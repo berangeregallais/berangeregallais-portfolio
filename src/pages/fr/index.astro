@@ -1,0 +1,445 @@
+---
+// src/pages/fr/index.astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import PortfolioCard from '../../components/PortfolioCard.astro';
+---
+
+<BaseLayout 
+  title="Technical Writer, Tech Ghostwriter & Ingénieure Documentation Technique | Docs API & Conformité IA"
+  description="Experte en rédaction technique spécialisée en documentation API, conformité AI Act, ghostwriting et stratégie documentaire pour entreprises tech."
+  lang="fr"
+>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Documentation Technique<br/>
+          <span class="gradient-text">Qui Stimule l'Adoption Produit</span>
+        </h1>
+        <p class="hero-subtitle">
+          Ingénieure documentation experte spécialisée en documentation API, 
+          conformité AI Act, ghostwriting technique et audits de contenu stratégiques pour entreprises tech.
+        </p>
+        <div class="hero-cta">
+          <a href="/fr/portfolio" class="btn btn-primary">Voir Mon Portfolio</a>
+          <a href="/fr/services#audit" class="btn btn-secondary">Audit Documentation</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="code-preview">
+          <div class="code-header">
+            <div class="dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="filename">documentation-api.md</span>
+          </div>
+          <div class="code-content">
+            <pre><code># Documentation API
+## Authentification
+
+JSON:
+auth: "Bearer [token]"
+conformite: "AI Act Article 13"</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="services-preview">
+    <div class="container">
+      <h2 class="section-title">Expertise Principale</h2>
+      <div class="services-grid">
+        <ServiceCard
+          icon="audit"
+          title="Audits & Stratégie Documentation"
+          description="Évaluation complète de votre écosystème documentaire avec feuille de route d'amélioration actionnable."
+          link="/fr/services#audit"
+        />
+        <ServiceCard
+          icon="api"
+          title="Excellence Documentation API"
+          description="Documentation API centrée développeur, spécifications OpenAPI et portails interactifs qui accélèrent l'adoption."
+          link="/fr/services#api"
+        />
+        <ServiceCard
+          icon="ai"
+          title="Documentation Conformité AI Act"
+          description="Documentation de modèles IA, évaluations de risques et frameworks de conformité alignés sur le règlement IA européen."
+          link="/fr/services#ai-compliance"
+        />
+        <ServiceCard
+          icon="ghostwriting"
+          title="Ghostwriting Technique"
+          description="Rédaction technique sous votre signature : articles de blog, livres blancs, guides experts et contenus thought leadership pour asseoir votre autorité."
+          link="/fr/services#ghostwriting"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Highlights -->
+  <section class="portfolio-highlights">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Projets Récents</h2>
+        <a href="/fr/portfolio" class="section-link">Voir Tous les Projets →</a>
+      </div>
+      <div class="portfolio-grid">
+        <PortfolioCard
+          title="Refonte Documentation API SaaS"
+          client="FinTech Scale-up"
+          description="Restructuration complète de la documentation API avec réduction de 40% des tickets support."
+          tags={["OpenAPI", "Portail Développeur", "React"]}
+          image="https://via.placeholder.com/400x250/4338ca/ffffff?text=Docs+API"
+          link="/fr/portfolio/refonte-api-saas"
+          featured={true}
+        />
+        <PortfolioCard
+          title="Framework Documentation Modèles IA"
+          client="Plateforme ML"
+          description="Système de documentation conforme AI Act pour le cycle de vie des modèles d'apprentissage automatique."
+          tags={["AI Act", "Model Cards", "Évaluation Risques"]}
+          image="https://via.placeholder.com/400x250/7c3aed/ffffff?text=Framework+IA"
+          link="/fr/portfolio/framework-documentation-ia"
+          featured={true}
+        />
+        <PortfolioCard
+          title="Audit Expérience Développeur"
+          client="Projet Open Source"
+          description="Stratégie documentaire et refonte d'architecture informationnelle pour une communauté de 50k+ développeurs."
+          tags={["UX Research", "Architecture Info", "Communauté"]}
+          image="https://via.placeholder.com/400x250/06b6d4/ffffff?text=Audit+DevEx"
+          link="/fr/portfolio/audit-experience-developpeur"
+          featured={true}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Prêt·e à Transformer Votre Documentation ?</h2>
+        <p>Obtenez un audit stratégique de votre documentation actuelle et découvrez les opportunités d'amélioration.</p>
+        <a href="/fr/contact" class="btn btn-primary btn-large">Commencer la Conversation</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    padding: 8rem 0 6rem;
+    background: linear-gradient(135deg, 
+      rgb(var(--color-background)) 0%, 
+      rgb(var(--color-primary) / 0.05) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgb(var(--color-primary) / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgb(var(--color-accent) / 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-title {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: rgb(var(--color-text));
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, 
+      rgb(var(--color-primary)), 
+      rgb(var(--color-secondary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: rgb(var(--color-text-muted));
+    margin-bottom: 2rem;
+    max-width: 90%;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* Code Preview */
+  .code-preview {
+    background: rgb(var(--color-surface) / 0.9);
+    border: 1px solid rgb(var(--color-border) / 0.5);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 
+      0 25px 50px rgb(var(--color-shadow) / 0.2),
+      0 0 0 1px rgb(var(--color-primary) / 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .code-header {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    background: rgb(var(--color-surface-variant) / 0.3);
+    border-bottom: 1px solid rgb(var(--color-border) / 0.3);
+  }
+
+  .dots {
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 1rem;
+  }
+
+  .dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgb(var(--color-text-muted) / 0.3);
+  }
+
+  .dots span:nth-child(1) { background: rgb(var(--color-primary)); }
+  .dots span:nth-child(2) { background: rgb(var(--color-secondary)); }
+  .dots span:nth-child(3) { background: rgb(var(--color-accent)); }
+
+  .filename {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: rgb(var(--color-text-muted));
+  }
+
+  .code-content {
+    padding: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: rgb(var(--color-text));
+  }
+
+  /* Services Grid */
+  .services-preview {
+    padding: 8rem 0;
+    background: rgb(var(--color-surface) / 0.3);
+  }
+
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: rgb(var(--color-text));
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  /* Portfolio Grid */
+  .portfolio-highlights {
+    padding: 8rem 0;
+    background: rgb(var(--color-surface-variant) / 0.5);
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+    margin: 0;
+  }
+
+  .section-link {
+    color: rgb(var(--color-primary));
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+  }
+
+  .section-link:hover {
+    opacity: 0.8;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Trust Indicators */
+  .trust-indicators {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, 
+      rgb(var(--color-background)) 0%, 
+      rgb(var(--color-primary) / 0.03) 100%);
+  }
+
+  .trust-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .trust-content h3 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .trust-content p {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    margin-bottom: 3rem;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgb(var(--color-primary));
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgb(var(--color-primary) / 0.3);
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: rgb(var(--color-text-muted));
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, 
+      rgb(var(--color-primary) / 0.08) 0%, 
+      rgb(var(--color-accent) / 0.05) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 30% 70%, rgb(var(--color-primary) / 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-content h2 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .cta-content p {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    margin-bottom: 2rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .hero-cta {
+      justify-content: center;
+    }
+
+    .section-header {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .stats {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

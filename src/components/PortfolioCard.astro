@@ -1,0 +1,223 @@
+---
+// src/components/PortfolioCard.astro
+export interface Props {
+  title: string;
+  client: string;
+  description: string;
+  tags: string[];
+  image: string;
+  link: string;
+  featured?: boolean;
+}
+
+const { title, client, description, tags, image, link, featured = false } = Astro.props;
+---
+
+<article class={`portfolio-card ${featured ? 'portfolio-card--featured' : ''}`}>
+  <div class="portfolio-image">
+    <img src={image} alt={`${title} project screenshot`} loading="lazy" />
+    <div class="portfolio-overlay">
+      <a href={link} class="portfolio-link" aria-label={`View ${title} case study`}>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M7 17L17 7"/>
+          <path d="M7 7h10v10"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  
+  <div class="portfolio-content">
+    <div class="portfolio-meta">
+      <span class="portfolio-client">{client}</span>
+      {featured && <span class="portfolio-badge">Featured</span>}
+    </div>
+    
+    <h3 class="portfolio-title">
+      <a href={link}>{title}</a>
+    </h3>
+    
+    <p class="portfolio-description">{description}</p>
+    
+    <div class="portfolio-tags">
+      {tags.map((tag) => (
+        <span class="portfolio-tag">{tag}</span>
+      ))}
+    </div>
+  </div>
+</article>
+
+<style>
+  .portfolio-card {
+    background: rgb(var(--color-surface) / 0.6);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+  }
+
+  .portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+      0 25px 50px rgb(var(--color-shadow) / 0.2),
+      0 0 0 1px rgb(var(--color-primary) / 0.2);
+    border-color: rgb(var(--color-primary) / 0.5);
+  }
+
+  .portfolio-card--featured {
+    border-color: rgb(var(--color-primary) / 0.6);
+    box-shadow: 0 0 0 1px rgb(var(--color-primary) / 0.2);
+  });
+  }
+
+  .portfolio-image {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: rgb(var(--color-surface-variant));
+  }
+
+  .portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+  }
+
+  .portfolio-card:hover .portfolio-image img {
+    transform: scale(1.05);
+  }
+
+  .portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(var(--color-primary) / 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+  }
+
+  .portfolio-card:hover .portfolio-overlay {
+    opacity: 1;
+  }
+
+  .portfolio-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: rgb(var(--color-text-inverse));
+    color: rgb(var(--color-primary));
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+  }
+
+  .portfolio-link:hover {
+    transform: scale(1.1);
+  }
+
+  .portfolio-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+
+  .portfolio-client {
+    font-size: 0.875rem;
+    color: rgb(var(--color-text-muted));
+    font-weight: 500;
+  }
+
+  .portfolio-badge {
+    background: rgb(var(--color-primary));
+    color: rgb(var(--color-text-inverse));
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .portfolio-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .portfolio-title a {
+    color: rgb(var(--color-text));
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .portfolio-title a:hover {
+    color: rgb(var(--color-primary));
+  }
+
+  .portfolio-description {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .portfolio-tag {
+    background: rgb(var(--color-surface-variant));
+    color: rgb(var(--color-text-muted));
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgb(var(--color-border));
+  }
+
+  /* Featured card styling */
+  .portfolio-card--featured .portfolio-badge {
+    background: rgb(var(--color-accent));
+  }
+
+  .portfolio-card--featured:hover {
+    border-color: rgb(var(--color-accent) / 0.5);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .portfolio-image {
+      aspect-ratio: 16 / 9;
+    }
+    
+    .portfolio-content {
+      padding: 1.25rem;
+    }
+    
+    .portfolio-title {
+      font-size: 1.125rem;
+    }
+  }
+</style>

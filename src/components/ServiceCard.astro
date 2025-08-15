@@ -1,0 +1,155 @@
+---
+// src/components/ServiceCard.astro
+export interface Props {
+  icon: 'audit' | 'api' | 'ai' | 'ghostwriting';
+  title: string;
+  description: string;
+  link: string;
+}
+
+const { icon, title, description, link } = Astro.props;
+---
+
+<div class="service-card">
+  <div class="service-icon">
+    {icon === 'audit' && (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14,2 14,8 20,8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+        <polyline points="10,9 9,9 8,9"/>
+      </svg>
+    )}
+    {icon === 'api' && (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="16 18 22 12 16 6"/>
+        <polyline points="8 6 2 12 8 18"/>
+      </svg>
+    )}
+    {icon === 'ai' && (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+        <path d="M2 17l10 5 10-5"/>
+        <path d="M2 12l10 5 10-5"/>
+      </svg>
+    )}
+  </div>
+  <h3 class="service-title">{title}</h3>
+  <p class="service-description">{description}</p>
+  <a href={link} class="service-link">
+    Learn More
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M7 17L17 7"/>
+      <path d="M7 7h10v10"/>
+    </svg>
+  </a>
+</div>
+
+<style>
+  .service-card {
+    background: rgb(var(--color-surface) / 0.6);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    transition: all var(--transition-normal);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      rgb(var(--color-primary) / 0.05) 0%, 
+      rgb(var(--color-accent) / 0.02) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+      0 25px 50px rgb(var(--color-shadow) / 0.2),
+      0 0 0 1px rgb(var(--color-primary) / 0.2);
+    border-color: rgb(var(--color-primary) / 0.5);
+  }
+
+  .service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, 
+      rgb(var(--color-primary) / 0.2), 
+      rgb(var(--color-accent) / 0.1));
+    color: rgb(var(--color-primary));
+    border-radius: 1.25rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-title {
+    font-family: var(--font-serif);
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-description {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(var(--color-primary));
+    font-weight: 500;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+  }
+
+  .service-link:hover {
+    gap: 0.75rem;
+  }
+
+  .service-link svg {
+    transition: transform var(--transition-fast);
+  }
+
+  .service-link:hover svg {
+    transform: translate(2px, -2px);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .service-card {
+      padding: 1.5rem;
+    }
+    
+    .service-title {
+      font-size: 1.125rem;
+    }
+  }
+</style>
