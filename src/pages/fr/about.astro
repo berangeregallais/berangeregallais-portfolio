@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="À propos — Bérangère Gallais" description="Technical Writer et DocOps — documentation API, IA & workflows dev.">
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-hero__grid">
+        <div class="about-hero__text">
+          <h1 class="title">Bonjour, je suis Bérangère 👋</h1>
+          <p class="lead">
+            <strong>Technical Writer & Ghostwriter</strong> spécialisée en <strong>documentation API</strong> et <strong>IA</strong>.
+            J’aide les équipes produit à livrer une doc claire, actionnable et conforme (AI Act, qualité, traçabilité).
+          </p>
+          <ul class="bullets">
+            <li>Docs API (REST/SDK) — Docusaurus, GitBook, MkDocs</li>
+            <li>Architecture d’information, glossaires, exemples multi-langages</li>
+            <li>Workflows DocOps — CI/CD, lint, templates, versioning</li>
+          </ul>
+          <div class="cta-row">
+            <a href="/fr/contact" class="btn btn-primary">Discuter de votre doc</a>
+            <a href="/fr/portfolio" class="btn">Voir le portfolio</a>
+          </div>
+        </div>
+        <div class="about-hero__media">
+          <img src="/about/portrait.jpg" alt="Portrait de Bérangère Gallais" class="about-portrait" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-bio">
+    <div class="container">
+      <h2>Mon approche</h2>
+      <p>
+        La bonne documentation réduit le temps d’onboarding, évite les tickets répétitifs et renforce la confiance.
+        J’interviens tôt dans le cycle, pour cadrer la structure, les exemples et les exigences de conformité, tout en
+        préparant une base réutilisable qui vit avec le produit.
+      </p>
+      <div class="about-cards">
+        <div class="card">
+          <h3>Clarté & structure</h3>
+          <p>Navigation logique, sommaires soignés, conventions de nommage, exemples <em>copy-paste ready</em>.</p>
+        </div>
+        <div class="card">
+          <h3>Orientation dev</h3>
+          <p>Quickstarts, guides par cas d’usage, snippets multi-langages, FAQ et troubleshooting.</p>
+        </div>
+        <div class="card">
+          <h3>DocOps</h3>
+          <p>Templates, linters, PR review, pré-prod, publication continue, versioning & recherche.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-expertise">
+    <div class="container">
+      <h2>Outils & écosystème</h2>
+      <ul class="chips">
+        <li>Docusaurus</li><li>GitBook</li><li>MkDocs</li><li>OpenAPI</li><li>Markdown/MDX</li>
+        <li>CI/CD</li><li>GitHub Pages</li><li>Netlify</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about-process">
+    <div class="container">
+      <h2>Méthode en 4 étapes</h2>
+      <ol class="steps">
+        <li><strong>Cadrage</strong> — objectifs, personas, périmètre, sources de vérité</li>
+        <li><strong>Structure</strong> — arborescence, gabarits, conventions & style guide</li>
+        <li><strong>Production</strong> — contenus, exemples, QA technique & éditoriale</li>
+        <li><strong>Release</strong> — publication, suivi métriques, itérations continues</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="about-cta">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Un projet doc/API ou IA ?</h2>
+        <p>Je peux auditer l’existant, proposer une structure et livrer un pilote en quelques jours.</p>
+        <div class="cta-row">
+          <a href="/fr/contact" class="btn btn-primary">Parler du besoin</a>
+          <a href="/about/cv-fr.pdf" class="btn" target="_blank" rel="noopener" download>📄 Télécharger mon CV (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .about-hero { padding: 3rem 0 1rem; }
+    .about-hero__grid { display: grid; gap: 2rem; align-items: center; }
+    @media (min-width: 900px){ .about-hero__grid { grid-template-columns: 1.2fr .8fr; } }
+    .about-hero__text { margin-bottom: 1.5rem; }
+    .title { font-size: 2rem; line-height: 1.2; margin: 0 0 .75rem; }
+    /* + espace autour des paragraphes/listes du hero */
+    .lead { font-size: 1.1rem; color: rgb(var(--color-text)); margin: 0 0 1.75rem; line-height: 1.7; }
+    .bullets { margin: 0 0 2rem; padding-left: 1.2rem; line-height: 1.6; }
+    .bullets li { margin-bottom: .6rem; }
+    .about-hero .btn { margin-right: .5rem; }
+    .about-portrait { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 8px 30px rgb(0 0 0 / .06); }
+
+    .about-bio { padding: 2rem 0; }
+    .about-cards { display: grid; gap: 1rem; margin-top: 1rem; }
+    @media (min-width: 900px){ .about-cards { grid-template-columns: repeat(3,1fr); } }
+    .card { border: 1px solid rgb(var(--color-border)); border-radius: 14px; padding: 1rem; background: rgb(var(--color-background)); }
+
+    .about-expertise { padding: 1.5rem 0; }
+    .chips { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: .5rem 0 0; }
+    .chips li { padding: .4rem .7rem; border: 1px solid rgb(var(--color-border)); border-radius: 999px; font-size: .9rem; background: rgb(var(--color-surface)); }
+
+    .about-process { padding: 1.5rem 0 2rem; }
+    .steps { padding-left: 1.2rem; margin: .5rem 0 0; }
+
+    .about-cta { padding: 2rem 0 3rem; }
+    .cta-box { border: 1px solid rgb(var(--color-border)); border-radius: 16px; padding: 1.25rem; text-align: center; background: rgb(var(--color-background)); }
+    .cta-row { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+  </style>
+</BaseLayout>

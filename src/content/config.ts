@@ -14,6 +14,7 @@ const blogCollection = defineCollection({
     draft: z.boolean().default(false),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
+    translationKey: z.string().optional(),
     language: z.enum(['en', 'fr'])
   })
 });
@@ -47,6 +48,7 @@ const portfolioCollection = defineCollection({
     }).optional(),
     tags: z.array(z.string()).default([]),
     language: z.enum(['en', 'fr']),
+    translationKey: z.string().optional(),
     slug: z.string().optional()
   })
 });

@@ -1,39 +1,41 @@
 ---
 // src/components/Header.astro
 export interface Props {
-  lang: 'en' | 'fr';
+  lang: "en" | "fr";
+  hideLangSwitch?: boolean; // optionnel : forcer le masquage depuis une page
 }
 
-const { lang } = Astro.props;
+const { lang, hideLangSwitch } = Astro.props;
 
-// Navigation items based on language
 const navItems = {
   en: [
-    { label: 'Services', href: '/en/services' },
-    { label: 'Portfolio', href: '/en/portfolio' },
-    { label: 'Blog', href: '/en/blog' },
-    { label: 'About', href: '/en/about' }
+    { label: "Services", href: "/en/services" },
+    { label: "Portfolio", href: "/en/portfolio" },
+    { label: "Blog", href: "/en/blog" },
+    { label: "About", href: "/en/about" },
   ],
   fr: [
-    { label: 'Services', href: '/fr/services' },
-    { label: 'Portfolio', href: '/fr/portfolio' },
-    { label: 'Blog', href: '/fr/blog' },
-    { label: 'À propos', href: '/fr/about' }
-  ]
+    { label: "Services", href: "/fr/services" },
+    { label: "Portfolio", href: "/fr/portfolio" },
+    { label: "Blog", href: "/fr/blog" },
+    { label: "À propos", href: "/fr/about" },
+  ],
 };
 
 const currentPath = Astro.url.pathname;
 const currentLang = lang;
 const nav = navItems[currentLang];
 
-// CTA text based on language
-const ctaText = {
-  en: 'Get Started',
-  fr: 'Contact'
-};
+const ctaText = { en: "Get Started", fr: "Contact" };
+
+// ✅ Détection auto des pages article: /fr|en/blog/<slug>[/]
+const isBlogArticle = /^\/(fr|en)\/blog\/[^/]+\/?$/.test(currentPath);
+// si la prop est renseignée, elle prime; sinon on prend la détection auto
+const shouldHideLangSwitch =
+  typeof hideLangSwitch === "boolean" ? hideLangSwitch : isBlogArticle;
 ---
 
-<header class="header">
+<header class="header" data-hide-lang={shouldHideLangSwitch ? "true" : "false"}>
   <div class="container">
     <div class="header-content">
       <!-- Logo -->
@@ -45,54 +47,80 @@ const ctaText = {
       <!-- Desktop Navigation -->
       <nav class="nav-desktop" aria-label="Main navigation">
         <ul class="nav-list">
-          {nav.map((item) => (
-            <li>
-              <a 
-                href={item.href} 
-                class={`nav-link ${currentPath.startsWith(item.href) ? 'nav-link--active' : ''}`}
-                aria-current={currentPath.startsWith(item.href) ? 'page' : undefined}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
+          {
+            nav.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class={`nav-link ${currentPath.startsWith(item.href) ? "nav-link--active" : ""}`}
+                  aria-current={
+                    currentPath.startsWith(item.href) ? "page" : undefined
+                  }
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </nav>
 
       <!-- Header Actions -->
       <div class="header-actions">
         <!-- Language Switcher -->
-        <div class="language-switcher">
-          <button 
-            class="lang-toggle" 
-            aria-label={lang === 'en' ? 'Switch to French' : 'Switch to English'}
+        <div class="language-switcher" hidden={shouldHideLangSwitch}>
+          <button
+            class="lang-toggle"
+            aria-label={lang === "en"
+              ? "Switch to French"
+              : "Switch to English"}
             data-lang-toggle
           >
-            <span class={`lang-option ${lang === 'en' ? 'active' : ''}`}>EN</span>
+            <span class={`lang-option ${lang === "en" ? "active" : ""}`}
+              >EN</span
+            >
             <span class="lang-separator">/</span>
-            <span class={`lang-option ${lang === 'fr' ? 'active' : ''}`}>FR</span>
+            <span class={`lang-option ${lang === "fr" ? "active" : ""}`}
+              >FR</span
+            >
           </button>
         </div>
 
         <!-- Theme Toggle -->
-        <button 
-          class="theme-toggle" 
+        <button
+          class="theme-toggle"
           aria-label="Toggle theme"
           data-theme-toggle
         >
-          <svg class="theme-icon theme-icon--light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="5"/>
-            <line x1="12" y1="1" x2="12" y2="3"/>
-            <line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1" y1="12" x2="3" y2="12"/>
-            <line x1="21" y1="12" x2="23" y2="12"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          <svg
+            class="theme-icon theme-icon--light"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          <svg class="theme-icon theme-icon--dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          <svg
+            class="theme-icon theme-icon--dark"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
 
@@ -102,8 +130,8 @@ const ctaText = {
         </a>
 
         <!-- Mobile Menu Toggle -->
-        <button 
-          class="mobile-menu-toggle" 
+        <button
+          class="mobile-menu-toggle"
           aria-label="Toggle mobile menu"
           aria-expanded="false"
           data-mobile-toggle
@@ -118,16 +146,18 @@ const ctaText = {
     <!-- Mobile Navigation -->
     <nav class="nav-mobile" aria-label="Mobile navigation" data-mobile-nav>
       <ul class="nav-mobile-list">
-        {nav.map((item) => (
-          <li>
-            <a 
-              href={item.href} 
-              class={`nav-mobile-link ${currentPath.startsWith(item.href) ? 'nav-mobile-link--active' : ''}`}
-            >
-              {item.label}
-            </a>
-          </li>
-        ))}
+        {
+          nav.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class={`nav-mobile-link ${currentPath.startsWith(item.href) ? "nav-mobile-link--active" : ""}`}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
         <li class="nav-mobile-cta">
           <a href={`/${lang}/contact`} class="btn btn-primary btn-full">
             {ctaText[currentLang]}
@@ -159,6 +189,11 @@ const ctaText = {
 
   /* Logo */
   .logo {
+    font-family: "Trocchi", serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: rgb(var(--color-primary));
+    letter-spacing: 0.5px;
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -218,7 +253,7 @@ const ctaText = {
   }
 
   .nav-link--active::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -1px;
     left: 0;
@@ -414,40 +449,45 @@ const ctaText = {
       gap: 1.5rem;
     }
   }
+
+  /* Force hide language switch when data flag is set */
+  .header[data-hide-lang="true"] .language-switcher {
+    display: none !important;
+  }
 </style>
 
 <script>
   // Mobile menu functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    const mobileToggle = document.querySelector('[data-mobile-toggle]');
-    const mobileNav = document.querySelector('[data-mobile-nav]');
-    
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileToggle = document.querySelector("[data-mobile-toggle]");
+    const mobileNav = document.querySelector("[data-mobile-nav]");
+
     if (mobileToggle && mobileNav) {
-      mobileToggle.addEventListener('click', function() {
-        const isOpen = mobileToggle.getAttribute('aria-expanded') === 'true';
-        
-        mobileToggle.setAttribute('aria-expanded', (!isOpen).toString());
-        mobileNav.setAttribute('data-open', (!isOpen).toString());
+      mobileToggle.addEventListener("click", function () {
+        const isOpen = mobileToggle.getAttribute("aria-expanded") === "true";
+
+        mobileToggle.setAttribute("aria-expanded", (!isOpen).toString());
+        mobileNav.setAttribute("data-open", (!isOpen).toString());
       });
-      
+
       // Close mobile menu when clicking on a link
-      const mobileLinks = mobileNav.querySelectorAll('a');
-      mobileLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          mobileToggle.setAttribute('aria-expanded', 'false');
-          mobileNav.setAttribute('data-open', 'false');
+      const mobileLinks = mobileNav.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileToggle.setAttribute("aria-expanded", "false");
+          mobileNav.setAttribute("data-open", "false");
         });
       });
     }
-    
+
     // Language switcher functionality
-    const langToggle = document.querySelector('[data-lang-toggle]');
+    const langToggle = document.querySelector("[data-lang-toggle]");
     if (langToggle) {
-      langToggle.addEventListener('click', function() {
+      langToggle.addEventListener("click", function () {
         const currentPath = window.location.pathname;
-        const currentLang = currentPath.startsWith('/fr/') ? 'fr' : 'en';
-        const newLang = currentLang === 'en' ? 'fr' : 'en';
-        
+        const currentLang = currentPath.startsWith("/fr/") ? "fr" : "en";
+        const newLang = currentLang === "en" ? "fr" : "en";
+
         // Replace language in URL
         const newPath = currentPath.replace(/^\/(en|fr)\//, `/${newLang}/`);
         window.location.href = newPath;

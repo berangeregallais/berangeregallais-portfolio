@@ -1,111 +1,133 @@
 ---
 // src/layouts/BaseLayout.astro
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import blogCss from "../styles/blog.css?url";
 
 export interface Props {
   title: string;
   description: string;
-  lang?: 'en' | 'fr';
+  lang?: "en" | "fr"; // optionnelle : une page peut surcharger
   image?: string;
 }
 
-const { title, description, lang = 'en', image = '/og-default.jpg' } = Astro.props;
+// Déduire la langue depuis l’URL si la prop n’est pas fournie
+const path = Astro.url.pathname;
+const detectedLang: "en" | "fr" = path.startsWith("/fr/") ? "fr" : "en";
+
+const {
+  title,
+  description,
+  lang, // si non fourni, on prendra detectedLang
+  image = "/og-default.jpg",
+} = Astro.props;
+
+const resolvedLang: "en" | "fr" = lang ?? detectedLang;
+
+// URLs absolues pour SEO/OG
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(image, Astro.site);
 ---
 
-<!DOCTYPE html>
-<html lang={lang}>
+<!doctype html>
+<html lang={resolvedLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    
+
     <!-- SEO -->
     <title>{title}</title>
     <link rel="canonical" href={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, Astro.url)} />
+    <meta property="og:image" content={ogImageURL} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    
+
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Theme initialization script (must be in head to prevent FOUC) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap&family=Trocchi&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Blog styles (bundled from src/styles/blog.css) -->
+    <link rel="stylesheet" href={blogCss} />
+
+    <!-- Theme initialization script (inline, JS pur) -->
     <script is:inline>
-      // Theme detection and application
-      (function() {
-        function getStoredTheme() {
-          return localStorage.getItem('theme');
-        }
-        
-        function getSystemTheme() {
-          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-        
-        function applyTheme(theme) {
-          document.documentElement.setAttribute('data-theme', theme);
-          localStorage.setItem('theme', theme);
-        }
-        
-        // Apply theme immediately
-        const storedTheme = getStoredTheme();
-        const theme = storedTheme || getSystemTheme();
-        applyTheme(theme);
-        
-        // Listen for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-          if (!getStoredTheme()) {
-            applyTheme(e.matches ? 'dark' : 'light');
+      (function () {
+        const getStoredTheme = () => {
+          try {
+            return localStorage.getItem("theme");
+          } catch {
+            return null;
           }
+        };
+        const getSystemTheme = () =>
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        const applyTheme = (t) => {
+          document.documentElement.setAttribute("data-theme", t);
+          try {
+            localStorage.setItem("theme", t);
+          } catch {}
+        };
+
+        const stored = getStoredTheme();
+        const theme =
+          stored === "dark" || stored === "light" ? stored : getSystemTheme();
+        applyTheme(theme);
+
+        const mq = window.matchMedia("(prefers-color-scheme: dark)");
+        mq.addEventListener("change", (e) => {
+          if (!getStoredTheme()) applyTheme(e.matches ? "dark" : "light");
         });
       })();
     </script>
   </head>
   <body>
-    <Header lang={lang} />
+    <Header lang={resolvedLang} />
     <main>
       <slot />
     </main>
-    <Footer lang={lang} />
-    
-    <!-- Theme toggle functionality -->
+    <Footer lang={resolvedLang} />
+
+    <!-- Theme toggle functionality (no param = no TS complaint) -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const themeToggle = document.querySelector('[data-theme-toggle]');
-        
+      document.addEventListener("DOMContentLoaded", function () {
+        const themeToggle = document.querySelector("[data-theme-toggle]");
+
+        // Ne prend plus de paramètre : lit le thème actuel depuis le DOM
+        const updateAria = () => {
+          const toggle = document.querySelector("[data-theme-toggle]");
+          if (!toggle) return;
+          const theme = document.documentElement.getAttribute("data-theme");
+          toggle.setAttribute(
+            "aria-label",
+            theme === "dark" ? "Switch to light mode" : "Switch to dark mode",
+          );
+        };
+
         if (themeToggle) {
-          themeToggle.addEventListener('click', function() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-            // Update toggle button state
-            updateThemeToggleState(newTheme);
+          themeToggle.addEventListener("click", function () {
+            const current = document.documentElement.getAttribute("data-theme");
+            const next = current === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", next);
+            try {
+              localStorage.setItem("theme", next);
+            } catch {}
+            updateAria(); // <-- plus d'argument
           });
         }
-        
-        function updateThemeToggleState(theme: string | null) {
-          const toggle = document.querySelector('[data-theme-toggle]');
-          if (toggle) {
-            toggle.setAttribute('aria-label', 
-              theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
-            );
-          }
-        }
-        
-        // Initialize toggle state
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        updateThemeToggleState(currentTheme);
+
+        updateAria(); // <-- plus d'argument
       });
     </script>
   </body>
@@ -118,31 +140,32 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     --color-primary: 230 183 212; /* Rose poudré exact #e6b7d4 */
     --color-secondary: 219 112 147; /* Rose plus intense pour contraste */
     --color-accent: 192 132 252; /* Lavande pour accents */
-    
+
     --color-text: 30 58 138; /* Bleu marine pour texte sur fond clair */
     --color-text-muted: 71 85 105; /* Gris bleuté */
     --color-text-inverse: 255 255 255; /* Blanc pour contraste */
-    
+
     --color-background: 255 255 255; /* Fond blanc pour thème clair */
     --color-surface: 248 250 252; /* Blanc cassé pour cards */
     --color-surface-variant: 241 245 249; /* Gris très clair */
-    
+
     --color-border: 226 232 240; /* Bordures claires */
     --color-border-muted: 241 245 249; /* Bordures plus claires */
-    
+
     --color-shadow: 30 58 138; /* Ombres bleu marine */
-    
+
     /* Success, warning, error - adaptés à la palette */
-    --color-success: 34 197 94; /* Vert */
-    --color-warning: 251 191 36; /* Jaune doré */
-    --color-error: 239 68 68; /* Rouge */
-    
+    --color-success: 34 197 94;
+    --color-warning: 251 191 36;
+    --color-error: 239 68 68;
+
     /* Fonts */
-    --font-logo: 'Lora', Georgia, serif;
-    --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-    --font-mono: 'JetBrains Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
-    
+    --font-logo: "Trocchi", "Lora", Georgia, serif;
+    --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", sans-serif;
+    --font-mono: "JetBrains Mono", "Menlo", "Monaco", "Courier New", monospace;
+
     /* Spacing scale */
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
@@ -151,69 +174,90 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     --space-xl: 2rem;
     --space-2xl: 3rem;
     --space-3xl: 4rem;
-    
+
     /* Border radius */
     --radius-sm: 0.25rem;
     --radius-md: 0.5rem;
     --radius-lg: 0.75rem;
     --radius-xl: 1rem;
-    
+
     /* Transitions */
     --transition-fast: 150ms ease;
     --transition-normal: 250ms ease;
     --transition-slow: 350ms ease;
   }
 
-  /* Dark theme colors - Version slate foncé comme avant */
+  /* Dark theme colors */
   [data-theme="dark"] {
-    --color-text: 248 250 252; /* Blanc cassé */
-    --color-text-muted: 148 163 184; /* Gris slate */
-    --color-text-inverse: 15 23 42; /* Slate très foncé */
-    
-    --color-background: 2 6 23; /* Slate 950 - très foncé */
-    --color-surface: 15 23 42; /* Slate 900 */
-    --color-surface-variant: 30 41 59; /* Slate 800 */
-    
-    --color-border: 51 65 85; /* Slate 700 */
-    --color-border-muted: 30 41 59; /* Slate 800 */
-    
-    --color-shadow: 0 0 0; /* Noir pour les ombres */
+    --color-text: 248 250 252;
+    --color-text-muted: 148 163 184;
+    --color-text-inverse: 15 23 42;
+
+    --color-background: 2 6 23;
+    --color-surface: 15 23 42;
+    --color-surface-variant: 30 41 59;
+
+    --color-border: 51 65 85;
+    --color-border-muted: 30 41 59;
+
+    --color-shadow: 0 0 0;
   }
 
   /* Base styles */
   * {
     box-sizing: border-box;
   }
-
   html {
     font-family: var(--font-sans);
     scroll-behavior: smooth;
   }
-
   body {
     margin: 0;
     background-color: rgb(var(--color-background));
     color: rgb(var(--color-text));
     line-height: 1.6;
-    transition: background-color var(--transition-normal), color var(--transition-normal);
+    transition:
+      background-color var(--transition-normal),
+      color var(--transition-normal);
   }
 
   /* Typography */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-serif);
     font-weight: 600;
     line-height: 1.2;
     margin-top: 0;
     color: rgb(var(--color-text));
   }
-
-  h1 { font-size: 3.5rem; font-weight: 700; }
-  h2 { font-size: 2.5rem; font-weight: 600; }
-  h3 { font-size: 2rem; font-weight: 600; }
-  h4 { font-size: 1.5rem; font-weight: 500; }
-  h5 { font-size: 1.25rem; font-weight: 500; }
-  h6 { font-size: 1.125rem; font-weight: 500; }
-
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  h6 {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
   p {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -225,7 +269,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     text-decoration: none;
     transition: opacity var(--transition-fast);
   }
-
   a:hover {
     opacity: 0.8;
   }
@@ -247,28 +290,34 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     position: relative;
     overflow: hidden;
   }
-
   .btn::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
     transition: left 0.5s;
   }
-
   .btn:hover::before {
     left: 100%;
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-secondary)));
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-secondary))
+    );
     color: rgb(var(--color-text-inverse));
     box-shadow: 0 10px 25px rgb(var(--color-primary) / 0.3);
   }
-
   .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 15px 35px rgb(var(--color-primary) / 0.4);
@@ -280,13 +329,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     border: 2px solid rgb(var(--color-primary) / 0.5);
     backdrop-filter: blur(10px);
   }
-
   .btn-secondary:hover {
     background: rgb(var(--color-primary) / 0.1);
     border-color: rgb(var(--color-primary));
     transform: translateY(-2px);
   }
-
   .btn-large {
     padding: 1rem 2rem;
     font-size: 1rem;
@@ -307,18 +354,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   }
 
   /* Code blocks */
-  pre, code {
+  pre,
+  code {
     font-family: var(--font-mono);
     background: rgb(var(--color-surface-variant));
     border-radius: var(--radius-sm);
   }
-
   pre {
     padding: 1rem;
     overflow-x: auto;
     line-height: 1.5;
   }
-
   code:not(pre code) {
     padding: 0.125rem 0.25rem;
     font-size: 0.875em;
