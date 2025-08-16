@@ -1,13 +1,13 @@
 ---
-// src/pages/index.astro
+// src/pages/en/index.astro
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import PortfolioCard from '../../components/PortfolioCard.astro';
 ---
 
 <BaseLayout 
-  title="Technical Documentation Engineer | API Docs & AI Compliance"
-  description="Expert technical writer specializing in API documentation, AI Act compliance, and documentation strategy for tech companies."
+  title="Technical Documentation Engineer & Ghostwriter | API Docs & AI Compliance"
+  description="Expert technical writer specializing in API documentation, AI Act compliance, technical ghostwriting, and strategic content audits for tech companies."
   lang="en"
 >
   <!-- Hero Section -->
@@ -90,31 +90,34 @@ compliance: "AI Act Article 13"</code></pre>
       </div>
       <div class="portfolio-grid">
         <PortfolioCard
-          title="SaaS API Documentation Overhaul"
-          client="FinTech Scale-up"
-          description="Complete API documentation restructure resulting in 40% reduction in support tickets."
-          tags={["OpenAPI", "Developer Portal", "React"]}
-          image="https://via.placeholder.com/400x250/4338ca/ffffff?text=API+Docs"
-          link="/en/portfolio/saas-api-overhaul"
+          title="Chatbot API Documentation Portal"
+          client="AI Chatbot Platform"
+          description="Complete API documentation suite for conversational AI platform with interactive examples and developer onboarding guides"
+          tags={["GitHub Pages", "API Documentation", "Interactive Examples"]}
+          image="https://via.placeholder.com/400x250/4338ca/ffffff?text=Chatbot+API+Docs"
+          link="https://berangeregallais.github.io/chatbot-api-documentation/"
           featured={true}
+          category={["api-docs", "featured"]}
         />
         <PortfolioCard
-          title="AI Model Documentation Framework"
-          client="ML Platform"
-          description="AI Act compliant documentation system for machine learning model lifecycle."
-          tags={["AI Act", "Model Cards", "Risk Assessment"]}
-          image="https://via.placeholder.com/400x250/7c3aed/ffffff?text=AI+Framework"
-          link="/en/portfolio/ai-documentation-framework"
+          title="Cognitia API Documentation on GitBook"
+          client="Cognitia AI Platform"
+          description="Professional API documentation platform built on GitBook with advanced search, team collaboration, and interactive developer experience"
+          tags={["GitBook", "Team Collaboration", "Enterprise Publishing"]}
+          image="https://via.placeholder.com/400x250/7c3aed/ffffff?text=Cognitia+GitBook"
+          link="https://cognitia-api-documentation.gitbook.io/bgallais"
           featured={true}
+          category={["api-docs", "enterprise", "featured"]}
         />
         <PortfolioCard
-          title="Developer Experience Audit"
-          client="Open Source Project"
-          description="Documentation strategy and information architecture redesign for 50k+ developer community."
-          tags={["UX Research", "Information Architecture", "Community"]}
-          image="https://via.placeholder.com/400x250/06b6d4/ffffff?text=DevEx+Audit"
-          link="/en/portfolio/developer-experience-audit"
-          featured={true}
+          title="Visionary AI Platform Documentation"
+          client="Visionary AI Platform"
+          description="Comprehensive AI platform documentation with focus on AI Act compliance, model transparency, and responsible AI implementation guidelines"
+          tags={["AI Act Compliance", "Responsible AI", "GitHub Pages"]}
+          image="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Visionary+AI+Docs"
+          link="https://berangeregallais.github.io/visionary-ai/introduction"
+          featured={false}
+          category={["ai-compliance"]}
         />
       </div>
     </div>
@@ -227,19 +230,22 @@ compliance: "AI Act Article 13"</code></pre>
 
   /* Code Preview */
   .code-preview {
-    background: rgb(var(--color-surface));
-    border: 1px solid rgb(var(--color-border));
-    border-radius: 0.75rem;
+    background: rgb(var(--color-surface) / 0.9);
+    border: 1px solid rgb(var(--color-border) / 0.5);
+    border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgb(var(--color-shadow) / 0.1);
+    box-shadow: 
+      0 25px 50px rgb(var(--color-shadow) / 0.2),
+      0 0 0 1px rgb(var(--color-primary) / 0.1);
+    backdrop-filter: blur(10px);
   }
 
   .code-header {
     display: flex;
     align-items: center;
-    padding: 1rem 1.5rem;
-    background: rgb(var(--color-surface-variant));
-    border-bottom: 1px solid rgb(var(--color-border));
+    padding: 1.25rem 1.5rem;
+    background: rgb(var(--color-surface-variant) / 0.3);
+    border-bottom: 1px solid rgb(var(--color-border) / 0.3);
   }
 
   .dots {
@@ -255,9 +261,9 @@ compliance: "AI Act Article 13"</code></pre>
     background: rgb(var(--color-text-muted) / 0.3);
   }
 
-  .dots span:nth-child(1) { background: #ff5f56; }
-  .dots span:nth-child(2) { background: #ffbd2e; }
-  .dots span:nth-child(3) { background: #27ca3f; }
+  .dots span:nth-child(1) { background: rgb(var(--color-primary)); }
+  .dots span:nth-child(2) { background: rgb(var(--color-secondary)); }
+  .dots span:nth-child(3) { background: rgb(var(--color-accent)); }
 
   .filename {
     font-family: var(--font-mono);
@@ -276,9 +282,7 @@ compliance: "AI Act Article 13"</code></pre>
   /* Services Grid */
   .services-preview {
     padding: 8rem 0;
-    background: linear-gradient(180deg, 
-      rgb(var(--color-background)) 0%, 
-      rgb(var(--color-surface) / 0.3) 100%);
+    background: rgb(var(--color-surface) / 0.3);
   }
 
   .section-title {
@@ -300,7 +304,7 @@ compliance: "AI Act Article 13"</code></pre>
   /* Portfolio Grid */
   .portfolio-highlights {
     padding: 8rem 0;
-    background: rgb(var(--color-surface) / 0.2);
+    background: rgb(var(--color-surface-variant) / 0.5);
   }
 
   .section-header {
@@ -337,7 +341,10 @@ compliance: "AI Act Article 13"</code></pre>
 
   /* Trust Indicators */
   .trust-indicators {
-    padding: 6rem 0;
+    padding: 8rem 0;
+    background: linear-gradient(135deg, 
+      rgb(var(--color-background)) 0%, 
+      rgb(var(--color-primary) / 0.03) 100%);
   }
 
   .trust-content {
@@ -347,8 +354,10 @@ compliance: "AI Act Article 13"</code></pre>
   }
 
   .trust-content h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
     color: rgb(var(--color-text));
   }
 
@@ -370,10 +379,12 @@ compliance: "AI Act Article 13"</code></pre>
 
   .stat-number {
     display: block;
-    font-size: 3rem;
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
     font-weight: 700;
     color: rgb(var(--color-primary));
     margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgb(var(--color-primary) / 0.3);
   }
 
   .stat-label {
@@ -387,8 +398,8 @@ compliance: "AI Act Article 13"</code></pre>
   .cta-section {
     padding: 8rem 0;
     background: linear-gradient(135deg, 
-      rgb(var(--color-primary) / 0.1) 0%, 
-      rgb(var(--color-accent) / 0.1) 100%);
+      rgb(var(--color-primary) / 0.08) 0%, 
+      rgb(var(--color-accent) / 0.05) 100%);
     position: relative;
     overflow: hidden;
   }
@@ -401,7 +412,7 @@ compliance: "AI Act Article 13"</code></pre>
     right: 0;
     bottom: 0;
     background: 
-      radial-gradient(circle at 30% 70%, rgb(var(--color-primary) / 0.2) 0%, transparent 50%);
+      radial-gradient(circle at 30% 70%, rgb(var(--color-primary) / 0.1) 0%, transparent 50%);
     pointer-events: none;
   }
 
@@ -451,6 +462,10 @@ compliance: "AI Act Article 13"</code></pre>
     }
 
     .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .services-grid {
       grid-template-columns: 1fr;
     }
   }

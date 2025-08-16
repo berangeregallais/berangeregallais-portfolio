@@ -1,7 +1,26 @@
 ---
-// src/pages/index.astro - Redirect vers /en/
+// src/pages/index.astro
+// Redirect principal vers la version anglaise
 ---
 
-<script>
-  window.location.href = '/en/';
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="0; url=/en/">
+  <link rel="canonical" href="/en/">
+</head>
+<body>
+  <script>
+    // Redirect immédiat vers la version anglaise
+    window.location.href = '/en/';
+  </script>
+  
+  <!-- Fallback si JavaScript est désactivé -->
+  <noscript>
+    <p>Redirecting to <a href="/en/">English version</a>...</p>
+  </noscript>
+</body>
+</html>

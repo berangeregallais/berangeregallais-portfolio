@@ -1,0 +1,338 @@
+---
+// src/pages/fr/portfolio/index.astro
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PortfolioCard from '../../components/PortfolioCard.astro';
+
+// Get portfolio projects for French
+const allProjects = await getCollection('portfolio', ({ data }) => {
+  return data.language === 'fr';
+});
+
+// Sort by project date (most recent first)
+const projects = allProjects.sort(
+  (a, b) => b.data.projectDate.getTime() - a.data.projectDate.getTime()
+);
+
+// Separate featured projects
+const featuredProjects = projects.filter(project => project.data.featured);
+const regularProjects = projects.filter(project => !project.data.featured);
+
+// Get all unique categories for filtering
+const allCategories = [...new Set(projects.flatMap(project => project.data.category))];
+---
+
+<BaseLayout 
+  title="Portfolio | Projets Documentation Technique & Études de Cas"
+  description="Découvrez mes projets de documentation technique : docs API, portails développeur, frameworks conformité IA, et stratégies documentaires."
+  lang="fr"
+>
+  <!-- Hero Section -->
+  <section class="portfolio-hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Portfolio</h1>
+        <p class="hero-subtitle">
+          Projets concrets illustrant mes approches de documentation stratégique, 
+          de la documentation API aux frameworks de conformité IA.
+        </p>
+        <div class="portfolio-stats">
+          <div class="stat">
+            <span class="stat-number">{projects.length}</span>
+            <span class="stat-label">Projets</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">{allCategories.length}</span>
+            <span class="stat-label">Catégories</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">{featuredProjects.length}</span>
+            <span class="stat-label">En Vedette</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="portfolio-filters">
+    <div class="container">
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">Tous les Projets</button>
+        <button class="filter-btn" data-filter="featured">En Vedette</button>
+        <button class="filter-btn" data-filter="api-docs">Documentation API</button>
+        <button class="filter-btn" data-filter="ai-compliance">Conformité IA</button>
+        <button class="filter-btn" data-filter="audits">Audits Documentation</button>
+        <button class="filter-btn" data-filter="migration">Migration & Modernisation</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  {featuredProjects.length > 0 && (
+    <section class="featured-projects">
+      <div class="container">
+        <h2 class="section-title">Projets en Vedette</h2>
+        <div class="projects-grid">
+          {featuredProjects.map((project) => (
+            <PortfolioCard
+              title={project.data.title}
+              client={project.data.client}
+              description={project.data.description}
+              tags={project.data.technologies}
+              image={project.data.image}
+              link={`/fr/portfolio/${project.slug}`}
+              featured={true}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- All Projects -->
+  <section class="all-projects">
+    <div class="container">
+      <h2 class="section-title">{featuredProjects.length > 0 ? 'Autres Projets' : 'Tous les Projets'}</h2>
+      <div class="projects-grid" id="projects-container">
+        {regularProjects.map((project) => (
+          <PortfolioCard
+            title={project.data.title}
+            client={project.data.client}
+            description={project.data.description}
+            tags={project.data.technologies}
+            image={project.data.image}
+            link={`/fr/portfolio/${project.slug}`}
+            featured={false}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="portfolio-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Créons Quelque Chose d'Exceptionnel Ensemble</h2>
+        <p>Prêt·e à transformer votre documentation ? Discutons de votre projet.</p>
+        <div class="cta-buttons">
+          <a href="/fr/contact" class="btn btn-primary btn-large">Démarrer Votre Projet</a>
+          <a href="/fr/services" class="btn btn-secondary">Voir les Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Portfolio Hero */
+  .portfolio-hero {
+    padding: 6rem 0 4rem;
+    background: linear-gradient(135deg, 
+      rgb(var(--color-background)) 0%, 
+      rgb(var(--color-primary) / 0.05) 100%);
+    text-align: center;
+  }
+
+  .portfolio-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: rgb(var(--color-text-muted));
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+  }
+
+  .portfolio-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(var(--color-primary));
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: rgb(var(--color-text-muted));
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Portfolio Filters */
+  .portfolio-filters {
+    padding: 3rem 0;
+    background: rgb(var(--color-surface-variant) / 0.3);
+    border-top: 1px solid rgb(var(--color-border) / 0.2);
+    border-bottom: 1px solid rgb(var(--color-border) / 0.2);
+  }
+
+  .filter-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: 2px solid rgb(var(--color-border) / 0.3);
+    border-radius: 2rem;
+    color: rgb(var(--color-text-muted));
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    backdrop-filter: blur(10px);
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: rgb(var(--color-primary));
+    border-color: rgb(var(--color-primary));
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  /* Featured Projects */
+  .featured-projects {
+    padding: 6rem 0;
+  }
+
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: rgb(var(--color-text));
+  }
+
+  /* All Projects */
+  .all-projects {
+    padding: 6rem 0;
+    background: rgb(var(--color-surface) / 0.2);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+  }
+
+  /* Portfolio CTA */
+  .portfolio-cta {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, 
+      rgb(var(--color-primary) / 0.08) 0%, 
+      rgb(var(--color-accent) / 0.05) 100%);
+    text-align: center;
+  }
+
+  .portfolio-cta h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .portfolio-cta p {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .portfolio-stats {
+      gap: 2rem;
+    }
+
+    .filter-controls {
+      gap: 0.75rem;
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  /* Filter animations */
+  .project-card {
+    transition: all var(--transition-normal);
+  }
+
+  .project-card.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+  }
+</style>
+
+<script is:inline>
+  // Portfolio filtering functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    var filterButtons = document.querySelectorAll('.filter-btn');
+    var projectCards = document.querySelectorAll('[data-category]');
+    
+    filterButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var filter = this.getAttribute('data-filter');
+        
+        // Update active button
+        filterButtons.forEach(function(btn) {
+          btn.classList.remove('active');
+        });
+        this.classList.add('active');
+        
+        // Filter projects
+        projectCards.forEach(function(card) {
+          var categories = card.getAttribute('data-category');
+          if (categories) {
+            var categoryList = categories.split(',');
+            var shouldShow = filter === 'all' || categoryList.includes(filter);
+            
+            if (shouldShow) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          }
+        });
+      });
+    });
+  });
+</script>

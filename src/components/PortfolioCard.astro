@@ -8,12 +8,13 @@ export interface Props {
   image: string;
   link: string;
   featured?: boolean;
+  category?: string[]; // Ajouter cette prop pour le filtering
 }
 
-const { title, client, description, tags, image, link, featured = false } = Astro.props;
+const { title, client, description, tags, image, link, featured = false, category = [] } = Astro.props;
 ---
 
-<article class={`portfolio-card ${featured ? 'portfolio-card--featured' : ''}`}>
+<article class={`portfolio-card ${featured ? 'portfolio-card--featured' : ''}`} data-category={category.join(',')}>
   <div class="portfolio-image">
     <img src={image} alt={`${title} project screenshot`} loading="lazy" />
     <div class="portfolio-overlay">

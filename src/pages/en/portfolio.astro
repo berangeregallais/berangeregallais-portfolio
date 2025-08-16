@@ -1,12 +1,12 @@
 ---
-// src/pages/fr/portfolio/index.astro
+// src/pages/en/portfolio/index.astro
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout 
-  title="Portfolio | Projets Documentation Technique & Études de Cas"
-  description="Découvrez mes projets de documentation technique : docs API, portails développeur, frameworks conformité IA, et stratégies documentaires pour entreprises tech."
-  lang="fr"
+  title="Portfolio | Technical Documentation Projects & Case Studies"
+  description="Explore my technical documentation projects: API docs, developer portals, AI compliance frameworks, and documentation strategies for tech companies."
+  lang="en"
 >
   <!-- Hero Section -->
   <section class="portfolio-hero">
@@ -14,23 +14,151 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="hero-content">
         <h1>Portfolio</h1>
         <p class="hero-subtitle">
-          Projets concrets illustrant mes approches de documentation stratégique, 
-          de la documentation API aux frameworks de conformité IA.
+          Real-world projects showcasing strategic documentation approaches, 
+          from API documentation to AI compliance frameworks.
         </p>
         <div class="portfolio-stats">
           <div class="stat">
             <span class="stat-number">4</span>
-            <span class="stat-label">Projets</span>
+            <span class="stat-label">Projects</span>
           </div>
           <div class="stat">
             <span class="stat-number">3</span>
-            <span class="stat-label">Catégories</span>
+            <span class="stat-label">Categories</span>
           </div>
           <div class="stat">
             <span class="stat-number">2</span>
-            <span class="stat-label">En Vedette</span>
+            <span class="stat-label">Featured</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Manual pour tester -->
+  <section class="all-projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        
+        <!-- Projet 1 - Hardcodé pour tester -->
+        <article class="portfolio-card portfolio-card--featured" data-category="api-docs">
+          <div class="portfolio-image">
+            <img src="/portfolio/chatbot-api-docs.png" alt="Chatbot API Documentation" loading="lazy" />
+            <div class="portfolio-overlay">
+              <a href="https://berangeregallais.github.io/chatbot-api-documentation/" class="portfolio-link" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7"/>
+                  <path d="M7 7h10v10"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-meta">
+              <span class="portfolio-client">AI Chatbot Platform</span>
+              <span class="portfolio-badge">Featured</span>
+            </div>
+            <h3 class="portfolio-title">
+              <a href="https://berangeregallais.github.io/chatbot-api-documentation/" target="_blank">Chatbot API Documentation Portal</a>
+            </h3>
+            <p class="portfolio-description">Complete API documentation suite for conversational AI platform with interactive examples and developer onboarding guides</p>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">GitHub Pages</span>
+              <span class="portfolio-tag">API Documentation</span>
+              <span class="portfolio-tag">Interactive Examples</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 2 -->
+        <article class="portfolio-card portfolio-card--featured" data-category="api-docs,enterprise">
+          <div class="portfolio-image">
+            <img src="/portfolio/cognitia-api-docs.png" alt="Cognitia API Documentation" loading="lazy" />
+            <div class="portfolio-overlay">
+              <a href="https://cognitia-api-documentation.gitbook.io/bgallais" class="portfolio-link" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7"/>
+                  <path d="M7 7h10v10"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-meta">
+              <span class="portfolio-client">Cognitia AI Platform</span>
+              <span class="portfolio-badge">Featured</span>
+            </div>
+            <h3 class="portfolio-title">
+              <a href="https://cognitia-api-documentation.gitbook.io/bgallais" target="_blank">Cognitia API Documentation on GitBook</a>
+            </h3>
+            <p class="portfolio-description">Professional API documentation platform built on GitBook with advanced search, team collaboration, and interactive developer experience</p>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">GitBook</span>
+              <span class="portfolio-tag">Team Collaboration</span>
+              <span class="portfolio-tag">Enterprise</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 3 -->
+        <article class="portfolio-card" data-category="api-docs,performance">
+          <div class="portfolio-image">
+            <img src="/portfolio/neolens-api-docs.png" alt="Neolens API Documentation" loading="lazy" />
+            <div class="portfolio-overlay">
+              <a href="https://neolens-api-docs.netlify.app/" class="portfolio-link" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7"/>
+                  <path d="M7 7h10v10"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-meta">
+              <span class="portfolio-client">Neolens Vision AI</span>
+            </div>
+            <h3 class="portfolio-title">
+              <a href="https://neolens-api-docs.netlify.app/" target="_blank">Neolens API Documentation Platform</a>
+            </h3>
+            <p class="portfolio-description">Modern API documentation built with cutting-edge tools and deployed on Netlify, featuring advanced developer experience and performance optimization</p>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Netlify</span>
+              <span class="portfolio-tag">Performance</span>
+              <span class="portfolio-tag">Modern Stack</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 4 -->
+        <article class="portfolio-card" data-category="ai-compliance">
+          <div class="portfolio-image">
+            <img src="/portfolio/visionary-ai-docs.png" alt="Visionary AI Documentation" loading="lazy" />
+            <div class="portfolio-overlay">
+              <a href="https://berangeregallais.github.io/visionary-ai/introduction" class="portfolio-link" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7"/>
+                  <path d="M7 7h10v10"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-meta">
+              <span class="portfolio-client">Visionary AI Platform</span>
+            </div>
+            <h3 class="portfolio-title">
+              <a href="https://berangeregallais.github.io/visionary-ai/introduction" target="_blank">Visionary AI Platform Documentation</a>
+            </h3>
+            <p class="portfolio-description">Comprehensive AI platform documentation with focus on AI Act compliance, model transparency, and responsible AI implementation guidelines</p>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">AI Act Compliance</span>
+              <span class="portfolio-tag">Responsible AI</span>
+              <span class="portfolio-tag">GitHub Pages</span>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -39,140 +167,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="portfolio-filters">
     <div class="container">
       <div class="filter-controls">
-        <button class="filter-btn active" data-filter="all">Tous les Projets</button>
-        <button class="filter-btn" data-filter="featured">En Vedette</button>
-        <button class="filter-btn" data-filter="api-docs">Documentation API</button>
-        <button class="filter-btn" data-filter="ai-compliance">Conformité IA</button>
-        <button class="filter-btn" data-filter="enterprise">Entreprise</button>
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="featured">Featured</button>
+        <button class="filter-btn" data-filter="api-docs">API Documentation</button>
+        <button class="filter-btn" data-filter="ai-compliance">AI Compliance</button>
+        <button class="filter-btn" data-filter="enterprise">Enterprise</button>
         <button class="filter-btn" data-filter="performance">Performance</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="all-projects">
-    <div class="container">
-      <h2 class="section-title">Projets en Vedette</h2>
-      <div class="projects-grid">
-        
-        <!-- Projet 1: Chatbot API -->
-        <article class="portfolio-card portfolio-card--featured" data-category="api-docs,featured">
-          <div class="portfolio-image">
-            <img src="https://via.placeholder.com/400x250/4338ca/ffffff?text=Documentation+API+Chatbot" alt="Documentation API Chatbot" loading="lazy" />
-            <div class="portfolio-overlay">
-              <a href="https://berangeregallais.github.io/chatbot-api-documentation/" class="portfolio-link" target="_blank" rel="noopener">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M7 17L17 7"/>
-                  <path d="M7 7h10v10"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="portfolio-content">
-            <div class="portfolio-meta">
-              <span class="portfolio-client">Plateforme IA Chatbot</span>
-              <span class="portfolio-badge">En Vedette</span>
-            </div>
-            <h3 class="portfolio-title">
-              <a href="https://berangeregallais.github.io/chatbot-api-documentation/" target="_blank" rel="noopener">Portail Documentation API Chatbot</a>
-            </h3>
-            <p class="portfolio-description">Suite complète de documentation API pour plateforme d'IA conversationnelle avec exemples interactifs et guides d'onboarding développeur</p>
-            <div class="portfolio-tags">
-              <span class="portfolio-tag">GitHub Pages</span>
-              <span class="portfolio-tag">Documentation API</span>
-              <span class="portfolio-tag">Exemples Interactifs</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Projet 2: Cognitia -->
-        <article class="portfolio-card portfolio-card--featured" data-category="api-docs,enterprise,featured">
-          <div class="portfolio-image">
-            <img src="https://via.placeholder.com/400x250/7c3aed/ffffff?text=Cognitia+GitBook" alt="Documentation API Cognitia" loading="lazy" />
-            <div class="portfolio-overlay">
-              <a href="https://cognitia-api-documentation.gitbook.io/bgallais" class="portfolio-link" target="_blank" rel="noopener">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M7 17L17 7"/>
-                  <path d="M7 7h10v10"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="portfolio-content">
-            <div class="portfolio-meta">
-              <span class="portfolio-client">Plateforme IA Cognitia</span>
-              <span class="portfolio-badge">En Vedette</span>
-            </div>
-            <h3 class="portfolio-title">
-              <a href="https://cognitia-api-documentation.gitbook.io/bgallais" target="_blank" rel="noopener">Documentation API Cognitia sur GitBook</a>
-            </h3>
-            <p class="portfolio-description">Plateforme de documentation API professionnelle construite sur GitBook avec recherche avancée, collaboration équipe et expérience développeur interactive</p>
-            <div class="portfolio-tags">
-              <span class="portfolio-tag">GitBook</span>
-              <span class="portfolio-tag">Collaboration Équipe</span>
-              <span class="portfolio-tag">Publication Entreprise</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Projet 3: Neolens -->
-        <article class="portfolio-card" data-category="api-docs,performance">
-          <div class="portfolio-image">
-            <img src="https://via.placeholder.com/400x250/06b6d4/ffffff?text=Plateforme+Neolens" alt="Documentation API Neolens" loading="lazy" />
-            <div class="portfolio-overlay">
-              <a href="https://neolens-api-docs.netlify.app/" class="portfolio-link" target="_blank" rel="noopener">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M7 17L17 7"/>
-                  <path d="M7 7h10v10"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="portfolio-content">
-            <div class="portfolio-meta">
-              <span class="portfolio-client">Neolens Vision IA</span>
-            </div>
-            <h3 class="portfolio-title">
-              <a href="https://neolens-api-docs.netlify.app/" target="_blank" rel="noopener">Plateforme Documentation API Neolens</a>
-            </h3>
-            <p class="portfolio-description">Documentation API moderne construite avec des outils de pointe et déployée sur Netlify, avec expérience développeur avancée et optimisation performance</p>
-            <div class="portfolio-tags">
-              <span class="portfolio-tag">Netlify</span>
-              <span class="portfolio-tag">Performance</span>
-              <span class="portfolio-tag">Stack Moderne</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Projet 4: Visionary AI -->
-        <article class="portfolio-card" data-category="ai-compliance">
-          <div class="portfolio-image">
-            <img src="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Documentation+Visionary+IA" alt="Documentation Visionary AI" loading="lazy" />
-            <div class="portfolio-overlay">
-              <a href="https://berangeregallais.github.io/visionary-ai/introduction" class="portfolio-link" target="_blank" rel="noopener">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M7 17L17 7"/>
-                  <path d="M7 7h10v10"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="portfolio-content">
-            <div class="portfolio-meta">
-              <span class="portfolio-client">Plateforme Visionary IA</span>
-            </div>
-            <h3 class="portfolio-title">
-              <a href="https://berangeregallais.github.io/visionary-ai/introduction" target="_blank" rel="noopener">Documentation Plateforme Visionary IA</a>
-            </h3>
-            <p class="portfolio-description">Documentation complète de plateforme IA avec focus sur la conformité AI Act, transparence des modèles et guidelines d'implémentation IA responsable</p>
-            <div class="portfolio-tags">
-              <span class="portfolio-tag">Conformité AI Act</span>
-              <span class="portfolio-tag">IA Responsable</span>
-              <span class="portfolio-tag">GitHub Pages</span>
-            </div>
-          </div>
-        </article>
-
       </div>
     </div>
   </section>
@@ -181,11 +181,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="portfolio-cta">
     <div class="container">
       <div class="cta-content">
-        <h2>Créons Quelque Chose d'Exceptionnel Ensemble</h2>
-        <p>Prêt·e à transformer votre documentation ? Discutons de votre projet.</p>
+        <h2>Let's Create Something Great Together</h2>
+        <p>Ready to transform your documentation? Let's discuss your project.</p>
         <div class="cta-buttons">
-          <a href="/fr/contact" class="btn btn-primary btn-large">Démarrer Votre Projet</a>
-          <a href="/fr/services" class="btn btn-secondary">Voir les Services</a>
+          <a href="/en/contact" class="btn btn-primary btn-large">Start Your Project</a>
+          <a href="/en/services" class="btn btn-secondary">View Services</a>
         </div>
       </div>
     </div>
@@ -193,7 +193,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-  /* Portfolio Hero */
+  /* Tous les styles du portfolio précédent */
   .portfolio-hero {
     padding: 6rem 0 4rem;
     background: linear-gradient(135deg, 
@@ -242,45 +242,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     letter-spacing: 0.5px;
   }
 
-  /* Portfolio Filters */
-  .portfolio-filters {
-    padding: 3rem 0;
-    background: rgb(var(--color-surface-variant) / 0.3);
-    border-top: 1px solid rgb(var(--color-border) / 0.2);
-    border-bottom: 1px solid rgb(var(--color-border) / 0.2);
-  }
-
-  .filter-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .filter-btn {
-    padding: 0.75rem 1.5rem;
-    background: transparent;
-    border: 2px solid rgb(var(--color-border) / 0.3);
-    border-radius: 2rem;
-    color: rgb(var(--color-text-muted));
-    font-weight: 500;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    backdrop-filter: blur(10px);
-  }
-
-  .filter-btn:hover,
-  .filter-btn.active {
-    background: rgb(var(--color-primary));
-    border-color: rgb(var(--color-primary));
-    color: white;
-    transform: translateY(-2px);
-  }
-
-  /* All Projects */
   .all-projects {
     padding: 6rem 0;
-    background: rgb(var(--color-surface) / 0.2);
   }
 
   .section-title {
@@ -297,7 +260,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     gap: 2.5rem;
   }
 
-  /* Portfolio Cards */
+  /* Styles PortfolioCard copiés ici pour éviter les imports */
   .portfolio-card {
     background: rgb(var(--color-surface) / 0.6);
     border: 1px solid rgb(var(--color-border) / 0.3);
@@ -408,7 +371,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     border-radius: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.75px;
-    box-shadow: 0 4px 12px rgb(var(--color-primary) / 0.3);
   }
 
   .portfolio-title {
@@ -450,7 +412,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     padding: 0.375rem 0.875rem;
     border-radius: 1rem;
     border: 1px solid rgb(var(--color-border) / 0.3);
-    backdrop-filter: blur(5px);
   }
 
   .portfolio-card.hidden {
@@ -459,7 +420,38 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     pointer-events: none;
   }
 
-  /* Portfolio CTA */
+  /* Filters */
+  .portfolio-filters {
+    padding: 3rem 0;
+    background: rgb(var(--color-surface-variant) / 0.3);
+  }
+
+  .filter-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: 2px solid rgb(var(--color-border) / 0.3);
+    border-radius: 2rem;
+    color: rgb(var(--color-text-muted));
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: rgb(var(--color-primary));
+    border-color: rgb(var(--color-primary));
+    color: white;
+    transform: translateY(-2px);
+  }
+
   .portfolio-cta {
     padding: 6rem 0;
     background: linear-gradient(135deg, 
@@ -488,19 +480,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     flex-wrap: wrap;
   }
 
-  /* Responsive */
   @media (max-width: 768px) {
     .portfolio-stats {
       gap: 2rem;
-    }
-
-    .filter-controls {
-      gap: 0.75rem;
-    }
-
-    .filter-btn {
-      padding: 0.5rem 1rem;
-      font-size: 0.875rem;
     }
 
     .projects-grid {
@@ -516,7 +498,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 </style>
 
 <script is:inline>
-  // Portfolio filtering functionality
   document.addEventListener('DOMContentLoaded', function() {
     var filterButtons = document.querySelectorAll('.filter-btn');
     var projectCards = document.querySelectorAll('[data-category]');
@@ -525,20 +506,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       button.addEventListener('click', function() {
         var filter = this.getAttribute('data-filter');
         
-        if (!filter) return; // Protection contre null
-        
-        // Update active button
         filterButtons.forEach(function(btn) {
           btn.classList.remove('active');
         });
         this.classList.add('active');
         
-        // Filter projects
         projectCards.forEach(function(card) {
           var categories = card.getAttribute('data-category');
-          if (categories) { // Vérification que categories n'est pas null
+          if (categories) {
             var categoryList = categories.split(',');
-            var shouldShow = filter === 'all' || categoryList.indexOf(filter) !== -1;
+            var shouldShow = filter === 'all' || categoryList.includes(filter);
             
             if (shouldShow) {
               card.classList.remove('hidden');
