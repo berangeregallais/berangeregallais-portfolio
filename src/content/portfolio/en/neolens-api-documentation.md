@@ -17,8 +17,7 @@ deliverables: [
 ]
 technologies: ["Modern Web Stack", "Netlify", "CDN Optimization", "Performance Engineering", "Advanced UX"]
 results: "High-performance documentation platform with global CDN delivery, advanced developer experience, and modern design that sets new standards for API documentation"
-featured: true
-image: "https://via.placeholder.com/800x500/06b6d4/ffffff?text=Neolens+Platform"
+image: "/portfolio/neolens-api-docs.png"
 demoUrl: "https://neolens-api-docs.netlify.app/"
 category: ["api-docs", "performance", "modern-stack"]
 language: "en"

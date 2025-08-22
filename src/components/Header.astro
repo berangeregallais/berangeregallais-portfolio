@@ -11,13 +11,11 @@ const navItems = {
   en: [
     { label: "Services", href: "/en/services" },
     { label: "Portfolio", href: "/en/portfolio" },
-    { label: "Blog", href: "/en/blog" },
     { label: "About", href: "/en/about" },
   ],
   fr: [
     { label: "Services", href: "/fr/services" },
     { label: "Portfolio", href: "/fr/portfolio" },
-    { label: "Blog", href: "/fr/blog" },
     { label: "À propos", href: "/fr/about" },
   ],
 };
@@ -28,11 +26,8 @@ const nav = navItems[currentLang];
 
 const ctaText = { en: "Get Started", fr: "Contact" };
 
-// ✅ Détection auto des pages article: /fr|en/blog/<slug>[/]
-const isBlogArticle = /^\/(fr|en)\/blog\/[^/]+\/?$/.test(currentPath);
-// si la prop est renseignée, elle prime; sinon on prend la détection auto
-const shouldHideLangSwitch =
-  typeof hideLangSwitch === "boolean" ? hideLangSwitch : isBlogArticle;
+// La détection auto des pages blog n'est plus nécessaire
+const shouldHideLangSwitch = hideLangSwitch || false;
 ---
 
 <header class="header" data-hide-lang={shouldHideLangSwitch ? "true" : "false"}>
@@ -158,6 +153,31 @@ const shouldHideLangSwitch =
             </li>
           ))
         }
+
+        <!-- Sélecteur de langue dans le menu mobile -->
+        {
+          !shouldHideLangSwitch && (
+            <li class="nav-mobile-lang">
+              <button
+                class="lang-toggle-mobile"
+                aria-label={
+                  lang === "en" ? "Switch to French" : "Switch to English"
+                }
+                data-lang-toggle
+              >
+                <span class="lang-label">{lang === "en" ? "Language:" : "Langue :"}</span>
+                <span class={`lang-option ${lang === "en" ? "active" : ""}`}>
+                  EN
+                </span>
+                <span class="lang-separator">/</span>
+                <span class={`lang-option ${lang === "fr" ? "active" : ""}`}>
+                  FR
+                </span>
+              </button>
+            </li>
+          )
+        }
+
         <li class="nav-mobile-cta">
           <a href={`/${lang}/contact`} class="btn btn-primary btn-full">
             {ctaText[currentLang]}
@@ -177,6 +197,7 @@ const shouldHideLangSwitch =
     border-bottom: 1px solid rgb(var(--color-border) / 0.2);
     z-index: 100;
     transition: all var(--transition-normal);
+    position: relative; /* Ajout pour le positionnement du menu mobile */
   }
 
   .header-content {
@@ -185,11 +206,12 @@ const shouldHideLangSwitch =
     justify-content: space-between;
     padding: 1.25rem 0;
     min-height: 4.5rem;
+    overflow: visible; /* Empêche le débordement */
   }
 
   /* Logo */
   .logo {
-    font-family: "Trocchi", serif;
+    font-family: "Merriweather", serif;
     font-size: 2.2rem;
     font-weight: 400;
     color: rgb(var(--color-primary));
@@ -221,6 +243,16 @@ const shouldHideLangSwitch =
     font-weight: 400;
     color: rgb(var(--color-text));
     letter-spacing: -0.02em;
+  }
+
+  /* Logo mobile - texte plus petit */
+  @media (max-width: 767px) {
+    .logo-text {
+      font-size: 0.9rem; /* Beaucoup plus petit sur mobile */
+    }
+    .logo-image {
+      height: 2rem; /* Image aussi plus petite */
+    }
   }
 
   /* Desktop Navigation */
@@ -268,9 +300,10 @@ const shouldHideLangSwitch =
     display: flex;
     align-items: center;
     gap: 1rem;
+    position: relative; /* Pour le contexte de positionnement */
   }
 
-  /* Language Switcher */
+  /* Language Switcher Desktop */
   .language-switcher {
     display: none;
   }
@@ -336,9 +369,9 @@ const shouldHideLangSwitch =
     display: block;
   }
 
-  /* Mobile Menu Toggle */
+  /* Mobile Menu Toggle - CORRECTION ICI */
   .mobile-menu-toggle {
-    display: flex;
+    display: flex; /* Supprimé le !important */
     flex-direction: column;
     justify-content: center;
     width: 2.5rem;
@@ -348,6 +381,8 @@ const shouldHideLangSwitch =
     cursor: pointer;
     padding: 0.5rem;
     gap: 3px;
+    position: relative;
+    z-index: 300;
   }
 
   .hamburger {
@@ -356,6 +391,7 @@ const shouldHideLangSwitch =
     background: rgb(var(--color-text));
     transition: all var(--transition-normal);
     transform-origin: center;
+    display: block;
   }
 
   .mobile-menu-toggle[aria-expanded="true"] .hamburger:nth-child(1) {
@@ -373,9 +409,16 @@ const shouldHideLangSwitch =
   /* Mobile Navigation */
   .nav-mobile {
     display: none;
+    position: absolute; /* Position absolue */
+    top: 100%; /* Juste sous le header */
+    left: 0;
+    right: 0;
+    width: 100%;
     background: rgb(var(--color-background));
     border-top: 1px solid rgb(var(--color-border));
     padding: 1rem 0;
+    z-index: 200; /* Au-dessus de tout */
+    box-shadow: 0 4px 20px rgb(var(--color-shadow) / 0.1);
   }
 
   .nav-mobile[data-open="true"] {
@@ -385,7 +428,9 @@ const shouldHideLangSwitch =
   .nav-mobile-list {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 2rem; /* Ajout de padding horizontal */
+    max-width: 1200px; /* Même largeur que le container */
+    margin: 0 auto; /* Centré */
   }
 
   .nav-mobile-list li {
@@ -410,6 +455,47 @@ const shouldHideLangSwitch =
     color: rgb(var(--color-primary));
   }
 
+  /* Mobile Language Switcher */
+  .nav-mobile-lang {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(var(--color-border-muted)) !important;
+  }
+
+  .lang-toggle-mobile {
+    background: none;
+    border: none;
+    color: rgb(var(--color-text));
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all var(--transition-fast);
+  }
+
+  .lang-toggle-mobile:hover {
+    color: rgb(var(--color-primary));
+  }
+
+  .lang-label {
+    color: rgb(var(--color-text-muted));
+    font-size: 0.9rem;
+  }
+
+  .lang-toggle-mobile .lang-option.active {
+    color: rgb(var(--color-primary));
+    font-weight: 600;
+  }
+
+  .lang-toggle-mobile .lang-separator {
+    margin: 0 0.25rem;
+    color: rgb(var(--color-text-muted));
+  }
+
   .nav-mobile-cta {
     padding-top: 1rem;
     border-bottom: none !important;
@@ -420,7 +506,7 @@ const shouldHideLangSwitch =
     justify-content: center;
   }
 
-  /* Desktop Styles */
+  /* Desktop Styles - CORRECTION ICI */
   @media (min-width: 768px) {
     .nav-desktop {
       display: block;
@@ -431,7 +517,11 @@ const shouldHideLangSwitch =
     }
 
     .mobile-menu-toggle {
-      display: none;
+      display: none !important; /* Maintenant le !important fonctionne */
+    }
+
+    .nav-mobile {
+      display: none !important;
     }
 
     .header-actions .btn {
@@ -454,10 +544,28 @@ const shouldHideLangSwitch =
   .header[data-hide-lang="true"] .language-switcher {
     display: none !important;
   }
+
+  /* Mobile optimizations */
+  @media (max-width: 767px) {
+    .header-content {
+      padding: 1.25rem 1rem;
+    }
+    
+    .header-actions {
+      gap: 0.5rem;
+    }
+    
+    .header-actions .btn {
+      display: none; /* CTA dans le menu mobile */
+    }
+    
+    .language-switcher {
+      display: none; /* Langue dans le menu mobile */
+    }
+  }
 </style>
 
 <script>
-  // Mobile menu functionality
   document.addEventListener("DOMContentLoaded", function () {
     const mobileToggle = document.querySelector("[data-mobile-toggle]");
     const mobileNav = document.querySelector("[data-mobile-nav]");
@@ -465,13 +573,15 @@ const shouldHideLangSwitch =
     if (mobileToggle && mobileNav) {
       mobileToggle.addEventListener("click", function () {
         const isOpen = mobileToggle.getAttribute("aria-expanded") === "true";
+        const newState = !isOpen;
 
-        mobileToggle.setAttribute("aria-expanded", (!isOpen).toString());
-        mobileNav.setAttribute("data-open", (!isOpen).toString());
+        // Mise à jour des attributs
+        mobileToggle.setAttribute("aria-expanded", newState.toString());
+        mobileNav.setAttribute("data-open", newState.toString());
       });
 
-      // Close mobile menu when clicking on a link
-      const mobileLinks = mobileNav.querySelectorAll("a");
+      // Fermer le menu mobile quand on clique sur un lien
+      const mobileLinks = mobileNav.querySelectorAll("a, button");
       mobileLinks.forEach((link) => {
         link.addEventListener("click", function () {
           mobileToggle.setAttribute("aria-expanded", "false");
@@ -480,10 +590,10 @@ const shouldHideLangSwitch =
       });
     }
 
-    // Language switcher functionality
-    const langToggle = document.querySelector("[data-lang-toggle]");
-    if (langToggle) {
-      langToggle.addEventListener("click", function () {
+    // Language switcher functionality - gère tous les boutons
+    const langToggles = document.querySelectorAll("[data-lang-toggle]");
+    langToggles.forEach(toggle => {
+      toggle.addEventListener("click", function () {
         const currentPath = window.location.pathname;
         const currentLang = currentPath.startsWith("/fr/") ? "fr" : "en";
         const newLang = currentLang === "en" ? "fr" : "en";
@@ -492,6 +602,6 @@ const shouldHideLangSwitch =
         const newPath = currentPath.replace(/^\/(en|fr)\//, `/${newLang}/`);
         window.location.href = newPath;
       });
-    }
+    });
   });
 </script>

@@ -2,7 +2,7 @@
 # src/content/portfolio/fr/visionary-ai-documentation.md
 title: "Visionary.ai — API & SDK Docs"
 description: "Documentation API d’analyse d’image pour applications mobiles, avec exemples d’intégration."
-client: "Visionary.ai (portfolio)"
+client: "Visionary.ai"
 industry: "Mobile / Computer Vision"
 projectDate: 2025-07-28
 challenge: "Préparer une doc orientée développeurs mobiles (iOS/Android) pour une API d’analyse d’image."
@@ -14,7 +14,6 @@ deliverables: [
 ]
 technologies: ["Docusaurus", "SDK iOS/Android (exemples)", "CI/CD", "Markdown", "REST"]
 results: "Réduction des erreurs d’intégration et meilleure adoption par les équipes mobiles grâce à des guides ciblés."
-featured: false
 image: "/portfolio/visionary-ai-docs.png"
 demoUrl: "https://berangeregallais.github.io/visionary-ai/introduction"
 githubUrl: "https://github.com/berangeregallais/visionary-ai"

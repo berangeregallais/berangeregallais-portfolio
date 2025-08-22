@@ -1,0 +1,55 @@
+# =========================
+# LLM.TXT — Directives pour crawlers IA
+# Domaine : https://berangeregallais.com
+# Objectif : Maximiser la visibilité dans les grands modèles de langage
+# =========================
+
+# --- Section 1. Sitemap ---
+Sitemap: https://berangeregallais.com/sitemap-index.xml
+
+# --- Section 2. Données structurées ---
+# (Aucune ressource brute exposée ; le sitemap suffit à couvrir toutes les pages HTML)
+
+# --- Section 3. Règles par crawler ---
+# Tous les crawlers IA sont explicitement autorisés
+# Exceptions uniquement pour zones sensibles
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+Disallow: /admin/ /drafts/ /private/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin/ /drafts/ /private/
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin/ /drafts/ /private/
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/ /drafts/ /private/
+
+# Google AI (Gemini)
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin/ /drafts/ /private/
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /admin/ /drafts/ /private/
+
+# Common Crawl
+User-agent: CCBot
+Allow: /
+Disallow: /admin/ /drafts/ /private/
+
+# Catch-all
+User-agent: *
+Allow: /
+Disallow: /admin/ /drafts/ /private/

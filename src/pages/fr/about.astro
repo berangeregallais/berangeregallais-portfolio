@@ -1,54 +1,111 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="À propos — Bérangère Gallais" description="Technical Writer et DocOps — documentation API, IA & workflows dev.">
+<BaseLayout
+  title="À propos — Bérangère Gallais"
+  description="Technical Writer et DocOps — documentation API, IA & workflows dev."
+>
   <section class="about-hero">
     <div class="container">
       <div class="about-hero__grid">
         <div class="about-hero__text">
           <h1 class="title">Bonjour, je suis Bérangère 👋</h1>
           <p class="lead">
-            <strong>Technical Writer & Ghostwriter</strong> spécialisée en <strong>documentation API</strong> et <strong>IA</strong>.
-            J’aide les équipes produit à livrer une doc claire, actionnable et conforme (AI Act, qualité, traçabilité).
+            <strong>Technical Writer & Ghostwriter</strong> spécialisée en <strong
+              >documentation API</strong
+            > et <strong>IA</strong>. J'aide les équipes tech à livrer une
+            documentation claire qui accélère l'onboarding et assure la
+            conformité.
           </p>
           <ul class="bullets">
-            <li>Docs API (REST/SDK) — Docusaurus, GitBook, MkDocs</li>
-            <li>Architecture d’information, glossaires, exemples multi-langages</li>
-            <li>Workflows DocOps — CI/CD, lint, templates, versioning</li>
+            <li>Documentation : Docusaurus, GitBook, MkDocs</li>
+            <li>Standards : OpenAPI, Markdown/MDX</li>
+            <li>Déploiement : CI/CD, GitHub Pages, GitLab, Netlify</li>
           </ul>
           <div class="cta-row">
-            <a href="/fr/contact" class="btn btn-primary">Discuter de votre doc</a>
+            <a href="/fr/contact" class="btn btn-primary"
+              >Discuter de Votre Documentation</a
+            >
             <a href="/fr/portfolio" class="btn">Voir le portfolio</a>
           </div>
         </div>
         <div class="about-hero__media">
-          <img src="/about/portrait.jpg" alt="Portrait de Bérangère Gallais" class="about-portrait" />
+          <img
+            src="/about/portrait.jpg"
+            alt="Portrait de Bérangère Gallais"
+            class="about-portrait"
+          />
         </div>
       </div>
     </div>
   </section>
 
-  <section class="about-bio">
+  <section class="about-background">
+    <div class="container">
+      <h2>Mon parcours</h2>
+      <div class="background-grid">
+        <div class="bg-item">
+          <div class="bg-icon">👩‍💻</div>
+          <h3>6 ans dans la tech</h3>
+          <p>
+            Développeuse puis QA automation engineer - je connais les défis des
+            équipes techniques de l'intérieur.
+          </p>
+        </div>
+        <div class="bg-item">
+          <div class="bg-icon">🔄</div>
+          <h3>Transition naturelle</h3>
+          <p>
+            De l'écriture de code à l'écriture sur le code - une évolution qui
+            donne du sens à mes docs.
+          </p>
+        </div>
+        <div class="bg-item">
+          <div class="bg-icon">📚</div>
+          <h3>Documentation experte</h3>
+          <p>
+            Aujourd'hui technical writer spécialisée, je comprends autant les
+            défis techniques que les exigences de la documentation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-approach">
     <div class="container">
       <h2>Mon approche</h2>
-      <p>
-        La bonne documentation réduit le temps d’onboarding, évite les tickets répétitifs et renforce la confiance.
-        J’interviens tôt dans le cycle, pour cadrer la structure, les exemples et les exigences de conformité, tout en
-        préparant une base réutilisable qui vit avec le produit.
+      <p class="section-intro">
+        Une bonne documentation réduit le temps d'onboarding, évite les tickets
+        répétitifs et renforce la confiance. J'interviens dans le cycle pour
+        cadrer la structure, les exemples et les exigences de conformité, tout
+        en préparant une base réutilisable qui vit avec le produit.
       </p>
-      <div class="about-cards">
-        <div class="card">
+      <div class="approach-grid">
+        <div class="approach-item">
+          <div class="approach-icon">✨</div>
           <h3>Clarté & structure</h3>
-          <p>Navigation logique, sommaires soignés, conventions de nommage, exemples <em>copy-paste ready</em>.</p>
+          <p>
+            Navigation logique, sommaires soignés, conventions de nommage,
+            exemples <em>copy-paste ready</em>.
+          </p>
         </div>
-        <div class="card">
+        <div class="approach-item">
+          <div class="approach-icon">👨‍💻</div>
           <h3>Orientation dev</h3>
-          <p>Quickstarts, guides par cas d’usage, snippets multi-langages, FAQ et troubleshooting.</p>
+          <p>
+            Quickstarts, guides par cas d'usage, snippets multi-langages, FAQ et
+            troubleshooting.
+          </p>
         </div>
-        <div class="card">
+        <div class="approach-item">
+          <div class="approach-icon">⚙️</div>
           <h3>DocOps</h3>
-          <p>Templates, linters, PR review, pré-prod, publication continue, versioning & recherche.</p>
+          <p>
+            Templates, linters, PR review, pré-prod, publication continue,
+            versioning & recherche.
+          </p>
         </div>
       </div>
     </div>
@@ -57,65 +114,620 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="about-expertise">
     <div class="container">
       <h2>Outils & écosystème</h2>
-      <ul class="chips">
-        <li>Docusaurus</li><li>GitBook</li><li>MkDocs</li><li>OpenAPI</li><li>Markdown/MDX</li>
-        <li>CI/CD</li><li>GitHub Pages</li><li>Netlify</li>
-      </ul>
+      <div class="expertise-categories">
+        <div class="expertise-category">
+          <h3>Documentation</h3>
+          <ul class="tech-list">
+            <li>Docusaurus</li>
+            <li>GitBook</li>
+            <li>MkDocs</li>
+          </ul>
+        </div>
+        <div class="expertise-category">
+          <h3>Standards</h3>
+          <ul class="tech-list">
+            <li>OpenAPI</li>
+            <li>Markdown/MDX</li>
+            <li>REST/GraphQL</li>
+          </ul>
+        </div>
+        <div class="expertise-category">
+          <h3>Déploiement</h3>
+          <ul class="tech-list">
+            <li>CI/CD</li>
+            <li>GitHub Pages</li>
+            <li>Netlify</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="about-process">
     <div class="container">
-      <h2>Méthode en 4 étapes</h2>
-      <ol class="steps">
-        <li><strong>Cadrage</strong> — objectifs, personas, périmètre, sources de vérité</li>
-        <li><strong>Structure</strong> — arborescence, gabarits, conventions & style guide</li>
-        <li><strong>Production</strong> — contenus, exemples, QA technique & éditoriale</li>
-        <li><strong>Release</strong> — publication, suivi métriques, itérations continues</li>
-      </ol>
+      <h2>Ma méthode en 4 étapes</h2>
+      <div class="process-grid">
+        <div class="process-item">
+          <div class="process-number">1</div>
+          <h3>Audit & Cadrage</h3>
+          <p>
+            Analyse de l'existant, définition des objectifs, identification des
+            personas.
+          </p>
+        </div>
+        <div class="process-item">
+          <div class="process-number">2</div>
+          <h3>Architecture & Design</h3>
+          <p>
+            Conception de l'arborescence, création des templates, définition du
+            style guide et de votre ligne éditoriale.
+          </p>
+        </div>
+        <div class="process-item">
+          <div class="process-number">3</div>
+          <h3>Création & Optimisation</h3>
+          <p>
+            Rédaction des contenus techniques ou thought leadership,
+            développement d'exemples pratiques et assurance qualité complète.
+          </p>
+        </div>
+        <div class="process-item">
+          <div class="process-number">4</div>
+          <h3>Déploiement & Suivi</h3>
+          <p>
+            Mise en production, formation des équipes, publication des contenus
+            et mise en place des métriques de performance.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="about-cta">
     <div class="container">
       <div class="cta-box">
-        <h2>Un projet doc/API ou IA ?</h2>
-        <p>Je peux auditer l’existant, proposer une structure et livrer un pilote en quelques jours.</p>
+        <h2>Prêt·e à transformer votre documentation ?</h2>
+        <p>
+          Que ce soit pour de la documentation API, de la conformité IA ou du
+          contenu ghostwrité, <br>je peux auditer votre situation actuelle et vous
+          proposer une roadmap claire en quelques jours.
+        </p>
+        <div class="cta-benefits">
+          <div class="benefit">
+            <span class="benefit-icon">🔍</span>
+            <span>Solutions sur mesure</span>
+          </div>
+          <div class="benefit">
+            <span class="benefit-icon">📋</span>
+            <span>Approche adaptée à votre contexte</span>
+          </div>
+          <div class="benefit">
+            <span class="benefit-icon">🚀</span>
+            <span>Expertise technique</span>
+          </div>
+        </div>
         <div class="cta-row">
-          <a href="/fr/contact" class="btn btn-primary">Parler du besoin</a>
-          <a href="/about/cv-fr.pdf" class="btn" target="_blank" rel="noopener" download>📄 Télécharger mon CV (PDF)</a>
+          <a href="/fr/contact" class="btn btn-primary">
+            <span>Discuter de votre projet</span>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5 12h14m-7-7 7 7-7 7"></path>
+            </svg>
+          </a>
+          <a
+            href="/about/cv-bgallais-fr.pdf"
+            class="btn btn-secondary"
+            target="_blank"
+            rel="noopener"
+            download
+          >
+            <span>📄 Télécharger mon CV</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
-
-  <style>
-    .about-hero { padding: 3rem 0 1rem; }
-    .about-hero__grid { display: grid; gap: 2rem; align-items: center; }
-    @media (min-width: 900px){ .about-hero__grid { grid-template-columns: 1.2fr .8fr; } }
-    .about-hero__text { margin-bottom: 1.5rem; }
-    .title { font-size: 2rem; line-height: 1.2; margin: 0 0 .75rem; }
-    /* + espace autour des paragraphes/listes du hero */
-    .lead { font-size: 1.1rem; color: rgb(var(--color-text)); margin: 0 0 1.75rem; line-height: 1.7; }
-    .bullets { margin: 0 0 2rem; padding-left: 1.2rem; line-height: 1.6; }
-    .bullets li { margin-bottom: .6rem; }
-    .about-hero .btn { margin-right: .5rem; }
-    .about-portrait { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 8px 30px rgb(0 0 0 / .06); }
-
-    .about-bio { padding: 2rem 0; }
-    .about-cards { display: grid; gap: 1rem; margin-top: 1rem; }
-    @media (min-width: 900px){ .about-cards { grid-template-columns: repeat(3,1fr); } }
-    .card { border: 1px solid rgb(var(--color-border)); border-radius: 14px; padding: 1rem; background: rgb(var(--color-background)); }
-
-    .about-expertise { padding: 1.5rem 0; }
-    .chips { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: .5rem 0 0; }
-    .chips li { padding: .4rem .7rem; border: 1px solid rgb(var(--color-border)); border-radius: 999px; font-size: .9rem; background: rgb(var(--color-surface)); }
-
-    .about-process { padding: 1.5rem 0 2rem; }
-    .steps { padding-left: 1.2rem; margin: .5rem 0 0; }
-
-    .about-cta { padding: 2rem 0 3rem; }
-    .cta-box { border: 1px solid rgb(var(--color-border)); border-radius: 16px; padding: 1.25rem; text-align: center; background: rgb(var(--color-background)); }
-    .cta-row { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
-  </style>
 </BaseLayout>
+
+<style>
+  .about-hero {
+    padding: 3rem 0 1rem;
+  }
+  .about-hero__grid {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+  }
+  @media (min-width: 900px) {
+    .about-hero__grid {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+  }
+  .about-hero__text {
+    margin-bottom: 1.5rem;
+  }
+  .title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 0.75rem;
+  }
+  /* + espace autour des paragraphes/listes du hero */
+  .lead {
+    font-size: 1.1rem;
+    color: rgb(var(--color-text));
+    margin: 0 0 1.75rem;
+    line-height: 1.7;
+  }
+  .bullets {
+    margin: 0 0 2rem;
+    padding-left: 1.2rem;
+    line-height: 1.6;
+  }
+  .bullets li {
+    margin-bottom: 0.6rem;
+  }
+  .about-hero .btn {
+    margin-right: 0.5rem;
+  }
+  .about-portrait {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgb(0 0 0 / 0.06);
+  }
+
+  /* Section Parcours */
+  .about-background {
+    padding: 3rem 0 2rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-surface-variant) / 0.3) 0%,
+      rgb(var(--color-primary) / 0.02) 100%
+    );
+  }
+  .about-background h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: rgb(var(--color-text));
+  }
+  .background-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 900px) {
+    .background-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+  }
+  .bg-item {
+    background: rgb(var(--color-surface) / 0.8);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+  }
+  .bg-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgb(var(--color-shadow) / 0.1);
+    border-color: rgb(var(--color-primary) / 0.3);
+  }
+  .bg-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .bg-item h3 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+  }
+  .bg-item p {
+    margin: 0;
+    line-height: 1.6;
+    color: rgb(var(--color-text-muted));
+  }
+
+  /* Section Approche */
+  .about-approach {
+    padding: 3rem 0 2rem;
+  }
+  .about-approach h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: rgb(var(--color-text));
+  }
+  .section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgb(var(--color-text-muted));
+  }
+  .approach-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 900px) {
+    .approach-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+  }
+  .approach-item {
+    background: rgb(var(--color-surface) / 0.6);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+  }
+  .approach-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgb(var(--color-shadow) / 0.1);
+    border-color: rgb(var(--color-primary) / 0.3);
+  }
+  .approach-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .approach-item h3 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+  }
+  .approach-item p {
+    margin: 0;
+    line-height: 1.6;
+    color: rgb(var(--color-text-muted));
+  }
+
+  /* Section Expertise */
+  .about-expertise {
+    padding: 3rem 0 2rem;
+    background: rgb(var(--color-surface-variant) / 0.2);
+  }
+  .about-expertise h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: rgb(var(--color-text));
+  }
+  .expertise-categories {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 900px) {
+    .expertise-categories {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+  }
+  .expertise-category {
+    background: rgb(var(--color-surface) / 0.8);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+  }
+  .expertise-category:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgb(var(--color-shadow) / 0.1);
+  }
+  .expertise-category h3 {
+    margin: 0 0 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+  }
+  .tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .tech-list li {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    background: rgb(var(--color-background) / 0.8);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: rgb(var(--color-text-muted));
+    transition: all var(--transition-fast);
+  }
+  .tech-list li:hover {
+    color: rgb(var(--color-primary));
+    border-color: rgb(var(--color-primary) / 0.3);
+  }
+
+  /* Section Processus */
+  .about-process {
+    padding: 3rem 0 2rem;
+  }
+  .about-process h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: rgb(var(--color-text));
+  }
+  .process-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 900px) {
+    .process-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+  }
+  .process-item {
+    background: rgb(var(--color-surface) / 0.6);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+    position: relative;
+  }
+  .process-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgb(var(--color-shadow) / 0.1);
+    border-color: rgb(var(--color-primary) / 0.3);
+  }
+  .process-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-accent))
+    );
+    color: white;
+    border-radius: 50%;
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  .process-item h3 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+  }
+  .process-item p {
+    margin: 0;
+    line-height: 1.6;
+    color: rgb(var(--color-text-muted));
+  }
+
+  .about-cta {
+    padding: 2rem 0 3rem;
+  }
+  .cta-box {
+    border: 1px solid rgb(var(--color-border));
+    border-radius: 16px;
+    padding: 1.25rem;
+    text-align: center;
+    background: rgb(var(--color-background));
+  }
+  .cta-row {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  /* Section Approche */
+  .about-approach {
+    padding: 3rem 0 2rem;
+  }
+  .about-approach h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: rgb(var(--color-text));
+  }
+  .section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgb(var(--color-text-muted));
+  }
+  .approach-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 900px) {
+    .approach-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+  }
+  .approach-item {
+    background: rgb(var(--color-surface) / 0.6);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+  }
+  .approach-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgb(var(--color-shadow) / 0.1);
+    border-color: rgb(var(--color-primary) / 0.3);
+  }
+  .approach-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .approach-item h3 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+  }
+  .approach-item p {
+    margin: 0;
+    line-height: 1.6;
+    color: rgb(var(--color-text-muted));
+  }
+
+  /* Section Expertise */
+  .about-expertise {
+    padding: 3rem 0 2rem;
+    background: rgb(var(--color-surface-variant) / 0.2);
+  }
+  .about-expertise h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: rgb(var(--color-text));
+  }
+  .expertise-categories {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 900px) {
+    .expertise-categories {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+  }
+  .expertise-category {
+    background: rgb(var(--color-surface) / 0.8);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+  }
+  .expertise-category:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgb(var(--color-shadow) / 0.1);
+  }
+  .expertise-category h3 {
+    margin: 0 0 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+  }
+  .tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .tech-list li {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    background: rgb(var(--color-background) / 0.8);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: rgb(var(--color-text-muted));
+    transition: all var(--transition-fast);
+  }
+  .tech-list li:hover {
+    color: rgb(var(--color-primary));
+    border-color: rgb(var(--color-primary) / 0.3);
+  }
+
+  /* Section Processus */
+  .about-process {
+    padding: 3rem 0 2rem;
+  }
+  .about-process h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: rgb(var(--color-text));
+  }
+  .process-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 900px) {
+    .process-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+  }
+  .process-item {
+    background: rgb(var(--color-surface) / 0.6);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+    position: relative;
+  }
+  .process-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgb(var(--color-shadow) / 0.1);
+    border-color: rgb(var(--color-primary) / 0.3);
+  }
+  .process-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-accent))
+    );
+    color: white;
+    border-radius: 50%;
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  .process-item h3 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+  }
+  .process-item p {
+    margin: 0;
+    line-height: 1.6;
+    color: rgb(var(--color-text-muted));
+  }
+</style>

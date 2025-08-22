@@ -1,0 +1,239 @@
+---
+// src/pages/fr/politique-confidentialite.astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Politique de confidentialité — Bérangère Gallais"
+  description="Politique de confidentialité du site berangeregallais.com"
+  lang="fr"
+>
+  <section class="legal-hero">
+    <div class="container">
+      <h1>Politique de confidentialité</h1>
+      <p class="legal-date">
+        En vigueur au <time datetime="2025-08-25">25 août 2025</time>
+      </p>
+    </div>
+  </section>
+
+  <section class="legal-content">
+    <div class="container">
+      <div class="legal-wrapper">
+        <section aria-labelledby="intro">
+          <h2 id="intro">Introduction</h2>
+          <p>
+            La présente politique de confidentialité a pour objet d'informer les
+            Utilisateurs du site
+            <a href="https://www.berangeregallais.com">https://www.berangeregallais.com</a>
+            (ci-après le « Site ») sur la manière dont leurs données personnelles sont
+            collectées et traitées.
+          </p>
+          <p>
+            Le respect de la vie privée et des données personnelles est une
+            priorité. Toutes les données sont traitées conformément au Règlement
+            (UE) 2016/679 (RGPD) et à la loi Informatique et Libertés.
+          </p>
+        </section>
+
+        <section aria-labelledby="data-collected">
+          <h2 id="data-collected">Données collectées</h2>
+          <p>Les données suivantes peuvent être collectées :</p>
+          <ul class="legal-list">
+            <li>Nom, prénom</li>
+            <li>Adresse e-mail</li>
+            <li>Informations saisies dans le formulaire de contact</li>
+            <li>Données de navigation (via outils d'analyse anonymisés)</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="purpose">
+          <h2 id="purpose">Finalités du traitement</h2>
+          <p>Les données collectées sont utilisées pour :</p>
+          <ul class="legal-list">
+            <li>Répondre aux demandes envoyées via le formulaire de contact</li>
+            <li>Établir un échange professionnel avec l'Utilisateur</li>
+            <li>Assurer la sécurité et l'amélioration du Site</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="retention">
+          <h2 id="retention">Durée de conservation</h2>
+          <p>
+            Les données personnelles sont conservées uniquement le temps nécessaire
+            à la réalisation des finalités décrites ci-dessus et conformément aux
+            obligations légales.
+          </p>
+        </section>
+
+        <section aria-labelledby="rights">
+          <h2 id="rights">Droits des Utilisateurs</h2>
+          <p>
+            Conformément à la réglementation applicable, l'Utilisateur dispose des
+            droits suivants :
+          </p>
+          <ul class="legal-list">
+            <li>Droit d'accès, de rectification et de suppression</li>
+            <li>Droit d'opposition et de limitation du traitement</li>
+            <li>Droit à la portabilité des données</li>
+          </ul>
+          <p>Ces droits peuvent être exercés en contactant :</p>
+          <ul class="legal-list">
+            <li>
+              par e-mail à <a href="mailto:contact@berangeregallais.com">contact@berangeregallais.com</a>
+            </li>
+            <li>via le formulaire de contact disponible sur le Site</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="cookies">
+          <h2 id="cookies">Cookies</h2>
+          <p>
+            Le Site peut utiliser des cookies strictement nécessaires à son
+            fonctionnement et des cookies analytiques anonymisés. L'Utilisateur peut
+            gérer ou désactiver les cookies depuis son navigateur.
+          </p>
+        </section>
+
+        <section aria-labelledby="updates">
+          <h2 id="updates">Mises à jour</h2>
+          <p>
+            La présente politique de confidentialité peut être mise à jour à tout
+            moment. La date de dernière mise à jour sera indiquée en haut de la
+            page.
+          </p>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero Section */
+  .legal-hero {
+    padding: 6rem 0 3rem;
+    background: linear-gradient(135deg, 
+      rgb(var(--color-background)) 0%, 
+      rgb(var(--color-primary) / 0.03) 100%);
+    text-align: center;
+    border-bottom: 1px solid rgb(var(--color-border) / 0.2);
+  }
+
+  .legal-hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .legal-date {
+    font-size: 1rem;
+    color: rgb(var(--color-text-muted));
+    margin: 0;
+  }
+
+  /* Content Section */
+  .legal-content {
+    padding: 4rem 0 6rem;
+    background: rgb(var(--color-background));
+  }
+
+  .legal-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* Typography */
+  .legal-content h2 {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 3rem 0 1.5rem 0;
+    color: rgb(var(--color-text));
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgb(var(--color-primary) / 0.2);
+  }
+
+  .legal-content h2:first-child {
+    margin-top: 0;
+  }
+
+  .legal-content p {
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .legal-content strong {
+    color: rgb(var(--color-text));
+    font-weight: 600;
+  }
+
+  .legal-content em {
+    color: rgb(var(--color-text-muted));
+    font-style: italic;
+  }
+
+  /* Links */
+  .legal-content a {
+    color: rgb(var(--color-primary));
+    text-decoration: none;
+    border-bottom: 1px solid rgb(var(--color-primary) / 0.3);
+    transition: all var(--transition-fast);
+  }
+
+  .legal-content a:hover {
+    color: rgb(var(--color-text));
+    border-bottom-color: rgb(var(--color-text));
+  }
+
+  /* Lists */
+  .legal-list {
+    margin: 1rem 0 1.5rem 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .legal-list li {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 2rem;
+    margin-bottom: 0.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .legal-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    color: rgb(var(--color-primary));
+    font-weight: 600;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .legal-hero {
+      padding: 4rem 0 2rem;
+    }
+
+    .legal-content {
+      padding: 3rem 0 4rem;
+    }
+
+    .legal-content h2 {
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .legal-hero h1 {
+      font-size: 2rem;
+    }
+
+    .legal-content h2 {
+      font-size: 1.375rem;
+    }
+  }
+</style>

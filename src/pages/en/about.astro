@@ -1,54 +1,110 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="About — Bérangère Gallais" description="Technical Writer & DocOps — API documentation, AI & developer workflows.">
+<BaseLayout
+  title="About — Bérangère Gallais"
+  description="Technical Writer & DocOps — API documentation, AI & dev workflows."
+>
   <section class="about-hero">
     <div class="container">
       <div class="about-hero__grid">
         <div class="about-hero__text">
-          <h1 class="title">Hi, I’m Bérangère 👋</h1>
+          <h1 class="title">Hello, I'm Bérangère 👋</h1>
           <p class="lead">
-            <strong>Technical Writer & Ghostwriter</strong> focused on <strong>API documentation</strong> and <strong>AI</strong>.
-            I help product teams ship clear, actionable docs with strong compliance (AI Act, quality, traceability).
+            <strong>Technical Writer & Ghostwriter</strong> specialized in <strong
+              >API documentation</strong
+            > and <strong>AI</strong>. I help tech teams deliver clear
+            documentation that accelerates onboarding and ensures compliance.
           </p>
           <ul class="bullets">
-            <li>API docs (REST/SDK) — Docusaurus, GitBook, MkDocs</li>
-            <li>Information architecture, glossaries, multi-language examples</li>
-            <li>DocOps workflows — CI/CD, linting, templates, versioning</li>
+            <li>Documentation: Docusaurus, GitBook, MkDocs</li>
+            <li>Standards: OpenAPI, Markdown/MDX</li>
+            <li>Deployment: CI/CD, GitHub Pages, GitLab, Netlify</li>
           </ul>
           <div class="cta-row">
-            <a href="/en/contact" class="btn btn-primary">Discuss your docs</a>
-            <a href="/en/portfolio" class="btn">See portfolio</a>
+            <a href="/en/contact" class="btn btn-primary"
+              >Discuss Your Documentation</a
+            >
+            <a href="/en/portfolio" class="btn">View portfolio</a>
           </div>
         </div>
         <div class="about-hero__media">
-          <img src="/about/portrait.jpg" alt="Portrait of Bérangère Gallais" class="about-portrait" />
+          <img
+            src="/about/portrait.jpg"
+            alt="Portrait of Bérangère Gallais"
+            class="about-portrait"
+          />
         </div>
       </div>
     </div>
   </section>
 
-  <section class="about-bio">
+  <section class="about-background">
     <div class="container">
-      <h2>How I work</h2>
-      <p>
-        Great documentation reduces onboarding time, avoids repetitive tickets and builds trust.
-        I get involved early to shape structure, examples and compliance requirements, while
-        preparing a reusable foundation that evolves with the product.
+      <h2>My journey</h2>
+      <div class="background-grid">
+        <div class="bg-item">
+          <div class="bg-icon">👩‍💻</div>
+          <h3>6 years in tech</h3>
+          <p>
+            Developer then QA automation engineer - I know the challenges of
+            technical teams from the inside.
+          </p>
+        </div>
+        <div class="bg-item">
+          <div class="bg-icon">🔄</div>
+          <h3>Natural transition</h3>
+          <p>
+            From writing code to writing about code - an evolution that brings
+            meaning to my docs.
+          </p>
+        </div>
+        <div class="bg-item">
+          <div class="bg-icon">📚</div>
+          <h3>Documentation expert</h3>
+          <p>
+            Today a specialized technical writer, I understand both technical
+            challenges and documentation requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-approach">
+    <div class="container">
+      <h2>My approach</h2>
+      <p class="section-intro">
+        Good documentation reduces onboarding time, prevents repetitive tickets
+        and builds confidence. I intervene in the cycle to frame the structure,
+        examples and compliance requirements, while preparing a reusable base
+        that lives with the product.
       </p>
-      <div class="about-cards">
-        <div class="card">
+      <div class="approach-grid">
+        <div class="approach-item">
+          <div class="approach-icon">✨</div>
           <h3>Clarity & structure</h3>
-          <p>Logical navigation, clean tables of contents, naming conventions, <em>copy-paste ready</em> examples.</p>
+          <p>
+            Logical navigation, polished summaries, naming conventions,
+            <em>copy-paste ready</em> examples.
+          </p>
         </div>
-        <div class="card">
-          <h3>Developer-first</h3>
-          <p>Quickstarts, use-case guides, multi-language snippets, FAQs and troubleshooting.</p>
+        <div class="approach-item">
+          <div class="approach-icon">👨‍💻</div>
+          <h3>Developer-focused</h3>
+          <p>
+            Quickstarts, use case guides, multi-language snippets, FAQ and
+            troubleshooting.
+          </p>
         </div>
-        <div class="card">
+        <div class="approach-item">
+          <div class="approach-icon">⚙️</div>
           <h3>DocOps</h3>
-          <p>Templates, linters, PR reviews, staging, continuous publishing, versioning & search.</p>
+          <p>
+            Templates, linters, PR review, pre-prod, continuous publishing,
+            versioning & search.
+          </p>
         </div>
       </div>
     </div>
@@ -57,65 +113,458 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="about-expertise">
     <div class="container">
       <h2>Tools & ecosystem</h2>
-      <ul class="chips">
-        <li>Docusaurus</li><li>GitBook</li><li>MkDocs</li><li>OpenAPI</li><li>Markdown/MDX</li>
-        <li>CI/CD</li><li>GitHub Pages</li><li>Netlify</li>
-      </ul>
+      <div class="expertise-categories">
+        <div class="expertise-category">
+          <h3>Documentation</h3>
+          <ul class="tech-list">
+            <li>Docusaurus</li>
+            <li>GitBook</li>
+            <li>MkDocs</li>
+          </ul>
+        </div>
+        <div class="expertise-category">
+          <h3>Standards</h3>
+          <ul class="tech-list">
+            <li>OpenAPI</li>
+            <li>Markdown/MDX</li>
+            <li>REST/GraphQL</li>
+          </ul>
+        </div>
+        <div class="expertise-category">
+          <h3>Deployment</h3>
+          <ul class="tech-list">
+            <li>CI/CD</li>
+            <li>GitHub Pages</li>
+            <li>Netlify</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="about-process">
     <div class="container">
-      <h2>4-step process</h2>
-      <ol class="steps">
-        <li><strong>Kickoff</strong> — goals, personas, scope, sources of truth</li>
-        <li><strong>Structure</strong> — IA, templates, conventions & style guide</li>
-        <li><strong>Production</strong> — content, examples, technical & editorial QA</li>
-        <li><strong>Release</strong> — publishing, metrics, continuous iteration</li>
-      </ol>
+      <h2>My 4-step method</h2>
+      <div class="process-grid">
+        <div class="process-item">
+          <div class="process-number">1</div>
+          <h3>Audit & Scoping</h3>
+          <p>
+            Analysis of existing content, goal definition, persona
+            identification.
+          </p>
+        </div>
+        <div class="process-item">
+          <div class="process-number">2</div>
+          <h3>Architecture & Design</h3>
+          <p>
+            Information architecture design, template creation, style guide
+            definition and editorial line development.
+          </p>
+        </div>
+        <div class="process-item">
+          <div class="process-number">3</div>
+          <h3>Creation & Optimization</h3>
+          <p>
+            Technical content or thought leadership writing, practical examples
+            development and complete quality assurance.
+          </p>
+        </div>
+        <div class="process-item">
+          <div class="process-number">4</div>
+          <h3>Deployment & Monitoring</h3>
+          <p>
+            Production deployment, team training, content publishing and
+            performance metrics implementation.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="about-cta">
     <div class="container">
       <div class="cta-box">
-        <h2>Have an API or AI doc project?</h2>
-        <p>I can audit the current docs, propose a structure and ship a pilot in a few days.</p>
+        <h2>Ready to transform your documentation?</h2>
+        <p>
+          Whether for API documentation, AI compliance or ghostwritten content,<br>
+          I can audit your current situation and propose a clear roadmap in a
+          few days.
+        </p>
+        <div class="cta-benefits">
+          <div class="benefit">
+            <span class="benefit-icon">🔍</span>
+            <span>Tailored solutions</span>
+          </div>
+          <div class="benefit">
+            <span class="benefit-icon">📋</span>
+            <span>Context-adapted approach</span>
+          </div>
+          <div class="benefit">
+            <span class="benefit-icon">🚀</span>
+            <span>Technical expertise</span>
+          </div>
+        </div>
         <div class="cta-row">
-          <a href="/en/contact" class="btn btn-primary">Let’s talk</a>
-          <a href="/about/cv-en.pdf" class="btn" target="_blank" rel="noopener" download>📄 Download my CV (PDF)</a>
+          <a href="/en/contact" class="btn btn-primary">
+            <span>Discuss your project</span>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5 12h14m-7-7 7 7-7 7"></path>
+            </svg>
+          </a>
+          <a
+            href="/about/cv-bgallais-en.pdf"
+            class="btn btn-secondary"
+            target="_blank"
+            rel="noopener"
+            download
+          >
+            <span>📄 Download my CV</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
-
-  <style>
-    .about-hero { padding: 3rem 0 1rem; }
-    .about-hero__grid { display: grid; gap: 2rem; align-items: center; }
-    @media (min-width: 900px){ .about-hero__grid { grid-template-columns: 1.2fr .8fr; } }
-    .about-hero__text { margin-bottom: 1.5rem; }
-    .title { font-size: 2rem; line-height: 1.2; margin: 0 0 .75rem; }
-    /* more spacing around the intro & list */
-    .lead { font-size: 1.1rem; color: rgb(var(--color-text)); margin: 0 0 1.75rem; line-height: 1.7; }
-    .bullets { margin: 0 0 2rem; padding-left: 1.2rem; line-height: 1.6; }
-    .bullets li { margin-bottom: .6rem; }
-    .about-hero .btn { margin-right: .5rem; }
-    .about-portrait { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 8px 30px rgb(0 0 0 / .06); }
-
-    .about-bio { padding: 2rem 0; }
-    .about-cards { display: grid; gap: 1rem; margin-top: 1rem; }
-    @media (min-width: 900px){ .about-cards { grid-template-columns: repeat(3,1fr); } }
-    .card { border: 1px solid rgb(var(--color-border)); border-radius: 14px; padding: 1rem; background: rgb(var(--color-background)); }
-
-    .about-expertise { padding: 1.5rem 0; }
-    .chips { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: .5rem 0 0; }
-    .chips li { padding: .4rem .7rem; border: 1px solid rgb(var(--color-border)); border-radius: 999px; font-size: .9rem; background: rgb(var(--color-surface)); }
-
-    .about-process { padding: 1.5rem 0 2rem; }
-    .steps { padding-left: 1.2rem; margin: .5rem 0 0; }
-
-    .about-cta { padding: 2rem 0 3rem; }
-    .cta-box { border: 1px solid rgb(var(--color-border)); border-radius: 16px; padding: 1.25rem; text-align: center; background: rgb(var(--color-background)); }
-    .cta-row { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
-  </style>
 </BaseLayout>
+
+<style>
+  .about-hero {
+    padding: 3rem 0 1rem;
+  }
+  .about-hero__grid {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+  }
+  @media (min-width: 900px) {
+    .about-hero__grid {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+  }
+  .about-hero__text {
+    margin-bottom: 1.5rem;
+  }
+  .title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 0.75rem;
+  }
+  /* + espace autour des paragraphes/listes du hero */
+  .lead {
+    font-size: 1.1rem;
+    color: rgb(var(--color-text));
+    margin: 0 0 1.75rem;
+    line-height: 1.7;
+  }
+  .bullets {
+    margin: 0 0 2rem;
+    padding-left: 1.2rem;
+    line-height: 1.6;
+  }
+  .bullets li {
+    margin-bottom: 0.6rem;
+  }
+  .about-hero .btn {
+    margin-right: 0.5rem;
+  }
+  .about-portrait {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgb(0 0 0 / 0.06);
+  }
+
+  /* Section Parcours */
+  .about-background {
+    padding: 3rem 0 2rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-surface-variant) / 0.3) 0%,
+      rgb(var(--color-primary) / 0.02) 100%
+    );
+  }
+  .about-background h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: rgb(var(--color-text));
+  }
+  .background-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 900px) {
+    .background-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+  }
+  .bg-item {
+    background: rgb(var(--color-surface) / 0.8);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+  }
+  .bg-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgb(var(--color-shadow) / 0.1);
+    border-color: rgb(var(--color-primary) / 0.3);
+  }
+  .bg-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .bg-item h3 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+  }
+  .bg-item p {
+    margin: 0;
+    line-height: 1.6;
+    color: rgb(var(--color-text-muted));
+  }
+
+  /* Section Approche */
+  .about-approach {
+    padding: 3rem 0 2rem;
+  }
+  .about-approach h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: rgb(var(--color-text));
+  }
+  .section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgb(var(--color-text-muted));
+  }
+  .approach-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 900px) {
+    .approach-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+  }
+  .approach-item {
+    background: rgb(var(--color-surface) / 0.6);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+  }
+  .approach-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgb(var(--color-shadow) / 0.1);
+    border-color: rgb(var(--color-primary) / 0.3);
+  }
+  .approach-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .approach-item h3 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+  }
+  .approach-item p {
+    margin: 0;
+    line-height: 1.6;
+    color: rgb(var(--color-text-muted));
+  }
+
+  /* Section Expertise */
+  .about-expertise {
+    padding: 3rem 0 2rem;
+    background: rgb(var(--color-surface-variant) / 0.2);
+  }
+  .about-expertise h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: rgb(var(--color-text));
+  }
+  .expertise-categories {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 900px) {
+    .expertise-categories {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+  }
+  .expertise-category {
+    background: rgb(var(--color-surface) / 0.8);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+  }
+  .expertise-category:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgb(var(--color-shadow) / 0.1);
+  }
+  .expertise-category h3 {
+    margin: 0 0 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+  }
+  .tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .tech-list li {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    background: rgb(var(--color-background) / 0.8);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: rgb(var(--color-text-muted));
+    transition: all var(--transition-fast);
+  }
+  .tech-list li:hover {
+    color: rgb(var(--color-primary));
+    border-color: rgb(var(--color-primary) / 0.3);
+  }
+
+  /* Section Processus */
+  .about-process {
+    padding: 3rem 0 2rem;
+  }
+  .about-process h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    color: rgb(var(--color-text));
+  }
+  .process-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 900px) {
+    .process-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+  }
+  .process-item {
+    background: rgb(var(--color-surface) / 0.6);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+    position: relative;
+  }
+  .process-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgb(var(--color-shadow) / 0.1);
+    border-color: rgb(var(--color-primary) / 0.3);
+  }
+  .process-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-accent))
+    );
+    color: white;
+    border-radius: 50%;
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  .process-item h3 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+  }
+  .process-item p {
+    margin: 0;
+    line-height: 1.6;
+    color: rgb(var(--color-text-muted));
+  }
+
+  .about-cta {
+    padding: 2rem 0 3rem;
+  }
+  .cta-box {
+    border: 1px solid rgb(var(--color-border));
+    border-radius: 16px;
+    padding: 1.25rem;
+    text-align: center;
+    background: rgb(var(--color-background));
+  }
+  .cta-row {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .cta-benefits {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+
+  .benefit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: rgb(var(--color-text-muted));
+  }
+
+  .benefit-icon {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 768px) {
+    .cta-benefits {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+</style>

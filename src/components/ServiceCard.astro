@@ -1,17 +1,20 @@
 ---
 // src/components/ServiceCard.astro
 export interface Props {
-  icon: 'audit' | 'api' | 'ai' | 'ghostwriting';
+  icon: 'audit' | 'api' | 'ai' | 'ghostwriting' | 'maintenance';
   title: string;
   description: string;
   link: string;
+  lang?: 'fr' | 'en';
 }
 
-const { icon, title, description, link } = Astro.props;
+const { icon, title, description, link, lang = 'fr' } = Astro.props;
+const linkText = lang === 'fr' ? 'En savoir plus' : 'Learn More';
 ---
 
-<div class="service-card">
-  <div class="service-icon">
+<a href={link} class="service-card-link">
+  <div class="service-card">
+    <div class="service-icon">
     {icon === 'audit' && (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -43,19 +46,30 @@ const { icon, title, description, link } = Astro.props;
         <line x1="13" y1="9" x2="8" y2="9"/>
       </svg>
     )}
+    {icon === 'maintenance' && (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+      </svg>
+    )}
   </div>
   <h3 class="service-title">{title}</h3>
   <p class="service-description">{description}</p>
-  <a href={link} class="service-link">
-    Learn More
+  <span class="service-link">
+    {linkText}
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <path d="M7 17L17 7"/>
       <path d="M7 7h10v10"/>
     </svg>
-  </a>
+  </span>
 </div>
+</a>
 
 <style>
+  .service-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
   .service-card {
     background: rgb(var(--color-surface) / 0.6);
     border: 1px solid rgb(var(--color-border) / 0.3);
@@ -135,11 +149,10 @@ const { icon, title, description, link } = Astro.props;
     gap: 0.5rem;
     color: rgb(var(--color-primary));
     font-weight: 500;
-    text-decoration: none;
     transition: all var(--transition-fast);
   }
 
-  .service-link:hover {
+  .service-card-link:hover .service-link {
     gap: 0.75rem;
   }
 
@@ -147,7 +160,7 @@ const { icon, title, description, link } = Astro.props;
     transition: transform var(--transition-fast);
   }
 
-  .service-link:hover svg {
+  .service-card-link:hover .service-link svg {
     transform: translate(2px, -2px);
   }
 

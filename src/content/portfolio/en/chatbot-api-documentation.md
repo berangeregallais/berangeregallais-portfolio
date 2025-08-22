@@ -17,8 +17,7 @@ deliverables: [
 ]
 technologies: ["GitHub Pages", "Markdown", "JavaScript", "API Documentation", "Interactive Examples"]
 results: "Modern documentation portal that serves as both technical reference and developer education platform, hosted on GitHub Pages for easy maintenance and updates"
-featured: true
-image: "https://via.placeholder.com/800x500/4338ca/ffffff?text=Chatbot+API+Docs"
+image: "/portfolio/chatbot-api-docs.png"
 demoUrl: "https://berangeregallais.github.io/chatbot-api-documentation/"
 githubUrl: "https://github.com/berangeregallais/chatbot-api-documentation"
 category: ["api-docs", "ai-platform"]

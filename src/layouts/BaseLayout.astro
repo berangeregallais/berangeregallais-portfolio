@@ -2,25 +2,19 @@
 // src/layouts/BaseLayout.astro
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import blogCss from "../styles/blog.css?url";
 
 export interface Props {
   title: string;
   description: string;
-  lang?: "en" | "fr"; // optionnelle : une page peut surcharger
+  lang?: "en" | "fr";
   image?: string;
 }
 
-// Déduire la langue depuis l’URL si la prop n’est pas fournie
+// Déduire la langue depuis l'URL si la prop n'est pas fournie
 const path = Astro.url.pathname;
 const detectedLang: "en" | "fr" = path.startsWith("/fr/") ? "fr" : "en";
 
-const {
-  title,
-  description,
-  lang, // si non fourni, on prendra detectedLang
-  image = "/og-default.jpg",
-} = Astro.props;
+const { title, description, lang, image = "/og-default.jpg" } = Astro.props;
 
 const resolvedLang: "en" | "fr" = lang ?? detectedLang;
 
@@ -41,6 +35,7 @@ const ogImageURL = new URL(image, Astro.site);
     <!-- SEO -->
     <title>{title}</title>
     <link rel="canonical" href={canonicalURL} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageURL} />
@@ -52,12 +47,9 @@ const ogImageURL = new URL(image, Astro.site);
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap&family=Trocchi&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Blog styles (bundled from src/styles/blog.css) -->
-    <link rel="stylesheet" href={blogCss} />
 
     <!-- Theme initialization script (inline, JS pur) -->
     <script is:inline>
@@ -93,18 +85,22 @@ const ogImageURL = new URL(image, Astro.site);
     </script>
   </head>
   <body>
-    <Header lang={resolvedLang} />
-    <main>
-      <slot />
-    </main>
-    <Footer lang={resolvedLang} />
+    <!-- WRAPPER qui colle le footer en bas -->
+    <div class="layout">
+      <Header lang={resolvedLang} />
 
-    <!-- Theme toggle functionality (no param = no TS complaint) -->
+      <main class="main">
+        <slot />
+      </main>
+
+      <Footer lang={resolvedLang} />
+    </div>
+
+    <!-- Theme toggle functionality -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const themeToggle = document.querySelector("[data-theme-toggle]");
 
-        // Ne prend plus de paramètre : lit le thème actuel depuis le DOM
         const updateAria = () => {
           const toggle = document.querySelector("[data-theme-toggle]");
           if (!toggle) return;
@@ -123,50 +119,72 @@ const ogImageURL = new URL(image, Astro.site);
             try {
               localStorage.setItem("theme", next);
             } catch {}
-            updateAria(); // <-- plus d'argument
+            updateAria();
           });
         }
 
-        updateAria(); // <-- plus d'argument
+        updateAria();
       });
     </script>
   </body>
 </html>
 
 <style is:global>
+  /* Sticky footer: structure */
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-text));
+    line-height: 1.6;
+    transition:
+      background-color var(--transition-normal),
+      color var(--transition-normal);
+  }
+
+  .layout {
+    min-height: 100svh; /* vh dynamique (iOS) */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main {
+    flex: 1 0 auto;
+    min-height: calc(100vh - 120px); /* Ajuste selon tes header/footer */
+  }
+
   /* CSS Custom Properties for Theming */
   :root {
-    /* Your exact brand colors - Navy & Rose */
-    --color-primary: 230 183 212; /* Rose poudré exact #e6b7d4 */
-    --color-secondary: 219 112 147; /* Rose plus intense pour contraste */
-    --color-accent: 192 132 252; /* Lavande pour accents */
+    --color-primary: 230 183 212; /* #e6b7d4 */
+    --color-secondary: 219 112 147;
+    --color-accent: 192 132 252;
 
-    --color-text: 30 58 138; /* Bleu marine pour texte sur fond clair */
-    --color-text-muted: 71 85 105; /* Gris bleuté */
-    --color-text-inverse: 255 255 255; /* Blanc pour contraste */
+    --color-text: 30 58 138;
+    --color-text-muted: 71 85 105;
+    --color-text-inverse: 255 255 255;
 
-    --color-background: 255 255 255; /* Fond blanc pour thème clair */
-    --color-surface: 248 250 252; /* Blanc cassé pour cards */
-    --color-surface-variant: 241 245 249; /* Gris très clair */
+    --color-background: 255 255 255;
+    --color-surface: 248 250 252;
+    --color-surface-variant: 241 245 249;
 
-    --color-border: 226 232 240; /* Bordures claires */
-    --color-border-muted: 241 245 249; /* Bordures plus claires */
+    --color-border: 226 232 240;
+    --color-border-muted: 241 245 249;
 
-    --color-shadow: 30 58 138; /* Ombres bleu marine */
+    --color-shadow: 30 58 138;
 
-    /* Success, warning, error - adaptés à la palette */
     --color-success: 34 197 94;
     --color-warning: 251 191 36;
     --color-error: 239 68 68;
 
-    /* Fonts */
-    --font-logo: "Trocchi", "Lora", Georgia, serif;
+    --font-logo: "Merriweather", "Lora", Georgia, serif;
     --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
     --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
       "Roboto", sans-serif;
     --font-mono: "JetBrains Mono", "Menlo", "Monaco", "Courier New", monospace;
 
-    /* Spacing scale */
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -175,19 +193,16 @@ const ogImageURL = new URL(image, Astro.site);
     --space-2xl: 3rem;
     --space-3xl: 4rem;
 
-    /* Border radius */
     --radius-sm: 0.25rem;
     --radius-md: 0.5rem;
     --radius-lg: 0.75rem;
     --radius-xl: 1rem;
 
-    /* Transitions */
     --transition-fast: 150ms ease;
     --transition-normal: 250ms ease;
     --transition-slow: 350ms ease;
   }
 
-  /* Dark theme colors */
   [data-theme="dark"] {
     --color-text: 248 250 252;
     --color-text-muted: 148 163 184;
@@ -210,15 +225,6 @@ const ogImageURL = new URL(image, Astro.site);
   html {
     font-family: var(--font-sans);
     scroll-behavior: smooth;
-  }
-  body {
-    margin: 0;
-    background-color: rgb(var(--color-background));
-    color: rgb(var(--color-text));
-    line-height: 1.6;
-    transition:
-      background-color var(--transition-normal),
-      color var(--transition-normal);
   }
 
   /* Typography */
@@ -388,7 +394,7 @@ const ogImageURL = new URL(image, Astro.site);
     }
   }
 
-  /* Print styles */
+  /* Print */
   @media print {
     .no-print {
       display: none !important;

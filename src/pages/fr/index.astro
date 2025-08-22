@@ -1,13 +1,13 @@
 ---
 // src/pages/fr/index.astro
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import ServiceCard from '../../components/ServiceCard.astro';
-import PortfolioCard from '../../components/PortfolioCard.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceCard from "../../components/ServiceCard.astro";
+import PortfolioCard from "../../components/PortfolioCard.astro";
 ---
 
-<BaseLayout 
-  title="Ingénieure Documentation Technique & Ghostwriter | Docs API & Conformité IA"
-  description="Experte en rédaction technique spécialisée dans la documentation API, conformité AI Act, ghostwriting technique et audits stratégiques de contenu pour entreprises tech."
+<BaseLayout
+  title="Technical Documentation Architect | API & IA"
+  description="Technical Documentation Architect | API, IA Act, ghostwriting technique pour entreprises innovantes"
   lang="fr"
 >
   <!-- Hero Section -->
@@ -15,35 +15,35 @@ import PortfolioCard from '../../components/PortfolioCard.astro';
     <div class="container">
       <div class="hero-content">
         <h1 class="hero-title">
-          Documentation Technique<br/>
-          <span class="gradient-text">Qui Stimule l'Adoption Produit</span>
+          Technical Documentation<br />
+          <span class="gradient-text">Architect</span>
         </h1>
         <p class="hero-subtitle">
-          Ingénieure documentation experte spécialisée dans la documentation API, 
-          conformité AI Act, ghostwriting technique et audits stratégiques de contenu pour entreprises tech.
+          API, IA Act, ghostwriting : documentation premium 
+          pour entreprises tech qui innovent.
         </p>
         <div class="hero-cta">
           <a href="/fr/portfolio" class="btn btn-primary">Voir Le Portfolio</a>
-          <a href="/fr/services#audit" class="btn btn-secondary">Audit Documentation</a>
+          <a href="/fr/services#audit" class="btn btn-secondary"
+            >Discuter de Votre Projet</a
+          >
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="code-preview">
-          <div class="code-header">
-            <div class="dots">
-              <span></span><span></span><span></span>
-            </div>
-            <span class="filename">documentation-api.md</span>
-          </div>
-          <div class="code-content">
-            <pre><code># Documentation API
-## Authentification
 
-JSON:
-auth: "Bearer [token]"
-conformite: "AI Act Article 13"</code></pre>
-          </div>
+      <div class="code-preview">
+        <div class="code-header">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <span class="filename">neolens-api.sh</span>
         </div>
+        <pre
+          class="code-block"><code class="language-bash">curl -X POST https://api.neolens.ai/analyze \
+  -H "Authorization: Bearer &lt;token&gt;" \
+  -H "Content-Type: application/json" \
+  -d '&#123;
+    "image_url": "https://demo.org/mri-sample.png",
+    "task": "anomaly_detection",
+    "compliance": "AI Act Annex IV"
+  &#125;'</code></pre>
       </div>
     </div>
   </section>
@@ -56,26 +56,37 @@ conformite: "AI Act Article 13"</code></pre>
         <ServiceCard
           icon="audit"
           title="Audits & Stratégie Documentation"
-          description="Évaluation complète de votre écosystème documentaire avec feuille de route d'amélioration actionnable."
+          description="Évaluation complète de votre écosystème documentaire avec feuille de route d'amélioration claire et exploitable."
           link="/fr/services#audit"
+          lang="fr"
         />
         <ServiceCard
           icon="api"
           title="Excellence Documentation API"
-          description="Docs API centrées développeur, spécifications OpenAPI et documentation interactive qui accélère l'adoption."
+          description="Docs API centrées développeur, spécifications OpenAPI et documentation interactive pour une intégration rapide."
           link="/fr/services#api"
+          lang="fr"
         />
         <ServiceCard
           icon="ai"
-          title="Documentation Conformité AI Act"
+          title="Documentation AI Act"
           description="Documentation modèles IA, évaluations risques et frameworks conformité alignés avec les exigences du règlement IA européen."
           link="/fr/services#ai-compliance"
+          lang="fr"
         />
         <ServiceCard
           icon="ghostwriting"
-          title="Ghostwriting Technique"
-          description="Contenu expert sous votre signature : articles thought leadership, guides techniques et contenu éducatif pour asseoir votre autorité."
+          title="Ghostwriting Tech"
+          description="Du contenu d'expert rédigé sous votre signature : articles de thought leadership, guides techniques et livres blancs pour affirmer votre autorité."
           link="/fr/services#ghostwriting"
+          lang="fr"
+        />
+        <ServiceCard
+          icon="maintenance"
+          title="Maintenance Documentation"
+          description="Gardez votre documentation toujours à jour et performante avec un service de maintenance continue et des processus durables."
+          link="/fr/services#maintenance"
+          lang="fr"
         />
       </div>
     </div>
@@ -90,33 +101,30 @@ conformite: "AI Act Article 13"</code></pre>
       </div>
       <div class="portfolio-grid">
         <PortfolioCard
-          title="Portail Documentation API Chatbot"
-          client="Plateforme de Chatbot IA"
-          description="Suite complète de documentation API pour plateforme d'IA conversationnelle avec exemples interactifs et guides d'intégration développeurs"
-          tags={["GitHub Pages", "Documentation API", "Exemples Interactifs"]}
-          image="/portfolio/chatbot-api-docs.png"
-          link="https://berangeregallais.github.io/chatbot-api-documentation/"
-          featured={true}
-          category={["api-docs", "featured"]}
+          title="Neolens – Documentation API"
+          client="IA fictive d'imagerie médicale"
+          description="Documentation API complète pour l'analyse intelligente d'images médicales, avec guides interactifs, notes de conformité et onboarding développeur."
+          tags={["Docusaurus", "Documentation API", "Conformité IA"]}
+          image="/portfolio/neolens-api-docs.png"
+          link="https://neolens-api-docs.netlify.app/"
+          category={["api-docs"]}
         />
         <PortfolioCard
           title="Documentation API Cognitia sur GitBook"
-          client="Plateforme IA Cognitia"
+          client="Plateforme IA Cognitia fictive"
           description="Plateforme de documentation API professionnelle construite sur GitBook avec recherche avancée, collaboration équipe et expérience développeur interactive"
           tags={["GitBook", "Collaboration Équipe", "Publication Entreprise"]}
           image="/portfolio/cognitia-api-docs.png"
           link="https://cognitia-api-documentation.gitbook.io/bgallais"
-          featured={true}
-          category={["api-docs", "enterprise", "featured"]}
+          category={["api-docs", "enterprise"]}
         />
         <PortfolioCard
           title="Documentation Plateforme Visionary IA"
-          client="Plateforme Visionary IA"
+          client="Plateforme Visionary IA fictive"
           description="Documentation complète de plateforme IA axée sur la conformité AI Act, transparence des modèles et directives d'implémentation IA responsable"
           tags={["Conformité AI Act", "IA Responsable", "GitHub Pages"]}
           image="/portfolio/visionary-ai-docs.png"
           link="https://berangeregallais.github.io/visionary-ai/introduction"
-          featured={false}
           category={["ai-compliance"]}
         />
       </div>
@@ -127,322 +135,391 @@ conformite: "AI Act Article 13"</code></pre>
   <section class="cta-section">
     <div class="container">
       <div class="cta-content">
-        <h2>Prêt·e à Transformer Votre Documentation ?</h2>
-        <p>Obtenez un audit stratégique de votre documentation actuelle et découvrez les opportunités d'amélioration.</p>
-        <a href="/fr/contact" class="btn btn-primary btn-large">Commencer la Conversation</a>
+        <h2>Révélez le Potentiel de Vos Écrits Techniques</h2>
+        <p>
+          Transformez vos contenus techniques en avantage concurrentiel.<br />
+          Discutons de vos besoins et trouvons la solution adaptée.
+        </p>
+        <a href="/fr/contact" class="btn btn-primary btn-large"
+          >Échanger Sur Votre Projet</a
+        >
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  /* Hero Section */
-  .hero {
-    padding: 8rem 0 6rem;
-    background: linear-gradient(135deg, 
-      rgb(var(--color-background)) 0%, 
-      rgb(var(--color-primary) / 0.05) 100%);
-    position: relative;
-    overflow: hidden;
-  }
+  /* ===============================
+   HERO
+   =============================== */
+.hero {
+  padding: 8rem 0 6rem;
+  background: linear-gradient(
+    135deg,
+    rgb(var(--color-background)) 0%,
+    rgb(var(--color-primary) / 0.05) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgb(var(--color-primary) / 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgb(var(--color-accent) / 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  color: rgb(var(--color-text));
+}
+.gradient-text {
+  background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-secondary)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+.hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: rgb(var(--color-text-muted));
+  margin-bottom: 2rem;
+  max-width: 90%;
+}
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 20% 80%, rgb(var(--color-primary) / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgb(var(--color-accent) / 0.05) 0%, transparent 50%);
-    pointer-events: none;
-  }
+/* ===============================
+   CODE PREVIEW (cadre extérieur)
+   =============================== */
 
-  .hero .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
-    z-index: 1;
-  }
+/* Base commune (sera surchargée par thème) */
+.code-preview {
+  border-radius: 1rem;
+  overflow: hidden;
+}
 
-  .hero-title {
-    font-family: var(--font-serif);
-    font-size: clamp(3rem, 6vw, 5rem);
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    color: rgb(var(--color-text));
-  }
+/* ---------- Light mode : fond plein sombre + pas de blur (évite bandes blanches) ---------- */
+:root[data-theme='light'] .code-preview {
+  background: #0a0c12;                 /* fond plein sombre */
+  border: 1px solid rgba(0,0,0,0.35);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+:root[data-theme='light'] .code-header {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: #0f1422;                 /* bandeau sombre cohérent */
+  color: rgba(255,255,255,0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+:root[data-theme='light'] .code-header .filename {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+}
+:root[data-theme='light'] .code-header .dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+:root[data-theme='light'] .code-header .dots span {
+  width: 12px; height: 12px; border-radius: 50%;
+  opacity: 0.9;
+  background: #e6b7d4;                 /* touche de ta couleur secondaire */
+}
 
-  .gradient-text {
-    background: linear-gradient(135deg, 
-      rgb(var(--color-primary)), 
-      rgb(var(--color-secondary)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: inline-block;
-  }
+/* ---------- Dark mode : conserve ton design existant ---------- */
+:root[data-theme='dark'] .code-preview {
+  background: rgb(var(--color-surface) / 0.9);
+  border: 1px solid rgb(var(--color-border) / 0.5);
+  box-shadow:
+    0 25px 50px rgb(var(--color-shadow) / 0.2),
+    0 0 0 1px rgb(var(--color-primary) / 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+:root[data-theme='dark'] .code-header {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: rgb(var(--color-surface-variant) / 0.3);
+  border-bottom: 1px solid rgb(var(--color-border) / 0.3);
+  color: rgb(var(--color-text));
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+.code-header .dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+.code-header .dots span {
+  width: 12px; height: 12px; border-radius: 50%;
+  background-color: var(--color-text-muted);
+  opacity: 0.3;
+}
+.code-header .dots span:nth-child(1) { background: rgb(var(--color-primary)); }
+.code-header .dots span:nth-child(2) { background: rgb(var(--color-secondary)); }
+.code-header .dots span:nth-child(3) { background: rgb(var(--color-accent)); }
+.filename {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: rgb(var(--color-text-muted));
+}
 
-  .hero-subtitle {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 2rem;
-    max-width: 90%;
-  }
+/* ===============================
+   CODE BLOCK (lisible + anti-artefacts)
+   =============================== */
 
-  .hero-cta {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
+/* Light mode : bloc très sombre, texte clair */
+:root[data-theme='light'] .code-block {
+  background: #05060a;                 /* quasi noir */
+  color: #f5f5f5;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  border-radius: 0 0 1rem 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  contain: paint;
+  transform: translateZ(0);
+}
 
-  /* Code Preview */
-  .code-preview {
-    background: rgb(var(--color-surface) / 0.9);
-    border: 1px solid rgb(var(--color-border) / 0.5);
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 
-      0 25px 50px rgb(var(--color-shadow) / 0.2),
-      0 0 0 1px rgb(var(--color-primary) / 0.1);
-    backdrop-filter: blur(10px);
-  }
+/* Dark mode : garde ton style rose sur fond clair */
+:root[data-theme='dark'] .code-block {
+  background: rgb(var(--color-surface-variant));
+  color: #e6b7d4;                      /* ta couleur secondaire */
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  border-radius: 0 0 1rem 1rem;
+}
 
-  .code-header {
-    display: flex;
-    align-items: center;
-    padding: 1.25rem 1.5rem;
-    background: rgb(var(--color-surface-variant) / 0.3);
-    border-bottom: 1px solid rgb(var(--color-border) / 0.3);
-  }
+/* Scrollbar douce */
+.code-block::-webkit-scrollbar { height: 10px; }
+.code-block::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 8px; }
 
-  .dots {
-    display: flex;
-    gap: 0.5rem;
+/* Anti-artefacts et variantes de fontes */
+.code-block, .code-block code {
+  text-shadow: none !important;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
+}
+
+/* Light mode : forcer le fond et le texte du <code> */
+:root[data-theme='light'] .code-block code {
+  background: transparent !important;  /* supprime le fond blanc par défaut */
+  color: #f5f5f5 !important;           /* texte bien clair */
+  text-shadow: none !important;        /* supprime tout halo */
+}
+
+/* ===============================
+   COLORATION SYNTAXIQUE (Prism-like)
+   =============================== */
+.code-block code { color: #e6e6e6; tab-size: 2; font-family: var(--font-mono); }
+.code-block .token.comment,
+.code-block .token.prolog,
+.code-block .token.doctype,
+.code-block .token.cdata { color: #8b90a1; font-style: italic; }
+.code-block .token.keyword,
+.code-block .token.atrule { color: #82aaff; font-weight: 600; }
+.code-block .token.string,
+.code-block .token.char,
+.code-block .token.attr-value,
+.code-block .token.builtin { color: #c3e88d; }
+.code-block .token.number,
+.code-block .token.boolean,
+.code-block .token.constant,
+.code-block .token.symbol { color: #f78c6c; }
+.code-block .token.function,
+.code-block .token.method { color: #c792ea; }
+.code-block .token.property,
+.code-block .token.variable,
+.code-block .token.parameter,
+.code-block .token.regex { color: #f07178; }
+.code-block .token.operator,
+.code-block .token.punctuation { color: #e6e6e6; }
+.code-block .token.selector,
+.code-block .token.tag,
+.code-block .token.namespace,
+.code-block .token.deleted { color: #ffcb6b; }
+.code-block .token.attr-name,
+.code-block .token.inserted { color: #addb67; }
+.code-block .token.class-name { color: #ffcb6b; }
+.code-block ::selection { background: rgba(255, 255, 255, 0.18); }
+
+/* ===============================
+   SERVICES (Expertises clés) 
+   =============================== */
+.services-preview {
+  padding: 8rem 0;
+  background: rgb(var(--color-surface) / 0.3);
+}
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: rgb(var(--color-text));
+}
+
+/* Grille adaptée pour 5 services */
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 colonnes par défaut */
+}
+
+/* Sur desktop : 3 cartes première ligne, 2 cartes deuxième ligne centrées */
+@media (min-width: 1024px) {
+  .services-grid { 
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+  }
+  /* Centrer les 2 dernières cartes sur la 2e ligne */
+  .services-grid > :nth-child(4),
+  .services-grid > :nth-child(5) {
+    grid-column: span 1;
+  }
+  .services-grid > :nth-child(4) {
+    justify-self: end;
     margin-right: 1rem;
   }
-
-  .dots span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgb(var(--color-text-muted) / 0.3);
+  .services-grid > :nth-child(5) {
+    justify-self: start;
+    margin-left: 1rem;
   }
+}
 
-  .dots span:nth-child(1) { background: rgb(var(--color-primary)); }
-  .dots span:nth-child(2) { background: rgb(var(--color-secondary)); }
-  .dots span:nth-child(3) { background: rgb(var(--color-accent)); }
-
-  .filename {
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
-    color: rgb(var(--color-text-muted));
+/* Sur mobile : 1 colonne */
+@media (max-width: 639px) {
+  .services-grid { 
+    grid-template-columns: 1fr;
   }
+}
 
-  .code-content {
-    padding: 1.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
-    line-height: 1.6;
-    color: rgb(var(--color-text));
-  }
+/* ===============================
+   PORTFOLIO
+   =============================== */
+.portfolio-highlights {
+  padding: 8rem 0;
+  background: rgb(var(--color-surface-variant) / 0.5);
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.section-header h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: rgb(var(--color-text));
+  margin: 0;
+}
+.section-link {
+  color: rgb(var(--color-primary));
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+.section-link:hover { opacity: 0.8; }
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
 
-  /* Services Grid */
-  .services-preview {
-    padding: 8rem 0;
-    background: rgb(var(--color-surface) / 0.3);
-  }
+/* ===============================
+   CTA SECTION
+   =============================== */
+.cta-section {
+  padding: 8rem 0;
+  background: linear-gradient(
+    135deg,
+    rgb(var(--color-primary) / 0.08) 0%,
+    rgb(var(--color-accent) / 0.05) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 70%,
+    rgb(var(--color-primary) / 0.1) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+.cta-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.cta-content h2 {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: rgb(var(--color-text));
+}
+.cta-content p {
+  font-size: 1.125rem;
+  color: rgb(var(--color-text-muted));
+  margin-bottom: 2rem;
+}
 
-  .section-title {
-    font-family: var(--font-serif);
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: rgb(var(--color-text));
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* ===============================
+   RESPONSIVE GLOBAL
+   =============================== */
+@media (max-width: 768px) {
+  .hero .container {
+    grid-template-columns: 1fr;
     gap: 2rem;
-    margin-top: 3rem;
-  }
-
-  /* Portfolio Grid */
-  .portfolio-highlights {
-    padding: 8rem 0;
-    background: rgb(var(--color-surface-variant) / 0.5);
-  }
-
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4rem;
-  }
-
-  .section-header h2 {
-    font-family: var(--font-serif);
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: rgb(var(--color-text));
-    margin: 0;
-  }
-
-  .section-link {
-    color: rgb(var(--color-primary));
-    text-decoration: none;
-    font-weight: 500;
-    transition: opacity 0.2s ease;
-  }
-
-  .section-link:hover {
-    opacity: 0.8;
-  }
-
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-  }
-
-  /* Trust Indicators */
-  .trust-indicators {
-    padding: 8rem 0;
-    background: linear-gradient(135deg, 
-      rgb(var(--color-background)) 0%, 
-      rgb(var(--color-primary) / 0.03) 100%);
-  }
-
-  .trust-content {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .trust-content h3 {
-    font-family: var(--font-serif);
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: rgb(var(--color-text));
-  }
-
-  .trust-content p {
-    font-size: 1.125rem;
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 3rem;
-  }
-
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-  }
-
-  .stat {
     text-align: center;
   }
-
-  .stat-number {
-    display: block;
-    font-family: var(--font-serif);
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: rgb(var(--color-primary));
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 20px rgb(var(--color-primary) / 0.3);
-  }
-
-  .stat-label {
-    font-size: 0.875rem;
-    color: rgb(var(--color-text-muted));
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  /* CTA Section */
-  .cta-section {
-    padding: 8rem 0;
-    background: linear-gradient(135deg, 
-      rgb(var(--color-primary) / 0.08) 0%, 
-      rgb(var(--color-accent) / 0.05) 100%);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cta-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 30% 70%, rgb(var(--color-primary) / 0.1) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  .cta-content {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
-
-  .cta-content h2 {
-    font-family: var(--font-serif);
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: rgb(var(--color-text));
-  }
-
-  .cta-content p {
-    font-size: 1.125rem;
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 2rem;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .hero .container {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      text-align: center;
-    }
-
-    .hero-cta {
-      justify-content: center;
-    }
-
-    .section-header {
-      flex-direction: column;
-      gap: 1rem;
-      text-align: center;
-    }
-
-    .stats {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .portfolio-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-  }
+  .hero-cta { justify-content: center; }
+  .cta-content h2 { font-size: 2rem; }
+}
 </style>

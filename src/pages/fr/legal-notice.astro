@@ -1,0 +1,278 @@
+---
+// src/pages/fr/mentions-legales.astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Mentions légales — Bérangère Gallais"
+  description="Mentions légales du site berangeregallais.com"
+  lang="fr"
+>
+  <section class="legal-hero">
+    <div class="container">
+      <h1>Mentions légales</h1>
+      <p class="legal-date">
+        En vigueur au <time datetime="2025-08-25">25 août 2025</time>
+      </p>
+    </div>
+  </section>
+
+  <section class="legal-content">
+    <div class="container">
+      <div class="legal-wrapper">
+        <section aria-labelledby="intro">
+          <h2 id="intro">Introduction</h2>
+          <p>
+            Conformément aux dispositions de la loi n°2004-575 du 21 juin 2004 pour
+            la Confiance en l'économie numérique, il est porté à la connaissance des
+            utilisateurs et visiteurs (ci-après l'« Utilisateur ») du site
+            <a href="https://www.berangeregallais.com">https://www.berangeregallais.com</a>
+            (ci-après le « Site »), les présentes mentions légales.
+          </p>
+          <p>
+            La connexion et la navigation sur le Site par l'Utilisateur impliquent
+            l'acceptation pleine et entière des présentes mentions légales,
+            accessibles à la rubrique « Mentions légales ».
+          </p>
+        </section>
+
+        <section aria-labelledby="editeur">
+          <h2 id="editeur">Édition du site</h2>
+          <p>
+            L'édition du Site est assurée par la société <strong>Bérangère Gallais EI</strong>,
+            Micro‑entreprise, immatriculée au Registre National des Entreprises
+            sous le numéro <strong>848 692 398</strong>, dont le siège social est
+            situé :
+          </p>
+          <address class="legal-address">
+            60, rue François 1er<br />
+            75008 Paris<br />
+            France
+          </address>
+
+          <p><strong>Numéro de téléphone :</strong> <a href="tel:+33677588091">06 77 58 80 91</a></p>
+          <p><strong>Adresse e‑mail :</strong> <a href="mailto:contact@berangeregallais.com">contact@berangeregallais.com</a></p>
+          <p><strong>Directeur de la publication :</strong> Bérangère Gallais</p>
+
+          <p class="legal-note">Ci‑après l'« Éditeur ».</p>
+        </section>
+
+        <section aria-labelledby="hebergeur">
+          <h2 id="hebergeur">Hébergeur</h2>
+          <p>
+            L'hébergeur du Site est la société <strong>Netlify</strong>, dont le
+            siège social est situé :
+          </p>
+          <address class="legal-address">
+            2325 3rd Street, Suite 215<br />
+            94107 San Francisco, Californie<br />
+            États‑Unis
+          </address>
+        </section>
+
+        <section aria-labelledby="acces">
+          <h2 id="acces">Accès au site</h2>
+          <p>
+            Le Site est normalement accessible, à tout moment, à l'Utilisateur.
+            Toutefois, l'Éditeur pourra, à tout moment, suspendre, limiter ou
+            interrompre l'accès au Site afin de procéder, notamment, à des mises à
+            jour ou des modifications de son contenu. L'Éditeur ne saurait être tenu
+            responsable des conséquences éventuelles de cette indisponibilité sur
+            les activités de l'Utilisateur.
+          </p>
+        </section>
+
+        <section aria-labelledby="donnees">
+          <h2 id="donnees">Collecte des données</h2>
+          <p>
+            Le Site assure à l'Utilisateur une collecte et un traitement des données
+            personnelles dans le respect de la vie privée, conformément à la loi
+            n°78‑17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux
+            libertés, ainsi qu'au <em>Règlement (UE) 2016/679</em> du 27 avril 2016 (RGPD)
+            (ci‑après, ensemble, la « Réglementation applicable en matière de protection
+            des données à caractère personnel »).
+          </p>
+          <p>
+            En vertu de cette Réglementation, l'Utilisateur dispose d'un droit
+            d'accès, de rectification, d'opposition et de suppression de ses données
+            personnelles. Il peut exercer ses droits :
+          </p>
+          <ul class="legal-list">
+            <li>
+              par e‑mail à l'adresse <a href="mailto:contact@berangeregallais.com">contact@berangeregallais.com</a> ;
+            </li>
+            <li>via le formulaire de contact disponible sur le Site.</li>
+          </ul>
+          <p>
+            Pour plus d'informations, se reporter à la page 
+            <a href="/fr/privacy-policy">Politique de confidentialité</a>.
+          </p>
+        </section>
+
+        <section aria-labelledby="pi">
+          <h2 id="pi">Propriété intellectuelle</h2>
+          <p>
+            Toute utilisation, reproduction, diffusion, commercialisation ou
+            modification de toute ou partie du Site, sans autorisation expresse de
+            l'Éditeur, est prohibée et pourra entraîner des actions et poursuites
+            judiciaires conformément à la réglementation en vigueur.
+          </p>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero Section */
+  .legal-hero {
+    padding: 6rem 0 3rem;
+    background: linear-gradient(135deg, 
+      rgb(var(--color-background)) 0%, 
+      rgb(var(--color-primary) / 0.03) 100%);
+    text-align: center;
+    border-bottom: 1px solid rgb(var(--color-border) / 0.2);
+  }
+
+  .legal-hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .legal-date {
+    font-size: 1rem;
+    color: rgb(var(--color-text-muted));
+    margin: 0;
+  }
+
+  /* Content Section */
+  .legal-content {
+    padding: 4rem 0 6rem;
+    background: rgb(var(--color-background));
+  }
+
+  .legal-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* Typography */
+  .legal-content h2 {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 3rem 0 1.5rem 0;
+    color: rgb(var(--color-text));
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgb(var(--color-primary) / 0.2);
+  }
+
+  .legal-content h2:first-child {
+    margin-top: 0;
+  }
+
+  .legal-content p {
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .legal-content strong {
+    color: rgb(var(--color-text));
+    font-weight: 600;
+  }
+
+  .legal-content em {
+    color: rgb(var(--color-text-muted));
+    font-style: italic;
+  }
+
+  /* Links */
+  .legal-content a {
+    color: rgb(var(--color-primary));
+    text-decoration: none;
+    border-bottom: 1px solid rgb(var(--color-primary) / 0.3);
+    transition: all var(--transition-fast);
+  }
+
+  .legal-content a:hover {
+    color: rgb(var(--color-text));
+    border-bottom-color: rgb(var(--color-text));
+  }
+
+  /* Address */
+  .legal-address {
+    background: rgb(var(--color-surface) / 0.5);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0 2rem 0;
+    font-style: normal;
+    line-height: 1.6;
+    color: rgb(var(--color-text));
+  }
+
+  /* Lists */
+  .legal-list {
+    margin: 1rem 0 1.5rem 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .legal-list li {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 2rem;
+    margin-bottom: 0.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .legal-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    color: rgb(var(--color-primary));
+    font-weight: 600;
+  }
+
+  /* Legal Note */
+  .legal-note {
+    font-size: 0.9rem;
+    color: rgb(var(--color-text-muted));
+    font-style: italic;
+    margin-top: 1rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .legal-hero {
+      padding: 4rem 0 2rem;
+    }
+
+    .legal-content {
+      padding: 3rem 0 4rem;
+    }
+
+    .legal-content h2 {
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .legal-hero h1 {
+      font-size: 2rem;
+    }
+
+    .legal-content h2 {
+      font-size: 1.375rem;
+    }
+
+    .legal-address {
+      padding: 1.25rem;
+    }
+  }
+</style>

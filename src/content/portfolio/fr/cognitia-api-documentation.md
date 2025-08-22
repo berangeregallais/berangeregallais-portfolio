@@ -2,7 +2,7 @@
 # src/content/portfolio/fr/cognitia-api-documentation.md
 title: "Cognitia API — Developer Docs (GitBook)"
 description: "Documentation API IA sur GitBook : guide développeur, OpenAPI d’exemple, FAQ, dark/light mode."
-client: "Cognitia (portfolio)"
+client: "Cognitia"
 industry: "IA / NLP"
 projectDate: 2025-08-01
 challenge: "Proposer une doc claire et moderne pour une API d’analyse de texte (NLP), accessible à des équipes produit variées."
@@ -15,7 +15,6 @@ deliverables: [
 ]
 technologies: ["GitBook", "OpenAPI", "Markdown", "Git", "Custom CSS"]
 results: "Lecture aisée et moderne, expérience accessible en dark/light mode et support convaincant pour présenter l’API à des prospects."
-featured: true
 image: "/portfolio/cognitia-api-docs.png"
 demoUrl: "https://cognitia-api-documentation.gitbook.io/bgallais"
 githubUrl: "https://github.com/berangeregallais/cognitia-api"

@@ -1,26 +1,26 @@
 ---
 // src/pages/index.astro
-// Redirect principal vers la version anglaise
+// Redirect principal vers la version française
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0; url=/en/">
-  <link rel="canonical" href="/en/">
+  <title>Redirection...</title>
+  <meta http-equiv="refresh" content="0; url=/fr/">
+  <link rel="canonical" href="/fr/">
 </head>
 <body>
   <script>
-    // Redirect immédiat vers la version anglaise
-    window.location.href = '/en/';
+    // Redirect immédiat vers la version française
+    window.location.href = '/fr/';
   </script>
   
   <!-- Fallback si JavaScript est désactivé -->
   <noscript>
-    <p>Redirecting to <a href="/en/">English version</a>...</p>
+    <p>Redirection vers <a href="/fr/">la version française</a>...</p>
   </noscript>
 </body>
 </html>

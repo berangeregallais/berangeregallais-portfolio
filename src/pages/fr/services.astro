@@ -1,21 +1,21 @@
 ---
 // src/pages/fr/services.astro
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout 
+<BaseLayout
   title="Services de Rédaction Technique, Ghostwriting & Documentation API"
-  description="Services experts en documentation : audits, documentation API, conformité AI Act, et modernisation de documentation pour entreprises tech."
+  description="Services experts en documentation : audits, documentation API, conformité AI Act, ghostwriting technique et maintenance pour entreprises tech."
   lang="fr"
 >
   <!-- Hero Section -->
   <section class="services-hero">
     <div class="container">
       <div class="hero-content">
-        <h1>Services de Documentation</h1>
+        <h1>Services Documentation Architect</h1>
         <p class="hero-subtitle">
-          Transformez votre documentation technique en atout stratégique qui stimule 
-          l'adoption produit, réduit la charge support et assure la conformité.
+          API, AI Act & Ghostwriting : solutions sur-mesure pour transformer
+          votre documentation technique en avantage concurrentiel durable.
         </p>
       </div>
     </div>
@@ -24,55 +24,89 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <!-- Services Grid -->
   <section class="services-main">
     <div class="container">
-      
       <!-- Documentation Audits -->
       <div class="service-block" id="audit">
         <div class="service-content">
           <div class="service-header">
             <div class="service-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14,2 14,8 20,8"/>
-                <line x1="16" y1="13" x2="8" y2="13"/>
-                <line x1="16" y1="17" x2="8" y2="17"/>
-                <polyline points="10,9 9,9 8,9"/>
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10,9 9,9 8,9"></polyline>
               </svg>
             </div>
             <h2>Audits & Stratégie Documentation</h2>
-            <p class="service-tagline">Évaluation complète de votre écosystème documentaire</p>
+            <p class="service-tagline">
+              Évaluation complète de votre écosystème documentaire
+            </p>
           </div>
-          
+
           <div class="service-details">
             <div class="service-description">
-              <p>Obtenez une vision claire des forces, lacunes et opportunités de votre documentation. J'analyse l'ensemble de votre écosystème documentaire pour créer une feuille de route d'amélioration actionnable.</p>
+              <p>
+                Votre documentation freine-t-elle l'adoption de votre produit ?
+                Je diagnostique ce qui ne fonctionne pas et vous donne un plan
+                précis pour transformer votre documentation en véritable atout
+                business.
+              </p>
             </div>
-            
+
             <div class="service-features">
-              <h3>Ce qui est inclus :</h3>
+              <h3>Ce que j'analyse :</h3>
               <ul>
-                <li><strong>Audit de contenu :</strong> Analyse des lacunes et évaluation qualité</li>
-                <li><strong>Révision architecture informationnelle :</strong> Optimisation structure et navigation</li>
-                <li><strong>Évaluation expérience utilisateur :</strong> Cartographie parcours développeur</li>
-                <li><strong>Évaluation technique :</strong> Outils, workflows et processus de maintenance</li>
-                <li><strong>Benchmarking concurrentiel :</strong> Comparaison meilleures pratiques secteur</li>
-                <li><strong>Feuille de route stratégique :</strong> Recommandations priorisées avec calendrier</li>
+                <li>
+                  <strong>Qualité du contenu :</strong> Ce qui manque, ce qui est
+                  obsolète, ce qui prête à confusion
+                </li>
+                <li>
+                  <strong>Facilité d'utilisation :</strong> Vos utilisateurs trouvent-ils
+                  rapidement ce qu'ils cherchent ?
+                </li>
+                <li>
+                  <strong>Parcours développeur :</strong> De la découverte à l'onboarding,
+                  où perdez-vous vos utilisateurs ?
+                </li>
+                <li>
+                  <strong>Outils et processus :</strong> Votre stack documentation
+                  vous fait-elle gagner ou perdre du temps ?
+                </li>
+                <li>
+                  <strong>Comparaison concurrentielle :</strong> Comment vous positionnez-vous
+                  face à vos concurrents ?
+                </li>
+                <li>
+                  <strong>Opportunités d'amélioration :</strong> Gains rapides vs
+                  transformations long terme
+                </li>
               </ul>
             </div>
-            
+
             <div class="service-deliverables">
-              <h3>Livrables :</h3>
+              <h3>Ce que vous recevez :</h3>
               <ul>
-                <li>Rapport d'audit complet (25-40 pages)</li>
-                <li>Recommandations architecture informationnelle</li>
-                <li>Matrice d'amélioration du contenu</li>
-                <li>Suggestions d'outils et workflows</li>
-                <li>Feuille de route d'implémentation 90 jours</li>
-                <li>Session de consultation de suivi</li>
+                <li>Diagnostic complet avec constats et recommandations</li>
+                <li>Plan d'amélioration par ordre de priorité</li>
+                <li>Suggestions d'outils et optimisations techniques</li>
+                <li>Roadmap de mise en œuvre priorisée</li>
+                <li>Session de présentation et questions-réponses</li>
               </ul>
             </div>
-            
+
             <div class="service-cta">
-              <a href="/fr/contact?service=audit" class="btn btn-primary">Demander Devis Audit</a>
+              <a href="/fr/contact?service=audit" class="btn btn-primary"
+                >Analyser Vos Besoins</a
+              >
             </div>
           </div>
         </div>
@@ -83,46 +117,85 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <div class="service-content">
           <div class="service-header">
             <div class="service-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="16 18 22 12 16 6"/>
-                <polyline points="8 6 2 12 8 18"/>
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
               </svg>
             </div>
             <h2>Excellence Documentation API</h2>
-            <p class="service-tagline">Documentation centrée développeur qui stimule l'adoption</p>
+            <p class="service-tagline">
+              Documentation API qui fait la différence
+            </p>
           </div>
-          
+
           <div class="service-details">
             <div class="service-description">
-              <p>Créez une documentation API que les développeurs ont vraiment envie d'utiliser. Des spécifications OpenAPI aux guides interactifs, je construis une documentation qui accélère l'intégration et réduit les tickets support.</p>
+              <p>
+                Combien de clients potentiels renoncent à votre API faute de
+                documentation claire ? Je conçois une documentation qui guide
+                naturellement vers l'adoption.
+              </p>
             </div>
-            
+
             <div class="service-features">
-              <h3>Ce qui est inclus :</h3>
+              <h3>Ce que je construis :</h3>
               <ul>
-                <li><strong>Spécification OpenAPI :</strong> Specs complètes, précises et maintenables</li>
-                <li><strong>Documentation interactive :</strong> Explorateurs API "testez par vous-même"</li>
-                <li><strong>Guides développeur :</strong> Démarrage, authentification et meilleures pratiques</li>
-                <li><strong>Exemples de code :</strong> Plusieurs langages avec cas d'usage réels</li>
-                <li><strong>Documentation gestion erreurs :</strong> Codes d'erreur et dépannage complets</li>
-                <li><strong>Documentation SDK :</strong> Guides et références spécifiques aux librairies</li>
+                <li>
+                  <strong>Documentation technique complète :</strong> Tous les endpoints,
+                  paramètres et réponses clairement expliqués
+                </li>
+                <li>
+                  <strong>Interface de test interactive :</strong> Les développeurs
+                  testent directement depuis la documentation
+                </li>
+                <li>
+                  <strong>Guide de démarrage rapide :</strong> De l'inscription à
+                  la première requête réussie en moins de 10 minutes
+                </li>
+                <li>
+                  <strong>Exemples de code prêts à copier :</strong> Dans les langages
+                  que vos clients utilisent vraiment
+                </li>
+                <li>
+                  <strong>Gestion d'erreurs détaillée :</strong> Chaque code d'erreur
+                  avec sa solution, plus de devinettes
+                </li>
+                <li>
+                  <strong>Ressources pour vos SDK :</strong> Documentation spécifique
+                  pour chaque librairie officielle
+                </li>
               </ul>
             </div>
-            
+
             <div class="service-deliverables">
-              <h3>Livrables :</h3>
+              <h3>Ce que vous recevez :</h3>
               <ul>
-                <li>Spécification OpenAPI 3.0+ complète</li>
-                <li>Portail documentation API interactive</li>
-                <li>Guide d'onboarding développeur</li>
-                <li>Exemples de code en 3-5 langages</li>
-                <li>Collections Postman/Insomnia</li>
-                <li>Guidelines de maintenance documentation</li>
+                <li>Documentation API technique complète et à jour</li>
+                <li>Plateforme interactive pour tester l'API</li>
+                <li>Onboarding optimisé pour développeurs</li>
+                <li>Bibliothèque d'exemples dans plusieurs langages</li>
+                <li>
+                  Collection Postman (ou équivalent) avec vos endpoints
+                  configurés et vos exemples de données
+                </li>
+                <li>
+                  Guidelines de maintenance et présentation de nos services de
+                  suivi
+                </li>
               </ul>
             </div>
-            
+
             <div class="service-cta">
-              <a href="/fr/contact?service=api" class="btn btn-primary">Discuter Docs API</a>
+              <a href="/fr/contact?service=api" class="btn btn-primary"
+                >Concevoir Vos Docs API</a
+              >
             </div>
           </div>
         </div>
@@ -133,47 +206,228 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <div class="service-content">
           <div class="service-header">
             <div class="service-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                <path d="M2 17l10 5 10-5"/>
-                <path d="M2 12l10 5 10-5"/>
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
               </svg>
             </div>
-            <h2>Documentation Conformité AI Act</h2>
-            <p class="service-tagline">Frameworks de documentation conformes au règlement IA européen</p>
+            <div>
+              <h2>Documentation AI Act</h2>
+              <p class="service-tagline">
+                Soyez conformes au règlement européen sans stress
+              </p>
+              <div class="expertise-badge">
+                <p>
+                  ✓ Maîtrise du règlement AI Act • ✓ Partenariat avocat
+                  spécialisé AI Act
+                </p>
+              </div>
+            </div>
           </div>
-          
+
           <div class="service-details">
             <div class="service-description">
-              <p>Naviguez les exigences du règlement IA européen en toute confiance. Je crée des frameworks de documentation complets qui assurent la conformité de vos systèmes IA aux standards réglementaires tout en restant accessibles aux développeurs.</p>
+              <p>
+                L'AI Act européen entre en vigueur progressivement : êtes-vous
+                prêts ? Je structure toute la documentation technique nécessaire
+                pour être en conformité. Résultat : des documents clairs,
+                organisés et prêts pour validation juridique.
+              </p>
+              <div class="legal-disclaimer">
+                <p>
+                  <em
+                    ><strong>Important :</strong> Je produis la documentation technique,
+                    pas le conseil juridique. Mes livrables doivent être validés
+                    par votre avocat spécialisé.</em
+                  >
+                </p>
+              </div>
             </div>
-            
+
+            <div class="compliance-context">
+              <h3>Ce qui change avec l'AI Act :</h3>
+              <ul>
+                <li>
+                  <strong>Nouvelles obligations</strong> pour les entreprises utilisant
+                  l'IA
+                </li>
+                <li>
+                  <strong>Documentation technique obligatoire</strong> selon le type
+                  de système
+                </li>
+                <li>
+                  <strong>Sanctions possibles</strong> : jusqu'à 35M€ d'amende ou
+                  7% du CA annuel
+                </li>
+                <li>
+                  <strong>Contrôles par les autorités</strong> (CNIL, etc.)
+                </li>
+              </ul>
+            </div>
+
+            <div class="ai-act-timeline">
+              <h3>Échéances à retenir :</h3>
+              <ul>
+                <li>
+                  <strong>2 février 2025 :</strong> Interdiction des systèmes d'IA
+                  prohibés (reconnaissance faciale en temps réel, manipulation comportementale,
+                  etc.)
+                </li>
+                <li>
+                  <strong>2 août 2025 :</strong> Obligations pour les modèles d'IA
+                  à usage général (ChatGPT, Claude, etc.) - Déjà en vigueur
+                </li>
+                <li>
+                  <strong>2 août 2026 :</strong> Obligations complètes pour les systèmes
+                  d'IA à haut risque (biométrie, emploi, justice, etc.)
+                </li>
+                <li>
+                  <strong>2 août 2027 :</strong> Extension aux systèmes d'IA intégrés
+                  dans les produits réglementés (dispositifs médicaux, jouets, machines)
+                </li>
+              </ul>
+            </div>
+
             <div class="service-features">
-              <h3>Ce qui est inclus :</h3>
+              <h3>Ce que je prépare pour vous :</h3>
               <ul>
-                <li><strong>Documentation évaluation risques :</strong> Conformité Article 9 AI Act</li>
-                <li><strong>Fiches modèles et données :</strong> Documentation transparence et responsabilité</li>
-                <li><strong>Documentation technique :</strong> Architecture, données entraînement et métriques performance</li>
-                <li><strong>Procédures évaluation conformité :</strong> Préparation marquage CE</li>
-                <li><strong>Documentation gestion qualité :</strong> Processus alignés ISO 9001</li>
-                <li><strong>Frameworks surveillance post-marché :</strong> Suivi conformité continue</li>
+                <li>
+                  <strong>Évaluation de vos systèmes IA :</strong>
+                  Quel niveau de risque ? Quelles obligations ?
+                </li>
+                <li>
+                  <strong>Dossier de conformité complet :</strong>
+                  Toute la documentation technique exigée
+                </li>
+                <li>
+                  <strong>Mode d'emploi de vos IA :</strong>
+                  Instructions claires pour les utilisateurs
+                </li>
+                <li>
+                  <strong>Système de suivi :</strong>
+                  Templates pour surveiller vos IA en continu
+                </li>
+                <li>
+                  <strong>Préparation aux contrôles :</strong>
+                  Dossiers prêts pour la CNIL et autres autorités
+                </li>
               </ul>
             </div>
-            
+
             <div class="service-deliverables">
-              <h3>Livrables :</h3>
+              <h3>Vos livrables :</h3>
               <ul>
-                <li>Évaluation conformité AI Act</li>
-                <li>Templates documentation technique</li>
-                <li>Framework génération fiches modèles</li>
-                <li>Documentation gestion des risques</li>
-                <li>Procédures gestion qualité</li>
-                <li>Templates surveillance et reporting</li>
+                <li>Audit de vos systèmes IA existants</li>
+                <li>Plan d'actions prioritaires</li>
+                <li>Dossier de conformité technique</li>
+                <li>Templates de documentation réutilisables</li>
+                <li>Guide de maintenance et suivi</li>
+                <li>Checklist pour vos équipes</li>
               </ul>
             </div>
-            
+
             <div class="service-cta">
-              <a href="/fr/contact?service=ai-compliance" class="btn btn-primary">Devis Conformité</a>
+              <a
+                href="/fr/contact?service=ai-compliance"
+                class="btn btn-primary">Préparer Votre Conformité IA</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ghostwriting Tech -->
+      <div class="service-block" id="ghostwriting">
+        <div class="service-content">
+          <div class="service-header">
+            <div class="service-icon">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <line x1="13" y1="9" x2="8" y2="9"></line>
+              </svg>
+            </div>
+            <h2>Ghostwriting Tech</h2>
+            <p class="service-tagline">
+              Du contenu technique expert publié sous votre nom
+            </p>
+          </div>
+
+          <div class="service-details">
+            <div class="service-description">
+              <p>
+                Vous voulez publier du contenu technique de qualité mais vous
+                n'avez pas le temps d'écrire ? Je rédige pour vous des articles,
+                guides, livres blancs et contenus experts que vous signez. Votre
+                expertise, ma plume, votre réputation renforcée.
+              </p>
+            </div>
+
+            <div class="service-features">
+              <h3>Ce que j'écris pour vous :</h3>
+              <ul>
+                <li>
+                  <strong>Articles de blog techniques :</strong> Tutoriels, guides
+                  pratiques, analyses d'outils et technologies
+                </li>
+                <li>
+                  <strong>Thought leadership pour dirigeants :</strong> Analyses
+                  sectorielles, prises de position sur l'actualité tech, vision d'entreprise
+                </li>
+                <li>
+                  <strong>Contenu LinkedIn professionnel :</strong> Posts longs (1300
+                  caractères), carrousels éducatifs, articles LinkedIn natifs
+                </li>
+                <li>
+                  <strong>Études de cas et success stories :</strong> Témoignages
+                  clients structurés, retours d'expérience détaillés
+                </li>
+                <li>
+                  <strong>Contenu premium :</strong> Livres blancs, position papers,
+                  guides stratégiques pour prospects qualifiés
+                </li>
+                <li>
+                  <strong>Support événementiel :</strong> Contenus pour keynotes,
+                  webinaires, interventions en conférences
+                </li>
+              </ul>
+            </div>
+
+            <div class="service-deliverables">
+              <h3>Ce que vous recevez :</h3>
+              <ul>
+                <li>Contenus rédigés et prêts à publier sous votre nom</li>
+                <li>Adaptation à votre ton et à votre style</li>
+                <li>Optimisation SEO et format web</li>
+                <li>Calendrier de publication suggéré</li>
+                <li>Version adaptée pour différents canaux</li>
+                <li>Deux révisions incluses par contenu</li>
+              </ul>
+            </div>
+
+            <div class="service-cta">
+              <a href="/fr/contact?service=ghostwriting" class="btn btn-primary"
+                >Renforcer Votre Expertise</a
+              >
             </div>
           </div>
         </div>
@@ -184,130 +438,116 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <div class="service-content">
           <div class="service-header">
             <div class="service-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                ></path>
               </svg>
             </div>
-            <h2>Maintenance & Migration Documentation</h2>
-            <p class="service-tagline">Modernisez et maintenez vos systèmes documentaires</p>
+            <h2>Maintenance Documentation</h2>
+            <p class="service-tagline">
+              Je garde votre documentation à jour et performante
+            </p>
           </div>
-          
+
           <div class="service-details">
             <div class="service-description">
-              <p>Transformez la documentation legacy en systèmes modernes et maintenables. Je vous aide à migrer le contenu, établir des workflows durables et implémenter l'automatisation pour un succès à long terme.</p>
+              <p>
+                Votre documentation vieillit mal ? Contenu obsolète, liens
+                cassés, informations périmées... Je vous aide à maintenir une
+                documentation toujours fraîche et utile pour vos utilisateurs.
+              </p>
             </div>
-            
+
             <div class="service-features">
-              <h3>Ce qui est inclus :</h3>
+              <h3>Ce que je réalise pour vous :</h3>
               <ul>
-                <li><strong>Migration de contenu :</strong> Transfert sécurisé depuis systèmes legacy</li>
-                <li><strong>Modernisation plateforme :</strong> Mise à jour vers outils documentation modernes</li>
-                <li><strong>Automatisation workflows :</strong> Intégration CI/CD et publication automatique</li>
-                <li><strong>Configuration contrôle version :</strong> Workflows documentation basés Git</li>
-                <li><strong>Formation équipe :</strong> Guidelines contributeurs et meilleures pratiques</li>
-                <li><strong>Planification maintenance :</strong> Processus de mise à jour durables</li>
+                <li>
+                  <strong>Audit régulier du contenu :</strong> Identification des
+                  pages obsolètes, liens morts, informations périmées
+                </li>
+                <li>
+                  <strong>Mise à jour continue :</strong> Révision et actualisation
+                  de votre documentation existante
+                </li>
+                <li>
+                  <strong>Amélioration de l'organisation :</strong> Restructuration
+                  pour une meilleure navigation
+                </li>
+                <li>
+                  <strong>Modernisation du format :</strong> Migration vers des outils
+                  plus adaptés si nécessaire
+                </li>
+                <li>
+                  <strong>Processus de suivi :</strong> Planning et méthodes pour
+                  une maintenance durable
+                </li>
               </ul>
             </div>
-            
+
             <div class="service-deliverables">
-              <h3>Livrables :</h3>
+              <h3>Ce que vous recevez :</h3>
               <ul>
-                <li>Contenu migré et restructuré</li>
-                <li>Configuration plateforme documentation moderne</li>
-                <li>Pipeline publication automatisé</li>
-                <li>Guidelines et templates contributeurs</li>
-                <li>Matériaux formation équipe</li>
-                <li>Planning et procédures maintenance</li>
+                <li>Documentation réactualisée</li>
+                <li>Plan de maintenance personnalisé</li>
+                <li>Processus de suivi documenté</li>
+                <li>Templates et checklists de contrôle</li>
+                <li>Calendrier de révisions régulières</li>
+                <li>Support continu selon vos besoins (minimum 1 mois)</li>
               </ul>
             </div>
-            
+
             <div class="service-cta">
-              <a href="/fr/contact?service=maintenance" class="btn btn-primary">Planifier Migration</a>
+              <a href="/fr/contact?service=maintenance" class="btn btn-primary"
+                >Planifier La Maintenance</a
+              >
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Ghostwriting Technique -->
-      <div class="service-block" id="ghostwriting">
-        <div class="service-content">
-          <div class="service-header">
-            <div class="service-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14,2 14,8 20,8"/>
-                <line x1="16" y1="13" x2="8" y2="13"/>
-                <line x1="16" y1="17" x2="8" y2="17"/>
-                <line x1="13" y1="9" x2="8" y2="9"/>
-              </svg>
-            </div>
-            <h2>Ghostwriting Technique</h2>
-            <p class="service-tagline">Contenu expert sous votre signature pour asseoir votre autorité</p>
-          </div>
-          
-          <div class="service-details">
-            <div class="service-description">
-              <p>Construisez votre réputation d'expert·e avec du contenu technique de haute qualité publié sous votre nom. Articles de thought leadership, guides techniques et contenus éducatifs qui positionnent votre entreprise comme référence du secteur.</p>
-            </div>
-            
-            <div class="service-features">
-              <h3>Ce qui est inclus :</h3>
-              <ul>
-                <li><strong>Articles de blog techniques :</strong> Contenu expert sur vos domaines d'expertise</li>
-                <li><strong>Guides et tutoriels :</strong> Ressources éducatives approfondies</li>
-                <li><strong>Thought leadership :</strong> Articles de vision et tendances secteur</li>
-                <li><strong>Études de cas clients :</strong> Success stories structurées et impactantes</li>
-                <li><strong>Livres blancs :</strong> Ressources premium pour génération de leads</li>
-                <li><strong>Contenu LinkedIn :</strong> Posts et articles pour votre personal branding</li>
-              </ul>
-            </div>
-            
-            <div class="service-deliverables">
-              <h3>Livrables :</h3>
-              <ul>
-                <li>Articles optimisés SEO et prêts à publier</li>
-                <li>Calendrier éditorial stratégique</li>
-                <li>Guidelines de ton et style personnalisés</li>
-                <li>Templates réutilisables pour votre équipe</li>
-                <li>Stratégie de distribution multicanal</li>
-                <li>Formation équipe interne (optionnel)</li>
-              </ul>
-            </div>
-            
-            <div class="service-cta">
-              <a href="/fr/contact?service=ghostwriting" class="btn btn-primary">Discuter Contenu</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <!-- Process Section -->
   <section class="process-section">
     <div class="container">
-      <h2 class="section-title">Comment Nous Travaillons Ensemble</h2>
+      <h2 class="section-title">Comment Je Travaille Avec Vous</h2>
       <div class="process-grid">
         <div class="process-step">
           <div class="step-number">1</div>
-          <h3>Appel Découverte</h3>
-          <p>Nous discutons de vos besoins, délais et objectifs pour assurer un alignement parfait.</p>
+          <h3>Analyse de Vos Besoins</h3>
+          <p>
+            Audit de votre documentation existante et définition des objectifs :
+            quels utilisateurs, quels contenus, quelles priorités ?
+          </p>
         </div>
         <div class="process-step">
           <div class="step-number">2</div>
-          <h3>Proposition & Planification</h3>
-          <p>Périmètre projet détaillé, planning et livrables adaptés à vos exigences.</p>
+          <h3>Stratégie & Planning</h3>
+          <p>
+            Proposition détaillée avec périmètre, timeline et livrables précis.
+            On valide ensemble avant de commencer.
+          </p>
         </div>
         <div class="process-step">
           <div class="step-number">3</div>
-          <h3>Exécution & Revues</h3>
-          <p>Points réguliers et itérations pour rester sur la bonne voie et alignés.</p>
+          <h3>Rédaction & Itérations</h3>
+          <p>Création du contenu avec points réguliers pour validation.</p>
         </div>
         <div class="process-step">
           <div class="step-number">4</div>
-          <h3>Livraison & Transfert</h3>
-          <p>Livrables complets avec documentation et session de transfert de connaissance.</p>
+          <h3>Livraison & Suivi</h3>
+          <p>
+            Remise des livrables finalisés, prêts à publier, avec
+            recommandations pour la maintenance.
+          </p>
         </div>
       </div>
     </div>
@@ -317,11 +557,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="services-cta">
     <div class="container">
       <div class="cta-content">
-        <h2>Prêt·e à Transformer Votre Documentation ?</h2>
-        <p>Discutons de la façon dont ces services peuvent résoudre vos défis documentation spécifiques.</p>
+        <h2>Révélez le Potentiel de Vos Écrits Techniques</h2>
+        <p>
+          Transformez vos contenus techniques en avantage concurrentiel. Parlons
+          de vos besoins et trouvons la solution qui fera de vos écrits
+          techniques un véritable atout business.
+        </p>
         <div class="cta-buttons">
-          <a href="/fr/contact" class="btn btn-primary btn-large">Commencer la Conversation</a>
-          <a href="/fr/portfolio" class="btn btn-secondary">Voir le Portfolio</a>
+          <a href="/fr/contact" class="btn btn-primary btn-large"
+            >Discuter de Votre Projet</a
+          >
+          <a href="/fr/portfolio" class="btn btn-secondary">Voir le Portfolio</a
+          >
         </div>
       </div>
     </div>
@@ -332,9 +579,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   /* Services Hero */
   .services-hero {
     padding: 6rem 0 4rem;
-    background: linear-gradient(135deg, 
-      rgb(var(--color-background)) 0%, 
-      rgb(var(--color-primary) / 0.05) 100%);
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-background)) 0%,
+      rgb(var(--color-primary) / 0.05) 100%
+    );
     text-align: center;
   }
 
@@ -383,9 +632,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     justify-content: center;
     width: 4rem;
     height: 4rem;
-    background: linear-gradient(135deg, 
-      rgb(var(--color-primary) / 0.2), 
-      rgb(var(--color-accent) / 0.1));
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary) / 0.2),
+      rgb(var(--color-accent) / 0.1)
+    );
     color: rgb(var(--color-primary));
     border-radius: 1.25rem;
     flex-shrink: 0;
@@ -446,24 +697,70 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     font-weight: 600;
   }
 
-  .service-timeline {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: rgb(var(--color-primary) / 0.05);
-    border-radius: 0.75rem;
-    border: 1px solid rgb(var(--color-primary) / 0.1);
-  }
-
-  .timeline-label {
-    font-weight: 600;
-    color: rgb(var(--color-text));
-  }
-
-  .timeline-value {
+  .expertise-badge {
+    margin-top: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: rgb(var(--color-primary) / 0.1);
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
     color: rgb(var(--color-primary));
-    font-weight: 600;
+  }
+
+  .expertise-badge p {
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .legal-disclaimer {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgb(var(--color-surface-variant) / 0.3);
+    border-left: 3px solid rgb(var(--color-primary));
+    border-radius: 0.5rem;
+  }
+
+  .legal-disclaimer p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: rgb(var(--color-text-muted));
+  }
+
+  .compliance-context {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgb(var(--color-surface-variant) / 0.3);
+    border-left: 4px solid rgb(var(--color-primary));
+    border-radius: 0.5rem;
+  }
+
+  .compliance-context h3 {
+    color: rgb(var(--color-primary));
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
+
+  .compliance-context ul li {
+    color: rgb(var(--color-text-muted));
+    margin-bottom: 0.5rem;
+  }
+
+  .ai-act-timeline {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgb(var(--color-primary) / 0.05);
+    border-left: 4px solid rgb(var(--color-primary));
+    border-radius: 0.5rem;
+  }
+
+  .ai-act-timeline h3 {
+    color: rgb(var(--color-primary));
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
+
+  .ai-act-timeline ul li {
+    color: rgb(var(--color-text-muted));
+    margin-bottom: 0.5rem;
   }
 
   .service-cta {
@@ -493,7 +790,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     justify-content: center;
     width: 3rem;
     height: 3rem;
-    background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-secondary)));
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-secondary))
+    );
     color: white;
     border-radius: 50%;
     font-size: 1.25rem;
@@ -514,9 +815,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   /* Services CTA */
   .services-cta {
     padding: 6rem 0;
-    background: linear-gradient(135deg, 
-      rgb(var(--color-primary) / 0.08) 0%, 
-      rgb(var(--color-accent) / 0.05) 100%);
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary) / 0.08) 0%,
+      rgb(var(--color-accent) / 0.05) 100%
+    );
     text-align: center;
   }
 

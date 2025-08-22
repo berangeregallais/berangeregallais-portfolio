@@ -1,0 +1,276 @@
+---
+// src/pages/en/legal-notice.astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Legal Notice — Bérangère Gallais"
+  description="Legal Notice of the berangeregallais.com website"
+  lang="en"
+>
+  <section class="legal-hero">
+    <div class="container">
+      <h1>Legal Notice</h1>
+      <p class="legal-date">
+        Effective as of <time datetime="2025-08-25">August 25, 2025</time>
+      </p>
+    </div>
+  </section>
+
+  <section class="legal-content">
+    <div class="container">
+      <div class="legal-wrapper">
+        <section aria-labelledby="intro">
+          <h2 id="intro">Introduction</h2>
+          <p>
+            In accordance with the provisions of French Law No. 2004-575 of
+            June 21, 2004 on Confidence in the Digital Economy, users and
+            visitors (hereinafter the "User") of the website
+            <a href="https://www.berangeregallais.com">https://www.berangeregallais.com</a>
+            (hereinafter the "Site") are hereby informed of the following legal
+            notices.
+          </p>
+          <p>
+            Accessing and browsing the Site implies the User's full and
+            unconditional acceptance of these legal notices, which are
+            available at the "Legal Notice" section of the Site.
+          </p>
+        </section>
+
+        <section aria-labelledby="publisher">
+          <h2 id="publisher">Publisher</h2>
+          <p>
+            The Site is published by <strong>Bérangère Gallais EI</strong>,
+            a sole proprietorship, registered in the French National
+            Business Register under number <strong>848 692 398</strong>,
+            with its registered office at:
+          </p>
+          <address class="legal-address">
+            60, rue François 1er<br />
+            75008 Paris<br />
+            France
+          </address>
+
+          <p><strong>Phone:</strong> <a href="tel:+33677588091">+33 6 77 58 80 91</a></p>
+          <p><strong>Email:</strong> <a href="mailto:contact@berangeregallais.com">contact@berangeregallais.com</a></p>
+          <p><strong>Publication Director:</strong> Bérangère Gallais</p>
+
+          <p class="legal-note">Hereinafter referred to as the "Publisher".</p>
+        </section>
+
+        <section aria-labelledby="host">
+          <h2 id="host">Hosting</h2>
+          <p>
+            The Site is hosted by <strong>Netlify</strong>, whose registered
+            office is located at:
+          </p>
+          <address class="legal-address">
+            2325 3rd Street, Suite 215<br />
+            94107 San Francisco, California<br />
+            United States
+          </address>
+        </section>
+
+        <section aria-labelledby="access">
+          <h2 id="access">Site Access</h2>
+          <p>
+            The Site is normally accessible to Users at all times. However,
+            the Publisher may, at any time, suspend, restrict or interrupt
+            access to the Site in order to carry out updates or
+            modifications to its content. The Publisher cannot be held
+            liable for any consequences of such unavailability on the User's
+            activities.
+          </p>
+        </section>
+
+        <section aria-labelledby="data">
+          <h2 id="data">Data Collection</h2>
+          <p>
+            The Site ensures the collection and processing of personal data
+            with respect for privacy, in accordance with French Law No.
+            78-17 of January 6, 1978 on Data Processing, Data Files and
+            Individual Liberties, and with <em>Regulation (EU) 2016/679</em> of April 27, 2016 (the "GDPR").
+          </p>
+          <p>
+            Under this Regulation, Users have the right to access, rectify,
+            object to, and delete their personal data. These rights may be
+            exercised:
+          </p>
+          <ul class="legal-list">
+            <li>
+              by e-mail at <a href="mailto:contact@berangeregallais.com">contact@berangeregallais.com</a>;
+            </li>
+            <li>through the Site's contact form.</li>
+          </ul>
+          <p>
+            For more information, please refer to the <a href="/en/privacy-policy">Privacy Policy</a>.
+          </p>
+        </section>
+
+        <section aria-labelledby="ip">
+          <h2 id="ip">Intellectual Property</h2>
+          <p>
+            Any use, reproduction, distribution, commercialization, or
+            modification of all or part of the Site, without the Publisher's
+            express authorization, is prohibited and may result in legal
+            action as provided by applicable law.
+          </p>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero Section */
+  .legal-hero {
+    padding: 6rem 0 3rem;
+    background: linear-gradient(135deg, 
+      rgb(var(--color-background)) 0%, 
+      rgb(var(--color-primary) / 0.03) 100%);
+    text-align: center;
+    border-bottom: 1px solid rgb(var(--color-border) / 0.2);
+  }
+
+  .legal-hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .legal-date {
+    font-size: 1rem;
+    color: rgb(var(--color-text-muted));
+    margin: 0;
+  }
+
+  /* Content Section */
+  .legal-content {
+    padding: 4rem 0 6rem;
+    background: rgb(var(--color-background));
+  }
+
+  .legal-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* Typography */
+  .legal-content h2 {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 3rem 0 1.5rem 0;
+    color: rgb(var(--color-text));
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgb(var(--color-primary) / 0.2);
+  }
+
+  .legal-content h2:first-child {
+    margin-top: 0;
+  }
+
+  .legal-content p {
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .legal-content strong {
+    color: rgb(var(--color-text));
+    font-weight: 600;
+  }
+
+  .legal-content em {
+    color: rgb(var(--color-text-muted));
+    font-style: italic;
+  }
+
+  /* Links */
+  .legal-content a {
+    color: rgb(var(--color-primary));
+    text-decoration: none;
+    border-bottom: 1px solid rgb(var(--color-primary) / 0.3);
+    transition: all var(--transition-fast);
+  }
+
+  .legal-content a:hover {
+    color: rgb(var(--color-text));
+    border-bottom-color: rgb(var(--color-text));
+  }
+
+  /* Address */
+  .legal-address {
+    background: rgb(var(--color-surface) / 0.5);
+    border: 1px solid rgb(var(--color-border) / 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0 2rem 0;
+    font-style: normal;
+    line-height: 1.6;
+    color: rgb(var(--color-text));
+  }
+
+  /* Lists */
+  .legal-list {
+    margin: 1rem 0 1.5rem 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .legal-list li {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 2rem;
+    margin-bottom: 0.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .legal-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    color: rgb(var(--color-primary));
+    font-weight: 600;
+  }
+
+  /* Legal Note */
+  .legal-note {
+    font-size: 0.9rem;
+    color: rgb(var(--color-text-muted));
+    font-style: italic;
+    margin-top: 1rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .legal-hero {
+      padding: 4rem 0 2rem;
+    }
+
+    .legal-content {
+      padding: 3rem 0 4rem;
+    }
+
+    .legal-content h2 {
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .legal-hero h1 {
+      font-size: 2rem;
+    }
+
+    .legal-content h2 {
+      font-size: 1.375rem;
+    }
+
+    .legal-address {
+      padding: 1.25rem;
+    }
+  }
+</style>

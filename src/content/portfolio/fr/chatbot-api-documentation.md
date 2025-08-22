@@ -2,7 +2,7 @@
 # src/content/portfolio/fr/chatbot-api-documentation.md
 title: "Chatbot — Documentation (MkDocs)"
 description: "Site de documentation pour un chatbot fictif, publié via GitHub Pages."
-client: "Chatbot Demo (portfolio)"
+client: "Chatbot Demo"
 industry: "SaaS / IA"
 projectDate: 2025-08-10
 challenge: "Montrer une doc simple et rapide à déployer pour une API produit légère."
@@ -14,7 +14,6 @@ deliverables: [
 ]
 technologies: ["MkDocs", "Markdown", "GitHub Pages", "YAML", "Material for MkDocs"]
 results: "Mise en ligne rapide avec une structure minimaliste et une base saine pour itérer facilement."
-featured: false
 image: "/portfolio/chatbot-api-docs.png"
 demoUrl: "https://berangeregallais.github.io/chatbot-api-documentation/"
 githubUrl: "https://github.com/berangeregallais/chatbot-api-documentation"

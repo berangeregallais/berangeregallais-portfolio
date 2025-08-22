@@ -17,8 +17,7 @@ deliverables: [
 ]
 technologies: ["GitBook", "API Documentation", "Team Collaboration", "Enterprise Publishing", "Interactive Examples"]
 results: "Professional documentation platform that serves both technical developers and business stakeholders, with advanced search capabilities and team editing workflows"
-featured: true
-image: "https://via.placeholder.com/800x500/7c3aed/ffffff?text=Cognitia+GitBook"
+image: "/portfolio/cognitia-api-docs.png"
 demoUrl: "https://cognitia-api-documentation.gitbook.io/bgallais"
 category: ["api-docs", "enterprise", "collaboration"]
 language: "en"

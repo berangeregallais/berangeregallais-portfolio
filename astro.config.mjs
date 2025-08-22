@@ -1,9 +1,11 @@
 import { defineConfig } from 'astro/config';
 
+import sitemap from '@astrojs/sitemap';
+
 export default defineConfig({
   site: 'https://berangeregallais.com',
   base: '/',
-  
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'fr'],
@@ -22,5 +24,9 @@ export default defineConfig({
       theme: 'github-dark-dimmed',
       wrap: true
     }
-  }
+  },
+
+  integrations: [
+    sitemap(),
+  ]
 });
