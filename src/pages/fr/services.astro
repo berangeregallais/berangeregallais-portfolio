@@ -763,6 +763,57 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     margin-bottom: 0.5rem;
   }
 
+  /* Modification des listes pour ajouter des puces visuelles */
+  .service-features ul,
+  .service-deliverables ul,
+  .compliance-context ul,
+  .ai-act-timeline ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .service-features li,
+  .service-deliverables li,
+  .compliance-context ul li,
+  .ai-act-timeline ul li {
+    position: relative;
+    padding: 0.75rem 0 0.75rem 2rem;
+    border-bottom: 1px solid rgb(var(--color-border) / 0.2);
+    color: rgb(var(--color-text-muted));
+    line-height: 1.5;
+  }
+
+  /* Puces personnalisées pour les différentes sections */
+  .service-features li::before,
+  .service-deliverables li::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    color: rgb(var(--color-primary));
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .compliance-context ul li::before,
+  .ai-act-timeline ul li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    color: rgb(var(--color-primary));
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .service-features li:last-child,
+  .service-deliverables li:last-child,
+  .compliance-context ul li:last-child,
+  .ai-act-timeline ul li:last-child {
+    border-bottom: none;
+  }
+
   .service-cta {
     margin-top: 1rem;
   }
