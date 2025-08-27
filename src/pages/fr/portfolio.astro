@@ -22,7 +22,7 @@ const allCategories = [
 
 <BaseLayout
   title="Portfolio | Projets Documentation Technique & Études de Cas"
-  description="Découvrez mes projets de documentation technique : docs API, portails développeur, frameworks conformité IA, et stratégies documentaires."
+  description="Exemples de mes projets en documentation technique : API, portails développeurs, conformité IA et structure documentaire."
   lang="fr"
 >
   <!-- Hero Section -->
@@ -31,9 +31,8 @@ const allCategories = [
       <div class="hero-content">
         <h1>Portfolio</h1>
         <p class="hero-subtitle">
-          De la documentation API à la conformité IA : découvrez mes
-          réalisations qui transforment la complexité technique en avantage
-          concurrentiel.
+          Découvrez une sélection de mes projets menés autour de la
+          documentation API, de l’IA et de la stratégie documentaire.
         </p>
       </div>
     </div>
@@ -42,7 +41,7 @@ const allCategories = [
   <!-- Projects Grid -->
   <section class="portfolio-projects">
     <div class="container">
-      <h2 class="section-title">Réalisations</h2>
+      <h2 class="section-title">Projets</h2>
       <div class="projects-grid">
         {
           projects.map((project, index) => (
@@ -70,34 +69,35 @@ const allCategories = [
   <section class="portfolio-cta">
     <div class="container">
       <div class="cta-content">
-        <h2>Prêt·e à Transformer Votre Documentation ?</h2>
+        <h2>Besoin d’une documentation claire et efficace&nbsp;?</h2>
         <p>
-          Votre documentation vous freine au lieu de vous propulser ? <br />
-          Changeons cela ensemble.
+          Je vous aide à structurer, rédiger et maintenir votre documentation
+          pour qu’elle soit utile aux développeurs, conforme aux exigences et
+          facile à faire évoluer.
         </p>
         <div class="cta-benefits">
           <div class="benefit">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 6 9 17l-5-5"></path>
             </svg>
-            Diagnostic professionnel de vos enjeux
+            Diagnostic de vos besoins
           </div>
           <div class="benefit">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 6 9 17l-5-5"></path>
             </svg>
-            Stratégie documentaire personnalisée
+            Stratégie documentaire adaptée
           </div>
           <div class="benefit">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 6 9 17l-5-5"></path>
             </svg>
-            Solutions techniques sur mesure
+            Mise en place de solutions pratiques
           </div>
         </div>
         <div class="cta-buttons">
           <a href="/fr/contact" class="btn btn-primary btn-large">
-            <span>Démarrer Votre Projet</span>
+            <span>Discutons de votre projet</span>
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
               <path d="M5 12h14m-7-7 7 7-7 7"></path>
             </svg>
@@ -311,9 +311,8 @@ const allCategories = [
     border: 2px solid transparent;
   }
 
-  .btn-primary {
-    background: rgb(var(--color-primary));
-    color: white;
+  :root[data-theme="light"] .btn-primary {
+    color: #d0d0d0; 
   }
 
   .btn-primary:hover {

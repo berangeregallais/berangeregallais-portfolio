@@ -22,7 +22,7 @@ const allCategories = [
 
 <BaseLayout
   title="Portfolio | Technical Documentation Projects & Case Studies"
-  description="Discover my technical documentation projects: API docs, developer portals, AI compliance frameworks, and documentation strategies."
+  description="Examples of my work in technical documentation: APIs, developer portals, AI compliance frameworks, and documentation strategy."
   lang="en"
 >
   <!-- Hero Section -->
@@ -31,8 +31,8 @@ const allCategories = [
       <div class="hero-content">
         <h1>Portfolio</h1>
         <p class="hero-subtitle">
-          From API documentation to AI compliance: discover my work that transforms 
-          technical complexity into competitive advantage.
+          Explore a selection of my projects in API documentation, AI, and
+          documentation strategy.
         </p>
       </div>
     </div>
@@ -41,7 +41,7 @@ const allCategories = [
   <!-- Projects Grid -->
   <section class="portfolio-projects">
     <div class="container">
-      <h2 class="section-title">Selected Work</h2>
+      <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
         {
           projects.map((project, index) => (
@@ -69,41 +69,41 @@ const allCategories = [
   <section class="portfolio-cta">
     <div class="container">
       <div class="cta-content">
-        <h2>Ready to Transform Your Documentation?</h2>
+        <h2>Need clear, effective documentation?</h2>
         <p>
-          Is your documentation holding you back instead of propelling you forward? <br/>
-          Let's change that together.
+          I help you structure, write, and maintain your documentation so it’s
+          useful to developers, compliant with requirements, and easy to evolve.
         </p>
         <div class="cta-benefits">
           <div class="benefit">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 6 9 17l-5-5"></path>
             </svg>
-            Professional assessment of your challenges
+            Needs assessment
           </div>
           <div class="benefit">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 6 9 17l-5-5"></path>
             </svg>
-            Personalized documentation strategy
+            Tailored documentation strategy
           </div>
           <div class="benefit">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 6 9 17l-5-5"></path>
             </svg>
-            Custom technical solutions
+            Practical solutions implementation
           </div>
         </div>
         <div class="cta-buttons">
           <a href="/en/contact" class="btn btn-primary btn-large">
-            <span>Start Your Project</span>
+            <span>Let’s discuss your project</span>
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
               <path d="M5 12h14m-7-7 7 7-7 7"></path>
             </svg>
           </a>
-          <a href="/en/services" class="btn btn-secondary"
-            >Discover Services</a
-          >
+          <a href="/en/services" class="btn btn-secondary">
+            View Services
+          </a>
         </div>
       </div>
     </div>
@@ -310,9 +310,8 @@ const allCategories = [
     border: 2px solid transparent;
   }
 
-  .btn-primary {
-    background: rgb(var(--color-primary));
-    color: white;
+  :root[data-theme="light"] .btn-primary {
+    color: #d0d0d0;
   }
 
   .btn-primary:hover {
