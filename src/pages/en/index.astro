@@ -374,6 +374,30 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     text-shadow: none !important; /* supprime tout halo */
   }
 
+  /* Keep the code block on the right at all sizes */
+  .hero .code-preview {
+    justify-self: end; /* grid-aware right alignment */
+    margin-left: auto; /* fallback if not in grid */
+    margin-right: 0;
+    max-width: 560px; /* prevent full-width so auto margin can work */
+    width: 100%;
+  }
+
+  /* Ensure its inner text isn’t centered by parent rules */
+  .hero .code-preview .code-header,
+  .hero .code-preview .code-block {
+    text-align: left;
+  }
+
+  /* Mobile: some layouts center the whole hero — override just the code */
+  @media (max-width: 768px) {
+    .hero .code-preview {
+      justify-self: end;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
   /* ===============================
    COLORATION SYNTAXIQUE (Prism-like)
    =============================== */
