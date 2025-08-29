@@ -3,8 +3,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-  title="About — Bérangère Gallais"
-  description="Technical Writer & DocOps — API documentation, AI & dev workflows."
+  title="About — Technical Writer API & AI | Bérangère Gallais"
+  description="Technical Writer specialized in API & AI, I help companies produce clear, effective, and easy-to-maintain documentation."
 >
   <section class="about-hero">
     <div class="container">
@@ -12,19 +12,26 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         <div class="about-hero__text">
           <h1 class="title">Hi, I’m Bérangère 👋</h1>
           <p class="lead">
-            <strong>Technical Writer & Ghostwriter</strong> specialized in <strong
-              >API documentation</strong
-            > and <strong>AI</strong>. I help tech teams deliver clear
-            documentation that speeds up onboarding and ensures compliance.
+            <strong>Technical Writer & Ghostwriter</strong> specialized in
+            <strong>API documentation</strong> and <strong>AI</strong>.
+            I design precise, compliant, and sustainable documentation,
+            built to simplify the developer experience and highlight your products.
           </p>
           <ul class="bullets">
             <li>Documentation: Docusaurus, GitBook, MkDocs</li>
-            <li>Standards: OpenAPI, Markdown/MDX</li>
-            <li>Deployment: CI/CD, GitHub Pages, GitLab, Netlify</li>
+            <li>Standards: OpenAPI/Swagger, Markdown/MDX, YAML/JSON</li>
+            <li>
+              Deployment: CI/CD (GitHub Actions, GitLab CI), GitHub Pages,
+              Netlify
+            </li>
+            <li>
+              Quality & testing: Postman, Docs-as-Code, Docs-as-Tests, linting
+              and automated checks
+            </li>
           </ul>
           <div class="cta-row">
             <a href="/en/contact" class="btn btn-primary"
-              >Let’s Talk About Your Docs</a
+              >Discuss Your Project</a
             >
             <a href="/en/portfolio" class="btn">View Portfolio</a>
           </div>
@@ -46,26 +53,26 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <div class="background-grid">
         <div class="bg-item">
           <div class="bg-icon">👩‍💻</div>
-          <h3>6 Years in Tech</h3>
+          <h3>6 years in tech</h3>
           <p>
-            Former full-stack developer and QA automation engineer — I know the
-            challenges of technical teams from the inside.
+            Former full-stack developer and QA automation engineer,
+            I know the constraints and needs of product teams from the inside.
           </p>
         </div>
         <div class="bg-item">
           <div class="bg-icon">🔄</div>
-          <h3>From Code to Docs</h3>
+          <h3>From code to docs</h3>
           <p>
-            From writing code to writing about code — a natural evolution that
-            allows me to bring meaning and clarity to documentation.
+            From writing code to writing about code: a natural evolution
+            to make technology accessible and useful.
           </p>
         </div>
         <div class="bg-item">
           <div class="bg-icon">📚</div>
-          <h3>Specialized in Documentation</h3>
+          <h3>Documentation expertise</h3>
           <p>
-            Now as a technical writer, I understand both the technical
-            challenges and the documentation requirements.
+            Now a technical writer, I help teams deliver documentation
+            that is reliable, clear, and tailored to their users.
           </p>
         </div>
       </div>
@@ -76,109 +83,35 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <div class="container">
       <h2>My Approach</h2>
       <p class="section-intro">
-        Well-designed documentation reduces onboarding time, prevents repeated
-        tickets, and builds trust. I focus on structuring content, creating
-        practical examples, and embedding compliance requirements, while
-        building a durable base that evolves with the product.
+        Clear documentation shortens onboarding time, reduces support tickets,
+        and builds trust. My approach combines technical rigor with pedagogy
+        to create useful, reliable, and scalable content.
       </p>
       <div class="approach-grid">
         <div class="approach-item">
           <div class="approach-icon">✨</div>
-          <h3>Clarity & Structure</h3>
+          <h3>Clarity & structure</h3>
           <p>
-            Logical navigation, clear tables of contents, consistent conventions,
-            copy-paste-ready examples.
+            Logical organization, readable tables of contents, and ready-to-use
+            examples to save time every day.
           </p>
         </div>
         <div class="approach-item">
           <div class="approach-icon">👨‍💻</div>
-          <h3>Dev-Focused Docs</h3>
+          <h3>Developer-first docs</h3>
           <p>
-            Quickstarts, use-case guides, multi-language snippets, FAQs, and
-            troubleshooting.
+            Quickstarts, use-case guides, multi-language snippets, FAQs,
+            and troubleshooting designed for real developer needs.
           </p>
         </div>
         <div class="approach-item">
           <div class="approach-icon">⚙️</div>
           <h3>DocOps</h3>
           <p>
-            The DocOps approach applies software development best practices to
-            documentation. This includes <strong>Docs-as-Code</strong> (Git, PR,
-            CI/CD), as well as workflow automation, versioning, quality, and
-            search — ensuring documentation is always up-to-date and integrated
-            into the product lifecycle.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="about-expertise">
-    <div class="container">
-      <h2>Tools & Ecosystem</h2>
-      <div class="expertise-categories">
-        <div class="expertise-category">
-          <h3>Documentation</h3>
-          <ul class="tech-list">
-            <li>Docusaurus</li>
-            <li>GitBook</li>
-            <li>MkDocs</li>
-          </ul>
-        </div>
-        <div class="expertise-category">
-          <h3>Standards</h3>
-          <ul class="tech-list">
-            <li>OpenAPI</li>
-            <li>Markdown/MDX</li>
-            <li>REST/GraphQL</li>
-          </ul>
-        </div>
-        <div class="expertise-category">
-          <h3>Deployment</h3>
-          <ul class="tech-list">
-            <li>CI/CD</li>
-            <li>GitHub Pages</li>
-            <li>Netlify</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="about-process">
-    <div class="container">
-      <h2>My 4-Step Method</h2>
-      <div class="process-grid">
-        <div class="process-item">
-          <div class="process-number">1</div>
-          <h3>Audit & Scoping</h3>
-          <p>
-            Review of existing docs, definition of objectives, identification of
-            personas.
-          </p>
-        </div>
-        <div class="process-item">
-          <div class="process-number">2</div>
-          <h3>Architecture & Design</h3>
-          <p>
-            Designing the structure, creating templates, defining the style guide
-            and editorial line.
-          </p>
-        </div>
-        <div class="process-item">
-          <div class="process-number">3</div>
-          <h3>Creation & Optimization</h3>
-          <p>
-            Writing technical or thought-leadership content, developing practical
-            examples, full quality reviews.
-          </p>
-        </div>
-        <div class="process-item">
-          <div class="process-number">4</div>
-          <h3>Deployment & Follow-Up</h3>
-          <p>
-            Publishing, team training, release of deliverables, and setting up
-            performance metrics.
+            Applying software engineering best practices to documentation:
+            <strong>Docs-as-Code</strong>, <strong>Docs-as-Tests</strong>,
+            CI/CD, automation, and quality checks — for content that
+            is always up to date and integrated into your product.
           </p>
         </div>
       </div>
@@ -188,40 +121,22 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   <section class="about-cta">
     <div class="container">
       <div class="cta-box">
-        <h2>Ready to Improve Your Documentation?</h2>
+        <h2>Ready to improve your documentation?</h2>
         <p>
-          API, AI, or ghostwritten content — I can review your documentation and
-          provide a clear roadmap in just a few days.
+          I help you turn technical content into a true asset:
+          clear, reliable, and tailored to your users.
         </p>
         <div class="cta-benefits">
-          <div class="benefit">
-            <span class="benefit-icon">🔍</span>
-            <span>Tailored solutions</span>
-          </div>
-          <div class="benefit">
-            <span class="benefit-icon">📋</span>
-            <span>Approach adapted to your context</span>
-          </div>
-          <div class="benefit">
-            <span class="benefit-icon">🚀</span>
-            <span>Technical expertise</span>
-          </div>
+          <div class="benefit">🔍 Personalized analysis</div>
+          <div class="benefit">📋 Proven methodology</div>
+          <div class="benefit">🚀 API & AI expertise</div>
         </div>
         <div class="cta-row">
           <a href="/en/contact" class="btn btn-primary">
-            <span>Let’s Discuss Your Project</span>
+            <span>Discuss Your Project</span>
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
               <path d="M5 12h14m-7-7 7 7-7 7"></path>
             </svg>
-          </a>
-          <a
-            href="/about/cv-bgallais-en.pdf"
-            class="btn btn-secondary"
-            target="_blank"
-            rel="noopener"
-            download
-          >
-            <span>📄 Download My CV</span>
           </a>
         </div>
       </div>
@@ -230,9 +145,33 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </BaseLayout>
 
 <style>
-  .about-hero {
-    padding: 3rem 0 1rem;
+  /* Espacement harmonisé */
+  .about-hero,
+  .about-background,
+  .about-approach,
+  .about-cta {
+    padding: 6rem 0; /* Desktop */
   }
+
+  @media (max-width: 1024px) {
+    .about-hero,
+    .about-background,
+    .about-approach,
+    .about-cta {
+      padding: 4.5rem 0; /* Tablette */
+    }
+  }
+
+  @media (max-width: 600px) {
+    .about-hero,
+    .about-background,
+    .about-approach,
+    .about-cta {
+      padding: 3rem 0; /* Mobile */
+    }
+  }
+
+  /* Section Hero */
   .about-hero__grid {
     display: grid;
     gap: 2rem;
@@ -251,7 +190,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     line-height: 1.2;
     margin: 0 0 0.75rem;
   }
-  /* + espace autour des paragraphes/listes du hero */
   .lead {
     font-size: 1.1rem;
     color: rgb(var(--color-text));
@@ -278,7 +216,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
   /* Section Parcours */
   .about-background {
-    padding: 3rem 0 2rem;
     background: linear-gradient(
       135deg,
       rgb(var(--color-surface-variant) / 0.3) 0%,
@@ -335,9 +272,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   }
 
   /* Section Approche */
-  .about-approach {
-    padding: 3rem 0 2rem;
-  }
   .about-approach h2 {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -395,135 +329,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     color: rgb(var(--color-text-muted));
   }
 
-  /* Section Expertise */
-  .about-expertise {
-    padding: 3rem 0 2rem;
-    background: rgb(var(--color-surface-variant) / 0.2);
-  }
-  .about-expertise h2 {
-    text-align: center;
-    margin-bottom: 2.5rem;
-    font-family: var(--font-serif);
-    font-size: 2.25rem;
-    color: rgb(var(--color-text));
-  }
-  .expertise-categories {
-    display: grid;
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  @media (min-width: 900px) {
-    .expertise-categories {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2.5rem;
-    }
-  }
-  .expertise-category {
-    background: rgb(var(--color-surface) / 0.8);
-    border: 1px solid rgb(var(--color-border) / 0.3);
-    border-radius: 16px;
-    padding: 2rem;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    transition: all var(--transition-normal);
-  }
-  .expertise-category:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgb(var(--color-shadow) / 0.1);
-  }
-  .expertise-category h3 {
-    margin: 0 0 1.5rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: rgb(var(--color-text));
-  }
-  .tech-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .tech-list li {
-    padding: 0.5rem 1rem;
-    margin: 0.5rem 0;
-    background: rgb(var(--color-background) / 0.8);
-    border: 1px solid rgb(var(--color-border) / 0.3);
-    border-radius: 8px;
-    font-size: 0.9rem;
-    color: rgb(var(--color-text-muted));
-    transition: all var(--transition-fast);
-  }
-  .tech-list li:hover {
-    color: rgb(var(--color-primary));
-    border-color: rgb(var(--color-primary) / 0.3);
-  }
-
-  /* Section Processus */
-  .about-process {
-    padding: 3rem 0 2rem;
-  }
-  .about-process h2 {
-    text-align: center;
-    margin-bottom: 2.5rem;
-    font-family: var(--font-serif);
-    font-size: 2.25rem;
-    color: rgb(var(--color-text));
-  }
-  .process-grid {
-    display: grid;
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  @media (min-width: 900px) {
-    .process-grid {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-    }
-  }
-  .process-item {
-    background: rgb(var(--color-surface) / 0.6);
-    border: 1px solid rgb(var(--color-border) / 0.3);
-    border-radius: 16px;
-    padding: 2rem;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    transition: all var(--transition-normal);
-    position: relative;
-  }
-  .process-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgb(var(--color-shadow) / 0.1);
-    border-color: rgb(var(--color-primary) / 0.3);
-  }
-  .process-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    background: linear-gradient(
-      135deg,
-      rgb(var(--color-primary)),
-      rgb(var(--color-accent))
-    );
-    color: white;
-    border-radius: 50%;
-    font-family: var(--font-serif);
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-  }
-  .process-item h3 {
-    margin: 0 0 1rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: rgb(var(--color-text));
-  }
-  .process-item p {
-    margin: 0;
-    line-height: 1.6;
-    color: rgb(var(--color-text-muted));
-  }
-
+  /* Section CTA */
   .about-cta {
     padding: 2rem 0 3rem;
   }
@@ -540,33 +346,5 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 1rem;
-  }
-
-  .cta-benefits {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-  }
-
-  .benefit {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-    color: rgb(var(--color-text-muted));
-  }
-
-  .benefit-icon {
-    font-size: 1.2rem;
-  }
-
-  @media (max-width: 768px) {
-    .cta-benefits {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
   }
 </style>

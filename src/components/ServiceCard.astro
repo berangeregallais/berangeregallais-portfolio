@@ -1,7 +1,7 @@
 ---
 // src/components/ServiceCard.astro
 export interface Props {
-  icon: 'audit' | 'api' | 'ai' | 'ghostwriting' | 'maintenance';
+  icon: 'audit' | 'api' | 'ghostwriting' | 'maintenance';
   title: string;
   description: string;
   link: string;
@@ -28,13 +28,6 @@ const linkText = lang === 'fr' ? 'En savoir plus' : 'Learn More';
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <polyline points="16 18 22 12 16 6"/>
         <polyline points="8 6 2 12 8 18"/>
-      </svg>
-    )}
-    {icon === 'ai' && (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-        <path d="M2 17l10 5 10-5"/>
-        <path d="M2 12l10 5 10-5"/>
       </svg>
     )}
     {icon === 'ghostwriting' && (

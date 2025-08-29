@@ -11,7 +11,7 @@ export interface Props {
   image?: string;
 }
 
-// Déduire la langue depuis l'URL si la prop n'est pas fournie
+// Déduire la langue depuis l’URL si la prop n’est pas fournie
 const path = Astro.url.pathname;
 const detectedLang: "en" | "fr" = path.startsWith("/fr/") ? "fr" : "en";
 
@@ -69,7 +69,7 @@ const ogImageURL = new URL(image, Astro.site);
       rel="stylesheet"
     />
 
-    <!-- Theme initialization script (inline, JS pur) -->
+    <!-- Theme initialization script -->
     <script is:inline>
       (function () {
         const getStoredTheme = () => {
@@ -103,7 +103,7 @@ const ogImageURL = new URL(image, Astro.site);
     </script>
   </head>
   <body>
-    <!-- WRAPPER qui colle le footer en bas -->
+    <!-- WRAPPER -->
     <div class="layout">
       <Header lang={resolvedLang} />
 
@@ -112,11 +112,10 @@ const ogImageURL = new URL(image, Astro.site);
       </main>
 
       <Footer lang={resolvedLang} />
-
       <BackToTop />
     </div>
 
-    <!-- Theme toggle functionality -->
+    <!-- Theme toggle -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const themeToggle = document.querySelector("[data-theme-toggle]");
@@ -150,7 +149,7 @@ const ogImageURL = new URL(image, Astro.site);
 </html>
 
 <style is:global>
-  /* Sticky footer: structure */
+  /* Sticky footer */
   html,
   body {
     height: 100%;
@@ -166,17 +165,17 @@ const ogImageURL = new URL(image, Astro.site);
   }
 
   .layout {
-    min-height: 100svh; /* vh dynamique (iOS) */
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
   }
 
   .main {
     flex: 1 0 auto;
-    min-height: calc(100vh - 120px); /* Ajuste selon tes header/footer */
+    min-height: calc(100vh - 120px);
   }
 
-  /* CSS Custom Properties for Theming */
+  /* THEME COLORS */
   :root {
     --color-primary: 230 183 212; /* #e6b7d4 */
     --color-secondary: 219 112 147;
@@ -303,7 +302,8 @@ const ogImageURL = new URL(image, Astro.site);
   .btn {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center !important;
+    text-align: center !important;
     padding: 1rem 2rem;
     border: none;
     border-radius: 2rem;
@@ -404,9 +404,7 @@ const ogImageURL = new URL(image, Astro.site);
 
   /* Reduced motion */
   @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    * {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -418,6 +416,30 @@ const ogImageURL = new URL(image, Astro.site);
   @media print {
     .no-print {
       display: none !important;
+    }
+  }
+
+  /* ===== Mobile : centrage sans largeur forcée ===== */
+  @media (max-width: 768px) {
+    .btn {
+      justify-content: center !important;
+      text-align: center !important;
+      width: auto;         /* largeur naturelle */
+      max-width: 100%;     /* sécurité anti-overflow */
+    }
+
+    /* Option : si tu veux un bouton plein écran,
+       ajoute .btn--full à ton HTML */
+    .btn--full {
+      width: 100%;
+      display: flex;
+    }
+
+    /* CTA en colonne → éviter le stretch */
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
     }
   }
 </style>

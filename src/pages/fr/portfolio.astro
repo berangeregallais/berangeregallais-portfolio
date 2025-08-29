@@ -22,7 +22,7 @@ const allCategories = [
 
 <BaseLayout
   title="Portfolio | Projets Documentation Technique & Études de Cas"
-  description="Exemples de mes projets en documentation technique : API, portails développeurs, conformité IA et structure documentaire."
+  description="Exemples de mes projets en documentation technique : API, portails développeurs et structure documentaire."
   lang="fr"
 >
   <!-- Hero Section -->
@@ -31,8 +31,8 @@ const allCategories = [
       <div class="hero-content">
         <h1>Portfolio</h1>
         <p class="hero-subtitle">
-          Découvrez une sélection de mes projets menés autour de la
-          documentation API, de l’IA et de la stratégie documentaire.
+          Découvrez mes projets en documentation API, IA et stratégie
+          documentaire
         </p>
       </div>
     </div>
@@ -312,7 +312,7 @@ const allCategories = [
   }
 
   :root[data-theme="light"] .btn-primary {
-    color: #d0d0d0; 
+    color: #d0d0d0;
   }
 
   .btn-primary:hover {
@@ -378,6 +378,44 @@ const allCategories = [
   @media (max-width: 480px) {
     .projects-grid {
       grid-template-columns: 1fr;
+    }
+  }
+
+  /* ===============================
+   Portfolio Page Adjustments
+   =============================== */
+
+  /* Réduction des espacements entre sections */
+  .portfolio-hero {
+    padding: 4rem 0 3rem; /* avant : souvent 6rem ou + */
+  }
+  .portfolio-projects {
+    padding: 4rem 0; /* réduit l’air entre les projets */
+  }
+  .portfolio-cta {
+    padding: 4rem 0; /* resserre la zone CTA */
+  }
+
+  /* Ajustement du titre/intro */
+  .portfolio-hero .hero-subtitle {
+    margin-top: 0.75rem;
+    margin-bottom: 0; /* réduit l’espace avant la section suivante */
+  }
+
+  /* Empêche les boutons CTA de s’étirer en largeur sur mobile */
+  @media (max-width: 768px) {
+    .cta-buttons .btn {
+      display: inline-flex !important;
+      width: auto !important;
+      max-width: 100%;
+      flex: 0 0 auto; /* empêche l’étirement */
+      align-self: center; /* centre le bouton */
+    }
+
+    .cta-buttons {
+      flex-direction: column; /* empile les boutons si nécessaire */
+      align-items: center;
+      gap: 1rem;
     }
   }
 </style>

@@ -1,13 +1,13 @@
 ---
-// src/pages/index.astro
+// src/pages/en/index.astro
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ServiceCard from "../../components/ServiceCard.astro";
 import PortfolioCard from "../../components/PortfolioCard.astro";
 ---
 
 <BaseLayout
-  title="Technical Writer & Ghostwriter | API & AI"
-  description="Technical Writer & Ghostwriter specializing in API, AI Act, technical documentation for innovative companies"
+  title="Technical Writer & Ghostwriter | API & AI Documentation"
+  description="Technical Writer & Ghostwriter — API & technical documentation for innovative companies"
   lang="en"
 >
   <!-- Hero Section -->
@@ -18,12 +18,10 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
           Technical Writer &<br />
           <span class="gradient-text">Ghostwriter</span>
         </h1>
-        <p class="hero-subtitle">
-          Specialized technical writing for API and AI tech companies
-        </p>
+        <p class="hero-subtitle">API and AI documentation for tech companies</p>
         <div class="hero-cta">
-          <a href="/portfolio" class="btn btn-primary">View Portfolio</a>
-          <a href="/services#audit" class="btn btn-secondary"
+          <a href="/en/portfolio" class="btn btn-primary">View Portfolio</a>
+          <a href="/en/contact" class="btn btn-secondary"
             >Discuss Your Project</a
           >
         </div>
@@ -41,7 +39,7 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
   -d '&#123;
     "image_url": "https://demo.org/mri-sample.png",
     "task": "anomaly_detection",
-    "compliance": "AI Act Annex IV"
+    "report_format": "report_format"
   &#125;'</code></pre>
       </div>
     </div>
@@ -55,36 +53,29 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
         <ServiceCard
           icon="audit"
           title="Documentation Audit"
-          description="Comprehensive evaluation of your documentation with improvement recommendations."
-          link="/services#audit"
+          description="Comprehensive evaluation of your documentation with clear improvement recommendations."
+          link="/en/services#audit"
           lang="en"
         />
         <ServiceCard
           icon="api"
-          title="API Documentation"
-          description="Developer-focused API docs, OpenAPI specifications and interactive documentation."
-          link="/services#api"
-          lang="en"
-        />
-        <ServiceCard
-          icon="ai"
-          title="AI Act Documentation"
-          description="AI model documentation, risk assessments and compliance frameworks aligned with European AI regulation requirements."
-          link="/services#ai-compliance"
+          title="Technical Documentation"
+          description="APIs, product specs, user guides and tutorials — clear content tailored for both developers and end users."
+          link="/en/services#documentation"
           lang="en"
         />
         <ServiceCard
           icon="ghostwriting"
           title="Technical Ghostwriting"
-          description="Articles, case studies and LinkedIn posts written under your signature."
-          link="/services#ghostwriting"
+          description="Articles, tutorials, white papers and technical case studies written under your name."
+          link="/en/services#ghostwriting"
           lang="en"
         />
         <ServiceCard
           icon="maintenance"
-          title="Documentation Maintenance"
-          description="Keep your documentation always current and performing with continuous maintenance service."
-          link="/services#maintenance"
+          title="Living Documentation"
+          description="Your content stays clear, up-to-date, and aligned with product evolution."
+          link="/en/services#maintenance"
           lang="en"
         />
       </div>
@@ -96,35 +87,39 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Recent Projects</h2>
-        <a href="/portfolio" class="section-link">View All Projects →</a>
+        <a href="/en/portfolio" class="section-link">See All Projects →</a>
       </div>
       <div class="portfolio-grid">
         <PortfolioCard
           title="Neolens – API Documentation"
-          client="Fictional Medical Imaging AI"
-          description="Complete API documentation for intelligent medical image analysis, with interactive guides, compliance notes and developer onboarding."
-          tags={["Docusaurus", "API Documentation", "AI Compliance"]}
+          client="Fictional medical imaging AI"
+          description="Comprehensive API documentation for intelligent medical image analysis, with interactive guides and developer onboarding."
+          tags={["API Documentation", "Docusaurus", "Interactive Guides"]}
           image="/portfolio/neolens-api-docs.png"
           link="https://neolens-api-docs.netlify.app/"
           category={["api-docs"]}
         />
         <PortfolioCard
           title="Cognitia API Documentation on GitBook"
-          client="Fictional Cognitia AI Platform"
-          description="Professional API documentation platform built on GitBook with advanced search, team collaboration and interactive developer experience"
-          tags={["GitBook", "Team Collaboration", "Enterprise Publishing"]}
+          client="Fictional Cognitia AI platform"
+          description="Professional API documentation platform built on GitBook with advanced search, team collaboration, and interactive developer experience."
+          tags={["GitBook", "Team Collaboration", "Enterprise Docs"]}
           image="/portfolio/cognitia-api-docs.png"
           link="https://cognitia-api-documentation.gitbook.io/bgallais"
           category={["api-docs", "enterprise"]}
         />
         <PortfolioCard
-          title="Visionary AI Platform Documentation"
-          client="Fictional Visionary AI Platform"
-          description="Comprehensive AI platform documentation focused on AI Act compliance, model transparency and responsible AI implementation guidelines"
-          tags={["AI Act Compliance", "Responsible AI", "GitHub Pages"]}
+          title="Tech Platform Documentation"
+          client="Fictional tech platform"
+          description="Complete technical platform documentation with developer guides, API references, and integration best practices."
+          tags={[
+            "Technical Documentation",
+            "Developer Onboarding",
+            "GitHub Pages",
+          ]}
           image="/portfolio/visionary-ai-docs.png"
           link="https://berangeregallais.github.io/visionary-ai/introduction"
-          category={["ai-compliance"]}
+          category={["technical-docs"]}
         />
       </div>
     </div>
@@ -134,13 +129,14 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
   <section class="cta-section">
     <div class="container">
       <div class="cta-content">
-        <h2>Enhance your technical content</h2>
+        <h2>Documentation <br />that makes a difference</h2>
         <p>
-          Transform your technical content into competitive advantage.<br />
-          Tell me about your documentation project.
+          Enhance your customers’ and teams’ experience with precise, accessible
+          information.<br />
+          Let’s talk about your project.
         </p>
-        <a href="/contact" class="btn btn-primary btn-large"
-          >Discuss your project</a
+        <a href="/en/contact" class="btn btn-primary btn-large"
+          >Discuss Your Project</a
         >
       </div>
     </div>
@@ -221,18 +217,15 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
   }
 
   /* ===============================
-   CODE PREVIEW (cadre extérieur)
+   CODE PREVIEW 
    =============================== */
-
-  /* Base commune (sera surchargée par thème) */
   .code-preview {
     border-radius: 1rem;
     overflow: hidden;
   }
 
-  /* ---------- Light mode : fond plein sombre + pas de blur (évite bandes blanches) ---------- */
   :root[data-theme="light"] .code-preview {
-    background: #0a0c12; /* fond plein sombre */
+    background: #0a0c12;
     border: 1px solid rgba(0, 0, 0, 0.35);
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
     backdrop-filter: none !important;
@@ -242,7 +235,7 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     display: flex;
     align-items: center;
     padding: 1.25rem 1.5rem;
-    background: #0f1422; /* bandeau sombre cohérent */
+    background: #0f1422;
     color: rgba(255, 255, 255, 0.95);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     font-family: var(--font-mono);
@@ -262,10 +255,9 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     height: 12px;
     border-radius: 50%;
     opacity: 0.9;
-    background: #e6b7d4; /* touche de ta couleur secondaire */
+    background: #e6b7d4;
   }
 
-  /* ---------- Dark mode : conserve ton design existant ---------- */
   :root[data-theme="dark"] .code-preview {
     background: rgb(var(--color-surface) / 0.9);
     border: 1px solid rgb(var(--color-border) / 0.5);
@@ -312,13 +304,8 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     color: rgb(var(--color-text-muted));
   }
 
-  /* ===============================
-   CODE BLOCK (lisible + anti-artefacts)
-   =============================== */
-
-  /* Light mode : bloc très sombre, texte clair */
   :root[data-theme="light"] .code-block {
-    background: #05060a; /* quasi noir */
+    background: #05060a;
     color: #f5f5f5;
     margin: 0;
     padding: 1.25rem 1.5rem;
@@ -334,10 +321,9 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     transform: translateZ(0);
   }
 
-  /* Dark mode : garde ton style rose sur fond clair */
   :root[data-theme="dark"] .code-block {
     background: rgb(var(--color-surface-variant));
-    color: #e6b7d4; /* ta couleur secondaire */
+    color: #e6b7d4;
     margin: 0;
     padding: 1.25rem 1.5rem;
     font-family: var(--font-mono);
@@ -348,7 +334,6 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     border-radius: 0 0 1rem 1rem;
   }
 
-  /* Scrollbar douce */
   .code-block::-webkit-scrollbar {
     height: 10px;
   }
@@ -357,7 +342,6 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     border-radius: 8px;
   }
 
-  /* Anti-artefacts et variantes de fontes */
   .code-block,
   .code-block code {
     text-shadow: none !important;
@@ -367,40 +351,12 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
       "calt" 0;
   }
 
-  /* Light mode : forcer le fond et le texte du <code> */
   :root[data-theme="light"] .code-block code {
-    background: transparent !important; /* supprime le fond blanc par défaut */
-    color: #f5f5f5 !important; /* texte bien clair */
-    text-shadow: none !important; /* supprime tout halo */
+    background: transparent !important;
+    color: #f5f5f5 !important;
+    text-shadow: none !important;
   }
 
-  /* Keep the code block on the right at all sizes */
-  .hero .code-preview {
-    justify-self: end; /* grid-aware right alignment */
-    margin-left: auto; /* fallback if not in grid */
-    margin-right: 0;
-    max-width: 560px; /* prevent full-width so auto margin can work */
-    width: 100%;
-  }
-
-  /* Ensure its inner text isn’t centered by parent rules */
-  .hero .code-preview .code-header,
-  .hero .code-preview .code-block {
-    text-align: left;
-  }
-
-  /* Mobile: some layouts center the whole hero — override just the code */
-  @media (max-width: 768px) {
-    .hero .code-preview {
-      justify-self: end;
-      margin-left: auto;
-      margin-right: 0;
-    }
-  }
-
-  /* ===============================
-   COLORATION SYNTAXIQUE (Prism-like)
-   =============================== */
   .code-block code {
     color: #e6e6e6;
     tab-size: 2;
@@ -462,7 +418,7 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
   }
 
   /* ===============================
-   SERVICES (Core Expertise) 
+   SERVICES 2x2 
    =============================== */
   .services-preview {
     padding: 8rem 0;
@@ -477,40 +433,16 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     color: rgb(var(--color-text));
   }
 
-  /* Grille adaptée pour 5 services */
+  /* Grille 2x2 pour 4 services */
   .services-grid {
     display: grid;
     gap: 2rem;
     margin-top: 3rem;
-    grid-template-columns: repeat(
-      2,
-      minmax(0, 1fr)
-    ); /* 2 colonnes par défaut */
-  }
-
-  /* Sur desktop : 3 cartes première ligne, 2 cartes deuxième ligne centrées */
-  @media (min-width: 1024px) {
-    .services-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      justify-items: center;
-    }
-    /* Centrer les 2 dernières cartes sur la 2e ligne */
-    .services-grid > :nth-child(4),
-    .services-grid > :nth-child(5) {
-      grid-column: span 1;
-    }
-    .services-grid > :nth-child(4) {
-      justify-self: end;
-      margin-right: 1rem;
-    }
-    .services-grid > :nth-child(5) {
-      justify-self: start;
-      margin-left: 1rem;
-    }
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   /* Sur mobile : 1 colonne */
-  @media (max-width: 639px) {
+  @media (max-width: 768px) {
     .services-grid {
       grid-template-columns: 1fr;
     }
@@ -536,6 +468,24 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     color: rgb(var(--color-text));
     margin: 0;
   }
+  .portfolio-highlights .section-header {
+    display: flex;
+    justify-content: center; /* centre tout par défaut */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .portfolio-highlights .section-header h2 {
+    flex: 0 0 100%; /* force le titre sur toute la largeur */
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-highlights .section-header .section-link {
+    text-align: center;
+  }
   .section-link {
     color: rgb(var(--color-primary));
     text-decoration: none;
@@ -549,6 +499,24 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+  }
+
+  .portfolio-highlights .section-header {
+    display: flex;
+    justify-content: space-between; /* comme la version FR */
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  .portfolio-highlights .section-header h2 {
+    text-align: center;
+    flex: 1; /* permet au titre de se centrer au milieu */
+  }
+
+  .portfolio-highlights .section-header .section-link {
+    flex: 0;
+    margin-left: auto; /* pousse le lien à droite */
+    text-align: right;
   }
 
   /* ===============================
@@ -609,6 +577,195 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     }
     .cta-content h2 {
       font-size: 2rem;
+    }
+  }
+
+  /* ===============================
+   TABLET & TOUCH ENHANCEMENTS
+   =============================== */
+
+  /* Container responsive padding (utile pour les sections hors .hero) */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  @media (max-width: 1024px) {
+    .container {
+      padding: 0 1.5rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .container {
+      padding: 0 1rem;
+    }
+  }
+
+  /* Hero – garder 2 colonnes sur tablette mais réduire les espacements/tailles */
+  @media (max-width: 1200px) {
+    .hero {
+      padding: 6rem 0 5rem;
+    }
+  }
+  @media (max-width: 1024px) {
+    .hero .container {
+      grid-template-columns: 1.1fr 0.9fr; /* conserve le visuel hero + code sur iPad */
+      gap: 3rem;
+    }
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      max-width: 100%;
+    }
+    .code-header,
+    .code-block {
+      padding: 1rem 1.25rem;
+    }
+  }
+  /* Passage à 1 colonne sous ~900 px (grandes tablettes en portrait) */
+  @media (max-width: 900px) {
+    .hero .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+    .hero-cta {
+      justify-content: center;
+    }
+    .code-preview {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Services – 2 colonnes sur tablette, 1 sur mobile (déjà géré), on optimise les espacements */
+  @media (max-width: 1024px) {
+    .services-preview {
+      padding: 6rem 0;
+    }
+    .services-grid {
+      gap: 1.5rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .services-preview {
+      padding: 5rem 0;
+    }
+  }
+
+  /* Section header – éviter la collision du lien sur petits écrans/tablettes étroites */
+  @media (max-width: 820px) {
+    .section-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+  }
+
+  /* Portfolio – assouplir le min des cartes pour tenir en 2 colonnes sur tablette */
+  @media (max-width: 1024px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+  @media (max-width: 640px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr; /* mobile pur */
+    }
+  }
+
+  /* CTA – réduire la hauteur sur tablette et lisser la typo */
+  @media (max-width: 1024px) {
+    .cta-section {
+      padding: 6rem 0;
+    }
+    .cta-content h2 {
+      font-size: 2.4rem;
+    }
+    .cta-content p {
+      font-size: 1.05rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .cta-section {
+      padding: 4.5rem 0;
+    }
+    .cta-content h2 {
+      font-size: 2rem;
+    }
+  }
+
+  /* Touch targets & petits ajustements pour écrans tactiles */
+  @media (hover: none) and (pointer: coarse) {
+    .btn {
+      min-height: 44px;
+      padding: 0.9rem 1.1rem;
+    }
+    .hero-cta {
+      gap: 0.75rem;
+    }
+    .code-block::-webkit-scrollbar {
+      height: 12px;
+    }
+  }
+
+  /* Bonus : limiter les très grands paddings des sections sur tablettes */
+  @media (max-width: 1024px) {
+    .portfolio-highlights {
+      padding: 6rem 0;
+    }
+  }
+
+  /* ======== Code block à gauche en mobile ======== */
+  @media (max-width: 900px) {
+    /* On annule le centrage global du container du hero */
+    .hero .container {
+      text-align: initial;
+    }
+    /* On ne recentre que le texte du bloc titre/sous-titre/CTA */
+    .hero-content {
+      text-align: center;
+    }
+
+    /* Le bloc code ne doit pas se centrer dans la grille 1 colonne */
+    .code-preview {
+      justify-self: start; /* ancre à gauche dans la grid */
+      margin: 0; /* annule margin: 0 auto; */
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* Le code prend toute la largeur utile à gauche */
+    .code-preview {
+      width: 100%;
+      max-width: none; /* annule le max-width: 720px */
+      text-align: left;
+    }
+    .code-header,
+    .code-block {
+      text-align: left; /* le contenu du <pre><code> reste à gauche */
+    }
+  }
+
+  /* Empêche les CTA de s'étirer en pleine largeur sur mobile */
+  @media (max-width: 768px) {
+    .hero-cta .btn,
+    .cta-section .btn {
+      display: inline-flex !important;
+      width: auto !important;
+      max-width: 100%;
+      flex: 0 0 auto; /* ne pas s'étirer dans le flex */
+      align-self: center; /* bien centré dans le conteneur */
+    }
+
+    /* Optionnel : si tu veux que deux boutons passent l’un sous l’autre
+     sans prendre toute la largeur, garde le gap agréable */
+    .hero-cta {
+      justify-content: center;
+      gap: 0.75rem;
     }
   }
 </style>
