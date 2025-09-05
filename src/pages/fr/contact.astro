@@ -4,14 +4,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="Contact — Bérangère Gallais"
-  description="Me contacter pour vos projets de documentation technique, API et IA."
+  description=""
 >
   <section class="contact-hero">
     <div class="container">
       <h1 class="title">Contact</h1>
       <p class="lead">
         Vous avez un projet de documentation ou de contenu ghostwrité ?<br />
-        Choisissez le moyen de contact le plus pratique pour vous.
+        Choisissez le moyen de contact qui vous convient le mieux.
       </p>
     </div>
   </section>
@@ -34,14 +34,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           <div class="contact-icon">📅</div>
           <div class="contact-details">
             <strong>Call découverte</strong>
-            <a
-              href="https://calendly.com/gallaisberangere/discovery-call"
-              target="_blank"
-              rel="noopener"
-              class="calendly-link"
-            >
-              Réserver un appel (30 min)
-            </a>
+            <div id="google-calendar-button" class="google-calendar-wrapper">
+              <!-- Le bouton Google Calendar sera injecté ici -->
+            </div>
           </div>
         </div>
 
@@ -71,27 +66,47 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   </section>
 </BaseLayout>
 
+<!-- Google Calendar Appointment Scheduling -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  window.addEventListener('load', function() {
+    const target = document.getElementById('google-calendar-button');
+    const googleCalendar = (window as any)['calendar'];
+    if (target && googleCalendar && googleCalendar.schedulingButton) {
+      googleCalendar.schedulingButton.load({
+        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3BhtGuapsUUSewuJZ3Vpo5ay4B8cZ4Nzy1ZjOBIsNJMr1RTW2zKE_w0fuLFYgfA_Hke7AJjoAZ?gv=true',
+        color: '#e6b7d4',
+        label: 'Réserver un appel (30 min)',
+        target,
+      });
+    }
+  });
+})();
+</script>
+
 <style>
   /* ========== HERO ========== */
   .contact-hero {
-    padding: 4.5rem 0 2.25rem; /* + air haut/bas */
+    padding: 4.5rem 0 2.25rem; /* + spacing top/bottom */
     text-align: center;
   }
   .title {
     font-size: 2.125rem;
     line-height: 1.2;
-    margin: 0 0 2.25rem; /* espace sous le titre */
+    margin: 0 0 2.25rem; /* spacing below title */
   }
   .lead {
     font-size: 1.125rem;
     color: rgb(var(--color-text));
-    line-height: 1.7; /* + lisible */
+    line-height: 1.7; /* more readable */
     margin: 0;
   }
 
-  /* ========== SECTION CONTACT ========== */
+  /* ========== CONTACT SECTION ========== */
   .contact-info {
-    padding: 2.5rem 0 3.5rem; /* + air global */
+    padding: 2.5rem 0 3.5rem; /* global spacing */
     text-align: center;
   }
   .contact-info h2 {
@@ -104,25 +119,25 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     margin: 0.35rem 0;
   }
 
-  /* Grille plus respirante */
+  /* Grid more spacious */
   .contact-methods {
     display: grid;
-    gap: 2.25rem; /* + espacement vertical/horizontal */
+    gap: 2.25rem; /* vertical/horizontal spacing */
     margin-top: 2.25rem;
   }
   @media (min-width: 768px) {
     .contact-methods {
       grid-template-columns: repeat(2, 1fr);
-      gap: 2.5rem; /* + air en desktop */
+      gap: 2.5rem; /* more air on desktop */
     }
   }
 
-  /* Cartes de contact plus généreuses */
+  /* Contact cards */
   .contact-method {
     display: flex;
     align-items: center;
     gap: 1.125rem;
-    padding: 1.5rem; /* + padding */
+    padding: 1.5rem; /* generous padding */
     background: rgb(var(--color-surface) / 1);
     border: 1px solid rgb(var(--color-border) / 0.4);
     border-radius: var(--radius-lg);
@@ -137,7 +152,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     border-color: rgb(var(--color-primary) / 0.35);
   }
 
-  /* Icône plus grande, plus douce */
+  /* Icon */
   .contact-icon {
     font-size: 1.85rem;
     width: 60px;
@@ -155,14 +170,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     flex-shrink: 0;
   }
 
-  /* Détails plus lisibles */
+  /* Details */
   .contact-details {
     flex: 1;
     text-align: left;
   }
   .contact-details strong {
     display: block;
-    margin: 0 0 0.5rem; /* + air sous le label */
+    margin: 0 0 0.5rem; /* spacing under label */
     color: rgb(var(--color-text));
     font-size: 1rem;
     font-weight: 700;
@@ -175,7 +190,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     color: rgb(var(--color-text-muted));
   }
 
-  /* Liens pro et sobres */
+  /* Links */
   .contact-details a {
     color: rgb(var(--color-primary));
     text-decoration: none;
@@ -189,38 +204,65 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     color: rgb(var(--color-primary));
   }
 
-  /* Effet texte dégradé Calendly conservé */
-  .calendly-link {
-    font-weight: 600;
+  /* Google Calendar Button Styling */
+  .google-calendar-wrapper {
+    margin-top: 0.25rem;
+  }
+
+  /* Style pour le bouton Google Calendar */
+  .google-calendar-wrapper :global(button) {
     background: linear-gradient(
       135deg,
       rgb(var(--color-primary)),
       rgb(var(--color-secondary))
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    ) !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 8px 16px !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    color: white !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
   }
 
-  /* ========== INLINE CALENDLY (si utilisé plus bas dans la page) ========== */
-  .calendly-inline-widget {
-    height: 720px;
-    min-width: 320px;
-  }
-  @media (max-width: 480px) {
-    .calendly-inline-widget {
-      height: 820px;
-    } /* + hauteur sur mobile */
+  .google-calendar-wrapper :global(button:hover) {
+    opacity: 0.9 !important;
+    transform: translateY(-1px) !important;
   }
 
-  /* ========== PETITS AJUSTEMENTS RESPONSIVE ========== */
+  /* Fallback pour navigateurs qui ne supportent pas :global */
+  :global(.calendar-scheduling-button) {
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-secondary))
+    ) !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 8px 16px !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    color: white !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+  }
+
+  :global(.calendar-scheduling-button:hover) {
+    opacity: 0.9 !important;
+    transform: translateY(-1px) !important;
+  }
+
+  /* Responsive adjustments */
   @media (max-width: 768px) {
     .title {
       font-size: 1.9rem;
       margin-bottom: 2rem;
     }
     .contact-method {
-      padding: 1.25rem; /* un peu moins serré en petit écran */
+      padding: 1.25rem; /* slightly lighter on mobile */
     }
     .contact-icon {
       width: 56px;
@@ -229,49 +271,46 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     }
   }
 
-  /* ========== MODE CLAIR/ SOMBRE (contrastes légers) ========== */
+  /* Dark mode tweaks */
   :root[data-theme="dark"] .contact-method {
     background: rgb(var(--color-surface) / 0.75);
     border-color: rgb(var(--color-border) / 0.25);
   }
   :root[data-theme="dark"] .contact-details a,
   :root[data-theme="dark"] .contact-details span {
-    color: rgb(var(--color-text)); /* + contraste en dark */
+    color: rgb(var(--color-text)); /* more contrast */
   }
 
-  /* Fix mobile: cartes collées à droite */
+  /* Fix mobile: no cards stuck to the right */
   @media (max-width: 768px) {
     .contact-info .container {
       padding-left: 1rem;
-      padding-right: 1rem; /* ajoute un vrai gutter mobile */
+      padding-right: 1rem;
     }
-
     .contact-methods {
-      grid-template-columns: 1fr; /* sécurité : une seule colonne */
-      justify-items: stretch; /* étire la carte sur toute la ligne */
+      grid-template-columns: 1fr;
+      justify-items: stretch;
     }
-
     .contact-method {
       width: 100%;
-      box-sizing: border-box; /* évite tout débordement horizontal */
-      margin: 0; /* pas de marge parasite */
+      box-sizing: border-box;
+      margin: 0;
     }
   }
 
-  /* Bonus robustesse : évite que les liens très longs débordent */
+  /* Robust links */
   .contact-details a {
     word-break: break-word;
     overflow-wrap: anywhere;
   }
 
-  /* Liens en rose uniquement en dark mode */
+  /* Pink links in dark mode */
   :root[data-theme="dark"] a,
   :root[data-theme="dark"] .contact-details a {
     color: #e6b7d4;
   }
-
   :root[data-theme="dark"] a:hover,
   :root[data-theme="dark"] .contact-details a:hover {
-    opacity: 0.85; /* petit effet au hover */
+    opacity: 0.85;
   }
 </style>

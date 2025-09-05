@@ -18,7 +18,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
   <section class="contact-info">
     <div class="container">
-      <h2>Let’s discuss your project</h2>
+      <h2>Let's discuss your project</h2>
       <div class="contact-methods">
         <div class="contact-method">
           <div class="contact-icon">✉️</div>
@@ -34,14 +34,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           <div class="contact-icon">📅</div>
           <div class="contact-details">
             <strong>Discovery Call</strong>
-            <a
-              href="https://calendly.com/gallaisberangere/discovery-call"
-              target="_blank"
-              rel="noopener"
-              class="calendly-link"
-            >
-              Book a call (30 min)
-            </a>
+            <div id="google-calendar-button" class="google-calendar-wrapper">
+              <!-- Le bouton Google Calendar sera injecté ici -->
+            </div>
           </div>
         </div>
 
@@ -70,6 +65,26 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     </div>
   </section>
 </BaseLayout>
+
+<!-- Google Calendar Appointment Scheduling -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  window.addEventListener('load', function() {
+    const target = document.getElementById('google-calendar-button');
+    const googleCalendar = (window as any)['calendar'];
+    if (target && googleCalendar && googleCalendar.schedulingButton) {
+      googleCalendar.schedulingButton.load({
+        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3BhtGuapsUUSewuJZ3Vpo5ay4B8cZ4Nzy1ZjOBIsNJMr1RTW2zKE_w0fuLFYgfA_Hke7AJjoAZ?gv=true',
+        color: '#e6b7d4',
+        label: 'Book a call (30 min)',
+        target,
+      });
+    }
+  });
+})();
+</script>
 
 <style>
   /* ========== HERO ========== */
@@ -189,28 +204,55 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     color: rgb(var(--color-primary));
   }
 
-  /* Gradient effect for Calendly */
-  .calendly-link {
-    font-weight: 600;
+  /* Google Calendar Button Styling */
+  .google-calendar-wrapper {
+    margin-top: 0.25rem;
+  }
+
+  /* Style pour le bouton Google Calendar */
+  .google-calendar-wrapper :global(button) {
     background: linear-gradient(
       135deg,
       rgb(var(--color-primary)),
       rgb(var(--color-secondary))
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    ) !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 8px 16px !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    color: white !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
   }
 
-  /* Inline Calendly */
-  .calendly-inline-widget {
-    height: 720px;
-    min-width: 320px;
+  .google-calendar-wrapper :global(button:hover) {
+    opacity: 0.9 !important;
+    transform: translateY(-1px) !important;
   }
-  @media (max-width: 480px) {
-    .calendly-inline-widget {
-      height: 820px;
-    } /* more height on mobile */
+
+  /* Fallback pour navigateurs qui ne supportent pas :global */
+  :global(.calendar-scheduling-button) {
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-secondary))
+    ) !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 8px 16px !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    color: white !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+  }
+
+  :global(.calendar-scheduling-button:hover) {
+    opacity: 0.9 !important;
+    transform: translateY(-1px) !important;
   }
 
   /* Responsive adjustments */
