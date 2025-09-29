@@ -21,8 +21,8 @@ const allCategories = [
 ---
 
 <BaseLayout
-  title="Portfolio | Projets Documentation Technique & Études de Cas"
-  description="Exemples de mes projets en documentation technique : API, portails développeurs et structure documentaire."
+  title="Portfolio | Agents IA Conversationnels & Documentation Technique"
+  description="Exemples de mes projets : agents conversationnels IA, documentation API et solutions intelligentes pour entreprises."
   lang="fr"
 >
   <!-- Hero Section -->
@@ -31,8 +31,7 @@ const allCategories = [
       <div class="hero-content">
         <h1>Portfolio</h1>
         <p class="hero-subtitle">
-          Découvrez mes projets en documentation API, IA et stratégie
-          documentaire
+          Agents conversationnels IA et projets de documentation technique
         </p>
       </div>
     </div>
@@ -66,49 +65,45 @@ const allCategories = [
   </section>
 
   <!-- CTA Section -->
-  <section class="portfolio-cta">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Besoin d’une documentation claire et efficace&nbsp;?</h2>
-        <p>
-          Je vous aide à structurer, rédiger et maintenir votre documentation
-          pour qu’elle soit utile aux développeurs, conforme aux exigences et
-          facile à faire évoluer.
-        </p>
-        <div class="cta-benefits">
-          <div class="benefit">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 6 9 17l-5-5"></path>
-            </svg>
-            Diagnostic de vos besoins
-          </div>
-          <div class="benefit">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 6 9 17l-5-5"></path>
-            </svg>
-            Stratégie documentaire adaptée
-          </div>
-          <div class="benefit">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 6 9 17l-5-5"></path>
-            </svg>
-            Mise en place de solutions pratiques
-          </div>
+<section class="portfolio-cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Prêt·e à créer votre agent conversationnel ?</h2>
+      <p>
+        Chaque projet est unique. Je vous accompagne de l'analyse de vos besoins jusqu'au déploiement et à la formation de vos équipes.
+      </p>
+      <div class="cta-benefits">
+        <div class="benefit">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+          Solution sur-mesure
         </div>
-        <div class="cta-buttons">
-          <a href="/fr/contact" class="btn btn-primary btn-large">
-            <span>Discutons de votre projet</span>
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M5 12h14m-7-7 7 7-7 7"></path>
-            </svg>
-          </a>
-          <a href="/fr/services" class="btn btn-secondary"
-            >Découvrir les Services</a
-          >
+        <div class="benefit">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+          Documentation complète incluse
+        </div>
+        <div class="benefit">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+          Suivi personnalisé sur 10 jours
         </div>
       </div>
+      <div class="cta-buttons">
+        <a href="/fr/contact" class="btn btn-primary btn-large">
+          <span>Discuter de votre projet</span>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M5 12h14m-7-7 7 7-7 7"></path>
+          </svg>
+        </a>
+        <a href="/fr/services" class="btn btn-secondary">Découvrir mes services</a>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 </BaseLayout>
 
 <style>
@@ -387,19 +382,19 @@ const allCategories = [
 
   /* Réduction des espacements entre sections */
   .portfolio-hero {
-    padding: 4rem 0 3rem; /* avant : souvent 6rem ou + */
+    padding: 4rem 0 3rem; 
   }
   .portfolio-projects {
-    padding: 4rem 0; /* réduit l’air entre les projets */
+    padding: 4rem 0; 
   }
   .portfolio-cta {
-    padding: 4rem 0; /* resserre la zone CTA */
+    padding: 4rem 0;
   }
 
   /* Ajustement du titre/intro */
   .portfolio-hero .hero-subtitle {
     margin-top: 0.75rem;
-    margin-bottom: 0; /* réduit l’espace avant la section suivante */
+    margin-bottom: 0; 
   }
 
   /* Empêche les boutons CTA de s’étirer en largeur sur mobile */
@@ -408,12 +403,12 @@ const allCategories = [
       display: inline-flex !important;
       width: auto !important;
       max-width: 100%;
-      flex: 0 0 auto; /* empêche l’étirement */
-      align-self: center; /* centre le bouton */
+      flex: 0 0 auto; 
+      align-self: center; 
     }
 
     .cta-buttons {
-      flex-direction: column; /* empile les boutons si nécessaire */
+      flex-direction: column; 
       align-items: center;
       gap: 1rem;
     }

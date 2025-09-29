@@ -4,18 +4,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-  title="Services Technical Writer & Ghostwriter | Documentation API & IA"
-  description="Services de documentation technique : audit, documentation API, conformité AI Act, ghostwriting technique et maintenance pour entreprises tech."
+  title="Solutions Agents IA Conversationnels | Automatisation intelligente"
+  description="Agents IA conversationnels sur-mesure pour support client, performance commerciale, opérations internes et documentation technique."
   lang="fr"
 >
   <!-- Hero Section -->
   <section class="services-hero">
     <div class="container">
       <div class="hero-content">
-        <h1>Documentation API, IA & contenus techniques</h1>
+        <h1>Solutions d'Agents IA Conversationnels</h1>
         <p class="hero-subtitle">
-          Des services de rédaction et d’ingénierie documentaire adaptés à vos
-          besoins.
+          Des agents intelligents sur-mesure pour automatiser vos interactions métier
         </p>
       </div>
     </div>
@@ -24,8 +23,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   <!-- Services Grid -->
   <section class="services-main">
     <div class="container">
-      <!-- Documentation Audits -->
-      <div class="service-block" id="audit">
+      
+      <!-- Bloc 1 : Expérience Client -->
+      <div class="service-block" id="customer">
         <div class="service-content">
           <div class="service-header">
             <div class="service-icon">
@@ -37,439 +37,288 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                 stroke="currentColor"
                 stroke-width="2"
               >
-                <path
-                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                ></path>
-                <polyline points="14,2 14,8 20,8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10,9 9,9 8,9"></polyline>
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
               </svg>
             </div>
-            <h2>Audit documentaire</h2>
+            <h2>Expérience Client</h2>
             <p class="service-tagline">
-              Un diagnostic complet pour identifier les forces et faiblesses de
-              votre documentation, et définir un plan d’amélioration clair
+              Agents conversationnels qui améliorent la satisfaction tout en réduisant vos coûts support
             </p>
           </div>
 
           <div class="service-details">
             <div class="service-description">
               <p>
-                Je réalise une analyse approfondie de votre documentation
-                existante : ce qui fonctionne, ce qui manque, et ce qui peut
-                être optimisé. Vous repartez avec des recommandations concrètes
-                et hiérarchisées pour améliorer l’expérience de vos utilisateurs
-                et développeurs.
+                Je crée des agents conversationnels intelligents qui gèrent vos interactions clients 24/7. Support technique, conseils produits, SAV, suivi commandes - chaque agent est adapté à vos besoins métier spécifiques et s'intègre à vos outils existants.
               </p>
             </div>
 
             <div class="service-features">
-              <h3>Ce que j'analyse :</h3>
+              <h3>Use cases types :</h3>
               <ul>
                 <li>
-                  <strong>Qualité du contenu :</strong> clarté, complétude, mise
-                  à jour
+                  <strong>Support technique automatisé :</strong> résolution des questions courantes, aide au dépannage, transfert vers équipe support pour cas complexes
                 </li>
                 <li>
-                  <strong>Expérience utilisateur :</strong> navigation, recherche
-                  et parcours de lecture
+                  <strong>E-commerce :</strong> conseils produits personnalisés, suivi commandes, gestion retours et SAV
                 </li>
                 <li>
-                  <strong>Parcours développeur :</strong> onboarding et intégration
-                  technique
+                  <strong>SaaS B2B :</strong> assistance utilisateur, guide fonctionnalités, résolution des problèmes techniques courants
                 </li>
                 <li>
-                  <strong>Outils et processus :</strong> efficacité et pérennité
-                  de votre stack documentaire
+                  <strong>Services financiers :</strong> questions compte, transactions, procédures réglementaires
+                </li>
+                <li>
+                  <strong>FAQ intelligentes :</strong> réponses contextualisées qui s'adaptent au parcours utilisateur
                 </li>
               </ul>
             </div>
 
             <div class="service-deliverables">
-              <h3>Vos livrables :</h3>
+              <h3>Bénéfices mesurables :</h3>
               <ul>
-                <li>Diagnostic complet avec constats et recommandations</li>
-                <li>Plan d’action priorisé</li>
-                <li>Suggestions d’outils et bonnes pratiques</li>
-                <li>Roadmap de mise en œuvre</li>
-                <li>Session de restitution et Q&A</li>
+                <li>Réduction significative du volume de tickets support</li>
+                <li>Disponibilité 24/7 sans coûts supplémentaires</li>
+                <li>Temps de réponse inférieur à 30 secondes</li>
+                <li>Satisfaction client améliorée (mesurée via analytics)</li>
+                <li>Équipes support libérées pour requêtes complexes</li>
+                <li>ROI mesurable via analytics intégrées</li>
               </ul>
             </div>
 
             <div class="service-cta">
-              <a href="/fr/contact?service=audit" class="btn btn-primary"
-                >Lancer un audit documentaire</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- API Documentation -->
-      <div class="service-block" id="documentation">
-        <div class="service-content">
-          <div class="service-header">
-            <div class="service-icon">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
-            <h2>Documentation technique</h2>
-            <p class="service-tagline">
-              API, produits et contenus techniques clairs pour vos utilisateurs
-              et développeurs — avec qualité vérifiée automatiquement
-            </p>
-          </div>
-
-          <div class="service-details">
-            <div class="service-description">
-              <p>
-                Je conçois des documentations techniques complètes et adaptées :
-                guides développeur, références API, tutoriels pas à pas ou
-                encore manuels utilisateurs. Mon objectif : faciliter l’adoption
-                de vos produits tout en optimisant l’expérience de vos clients
-                et équipes.
-              </p>
-            </div>
-
-            <div class="service-features">
-              <h3>Ce que je crée :</h3>
-              <ul>
-                <li>
-                  <strong>Référentiels API :</strong> endpoints, paramètres et réponses
-                  détaillés
-                </li>
-                <li>
-                  <strong>Guides produit et utilisateurs :</strong> tutoriels pas
-                  à pas, bonnes pratiques
-                </li>
-                <li>
-                  <strong>Onboarding développeur :</strong> intégration rapide avec
-                  code samples multi-langages
-                </li>
-                <li>
-                  <strong>Interface interactive :</strong> tests API et exploration
-                  en direct
-                </li>
-                <li>
-                  <strong>Docs-as-Code :</strong> documentation intégrée à votre
-                  code source et workflows de développement
-                </li>
-                <li>
-                  <strong>Automatisation :</strong> génération et mise en ligne continues,
-                  sans intervention manuelle
-                </li>
-                <li>
-                  <strong>Gestion d'erreurs :</strong> codes, explications et solutions
-                </li>
-                <li>
-                  <strong>Renfort d’équipe :</strong> intégration dans une équipe
-                  de technical writers existante pour absorber la charge ou accélérer
-                  vos livrables
-                </li>
-              </ul>
-              <h3>Tests qualité automatisés (option)</h3>
-              <ul>
-                <li>
-                  <strong>Vérifications automatiques :</strong> détection de liens
-                  cassés, images manquantes et pages en erreur
-                </li>
-                <li>
-                  <strong>Relecture assistée :</strong> règles de style et glossaire
-                  appliqués de façon homogène
-                </li>
-                <li>
-                  <strong>Exemples vérifiés :</strong> commandes et extraits de code
-                  testés régulièrement
-                </li>
-                <li>
-                  <strong>Publication fiable :</strong> la documentation se met en
-                  ligne automatiquement après validation
-                </li>
-              </ul>
-            </div>
-
-            <div class="service-deliverables">
-              <h3>Vos livrables :</h3>
-              <ul>
-                <li>Documentation API et produit intégrée à votre workflow</li>
-                <li>Guides clairs pour développeurs et utilisateurs finaux</li>
-                <li>Exemples de code et cas d’usage concrets</li>
-                <li>Plateforme interactive et facile à maintenir</li>
-                <li>
-                  Collection Postman ou équivalent pour tester rapidement vos
-                  endpoints
-                </li>
-                <li>Templates et processus de mise à jour continue</li>
-                <li>
-                  Un rapport de qualité simple (vert / orange / rouge) après
-                  chaque mise à jour
-                </li>
-                <li>
-                  Un flux d’automatisation prêt à l’emploi pour publier sans
-                  surprises
-                </li>
-              </ul>
-            </div>
-
-            <div class="service-cta">
-              <a
-                href="/fr/contact?service=documentation"
-                class="btn btn-primary">Créer votre documentation technique</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Ghostwriting Tech -->
-      <div class="service-block" id="ghostwriting">
-        <div class="service-content">
-          <div class="service-header">
-            <div class="service-icon">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                ></path>
-                <polyline points="14,2 14,8 20,8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <line x1="13" y1="9" x2="8" y2="9"></line>
-              </svg>
-            </div>
-            <h2>Ghostwriting Technique</h2>
-            <p class="service-tagline">
-              Articles, tutoriels et études de cas rédigés sous votre signature
-            </p>
-          </div>
-
-          <div class="service-details">
-            <div class="service-description">
-              <p>
-                Je rédige pour vous du contenu technique clair et précis, publié
-                sous votre nom. Articles de blog, guides pratiques, études de
-                cas ou livres blancs : des textes structurés et fiables pour
-                partager votre expertise.
-              </p>
-            </div>
-
-            <div class="service-features">
-              <h3>Types de contenus :</h3>
-              <ul>
-                <li>
-                  <strong>Articles techniques :</strong> tutoriels, guides pas à
-                  pas, analyses d’outils
-                </li>
-                <li>
-                  <strong>Études de cas :</strong> retours d’expérience et success
-                  stories
-                </li>
-                <li>
-                  <strong>Livres blancs et guides :</strong> documents approfondis
-                  pour vos clients ou partenaires
-                </li>
-                <li>
-                  <strong>Contenus internes :</strong> supports techniques pour vos
-                  équipes
-                </li>
-                <li>
-                  <strong>Posts professionnels :</strong> articles courts ou contenus
-                  techniques adaptés aux réseaux spécialisés (ex. LinkedIn, Medium)
-                </li>
-              </ul>
-            </div>
-
-            <div class="service-deliverables">
-              <h3>Vos contenus prêts à publier :</h3>
-              <ul>
-                <li>
-                  Articles, tutoriels ou études de cas structurés et clairs
-                </li>
-                <li>Adaptation à votre ton et à votre audience</li>
-                <li>Relecture et vérification technique</li>
-                <li>
-                  Relecture attentive pour assurer une rédaction claire et sans
-                  fautes
-                </li>
-                <li>Formats adaptés (web, PDF, support interne)</li>
-                <li>Deux cycles de révision inclus</li>
-              </ul>
-            </div>
-
-            <div class="service-cta">
-              <a href="/fr/contact?service=ghostwriting" class="btn btn-primary"
-                >Créer vos contenus techniques</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Documentation évolutive -->
-      <div class="service-block" id="maintenance">
-        <div class="service-content">
-          <div class="service-header">
-            <div class="service-icon">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
-                ></path>
-              </svg>
-            </div>
-            <h2>Documentation évolutive</h2>
-            <p class="service-tagline">
-              Suivi et mises à jour régulières pour des contenus toujours
-              fiables et adaptés.
-            </p>
-          </div>
-
-          <div class="service-details">
-            <div class="service-description">
-              <p>
-                Mise à jour continue de vos documents : contenu actualisé, liens
-                vérifiés, organisation optimisée et migration vers des outils
-                plus adaptés si nécessaire. Objectif : une documentation
-                vivante, claire et durable.
-              </p>
-            </div>
-
-            <div class="service-features">
-              <h3>Ce que je réalise :</h3>
-              <ul>
-                <li>
-                  <strong>Mises à jour planifiées :</strong> contenus, liens et informations
-                  tenus à jour
-                </li>
-                <li>
-                  <strong>Structure & navigation :</strong> sections mieux organisées
-                  pour trouver l’information rapidement
-                </li>
-                <li>
-                  <strong>Modernisation :</strong> migration ou adaptation vers des
-                  outils plus efficaces
-                </li>
-                <li>
-                  <strong>Processus durables :</strong> méthodes de suivi et bonnes
-                  pratiques à long terme
-                </li>
-                <li>
-                  <strong>Surveillance continue :</strong> alertes en cas de lien
-                  cassé ou de régression détectée
-                </li>
-              </ul>
-            </div>
-
-            <div class="service-deliverables">
-              <h3>Vos livrables :</h3>
-              <ul>
-                <li>Documentation actualisée et vérifiée</li>
-                <li>Plan de maintenance adapté à vos besoins</li>
-                <li>Calendrier de révisions programmées</li>
-                <li>
-                  Notifications en cas d’anomalie pour corriger rapidement
-                </li>
-              </ul>
-            </div>
-
-            <div class="service-cta">
-              <a href="/fr/contact?service=maintenance" class="btn btn-primary">
-                Assurer le suivi de votre documentation
+              <a href="/fr/contact?service=customer" class="btn btn-primary">
+                Discuter de votre projet support client
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Process Section -->
-      <section class="process-section">
-        <div class="container">
-          <h2 class="section-title">Déroulement des projets</h2>
-          <div class="process-grid">
-            <div class="process-step">
-              <div class="step-number">1</div>
-              <h3>Analyse de vos besoins</h3>
-              <p>
-                Audit de votre documentation existante et définition des
-                objectifs : publics visés, contenus prioritaires, contraintes
-                techniques et attentes de l’équipe.
-              </p>
+      <!-- Bloc 2 : Performance Commerciale -->
+      <div class="service-block" id="business">
+        <div class="service-content">
+          <div class="service-header">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
             </div>
-            <div class="process-step">
-              <div class="step-number">2</div>
-              <h3>Proposition & plan d’action</h3>
-              <p>
-                Périmètre, livrables, planning et méthode de travail présentés
-                de façon claire. Validation conjointe avant démarrage.
-              </p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">3</div>
-              <h3>Rédaction & validations</h3>
-              <p>
-                Rédaction progressive des contenus avec validations régulières.
-                Vérifications automatiques possibles (liens, exemples de code)
-                pour garantir la qualité.
-              </p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">4</div>
-              <h3>Livraison & formation</h3>
-              <p>
-                Remise des contenus, mise en ligne assistée, formation aux
-                outils et recommandations pour le suivi sur la durée.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA Section -->
-      <section class="services-cta">
-        <div class="container">
-          <div class="cta-content">
-            <h2>Faites de votre documentation un atout</h2>
-            <p>
-              Une documentation claire et maintenue renforce l’expérience
-              utilisateur, accélère l’onboarding et valorise vos produits.
-              Discutons de vos besoins pour construire la solution adaptée.
+            <h2>Performance Commerciale</h2>
+            <p class="service-tagline">
+              Agents qui qualifient vos leads et accompagnent vos prospects 24/7
             </p>
-            <div class="cta-buttons">
-              <a href="/fr/contact" class="btn btn-primary btn-large"
-                >Discuter de votre projet</a
-              >
-              <a href="/fr/portfolio" class="btn btn-secondary"
-                >Découvrir mes réalisations</a
-              >
+          </div>
+
+          <div class="service-details">
+            <div class="service-description">
+              <p>
+                Des agents conversationnels qui prennent en charge la qualification de vos prospects, répondent aux questions commerciales et accompagnent vos nouveaux clients. Disponibles en permanence, ils libèrent vos équipes commerciales pour les deals stratégiques et clients à fort potentiel.
+              </p>
+            </div>
+
+            <div class="service-features">
+              <h3>Use cases types :</h3>
+              <ul>
+                <li><strong>Qualification de leads :</strong> budget, besoins métier, décideurs identifiés, scoring automatique selon vos critères</li>
+                <li><strong>Démonstration produit :</strong> présentation interactive des fonctionnalités, réponses aux questions techniques préalables</li>
+                <li><strong>Onboarding clients :</strong> accompagnement des nouveaux utilisateurs, configuration guidée, premiers pas dans votre solution</li>
+                <li><strong>Prise de rendez-vous :</strong> calendrier intégré, qualification avant mise en relation avec commercial</li>
+                <li><strong>Opportunités commerciales :</strong> l'agent détecte quand un client pourrait bénéficier d'une offre supérieure et alerte vos équipes</li>
+              </ul>
+            </div>
+
+            <div class="service-deliverables">
+              <h3>Bénéfices mesurables :</h3>
+              <ul>
+                <li>Qualification préliminaire automatisée des prospects</li>
+                <li>Engagement prospect maintenu en dehors des heures ouvrées</li>
+                <li>Temps commercial optimisé sur leads qualifiés</li>
+                <li>Taux de conversion amélioré via accompagnement personnalisé</li>
+                <li>Données d'interaction enrichies pour votre CRM</li>
+                <li>Parcours client cohérent de la découverte à l'adoption</li>
+              </ul>
+            </div>
+
+            <div class="service-cta">
+              <a href="/fr/contact?service=business" class="btn btn-primary">
+                Discuter de votre projet commercial
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      <!-- Bloc 3 : Opérations Internes -->
+<div class="service-block" id="internal">
+  <div class="service-content">
+    <div class="service-header">
+      <div class="service-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="9" y1="9" x2="15" y2="9"></line>
+          <line x1="9" y1="15" x2="15" y2="15"></line>
+        </svg>
+      </div>
+      <h2>Opérations Internes</h2>
+      <p class="service-tagline">
+        Automatisation de vos processus RH, compliance, formation et helpdesk
+      </p>
     </div>
-  </section></BaseLayout
->
+
+    <div class="service-details">
+      <div class="service-description">
+        <p>
+          Des agents conversationnels qui optimisent vos opérations internes et libèrent vos équipes des tâches répétitives. Accueil employés, procédures administratives, formations, helpdesk IT... Chaque agent s'intègre à votre système d'information existant.
+        </p>
+      </div>
+
+      <div class="service-features">
+        <h3>Use cases types :</h3>
+        <ul>
+          <li><strong>RH et onboarding :</strong> accueil nouveaux employés, explications procédures internes, gestion congés et demandes administratives</li>
+          <li><strong>Helpdesk IT :</strong> assistance technique niveau 1, réinitialisation mots de passe, guide outils internes</li>
+          <li><strong>Compliance et procédures :</strong> règlements internes, normes de sécurité, procédures qualité accessibles instantanément</li>
+          <li><strong>Formation continue :</strong> accompagnement apprentissage, quiz interactifs, suivi progression</li>
+          <li><strong>Gestion des incidents :</strong> déclaration et suivi tickets, transfert automatique vers équipe spécialisée pour incidents critiques</li>
+        </ul>
+      </div>
+
+      <div class="service-deliverables">
+        <h3>Bénéfices mesurables :</h3>
+        <ul>
+          <li>Temps administratif réduit pour RH et IT</li>
+          <li>Employés autonomes sur questions courantes</li>
+          <li>Conformité des procédures garantie et traçable</li>
+          <li>Onboarding accéléré des nouveaux arrivants</li>
+          <li>Base de connaissances centralisée et accessible</li>
+          <li>Satisfaction des employés améliorée</li>
+        </ul>
+      </div>
+
+      <div class="service-cta">
+        <a href="/fr/contact?service=internal" class="btn btn-primary">
+          Discuter de votre projet opérations internes
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bloc 4 : Documentation Technique -->
+<div class="service-block" id="technical">
+  <div class="service-content">
+    <div class="service-header">
+      <div class="service-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+      </div>
+      <h2>Documentation Technique</h2>
+      <p class="service-tagline">
+        Je transforme vos documentations statiques en assistants conversationnels intelligents
+      </p>
+    </div>
+
+    <div class="service-details">
+      <div class="service-description">
+        <p>
+          Je transforme vos documentations API, guides développeur et contenus techniques en agents conversationnels qui comprennent le contexte et répondent précisément aux questions. Vos développeurs obtiennent des réponses instantanées et contextualisées au lieu de chercher pendant des heures dans des centaines de pages de documentation.
+        </p>
+      </div>
+
+      <div class="service-features">
+        <h3>Use cases types :</h3>
+        <ul>
+          <li><strong>Assistance API :</strong> authentification, endpoints, paramètres, codes erreur expliqués en conversation naturelle</li>
+          <li><strong>Troubleshooting guidé :</strong> diagnostic problèmes techniques, solutions étape par étape adaptées au contexte</li>
+          <li><strong>Onboarding développeur :</strong> premiers pas, exemples de code, intégration guidée selon le langage utilisé</li>
+          <li><strong>Documentation interactive :</strong> SDK, libraries, outils - explications adaptées au niveau technique de l'utilisateur</li>
+          <li><strong>Knowledge base technique :</strong> architecture système, best practices, spécifications accessibles en conversation</li>
+        </ul>
+      </div>
+
+      <div class="service-deliverables">
+        <h3>Bénéfices mesurables :</h3>
+        <ul>
+          <li>Temps de recherche d'information drastiquement réduit</li>
+          <li>Adoption développeur accélérée</li>
+          <li>Questions support technique réduites</li>
+          <li>Documentation toujours accessible et à jour</li>
+          <li>Expérience développeur moderne et fluide</li>
+          <li>Intégration produit facilitée</li>
+        </ul>
+      </div>
+
+      <div class="service-cta">
+        <a href="/fr/contact?service=technical" class="btn btn-primary">
+          Discuter de votre projet documentation
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div> 
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section">
+    <div class="container">
+      <h2 class="section-title">Déroulement des projets</h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>Analyse de vos besoins</h3>
+          <p>
+            Audit de vos processus actuels et définition des objectifs : cas d'usage prioritaires, publics visés, intégrations nécessaires et contraintes techniques.
+          </p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>Proposition & plan d'action</h3>
+          <p>
+            Périmètre, livrables, planning et méthode de travail présentés de façon claire. Validation conjointe avant démarrage.
+          </p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>Développement & validations</h3>
+          <p>
+            Développement progressif de l'agent avec validations régulières. Tests sur scénarios réels pour garantir la qualité.
+          </p>
+        </div>
+        <div class="process-step">
+  <div class="step-number">4</div>
+  <h3>Livraison & accompagnement</h3>
+  <p>
+    Déploiement de l'agent, intégration à vos outils et documentation complète du produit. Formation de vos équipes (vidéo Loom + session live) et suivi personnalisé pendant 10 jours pour garantir une adoption réussie.
+  </p>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="services-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Créons ensemble votre agent conversationnel</h2>
+        <p>
+          Réduisez vos coûts, améliorez l'expérience utilisateur et libérez vos équipes avec des agents IA conversationnels sur-mesure.
+        </p>
+        <div class="cta-buttons">
+          <a href="/fr/contact" class="btn btn-primary btn-large">Discuter de votre projet</a>
+          <a href="/fr/portfolio" class="btn btn-secondary">Voir mes réalisations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
 
 <style>
   /* ===============================
@@ -519,12 +368,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     backdrop-filter: blur(10px);
     width: 100%;
     box-sizing: border-box;
-    overflow: hidden; /* sécurité anti-débordements */
+    overflow: hidden;
   }
 
   /* Espacement entre "Ce que je crée" et "Automatisation qualité (option)" */
   #documentation .service-features h3 + ul {
-    margin-bottom: 2.5rem; /* ajoute de l’air après la 1ʳᵉ liste */
+    margin-bottom: 2.5rem; 
   }
 
   /* ===============================
@@ -537,7 +386,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     grid-template-columns: auto 1fr;
     grid-auto-rows: auto;
     column-gap: 1rem;
-    align-items: center; /* aligne l’icône avec la 1ère ligne du titre */
+    align-items: center; 
   }
 
   .service-icon {
@@ -562,11 +411,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     grid-column: 2;
     grid-row: 1;
     margin: 0 0 0.25rem 0;
-    font-size: clamp(1.35rem, 2vw, 1.75rem); /* compact */
+    font-size: clamp(1.35rem, 2vw, 1.75rem); 
     line-height: 1.25;
     color: rgb(var(--color-text));
-    max-width: 24ch; /* limite optique du titre */
-    white-space: normal; /* autorise 1–2 lignes max */
+    max-width: 24ch; 
+    white-space: normal; 
     overflow-wrap: anywhere;
     word-break: break-word;
     hyphens: auto;
@@ -577,7 +426,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     grid-column: 2;
     grid-row: 2;
     color: rgb(var(--color-text-muted));
-    font-size: 1rem; /* compact */
+    font-size: 1rem; 
     line-height: 1.45;
     margin: 0.15rem 0 0 0;
     max-width: 65ch;
@@ -592,12 +441,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
    =============================== */
   .service-details {
     display: grid;
-    grid-template-columns: 1fr; /* 1 colonne par défaut (safe) */
+    grid-template-columns: 1fr; 
     gap: 1.75rem;
   }
   .service-details > * {
     margin-top: 0.6rem;
-    min-width: 0; /* indispensable en grid pour éviter les overflow */
+    min-width: 0;
     max-width: 100%;
   }
 
@@ -622,7 +471,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr; /* 1 colonne par défaut */
+    grid-template-columns: 1fr; 
     gap: 0.5rem 1rem;
   }
   .service-features li,
@@ -810,7 +659,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
    Small Tablet / Landscape Mobile (≤ 820px)
    =============================== */
   @media (max-width: 820px) {
-    /* Header : on passe en pile verticale centrée */
     .service-header {
       display: flex;
       flex-direction: column;
@@ -836,7 +684,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       gap: 1rem;
     }
 
-    /* Listes : redeviennent 1 colonne pour éviter la casse */
     .service-features ul,
     .service-deliverables ul {
       grid-template-columns: 1fr;

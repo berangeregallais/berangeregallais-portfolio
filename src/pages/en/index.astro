@@ -6,8 +6,8 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
 ---
 
 <BaseLayout
-  title="Technical Writer & Ghostwriter | API & AI Documentation"
-  description="Technical Writer & Ghostwriter — API & technical documentation for innovative companies"
+  title="Conversational AI Agent Developer | Custom Solutions"
+  description="Conversational AI agent developer — Intelligent solutions to automate your client and internal interactions"
   lang="en"
 >
   <!-- Hero Section -->
@@ -15,32 +15,47 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     <div class="container">
       <div class="hero-content">
         <h1 class="hero-title">
-          Technical Writer &<br />
-          <span class="gradient-text">Ghostwriter</span>
+          Conversational<br />
+          <span class="gradient-text">AI Agents</span>
         </h1>
-        <p class="hero-subtitle">API and AI documentation for tech companies</p>
+        <p class="hero-subtitle">
+          Custom AI solutions tailored to your business challenges
+        </p>
+        <p class="hero-tagline">
+          From documentation to conversation: your content becomes intelligent assistants
+        </p>
         <div class="hero-cta">
-          <a href="/en/portfolio" class="btn btn-primary">View Portfolio</a>
-          <a href="/en/contact" class="btn btn-secondary"
-            >Discuss Your Project</a
+          <a
+            href="https://visionary-ai-agent.netlify.app/"
+            class="btn btn-primary"
+            target="_blank">Try the demo</a
           >
+          <a href="/en/portfolio" class="btn btn-secondary">View my projects</a>
         </div>
       </div>
 
-      <div class="code-preview">
-        <div class="code-header">
-          <div class="dots"><span></span><span></span><span></span></div>
-          <span class="filename">neolens-api.sh</span>
+      <div class="chat-preview">
+        <div class="chat-header">
+          <div class="agent-avatar">🤖</div>
+          <div class="agent-info">
+            <span class="agent-name">Visionary AI Assistant</span>
+            <span class="agent-status">Online</span>
+          </div>
         </div>
-        <pre
-          class="code-block"><code class="language-bash">curl -X POST https://api.neolens.ai/analyze \
-  -H "Authorization: Bearer &lt;token&gt;" \
-  -H "Content-Type: application/json" \
-  -d '&#123;
-    "image_url": "https://demo.org/mri-sample.png",
-    "task": "anomaly_detection",
-    "report_format": "report_format"
-  &#125;'</code></pre>
+        <div class="chat-messages">
+          <div class="message user-message">
+            <div class="message-content">
+              How do I authenticate my API requests?
+            </div>
+          </div>
+          <div class="message agent-message">
+            <div class="message-content">
+              To authenticate your requests, use a Bearer token in the Authorization header.<br /><br />
+              <code class="inline-code">Authorization: Bearer YOUR_TOKEN</code><br /><br />
+              Need help generating your token?
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -51,34 +66,37 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
       <h2 class="section-title">Core Expertise</h2>
       <div class="services-grid">
         <ServiceCard
-          icon="audit"
-          title="Documentation Audit"
-          description="Comprehensive evaluation of your documentation with clear improvement recommendations."
-          link="/en/services#audit"
-          lang="en"
-        />
-        <ServiceCard
           icon="api"
-          title="Technical Documentation"
-          description="APIs, product specs, user guides and tutorials — clear content tailored for both developers and end users."
-          link="/en/services#documentation"
+          title="Customer Experience"
+          description="24/7 support, product recommendations, after-sales service, e-commerce - Agents that improve satisfaction and reduce costs."
+          link="/en/services#customer"
           lang="en"
         />
         <ServiceCard
           icon="ghostwriting"
-          title="Technical Ghostwriting"
-          description="Articles, tutorials, white papers and technical case studies written under your name."
-          link="/en/services#ghostwriting"
+          title="Sales Performance"
+          description="Lead qualification, client onboarding, product demos - Agents that convert and nurture."
+          link="/en/services#business"
           lang="en"
         />
         <ServiceCard
           icon="maintenance"
-          title="Living Documentation"
-          description="Your content stays clear, up-to-date, and aligned with product evolution."
-          link="/en/services#maintenance"
+          title="Internal Operations"
+          description="HR, compliance, training, helpdesk - Agents that automate your business processes."
+          link="/en/services#internal"
+          lang="en"
+        />
+        <ServiceCard
+          icon="audit"
+          title="Technical Documentation"
+          description="Developer assistance, troubleshooting, API queries - Agents that transform your docs into conversations."
+          link="/en/services#technical"
           lang="en"
         />
       </div>
+      <p class="services-note">
+        Each agent is custom-built according to your specific business needs.
+      </p>
     </div>
   </section>
 
@@ -87,13 +105,22 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Recent Projects</h2>
-        <a href="/en/portfolio" class="section-link">See All Projects →</a>
+        <a href="/en/portfolio" class="section-link">View All Projects →</a>
       </div>
+      <PortfolioCard
+        title="Visionary AI Agent"
+        client="Conversational AI Assistant"
+        description="Intelligent conversational agent for image analysis API. Demonstrates hybrid conversational approach with structured knowledge base."
+        tags={["React", "TypeScript", "Gemini AI", "Netlify Functions"]}
+        image="/portfolio/visionary-ai-agent.png"
+        link="https://visionary-ai-agent.netlify.app/"
+        category={["ai-agent"]}
+      />
       <div class="portfolio-grid">
         <PortfolioCard
           title="Neolens – API Documentation"
           client="Fictional medical imaging AI"
-          description="Comprehensive API documentation for intelligent medical image analysis, with interactive guides and developer onboarding."
+          description="Complete API documentation for intelligent medical image analysis, with interactive guides and developer onboarding."
           tags={["API Documentation", "Docusaurus", "Interactive Guides"]}
           image="/portfolio/neolens-api-docs.png"
           link="https://neolens-api-docs.netlify.app/"
@@ -101,25 +128,12 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
         />
         <PortfolioCard
           title="Cognitia API Documentation on GitBook"
-          client="Fictional Cognitia AI platform"
-          description="Professional API documentation platform built on GitBook with advanced search, team collaboration, and interactive developer experience."
+          client="Fictional Cognitia AI Platform"
+          description="Professional API documentation platform built on GitBook with advanced search, team collaboration and interactive developer experience"
           tags={["GitBook", "Team Collaboration", "Enterprise Docs"]}
           image="/portfolio/cognitia-api-docs.png"
           link="https://cognitia-api-documentation.gitbook.io/bgallais"
-          category={["api-docs", "enterprise"]}
-        />
-        <PortfolioCard
-          title="Tech Platform Documentation"
-          client="Fictional tech platform"
-          description="Complete technical platform documentation with developer guides, API references, and integration best practices."
-          tags={[
-            "Technical Documentation",
-            "Developer Onboarding",
-            "GitHub Pages",
-          ]}
-          image="/portfolio/visionary-ai-docs.png"
-          link="https://berangeregallais.github.io/visionary-ai/introduction"
-          category={["technical-docs"]}
+          category={["api-docs"]}
         />
       </div>
     </div>
@@ -129,14 +143,13 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
   <section class="cta-section">
     <div class="container">
       <div class="cta-content">
-        <h2>Documentation <br />that makes a difference</h2>
+        <h2>Ready to automate<br />your business interactions?</h2>
         <p>
-          Enhance your customers’ and teams’ experience with precise, accessible
-          information.<br />
-          Let’s talk about your project.
+          Reduce costs, improve customer experience and free up your teams<br />
+          with custom conversational AI agents.
         </p>
         <a href="/en/contact" class="btn btn-primary btn-large"
-          >Discuss Your Project</a
+          >Discuss your project</a
         >
       </div>
     </div>
@@ -202,6 +215,7 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     -webkit-text-fill-color: transparent;
     background-clip: text;
     display: inline-block;
+    padding-bottom: 0.1em;
   }
   .hero-subtitle {
     font-size: 1.25rem;
@@ -210,6 +224,13 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     margin-bottom: 2rem;
     max-width: 90%;
   }
+  .hero-tagline {
+    font-size: 1rem;
+    color: rgb(var(--color-text-muted));
+    font-style: italic;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+  }
   .hero-cta {
     display: flex;
     gap: 1rem;
@@ -217,204 +238,196 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
   }
 
   /* ===============================
-   CODE PREVIEW 
+   CHAT PREVIEW (remplace code-preview)
    =============================== */
-  .code-preview {
+  .chat-preview {
     border-radius: 1rem;
     overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
   }
 
-  :root[data-theme="light"] .code-preview {
-    background: #0a0c12;
-    border: 1px solid rgba(0, 0, 0, 0.35);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
+  :root[data-theme="light"] .chat-preview {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
   }
-  :root[data-theme="light"] .code-header {
+
+  :root[data-theme="dark"] .chat-preview {
+    background: rgb(var(--color-surface));
+    border: 1px solid rgb(var(--color-border) / 0.3);
+  }
+
+  /* Chat Header */
+  .chat-header {
     display: flex;
     align-items: center;
     padding: 1.25rem 1.5rem;
-    background: #0f1422;
-    color: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
-  }
-  :root[data-theme="light"] .code-header .filename {
-    color: rgba(255, 255, 255, 0.95);
-    font-weight: 600;
-  }
-  :root[data-theme="light"] .code-header .dots {
-    display: flex;
-    gap: 0.5rem;
-    margin-right: 1rem;
-  }
-  :root[data-theme="light"] .code-header .dots span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    opacity: 0.9;
-    background: #e6b7d4;
+    gap: 1rem;
+    border-bottom: 1px solid rgb(var(--color-border) / 0.2);
   }
 
-  :root[data-theme="dark"] .code-preview {
-    background: rgb(var(--color-surface) / 0.9);
-    border: 1px solid rgb(var(--color-border) / 0.5);
-    box-shadow:
-      0 25px 50px rgb(var(--color-shadow) / 0.2),
-      0 0 0 1px rgb(var(--color-primary) / 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+  :root[data-theme="light"] .chat-header {
+    background: #f8f9fa;
+    border-bottom-color: rgba(0, 0, 0, 0.08);
   }
-  :root[data-theme="dark"] .code-header {
-    display: flex;
-    align-items: center;
-    padding: 1.25rem 1.5rem;
+
+  :root[data-theme="dark"] .chat-header {
     background: rgb(var(--color-surface-variant) / 0.3);
-    border-bottom: 1px solid rgb(var(--color-border) / 0.3);
-    color: rgb(var(--color-text));
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
   }
-  .code-header .dots {
+
+  .agent-avatar {
+    font-size: 2rem;
+    width: 48px;
+    height: 48px;
     display: flex;
-    gap: 0.5rem;
-    margin-right: 1rem;
-  }
-  .code-header .dots span {
-    width: 12px;
-    height: 12px;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    background-color: var(--color-text-muted);
-    opacity: 0.3;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-secondary))
+    );
   }
-  .code-header .dots span:nth-child(1) {
-    background: rgb(var(--color-primary));
+
+  .agent-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
   }
-  .code-header .dots span:nth-child(2) {
-    background: rgb(var(--color-secondary));
+
+  .agent-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(var(--color-text));
   }
-  .code-header .dots span:nth-child(3) {
-    background: rgb(var(--color-accent));
-  }
-  .filename {
-    font-family: var(--font-mono);
+
+  .agent-status {
     font-size: 0.875rem;
     color: rgb(var(--color-text-muted));
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
-  :root[data-theme="light"] .code-block {
-    background: #05060a;
-    color: #f5f5f5;
-    margin: 0;
-    padding: 1.25rem 1.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
+  .agent-status::before {
+    content: "●";
+    color: #10b981;
+    font-size: 0.75rem;
+  }
+
+  /* Chat Messages */
+  .chat-messages {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 280px;
+  }
+
+  :root[data-theme="light"] .chat-messages {
+    background: #ffffff;
+  }
+
+  :root[data-theme="dark"] .chat-messages {
+    background: rgb(var(--color-surface-variant) / 0.1);
+  }
+
+  .message {
+    display: flex;
+    max-width: 85%;
+    animation: slideIn 0.3s ease;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .user-message {
+    align-self: flex-end;
+  }
+
+  .agent-message {
+    align-self: flex-start;
+  }
+
+  .message-content {
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    font-size: 0.95rem;
     line-height: 1.6;
-    white-space: pre-wrap;
-    overflow-x: auto;
-    border-radius: 0 0 1rem 1rem;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    contain: paint;
-    transform: translateZ(0);
   }
 
-  :root[data-theme="dark"] .code-block {
-    background: rgb(var(--color-surface-variant));
-    color: #e6b7d4;
-    margin: 0;
-    padding: 1.25rem 1.5rem;
+  :root[data-theme="light"] .user-message .message-content {
+    background: rgb(var(--color-primary));
+    color: white;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  :root[data-theme="dark"] .user-message .message-content {
+    background: rgb(var(--color-primary) / 0.9);
+    color: white;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  :root[data-theme="light"] .agent-message .message-content {
+    background: #f1f3f5;
+    color: #212529;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  :root[data-theme="dark"] .agent-message .message-content {
+    background: rgb(var(--color-surface-variant) / 0.8);
+    color: rgb(var(--color-text));
+    border-bottom-left-radius: 0.25rem;
+    border: 1px solid rgb(var(--color-border) / 0.7);
+  }
+
+  .inline-code {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
     font-family: var(--font-mono);
-    font-size: 0.9rem;
-    line-height: 1.6;
-    white-space: pre-wrap;
-    overflow-x: auto;
-    border-radius: 0 0 1rem 1rem;
+    font-size: 0.875rem;
   }
 
-  .code-block::-webkit-scrollbar {
-    height: 10px;
-  }
-  .code-block::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 8px;
+  :root[data-theme="dark"] .inline-code {
+    background: rgba(255, 255, 255, 0.1);
   }
 
-  .code-block,
-  .code-block code {
-    text-shadow: none !important;
-    font-variant-ligatures: none;
-    font-feature-settings:
-      "liga" 0,
-      "calt" 0;
+  /* Responsive */
+  @media (max-width: 900px) {
+    .chat-preview {
+      max-width: 720px;
+      margin: 0 auto;
+    }
   }
 
-  :root[data-theme="light"] .code-block code {
-    background: transparent !important;
-    color: #f5f5f5 !important;
-    text-shadow: none !important;
+  @media (max-width: 768px) {
+    .chat-preview {
+      width: 100%;
+      max-width: none;
+    }
+
+    .message {
+      max-width: 90%;
+    }
   }
 
-  .code-block code {
-    color: #e6e6e6;
-    tab-size: 2;
-    font-family: var(--font-mono);
-  }
-  .code-block .token.comment,
-  .code-block .token.prolog,
-  .code-block .token.doctype,
-  .code-block .token.cdata {
-    color: #8b90a1;
+  /* Tagline hero */
+  .hero-tagline {
+    font-size: 1rem;
+    color: rgb(var(--color-text-muted));
     font-style: italic;
-  }
-  .code-block .token.keyword,
-  .code-block .token.atrule {
-    color: #82aaff;
-    font-weight: 600;
-  }
-  .code-block .token.string,
-  .code-block .token.char,
-  .code-block .token.attr-value,
-  .code-block .token.builtin {
-    color: #c3e88d;
-  }
-  .code-block .token.number,
-  .code-block .token.boolean,
-  .code-block .token.constant,
-  .code-block .token.symbol {
-    color: #f78c6c;
-  }
-  .code-block .token.function,
-  .code-block .token.method {
-    color: #c792ea;
-  }
-  .code-block .token.property,
-  .code-block .token.variable,
-  .code-block .token.parameter,
-  .code-block .token.regex {
-    color: #f07178;
-  }
-  .code-block .token.operator,
-  .code-block .token.punctuation {
-    color: #e6e6e6;
-  }
-  .code-block .token.selector,
-  .code-block .token.tag,
-  .code-block .token.namespace,
-  .code-block .token.deleted {
-    color: #ffcb6b;
-  }
-  .code-block .token.attr-name,
-  .code-block .token.inserted {
-    color: #addb67;
-  }
-  .code-block .token.class-name {
-    color: #ffcb6b;
-  }
-  .code-block ::selection {
-    background: rgba(255, 255, 255, 0.18);
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
   }
 
   /* ===============================
@@ -448,6 +461,14 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     }
   }
 
+  .services-note {
+    text-align: center;
+    margin-top: 2rem;
+    color: rgb(var(--color-text-muted));
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+
   /* ===============================
    PORTFOLIO
    =============================== */
@@ -470,7 +491,7 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
   }
   .portfolio-highlights .section-header {
     display: flex;
-    justify-content: center; /* centre tout par défaut */
+    justify-content: center; 
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
@@ -478,7 +499,7 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
   }
 
   .portfolio-highlights .section-header h2 {
-    flex: 0 0 100%; /* force le titre sur toute la largeur */
+    flex: 0 0 100%; 
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -501,22 +522,13 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
     gap: 2rem;
   }
 
-  .portfolio-highlights .section-header {
-    display: flex;
-    justify-content: space-between; /* comme la version FR */
-    align-items: center;
-    margin-bottom: 4rem;
+  .portfolio-grid .portfolio-card {
+    max-height: 450px;
   }
 
-  .portfolio-highlights .section-header h2 {
-    text-align: center;
-    flex: 1; /* permet au titre de se centrer au milieu */
-  }
-
-  .portfolio-highlights .section-header .section-link {
-    flex: 0;
-    margin-left: auto; /* pousse le lien à droite */
-    text-align: right;
+  .portfolio-grid .portfolio-card img {
+    max-height: 250px;
+    object-fit: cover;
   }
 
   /* ===============================
@@ -609,7 +621,7 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
   }
   @media (max-width: 1024px) {
     .hero .container {
-      grid-template-columns: 1.1fr 0.9fr; /* conserve le visuel hero + code sur iPad */
+      grid-template-columns: 1.1fr 0.9fr; 
       gap: 3rem;
     }
     .hero-title {
@@ -673,7 +685,7 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
   }
   @media (max-width: 640px) {
     .portfolio-grid {
-      grid-template-columns: 1fr; /* mobile pur */
+      grid-template-columns: 1fr; 
     }
   }
 
@@ -721,48 +733,41 @@ import PortfolioCard from "../../components/PortfolioCard.astro";
 
   /* ======== Code block à gauche en mobile ======== */
   @media (max-width: 900px) {
-    /* On annule le centrage global du container du hero */
     .hero .container {
       text-align: initial;
     }
-    /* On ne recentre que le texte du bloc titre/sous-titre/CTA */
     .hero-content {
       text-align: center;
     }
 
-    /* Le bloc code ne doit pas se centrer dans la grille 1 colonne */
     .code-preview {
-      justify-self: start; /* ancre à gauche dans la grid */
-      margin: 0; /* annule margin: 0 auto; */
+      justify-self: start; 
+      margin: 0; 
     }
   }
 
   @media (max-width: 768px) {
-    /* Le code prend toute la largeur utile à gauche */
     .code-preview {
       width: 100%;
-      max-width: none; /* annule le max-width: 720px */
+      max-width: none; 
       text-align: left;
     }
     .code-header,
     .code-block {
-      text-align: left; /* le contenu du <pre><code> reste à gauche */
+      text-align: left;
     }
   }
 
-  /* Empêche les CTA de s'étirer en pleine largeur sur mobile */
   @media (max-width: 768px) {
     .hero-cta .btn,
     .cta-section .btn {
       display: inline-flex !important;
       width: auto !important;
       max-width: 100%;
-      flex: 0 0 auto; /* ne pas s'étirer dans le flex */
-      align-self: center; /* bien centré dans le conteneur */
+      flex: 0 0 auto; 
+      align-self: center; 
     }
 
-    /* Optionnel : si tu veux que deux boutons passent l’un sous l’autre
-     sans prendre toute la largeur, garde le gap agréable */
     .hero-cta {
       justify-content: center;
       gap: 0.75rem;
