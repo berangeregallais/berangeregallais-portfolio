@@ -12,9 +12,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   <section class="services-hero">
     <div class="container">
       <div class="hero-content">
-        <h1>Solutions d'Agents IA Conversationnels</h1>
+        <h1>Agents IA Conversationnels sur-mesure</h1>
         <p class="hero-subtitle">
-          Des agents intelligents adaptés à vos besoins pour automatiser vos interactions métier
+          Des agents intelligents construits avec LangGraph pour automatiser 
+          vos interactions métier et support technique
         </p>
       </div>
     </div>
@@ -306,13 +307,19 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   <section class="services-cta">
     <div class="container">
       <div class="cta-content">
-        <h2>Créons ensemble votre agent conversationnel</h2>
+        <h2>Prêt à démarrer ?</h2>
         <p>
           Réduisez vos coûts, améliorez l'expérience utilisateur et libérez vos équipes avec des agents IA conversationnels adaptés à vos besoins.
         </p>
+        <div class="cta-pricing-highlight">
+          <p class="pricing-intro">
+            <strong>Du POC</strong> pour valider votre concept, 
+            aux <strong>solutions entreprise</strong> pour des architectures complexes.
+          </p>
+        </div>
         <div class="cta-buttons">
-          <a href="/fr/contact" class="btn btn-primary btn-large">Discuter de votre projet</a>
-          <a href="/fr/portfolio" class="btn btn-secondary">Voir mes réalisations</a>
+          <a href="/fr/#offres" class="btn btn-primary btn-large">Voir les offres et tarifs</a>
+          <a href="/fr/contact" class="btn btn-secondary">Discuter de votre projet</a>
         </div>
       </div>
     </div>
@@ -588,6 +595,29 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     color: rgb(var(--color-text-muted));
     margin-bottom: 2.5rem;
   }
+  
+  .cta-pricing-highlight {
+    background: rgba(var(--color-primary), 0.08);
+    border: 2px solid rgba(var(--color-primary), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 2rem;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .pricing-intro {
+    font-size: 1.125rem !important;
+    color: rgb(var(--color-text)) !important;
+    margin: 0 !important;
+    line-height: 1.7;
+  }
+  
+  .pricing-intro strong {
+    color: rgb(var(--color-primary));
+  }
+  
   .cta-buttons {
     display: flex;
     gap: 1.5rem;

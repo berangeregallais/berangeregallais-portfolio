@@ -1,0 +1,838 @@
+---
+// src/pages/fr/portfolio/neolens-support-agent.astro
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BackToTop from "../../../components/BackToTop.astro";
+---
+
+<BaseLayout
+  title="Neolens Support Agent | Agent RAG Enterprise-Grade"
+  description="Agent conversationnel RAG pour support technique API. Architecture LangGraph 7 nœuds, recherche vectorielle FAISS, multilingue FR/EN."
+  lang="fr"
+>
+  <!-- Hero Section -->
+  <section class="project-hero">
+    <div class="container">
+      <div class="hero-back">
+        <a href="/fr/#portfolio" class="back-link">← Retour au portfolio</a>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">Agent RAG</div>
+        <h1>Neolens Support Agent</h1>
+        <p class="hero-subtitle">
+          Agent conversationnel enterprise-grade pour support technique API. 
+          Architecture LangGraph à 7 nœuds, RAG avancé avec FAISS, 
+          streaming temps réel. Déployable en production.
+        </p>
+        <div class="hero-image">
+          <img
+            src="/portfolio/01-home-welcome.png"
+            alt="Interface Neolens Support Agent"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vue d'ensemble -->
+  <section class="overview-section">
+    <div class="container">
+      <h2 class="section-title">Vue d'ensemble</h2>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="overview-icon">🎯</div>
+          <h3>Objectif</h3>
+          <p>
+            Automatiser le support technique pour une API d'imagerie médicale. 
+            Répondre instantanément aux questions des développeurs sur 200+ pages de documentation.
+          </p>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">⚡</div>
+          <h3>Performance</h3>
+          <p>
+            Temps de réponse en quelques secondes, recherche vectorielle &lt; 500ms, 
+            disponible 24/7 en français et anglais.
+          </p>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">🔒</div>
+          <h3>Fiabilité</h3>
+          <p>
+            93 tests automatisés (76% couverture), validation double input/output, 
+            citations sources systématiques.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Démonstrations Vidéo -->
+  <section class="videos-section">
+    <div class="container">
+      <h2 class="section-title">Fonctionnalités en action</h2>
+      <p class="section-intro">
+        Découvrez les capacités avancées de l'agent à travers ces démonstrations
+      </p>
+
+      <div class="videos-grid">
+        <!-- Vidéo 1 : RAG Intelligent -->
+        <div class="video-card">
+          <div class="video-placeholder">
+            <div class="video-icon">🎥</div>
+            <p>Vidéo : RAG Intelligent avec Sources</p>
+            <span class="video-duration">45s</span>
+          </div>
+          <div class="video-info">
+            <h3>RAG Intelligent avec Citations</h3>
+            <p>
+              Recherche sémantique dans 200+ pages de documentation, 
+              citations automatiques des sources, streaming temps réel.
+            </p>
+            <ul class="video-features">
+              <li>✓ Recherche vectorielle FAISS &lt; 500ms</li>
+              <li>✓ Citations sources avec numéros de page</li>
+              <li>✓ Réponses contextuelles précises</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Vidéo 2 : Support Multilingue -->
+        <div class="video-card">
+          <div class="video-placeholder">
+            <div class="video-icon">🎥</div>
+            <p>Vidéo : Support Multilingue FR/EN</p>
+            <span class="video-duration">40s</span>
+          </div>
+          <div class="video-info">
+            <h3>Support Multilingue</h3>
+            <p>
+              Détection automatique français/anglais, cohérence conversationnelle, 
+              réponses localisées.
+            </p>
+            <ul class="video-features">
+              <li>✓ Détection automatique de la langue</li>
+              <li>✓ Maintien de la cohérence conversationnelle</li>
+              <li>✓ Messages d'erreur localisés</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Vidéo 3 : Contexte Conversationnel -->
+        <div class="video-card">
+          <div class="video-placeholder">
+            <div class="video-icon">🎥</div>
+            <p>Vidéo : Contexte Conversationnel</p>
+            <span class="video-duration">50s</span>
+          </div>
+          <div class="video-info">
+            <h3>Contexte Conversationnel</h3>
+            <p>
+              Résolution d'anaphores ("it", "this", "that"), mémoire conversationnelle, 
+              reformulation intelligente.
+            </p>
+            <ul class="video-features">
+              <li>✓ Mémoire des 5 derniers échanges</li>
+              <li>✓ Résolution d'anaphores automatique</li>
+              <li>✓ Persistance SQLite entre sessions</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Vidéo 4 : Gestion d'Erreurs (optionnelle) -->
+        <div class="video-card">
+          <div class="video-placeholder">
+            <div class="video-icon">🎥</div>
+            <p>Vidéo : Gestion d'Erreurs Gracieuse</p>
+            <span class="video-duration">45s</span>
+          </div>
+          <div class="video-info">
+            <h3>Gestion d'Erreurs</h3>
+            <p>
+              Validation robuste, messages pédagogiques, fallback gracieux 
+              pour maintenir l'expérience utilisateur.
+            </p>
+            <ul class="video-features">
+              <li>✓ Validation input/output double</li>
+              <li>✓ Messages d'erreur clairs et actionnables</li>
+              <li>✓ Fallback gracieux sans interruption</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Vidéo 5 : Rendu Markdown (optionnelle) -->
+        <div class="video-card">
+          <div class="video-placeholder">
+            <div class="video-icon">🎥</div>
+            <p>Vidéo : Rendu Markdown Professionnel</p>
+            <span class="video-duration">45s</span>
+          </div>
+          <div class="video-info">
+            <h3>Rendu Markdown</h3>
+            <p>
+              Tableaux professionnels, code avec syntax highlighting, 
+              boutons copy fonctionnels.
+            </p>
+            <ul class="video-features">
+              <li>✓ Tableaux avec alignement et bordures</li>
+              <li>✓ Syntax highlighting Prism.js</li>
+              <li>✓ Boutons copy to clipboard</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-note">
+        <p>
+          📹 <strong>Vidéos disponibles prochainement</strong> - 
+          En attendant, découvrez l'architecture technique complète ci-dessous
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Technique -->
+  <section class="architecture-section">
+    <div class="container">
+      <h2 class="section-title">Architecture Technique</h2>
+      
+      <div class="architecture-overview">
+        <h3>Pipeline LangGraph à 7 Nœuds Spécialisés</h3>
+        <p>
+          Architecture state-of-the-art avec gestion d'état avancée, 
+          routing conditionnel et validation multi-niveau.
+        </p>
+      </div>
+
+      <div class="architecture-grid">
+        <div class="architecture-card">
+          <div class="node-number">1</div>
+          <h4>Memory Node</h4>
+          <p>Gestion intelligente de l'historique conversationnel avec SQLite checkpointing</p>
+        </div>
+
+        <div class="architecture-card">
+          <div class="node-number">2</div>
+          <h4>Validation Input</h4>
+          <p>Validation à double niveau : limite 500 caractères, filtrage XSS, modération contenu</p>
+        </div>
+
+        <div class="architecture-card">
+          <div class="node-number">3</div>
+          <h4>Retrieval Node</h4>
+          <p>Recherche sémantique FAISS dans 200+ chunks, expansion de requêtes, priorisation</p>
+        </div>
+
+        <div class="architecture-card">
+          <div class="node-number">4</div>
+          <h4>Validation Output</h4>
+          <p>Évaluation de la confiance, scoring de pertinence, détection hallucinations</p>
+        </div>
+
+        <div class="architecture-card">
+          <div class="node-number">5</div>
+          <h4>Generation Node</h4>
+          <p>Génération contextuelle GPT-4, streaming SSE, formatting markdown</p>
+        </div>
+
+        <div class="architecture-card">
+          <div class="node-number">6</div>
+          <h4>Fallback Node</h4>
+          <p>Gestion gracieuse des erreurs, messages pédagogiques, suggestions alternatives</p>
+        </div>
+
+        <div class="architecture-card">
+          <div class="node-number">7</div>
+          <h4>Reject Node</h4>
+          <p>Filtrage requêtes inappropriées, protection contre abus, rate limiting</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack Technique -->
+  <section class="stack-section">
+    <div class="container">
+      <h2 class="section-title">Stack Technique Complète</h2>
+      
+      <div class="stack-grid">
+        <div class="stack-category">
+          <h3>Backend & IA</h3>
+          <ul>
+            <li><strong>Python 3.11+</strong> - Langage principal</li>
+            <li><strong>FastAPI</strong> - Framework web async haute performance</li>
+            <li><strong>LangGraph</strong> - Machine à états avancée pour agents IA</li>
+            <li><strong>LangChain</strong> - Orchestration des composants IA</li>
+            <li><strong>OpenAI GPT-4</strong> - Modèle de langage</li>
+            <li><strong>FAISS</strong> - Recherche vectorielle Facebook</li>
+            <li><strong>SQLite</strong> - Persistance des conversations</li>
+          </ul>
+        </div>
+
+        <div class="stack-category">
+          <h3>Frontend</h3>
+          <ul>
+            <li><strong>Next.js 14</strong> - Framework React avec App Router</li>
+            <li><strong>TypeScript</strong> - Développement type-safe</li>
+            <li><strong>Tailwind CSS</strong> - Design system utility-first</li>
+            <li><strong>React Markdown</strong> - Rendu markdown avec syntax highlighting</li>
+            <li><strong>Prism.js</strong> - Syntax highlighting code</li>
+          </ul>
+        </div>
+
+        <div class="stack-category">
+          <h3>Tests & Qualité</h3>
+          <ul>
+            <li><strong>Pytest</strong> - 93 tests automatisés</li>
+            <li><strong>Jest</strong> - Tests frontend</li>
+            <li><strong>React Testing Library</strong> - Tests composants</li>
+            <li><strong>Couverture</strong> - 76% de code coverage</li>
+            <li><strong>CI/CD</strong> - Pipeline automatisé</li>
+          </ul>
+        </div>
+
+        <div class="stack-category">
+          <h3>Déploiement & Monitoring</h3>
+          <ul>
+            <li><strong>Docker</strong> - Containerisation</li>
+            <li><strong>Render</strong> - Hébergement backend</li>
+            <li><strong>Netlify</strong> - Hébergement frontend</li>
+            <li><strong>Logging structuré</strong> - Traces détaillées</li>
+            <li><strong>Métriques temps réel</strong> - Performance monitoring</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Métriques & Performance -->
+  <section class="metrics-section">
+    <div class="container">
+      <h2 class="section-title">Métriques de Performance</h2>
+      
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value">&lt; 2s</div>
+          <div class="metric-label">Temps de réponse (P95)</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-value">&lt; 500ms</div>
+          <div class="metric-label">Recherche vectorielle</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-value">93</div>
+          <div class="metric-label">Tests automatisés</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-value">76%</div>
+          <div class="metric-label">Couverture de code</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-value">200+</div>
+          <div class="metric-label">Pages de documentation indexées</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-value">24/7</div>
+          <div class="metric-label">Disponibilité multilingue</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Prêt à déployer un agent similaire ?</h2>
+        <p>
+          Cette architecture est réplicable et adaptable à votre cas d'usage. 
+          Du POC (5 000€) aux solutions enterprise (30 000€).
+        </p>
+        <div class="cta-buttons">
+          <a href="/fr/#offres" class="btn btn-primary btn-large">Voir les offres et tarifs</a>
+          <a href="/fr/contact" class="btn btn-secondary">Discuter de votre projet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <BackToTop />
+</BaseLayout>
+
+<style>
+  /* Variables */
+  :root {
+    --section-spacing: 6rem;
+  }
+
+  /* Hero Section */
+  .project-hero {
+    padding: 4rem 0 6rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-background)) 0%,
+      rgba(var(--color-primary), 0.05) 100%
+    );
+  }
+
+  .hero-back {
+    margin-bottom: 2rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(var(--color-text-muted));
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+
+  .back-link:hover {
+    color: rgb(var(--color-primary));
+  }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-primary-hover))
+    );
+    color: rgb(var(--color-text-button));
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: rgb(var(--color-text-muted));
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-image {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(var(--color-border), 0.3);
+  }
+
+  .hero-image img {
+    width: 100%;
+    display: block;
+  }
+
+  /* Overview Section */
+  .overview-section {
+    padding: var(--section-spacing) 0;
+    background: rgb(var(--color-surface));
+  }
+
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .overview-card {
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .overview-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .overview-card h3 {
+    font-size: 1.5rem;
+    color: rgb(var(--color-text));
+    margin-bottom: 1rem;
+  }
+
+  .overview-card p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.6;
+  }
+
+  /* Videos Section */
+  .videos-section {
+    padding: var(--section-spacing) 0;
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .section-intro {
+    text-align: center;
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    max-width: 700px;
+    margin: 0 auto 3rem;
+  }
+
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .video-card {
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .video-placeholder {
+    position: relative;
+    background: linear-gradient(
+      135deg,
+      rgba(var(--color-primary), 0.1) 0%,
+      rgba(var(--color-accent), 0.05) 100%
+    );
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .video-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .video-placeholder p {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+    margin-bottom: 0.5rem;
+  }
+
+  .video-duration {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .video-info {
+    padding: 1.5rem;
+  }
+
+  .video-info h3 {
+    font-size: 1.25rem;
+    color: rgb(var(--color-text));
+    margin-bottom: 0.75rem;
+  }
+
+  .video-info p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .video-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .video-features li {
+    font-size: 0.9rem;
+    color: rgb(var(--color-text-muted));
+    margin-bottom: 0.5rem;
+  }
+
+  .video-note {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(var(--color-accent), 0.05);
+    border-radius: var(--radius-lg);
+    border: 2px dashed rgba(var(--color-accent), 0.3);
+  }
+
+  .video-note p {
+    margin: 0;
+    font-size: 1.125rem;
+    color: rgb(var(--color-text));
+  }
+
+  /* Architecture Section */
+  .architecture-section {
+    padding: var(--section-spacing) 0;
+    background: rgba(var(--color-surface-variant), 0.3);
+  }
+
+  .architecture-overview {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+  }
+
+  .architecture-overview h3 {
+    font-size: 1.75rem;
+    color: rgb(var(--color-text));
+    margin-bottom: 1rem;
+  }
+
+  .architecture-overview p {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+  }
+
+  .architecture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .architecture-card {
+    background: rgb(var(--color-surface));
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    position: relative;
+  }
+
+  .node-number {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-primary-hover))
+    );
+    color: rgb(var(--color-text-button));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  .architecture-card h4 {
+    font-size: 1.25rem;
+    color: rgb(var(--color-text));
+    margin-bottom: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .architecture-card p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  /* Stack Section */
+  .stack-section {
+    padding: var(--section-spacing) 0;
+  }
+
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .stack-category {
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+  }
+
+  .stack-category h3 {
+    font-size: 1.5rem;
+    color: rgb(var(--color-primary));
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(var(--color-primary), 0.3);
+    padding-bottom: 0.75rem;
+  }
+
+  .stack-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .stack-category ul li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(var(--color-border), 0.2);
+    color: rgb(var(--color-text-muted));
+    line-height: 1.6;
+  }
+
+  .stack-category ul li:last-child {
+    border-bottom: none;
+  }
+
+  .stack-category strong {
+    color: rgb(var(--color-text));
+  }
+
+  /* Metrics Section */
+  .metrics-section {
+    padding: var(--section-spacing) 0;
+    background: linear-gradient(
+      135deg,
+      rgba(var(--color-primary), 0.05) 0%,
+      rgba(var(--color-accent), 0.03) 100%
+    );
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .metric-card {
+    background: rgb(var(--color-surface));
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .metric-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(var(--color-primary));
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+
+  .metric-label {
+    font-size: 1rem;
+    color: rgb(var(--color-text-muted));
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: var(--section-spacing) 0;
+    text-align: center;
+  }
+
+  .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: rgb(var(--color-text));
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 1.25rem;
+    color: rgb(var(--color-text-muted));
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .overview-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stack-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    :root {
+      --section-spacing: 4rem;
+    }
+
+    .project-hero {
+      padding: 3rem 0 4rem;
+    }
+
+    .videos-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .architecture-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .metrics-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+

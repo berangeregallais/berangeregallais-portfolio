@@ -14,30 +14,33 @@ import BackToTop from "../../components/BackToTop.astro";
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1 class="hero-title">
-          AI Agent Engineer Freelance<span class="gradient-text"
-            >Systèmes conversationnels en production</span
-          >
-        </h1>
+        <h1 class="hero-title">Agent Engineer Freelance</h1>
+        <p
+          class="hero-tagline"
+          style="font-size: 1.5rem; font-weight: 600; margin: 1rem 0 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+        >
+          Agent IA production-ready : pas juste du code, une solution complète
+        </p>
         <p class="hero-subtitle">
-          Je construis des agents IA conversationnels avec LangGraph, FastAPI et
-          React. Code propre, testé, documenté. Livré en 4-6 semaines.
+          Backend + Frontend + Documentation + Tests automatisés. Des agents IA
+          maintenables qui réduisent vos coûts et automatisent votre support.
+          Livrés en 4-6 semaines.
         </p>
         <div class="tech-badges">
           <span class="badge">Python</span>
-          <span class="badge">FastAPI</span>
           <span class="badge">LangGraph</span>
+          <span class="badge">LangChain</span>
+          <span class="badge">FastAPI</span>
           <span class="badge">React</span>
-          <span class="badge">FAISS</span>
-          <span class="badge">PostgreSQL</span>
+          <span class="badge">OpenAI</span>
+          <span class="badge">Gemini</span>
+          <span class="badge">Claude</span>
+          <span class="badge">RAG</span>
+          <span class="badge">📚 Doc + Tests inclus</span>
+          <span class="badge">Multilingue FR/EN</span>
         </div>
         <div class="hero-cta">
           <a href="#offres" class="btn btn-primary">Voir les offres</a>
-          <a
-            href="https://visionary-ai-agent.netlify.app/"
-            class="btn btn-secondary"
-            target="_blank">Tester la démo</a
-          >
         </div>
       </div>
 
@@ -83,13 +86,20 @@ import BackToTop from "../../components/BackToTop.astro";
           <h3>Vous avez ce problème</h3>
           <ul>
             <li>
-              Votre équipe technique fait du support au lieu de développer
+              Votre équipe technique passe plusieurs heures par semaine sur du
+              support répétitif
             </li>
-            <li>Votre documentation est complète mais personne ne la lit</li>
-            <li>Vous gérez 500+ tickets/mois dont 60% sont répétitifs</li>
             <li>
-              Les chatbots no-code que vous avez testés sont trop limités pour
-              vous et donnent des réponses génériques
+              Votre documentation est complète mais personne ne trouve l'info
+              rapidement
+            </li>
+            <li>
+              Vous gérez 200+ tickets/mois dont 60% sont des questions
+              récurrentes
+            </li>
+            <li>
+              Les chatbots no-code que vous avez testés donnent des réponses
+              trop génériques
             </li>
           </ul>
         </div>
@@ -110,8 +120,8 @@ import BackToTop from "../../components/BackToTop.astro";
               ou collaborateurs, explique les fonctionnalités, réduit le time-to-value
             </li>
             <li>
-              <strong>Assistant interne</strong> : RH, IT, compliance — répond aux
-              questions récurrentes de vos équipes
+              <strong>Assistant interne</strong> : RH, IT, compliance, il répond
+              aux questions récurrentes de vos équipes
             </li>
           </ul>
         </div>
@@ -119,10 +129,17 @@ import BackToTop from "../../components/BackToTop.astro";
 
       <div class="context-result">
         <p>
-          <strong>Résultat concret :</strong> 80% des questions niveau 1 automatisées.
+          <strong>Résultat concret :</strong> Les questions récurrentes sont automatisées.
           Votre équipe se concentre sur les cas complexes. Vos utilisateurs ont leurs
-          réponses en quelquesberan secondes
+          réponses en quelques secondes.
         </p>
+      </div>
+
+      <div class="cta-services">
+        <p>Vous voulez des exemples concrets pour votre secteur ?</p>
+        <a href="/fr/services" class="btn btn-secondary">
+          Découvrir tous les cas d'usage détaillés →
+        </a>
       </div>
     </div>
   </section>
@@ -130,15 +147,15 @@ import BackToTop from "../../components/BackToTop.astro";
   <!-- Architecture & Approche -->
   <section class="solution-section section-spacing">
     <div class="container">
-      <h2 class="section-title">Architecture RAG complète</h2>
+      <h2 class="section-title">Comment ça fonctionne ?</h2>
 
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">◆</div>
-          <h3>Retrieval-Augmented Generation</h3>
+          <h3>Recherche intelligente dans vos données</h3>
           <p>
-            Vector search, reranking, citation des sources. Répond avec
-            précision à partir de vos données.
+            L'agent accède à votre documentation, FAQ, base de connaissances et
+            répond avec précision en citant ses sources.
           </p>
         </div>
 
@@ -146,17 +163,17 @@ import BackToTop from "../../components/BackToTop.astro";
           <div class="feature-icon">◆</div>
           <h3>Intégrations métier</h3>
           <p>
-            Connexion à vos APIs, CRM, documentation, Slack, bases de données.
-            L'agent accède à vos propres données.
+            Connexion à vos outils existants : CRM, ticketing, Slack, base de
+            données. L'agent s'intègre dans votre écosystème.
           </p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">◆</div>
-          <h3>Production-ready</h3>
+          <h3>Fiable et évolutif</h3>
           <p>
-            Tests automatisés (pytest, CI/CD), observabilité complète (logs,
-            metrics, monitoring), documentation technique.
+            Architecture testée, monitoring en temps réel, documentation
+            complète. Prêt pour la production.
           </p>
         </div>
       </div>
@@ -164,14 +181,21 @@ import BackToTop from "../../components/BackToTop.astro";
       <div class="use-cases">
         <h3>Cas d'usage typiques</h3>
         <ul class="use-cases-list">
-          <li>Support technique automatisé (FAQ, docs, troubleshooting)</li>
-          <li>Qualification de leads commerciaux</li>
-          <li>Onboarding utilisateurs</li>
-          <li>Assistants internes (RH, IT, compliance)</li>
+          <li>
+            Support client automatisé (FAQ, troubleshooting, suivi commandes)
+          </li>
+          <li>
+            Assistant développeur (documentation API, authentification, exemples
+            de code)
+          </li>
+          <li>
+            Onboarding utilisateurs (guides interactifs, formation produit)
+          </li>
+          <li>Support interne (RH, IT, compliance, procédures)</li>
         </ul>
         <p class="metrics-text">
-          <strong>Métriques moyennes :</strong> 80% des requêtes niveau 1 résolues
-          • Temps de réponse &lt;2s
+          <strong>Impact mesurable :</strong> Réduction des coûts support • Automatisation
+          du support récurrent • Disponible 24/7
         </p>
       </div>
     </div>
@@ -194,8 +218,8 @@ import BackToTop from "../../components/BackToTop.astro";
         <div class="approach-card">
           <h4>Tests automatisés complets</h4>
           <p>
-            Tests unitaires, tests d'intégration, CI/CD. Pas optionnels. Vous
-            recevez un système qui fonctionne.
+            Tests unitaires, tests d'intégration, CI/CD. Vous recevez un système
+            qui fonctionne et reste maintenable.
           </p>
         </div>
 
@@ -203,17 +227,70 @@ import BackToTop from "../../components/BackToTop.astro";
           <h4>Documentation complète</h4>
           <p>
             Documentation technique (architecture, APIs, déploiement) ET
-            documentation utilisateur. Pas de boîte noire.
+            documentation utilisateur. Zéro dépendance : vous comprenez comment
+            ça marche, vous pouvez le faire évoluer.
           </p>
         </div>
 
         <div class="approach-card">
           <h4>Code ownership</h4>
           <p>
-            Vous recevez tout le code, commenté, versionné, déployable. Pas de
-            dépendance. Pas de vendor lock-in.
+            Vous recevez tout le code, commenté, versionné, déployable. Vous en
+            êtes propriétaire et restez autonome.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Marché -->
+  <section class="market-section section-spacing">
+    <div class="container">
+      <h2 class="section-title">Pourquoi investir maintenant ?</h2>
+
+      <div class="market-stats">
+        <div class="stat-card">
+          <div class="stat-number">87%</div>
+          <p>
+            des utilisateurs ont une expérience positive avec les chatbots IA
+          </p>
+          <span class="stat-source">Source : Botpress 2025</span>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number">25%</div>
+          <p>
+            de réduction des coûts opérationnels grâce à l'IA conversationnelle
+          </p>
+          <span class="stat-source">Source : Gartner 2024</span>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number">40%</div>
+          <p>
+            des entreprises utilisent des chatbots pour le support client 24/7
+          </p>
+          <span class="stat-source">Source : IBM 2024</span>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number">70%</div>
+          <p>des interactions client seront gérées par l'IA d'ici 2028</p>
+          <span class="stat-source">Source : Gartner 2024</span>
+        </div>
+      </div>
+
+      <div class="market-insight">
+        <p>
+          Le marché des agents conversationnels atteindra <strong
+            >50 milliards de dollars en 2030</strong
+          >, avec une croissance annuelle de 45%. Les entreprises qui
+          investissent maintenant prennent une longueur d'avance sur leurs
+          concurrents.
+        </p>
+        <p class="market-source">
+          <em>Sources : GM Insights, Spherical Insights, Dual Media 2025</em>
+        </p>
       </div>
     </div>
   </section>
@@ -230,7 +307,7 @@ import BackToTop from "../../components/BackToTop.astro";
           <div class="offer-header">
             <h3>POC</h3>
             <p class="offer-tagline">Audit + Prototype fonctionnel</p>
-            <div class="offer-price">5 000€</div>
+            <div class="offer-price">5 000 €</div>
             <p class="offer-vat">TVA non applicable, art. 293 B du CGI</p>
           </div>
           <div class="offer-duration">
@@ -250,7 +327,7 @@ import BackToTop from "../../components/BackToTop.astro";
           </div>
           <div class="offer-upgrade">
             <p class="offer-upgrade-text">
-              <strong>🎁 Upgrade :</strong> 2 500€ déduits si passage au Starter
+              <strong>🎁 Upgrade :</strong> 2 500 € déduits si passage au Starter
               ou Scale
             </p>
           </div>
@@ -261,10 +338,8 @@ import BackToTop from "../../components/BackToTop.astro";
             </p>
           </div>
           <div class="offer-cta">
-            <a href="#" class="btn btn-primary">🗓️ Réserver un appel (30 min)</a
-            >
-            <a href="#" class="btn btn-secondary">✉️ Être recontacté sous 24h</a
-            >
+            <a href="#" class="btn btn-primary">🗓️ Réserver un appel</a>
+            <a href="#" class="btn btn-secondary">✉️ Être recontacté</a>
           </div>
         </div>
 
@@ -273,9 +348,9 @@ import BackToTop from "../../components/BackToTop.astro";
           <div class="offer-header">
             <h3>Starter</h3>
             <p class="offer-tagline">Agent conversationnel fonctionnel</p>
-            <div class="offer-price">10 000€</div>
+            <div class="offer-price">10 000 €</div>
             <p class="offer-vat">TVA non applicable, art. 293 B du CGI</p>
-            <p class="offer-after-poc">Ou 7 500€ après POC</p>
+            <p class="offer-after-poc">Ou 7 500 € après POC</p>
           </div>
           <div class="offer-duration">
             ⏱️ Durée approximative : 3-4 semaines
@@ -299,10 +374,8 @@ import BackToTop from "../../components/BackToTop.astro";
             </p>
           </div>
           <div class="offer-cta">
-            <a href="#" class="btn btn-primary">🗓️ Réserver un appel (30 min)</a
-            >
-            <a href="#" class="btn btn-secondary">✉️ Être recontacté sous 24h</a
-            >
+            <a href="#" class="btn btn-primary">🗓️ Réserver un appel</a>
+            <a href="#" class="btn btn-secondary">✉️ Être recontacté</a>
           </div>
         </div>
 
@@ -312,9 +385,9 @@ import BackToTop from "../../components/BackToTop.astro";
           <div class="offer-header">
             <h3>Scale</h3>
             <p class="offer-tagline">Système RAG complet</p>
-            <div class="offer-price">15 000€</div>
+            <div class="offer-price">15 000 €</div>
             <p class="offer-vat">TVA non applicable, art. 293 B du CGI</p>
-            <p class="offer-after-poc">Ou 12 500€ après POC</p>
+            <p class="offer-after-poc">Ou 12 500 € après POC</p>
           </div>
           <div class="offer-duration">
             ⏱️ Durée approximative : 4-6 semaines
@@ -339,10 +412,8 @@ import BackToTop from "../../components/BackToTop.astro";
             </p>
           </div>
           <div class="offer-cta">
-            <a href="#" class="btn btn-primary">🗓️ Réserver un appel (30 min)</a
-            >
-            <a href="#" class="btn btn-secondary">✉️ Être recontacté sous 24h</a
-            >
+            <a href="#" class="btn btn-primary">🗓️ Réserver un appel</a>
+            <a href="#" class="btn btn-secondary">✉️ Être recontacté</a>
           </div>
         </div>
 
@@ -351,7 +422,7 @@ import BackToTop from "../../components/BackToTop.astro";
           <div class="offer-header">
             <h3>Enterprise</h3>
             <p class="offer-tagline">Architecture multi-agents</p>
-            <div class="offer-price">30 000€</div>
+            <div class="offer-price">30 000 €</div>
             <p class="offer-vat">TVA non applicable, art. 293 B du CGI</p>
           </div>
           <div class="offer-duration">
@@ -377,10 +448,8 @@ import BackToTop from "../../components/BackToTop.astro";
             </p>
           </div>
           <div class="offer-cta">
-            <a href="#" class="btn btn-primary">🗓️ Réserver un appel (30 min)</a
-            >
-            <a href="#" class="btn btn-secondary">✉️ Être recontacté sous 24h</a
-            >
+            <a href="#" class="btn btn-primary">🗓️ Réserver un appel</a>
+            <a href="#" class="btn btn-secondary">✉️ Être recontacté</a>
           </div>
         </div>
       </div>
@@ -388,180 +457,268 @@ import BackToTop from "../../components/BackToTop.astro";
       <div class="offer-unsure">
         <p>Pas sûr de votre choix ?</p>
         <p>
-          Commencez par le <strong>POC (5 000€)</strong> pour valider la faisabilité
-          technique, ou réservez un appel découverte pour qu'on analyse votre cas
+          Commencez par le <strong>POC</strong> pour valider la faisabilité technique.
+          <br />Ou réservez un appel découverte (30 min) pour analyser votre cas
           ensemble.
         </p>
-        <a href="#" class="btn btn-primary">Réserver un appel découverte</a>
       </div>
+      <a href="/fr/contact" class="btn btn-primary"
+        >Réserver un appel découverte</a
+      >
     </div>
   </section>
+</BaseLayout>
 
-  <!-- Services complémentaires -->
-  <section class="complementary-services section-spacing">
-    <div class="container">
-      <h2 class="section-title">Autres services</h2>
+<!-- Services complémentaires -->
+<section class="complementary-services section-spacing">
+  <div class="container">
+    <h2 class="section-title">Autres services</h2>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">◆</div>
-          <h3>Audit d'agent IA</h3>
-          <div class="service-price">2 500€</div>
-          <p class="service-vat">TVA non applicable, art. 293 B du CGI</p>
-          <p>Vous avez déjà un agent IA qui ne fonctionne pas comme prévu ?</p>
-          <div class="service-includes">
-            <h4>Ce qui est inclus :</h4>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">◆</div>
+        <h3>Audit d'agent IA</h3>
+        <div class="service-price">2 500 €</div>
+        <p class="service-vat">TVA non applicable, art. 293 B du CGI</p>
+        <p>Vous avez déjà un agent IA qui ne fonctionne pas comme prévu ?</p>
+        <div class="service-includes">
+          <h4>Ce qui est inclus :</h4>
+          <ul>
+            <li>
+              Audit technique complet (architecture, RAG, performance, sécurité)
+            </li>
+            <li>Audit métier (analyse des logs, taux de succès)</li>
+            <li>Rapport détaillé (10-15 pages)</li>
+            <li>Recommandations priorisées</li>
+            <li>Call de restitution (1h)</li>
+          </ul>
+        </div>
+        <p class="service-duration">⏱️ Durée : 1 semaine</p>
+        <a href="#" class="btn btn-secondary">En savoir plus</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">●</div>
+        <h3>Maintenance</h3>
+        <div class="maintenance-options">
+          <div class="maintenance-option">
+            <h4>Light — 1 200 €/mois</h4>
             <ul>
-              <li>
-                Audit technique complet (architecture, RAG, performance,
-                sécurité)
-              </li>
-              <li>Audit métier (analyse des logs, taux de succès)</li>
-              <li>Rapport détaillé (10-15 pages)</li>
-              <li>Recommandations priorisées</li>
-              <li>Call de restitution (1h)</li>
+              <li>Support réactif</li>
+              <li>Correction bugs</li>
+              <li>Mises à jour contenu</li>
+              <li>1 call/mois</li>
             </ul>
           </div>
-          <p class="service-duration">⏱️ Durée : 1 semaine</p>
-          <a href="#" class="btn btn-secondary">En savoir plus</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">●</div>
-          <h3>Maintenance</h3>
-          <div class="maintenance-options">
-            <div class="maintenance-option">
-              <h4>Light — 1 200€/mois</h4>
-              <ul>
-                <li>Support réactif</li>
-                <li>Correction bugs</li>
-                <li>Mises à jour contenu</li>
-                <li>1 call/mois</li>
-              </ul>
-            </div>
-            <div class="maintenance-option">
-              <h4>Pro — 2 000€/mois</h4>
-              <ul>
-                <li>Tout Light +</li>
-                <li>Optimisations</li>
-                <li>Nouvelles features (1 jour/mois)</li>
-                <li>2 calls/mois</li>
-                <li>Rapport mensuel</li>
-              </ul>
-            </div>
+          <div class="maintenance-option">
+            <h4>Pro — 2 000 €/mois</h4>
+            <ul>
+              <li>Tout Light +</li>
+              <li>Optimisations</li>
+              <li>Nouvelles features (1 jour/mois)</li>
+              <li>2 calls/mois</li>
+              <li>Rapport mensuel</li>
+            </ul>
           </div>
-          <a href="#" class="btn btn-secondary">En savoir plus</a>
         </div>
+        <a href="#" class="btn btn-secondary">En savoir plus</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Bloc Preuve (Portfolio) -->
-  <section class="proof-section section-spacing">
-    <div class="container">
-      <h2 class="section-title">
-        Mon propre agent RAG : la preuve que ça marche
-      </h2>
+<!-- Bloc Preuve (Portfolio) -->
+<section class="proof-section section-spacing">
+  <div class="container">
+    <h2 class="section-title">Démo : Agent de support API</h2>
 
-      <div class="proof-content">
-        <div class="proof-image">
-          <img
-            src="/portfolio/visionary-ai-agent.png"
-            alt="Visionary AI Agent"
-          />
+    <div class="proof-content">
+      <div class="proof-image">
+        <img src="/portfolio/01-home-welcome.png" alt="Agent de support API" />
+      </div>
+      <div class="proof-text">
+        <p>
+          Agent conversationnel pour support technique API. Répond aux questions
+          sur l'authentification, les endpoints, les codes erreur. Disponible
+          24/7, multilingue (FR/EN), avec citations des sources.
+        </p>
+
+        <h4>Ce que l'agent peut faire :</h4>
+        <ul class="tech-stack">
+          <li>
+            <strong>Support technique :</strong> Répond aux questions API en temps
+            réel
+          </li>
+          <li>
+            <strong>Recherche intelligente :</strong> Trouve l'info dans 200+ pages
+            de documentation
+          </li>
+          <li>
+            <strong>Multilingue :</strong> Détection automatique français/anglais
+          </li>
+          <li>
+            <strong>Citations sources :</strong> Toujours vérifiable et traçable
+          </li>
+        </ul>
+
+        <h4>Bénéfices pour vos utilisateurs :</h4>
+        <ul class="tech-stack">
+          <li>
+            <strong>Réponse instantanée :</strong> Quelques secondes vs plusieurs
+            heures
+          </li>
+          <li>
+            <strong>Disponibilité 24/7 :</strong> Plus besoin d'attendre les heures
+            ouvrées
+          </li>
+          <li>
+            <strong>Précision :</strong> Réponses contextuelles avec exemples de
+            code
+          </li>
+          <li>
+            <strong>Autonomie :</strong> Vos développeurs progressent sans bloquer
+            votre support
+          </li>
+        </ul>
+
+        <a href="/fr/portfolio" class="btn btn-primary">Tester la démo →</a>
+      </div>
+    </div>
+
+    <!-- Portfolio supplémentaire -->
+    <div class="portfolio-intro">
+      <h3>Deux approches complémentaires</h3>
+      <p>Je maîtrise différentes architectures d'agents IA selon vos besoins</p>
+    </div>
+
+    <div class="portfolio-grid-featured">
+      <!-- Agent 1 : RAG -->
+      <div class="portfolio-featured-card">
+        <div class="featured-badge featured-badge-rag">Agent RAG</div>
+        <PortfolioCard
+          title="Neolens Support Agent"
+          client="Support technique API"
+          description="Agent RAG pour support documentation API. Recherche intelligente dans 200+ pages, citations sources, multilingue FR/EN."
+          tags={["Python", "FastAPI", "LangGraph", "FAISS", "Next.js 14"]}
+          image="/portfolio/01-home-welcome.png"
+          link="/fr/portfolio"
+          category={["ai-agent"]}
+        />
+        <div class="use-case-label">
+          <strong>Cas d'usage :</strong> Documentation technique, FAQ, troubleshooting
         </div>
-        <div class="proof-text">
-          <p>
-            J'ai développé un agent conversationnel avec RAG pour ma
-            documentation technique. Architecture LangGraph, backend
-            Python/FastAPI, frontend React. Fonctionnel, testé, déployé.
-          </p>
-
-          <h4>Stack technique :</h4>
-          <ul class="tech-stack">
-            <li><strong>Backend :</strong> Python, FastAPI, LangGraph</li>
-            <li><strong>RAG :</strong> FAISS, embeddings OpenAI</li>
-            <li><strong>Frontend :</strong> React, Tailwind CSS</li>
-            <li>
-              <strong>Tests :</strong> Pytest, tests unitaires + intégration
-            </li>
-            <li><strong>Déploiement :</strong> Render</li>
-          </ul>
-
-          <a href="/fr/portfolio" class="btn btn-primary"
-            >Voir le projet complet →</a
-          >
+        <div class="demo-status">
+          <span class="status-badge">📹 Démo vidéo disponible</span>
+          <p>Voir les vidéos et la documentation technique complète</p>
         </div>
       </div>
 
-      <!-- Portfolio supplémentaire -->
-      <div class="portfolio-grid">
+      <!-- Agent 2 : Conversationnel -->
+      <div class="portfolio-featured-card">
+        <div class="featured-badge featured-badge-conversational">
+          Agent Conversationnel
+        </div>
         <PortfolioCard
           title="Visionary AI Agent"
-          client="Assistant conversationnel IA"
-          description="Agent conversationnel intelligent pour API d'analyse d'images. Démontre l'approche hybride conversationnelle avec knowledge base structurée."
+          client="Assistant API conversationnel"
+          description="Assistant qui accélère l'adoption de votre API. Quick-start prompts, exemples de code interactifs, copie en un clic. Vos développeurs autonomes en 10 minutes."
           tags={["React", "TypeScript", "Gemini AI", "Netlify Functions"]}
           image="/portfolio/visionary-ai-agent.png"
           link="https://visionary-ai-agent.netlify.app/"
           category={["ai-agent"]}
         />
-        <PortfolioCard
-          title="Agent RAG (Coming Soon)"
-          client="Projet en développement"
-          description="Système RAG avancé avec multi-sources et reranking. Disponible la semaine prochaine."
-          tags={["Python", "FastAPI", "LangGraph", "FAISS"]}
-          image="/portfolio/coming-soon.png"
-          link="#"
-          category={["ai-agent"]}
-        />
-        <PortfolioCard
-          title="Visionary API Documentation"
-          client="Documentation technique"
-          description="Documentation API complète pour l'agent Visionary, avec guides interactifs et onboarding développeur."
-          tags={["API Documentation", "Docusaurus", "Interactive Guides"]}
-          image="/portfolio/visionary-docs.png"
-          link="https://visionary-api-docs.netlify.app/"
-          category={["api-docs"]}
-        />
-        <PortfolioCard
-          title="Neolens – Documentation API"
-          client="IA fictive d'imagerie médicale"
-          description="Documentation API complète pour l'analyse intelligente d'images médicales, avec guides interactifs et onboarding développeur."
-          tags={["API Documentation", "Docusaurus", "Interactive Guides"]}
-          image="/portfolio/neolens-api-docs.png"
-          link="https://neolens-api-docs.netlify.app/"
-          category={["api-docs"]}
-        />
-        <PortfolioCard
-          title="Documentation API Cognitia sur GitBook"
-          client="Plateforme IA Cognitia fictive"
-          description="Plateforme de documentation API professionnelle construite sur GitBook avec recherche avancée, collaboration équipe et expérience développeur interactive"
-          tags={["GitBook", "Team Collaboration", "Enterprise Docs"]}
-          image="/portfolio/cognitia-api-docs.png"
-          link="https://cognitia-api-documentation.gitbook.io/bgallais"
-          category={["api-docs"]}
-        />
+        <div class="use-case-label">
+          <strong>Cas d'usage :</strong> Onboarding développeur, adoption API, support
+          intégration
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- CTA Final -->
-  <section class="cta-final section-spacing">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Discutons de votre projet</h2>
-        <p>
-          30 minutes pour analyser la faisabilité technique. Je vous dis si un
-          agent IA est adapté à votre cas, et comment le construire.
-        </p>
-        <p class="cta-note">Pas de vente. Juste une discussion technique.</p>
-        <a href="#" class="btn btn-primary btn-large">Prendre rendez-vous</a>
+    <!-- Section comparative -->
+    <div class="agent-comparison">
+      <h3>Quelle approche pour votre projet ?</h3>
+
+      <div class="comparison-cards">
+        <div class="comparison-card">
+          <h4>Agent RAG</h4>
+          <p><strong>Idéal pour :</strong></p>
+          <ul>
+            <li>Documentation technique volumineuse</li>
+            <li>Base de connaissances statique</li>
+            <li>Besoin de citations sources</li>
+            <li>Contenu peu changeant</li>
+          </ul>
+          <p class="example">Ex : Support technique, FAQ, compliance</p>
+        </div>
+
+        <div class="comparison-card">
+          <h4>Agent Conversationnel</h4>
+          <p><strong>Idéal pour :</strong></p>
+          <ul>
+            <li>Onboarding développeur</li>
+            <li>Adoption produit/API</li>
+            <li>Intégration complexe</li>
+            <li>Exemples de code dynamiques</li>
+          </ul>
+          <p class="example">Ex : Assistant API, guide intégration</p>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <BackToTop />
-</BaseLayout>
+      <p class="comparison-note">
+        <strong>Pas sûr ?</strong> Je vous aide à choisir l'approche adaptée lors
+        de l'appel découverte.
+      </p>
+    </div>
+
+    <!-- Autres projets documentation -->
+    <div class="portfolio-grid">
+      <PortfolioCard
+        title="Visionary API Documentation"
+        client="Documentation technique"
+        description="Documentation API complète pour l'agent Visionary, avec guides interactifs et onboarding développeur."
+        tags={["API Documentation", "Docusaurus", "Interactive Guides"]}
+        image="/portfolio/visionary-docs.png"
+        link="https://visionary-api-docs.netlify.app/"
+        category={["api-docs"]}
+      />
+      <PortfolioCard
+        title="Neolens – Documentation API"
+        client="IA fictive d'imagerie médicale"
+        description="Documentation API complète pour l'analyse intelligente d'images médicales, avec guides interactifs et onboarding développeur."
+        tags={["API Documentation", "Docusaurus", "Interactive Guides"]}
+        image="/portfolio/neolens-api-docs.png"
+        link="https://neolens-api-docs.netlify.app/"
+        category={["api-docs"]}
+      />
+      <PortfolioCard
+        title="Documentation API Cognitia sur GitBook"
+        client="Plateforme IA Cognitia fictive"
+        description="Plateforme de documentation API professionnelle construite sur GitBook avec recherche avancée, collaboration équipe et expérience développeur interactive"
+        tags={["GitBook", "Team Collaboration", "Enterprise Docs"]}
+        image="/portfolio/cognitia-api-docs.png"
+        link="https://cognitia-api-documentation.gitbook.io/bgallais"
+        category={["api-docs"]}
+      />
+    </div>
+  </div>
+</section>
+
+<!-- CTA Final -->
+<section class="cta-final section-spacing">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Discutons de votre projet</h2>
+      <p>
+        30 minutes pour analyser la faisabilité technique. Je vous dis si un
+        agent IA est adapté à votre cas, et comment le construire.
+      </p>
+      <p class="cta-note">Pas de vente. Juste une discussion technique.</p>
+      <a href="#" class="btn btn-primary btn-large">Prendre rendez-vous</a>
+    </div>
+  </div>
+</section>
+
+<BackToTop />
 
 <style>
   /* ===============================
@@ -869,6 +1026,21 @@ import BackToTop from "../../components/BackToTop.astro";
 
   .context-result strong {
     color: rgb(var(--color-primary));
+  }
+
+  .cta-services {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 2rem;
+    background: rgba(var(--color-accent), 0.03);
+    border-radius: var(--radius-lg);
+  }
+
+  .cta-services p {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text));
+    margin-bottom: 1.5rem;
+    font-weight: 500;
   }
 
   /* Responsive */
@@ -1330,8 +1502,52 @@ import BackToTop from "../../components/BackToTop.astro";
 
   /* Grid avec POC (4 colonnes) */
   .offers-grid--with-poc {
-    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem;
+  }
+
+  /* Réduire padding des cartes en mode 4 colonnes pour éviter troncature */
+  .offers-grid--with-poc .offer-card {
+    padding: 1.5rem;
+  }
+
+  .offers-grid--with-poc .offer-includes ul {
+    font-size: 0.9rem;
+  }
+
+  /* Adapter les boutons en mode 4 colonnes */
+  .offers-grid--with-poc .offer-cta .btn {
+    font-size: 0.85rem;
+    padding: 0.65rem 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: 1400px) {
+    .offers-grid--with-poc {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    /* Rétablir padding normal en mode 2 colonnes */
+    .offers-grid--with-poc .offer-card {
+      padding: 2rem;
+    }
+
+    .offers-grid--with-poc .offer-includes ul {
+      font-size: 1rem;
+    }
+
+    /* Rétablir taille normale des boutons */
+    .offers-grid--with-poc .offer-cta .btn {
+      font-size: 1rem;
+      padding: 0.875rem 1.5rem;
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+    }
   }
 
   /* POC Card - Design distinct */
@@ -1392,7 +1608,7 @@ import BackToTop from "../../components/BackToTop.astro";
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     .offers-grid--with-poc {
       grid-template-columns: 1fr;
     }
@@ -1582,10 +1798,249 @@ import BackToTop from "../../components/BackToTop.astro";
     color: rgb(var(--color-text));
   }
 
+  /* ===============================
+     PORTFOLIO - INTRO
+     =============================== */
+  .portfolio-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .portfolio-intro h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: rgb(var(--color-text));
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-intro p {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* ===============================
+     PORTFOLIO - FEATURED GRID
+     =============================== */
+  .portfolio-grid-featured {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .portfolio-featured-card {
+    position: relative;
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 2px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .portfolio-featured-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(var(--color-primary), 0.5);
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-md);
+    z-index: 1;
+  }
+
+  .featured-badge-rag {
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-primary-hover))
+    );
+    color: rgb(var(--color-text-button));
+  }
+
+  .featured-badge-conversational {
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-accent)),
+      rgba(var(--color-accent), 0.8)
+    );
+    color: rgb(var(--color-text-button));
+  }
+
+  .use-case-label {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(var(--color-primary), 0.05);
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    color: rgb(var(--color-text-muted));
+    border-left: 3px solid rgb(var(--color-primary));
+  }
+
+  .use-case-label strong {
+    color: rgb(var(--color-text));
+  }
+
+  .demo-status {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(var(--color-accent), 0.05);
+    border-radius: var(--radius-md);
+    text-align: center;
+  }
+
+  .status-badge {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    background: rgba(var(--color-accent), 0.15);
+    border: 1px solid rgba(var(--color-accent), 0.3);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+    margin-bottom: 0.5rem;
+  }
+
+  .demo-status p {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.875rem;
+    color: rgb(var(--color-text-muted));
+  }
+
+  /* ===============================
+     AGENT COMPARISON
+     =============================== */
+  .agent-comparison {
+    margin: 4rem 0;
+    padding: 3rem 2rem;
+    background: rgba(var(--color-surface-variant), 0.2);
+    border-radius: var(--radius-lg);
+  }
+
+  .agent-comparison h3 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: rgb(var(--color-text));
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .comparison-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .comparison-card {
+    background: rgb(var(--color-surface));
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+  }
+
+  .comparison-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: rgb(var(--color-primary));
+    margin-bottom: 1rem;
+  }
+
+  .comparison-card p {
+    margin-bottom: 0.75rem;
+    color: rgb(var(--color-text));
+  }
+
+  .comparison-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .comparison-card ul li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    color: rgb(var(--color-text-muted));
+    font-size: 0.9rem;
+  }
+
+  .comparison-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: rgb(var(--color-success));
+    font-weight: bold;
+  }
+
+  .comparison-card .example {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(var(--color-accent), 0.05);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    color: rgb(var(--color-text-muted));
+    font-style: italic;
+  }
+
+  .comparison-note {
+    text-align: center;
+    font-size: 1.125rem;
+    color: rgb(var(--color-text));
+    padding: 1.5rem;
+    background: rgba(var(--color-primary), 0.05);
+    border-radius: var(--radius-md);
+    margin: 0;
+  }
+
+  .comparison-note strong {
+    color: rgb(var(--color-primary));
+  }
+
+  /* ===============================
+     PORTFOLIO GRID (autres projets)
+     =============================== */
   .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
+  }
+
+  /* ===============================
+     RESPONSIVE - PORTFOLIO
+     =============================== */
+  @media (max-width: 1024px) {
+    .portfolio-grid-featured {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .comparison-cards {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .portfolio-featured-card {
+      padding: 1.5rem;
+    }
+
+    .agent-comparison {
+      padding: 2rem 1rem;
+    }
+
+    .comparison-card {
+      padding: 1.5rem;
+    }
   }
 
   /* ===============================
@@ -1743,6 +2198,123 @@ import BackToTop from "../../components/BackToTop.astro";
     .comparison-table td {
       padding: 0.5rem 0.25rem;
       font-size: 0.75rem;
+    }
+  }
+
+  /* ===============================
+     SECTION MARCHÉ
+     =============================== */
+  .market-section {
+    background: linear-gradient(
+      135deg,
+      rgba(var(--color-primary), 0.03) 0%,
+      rgba(var(--color-accent), 0.02) 100%
+    );
+  }
+
+  .market-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .stat-card {
+    background: rgb(var(--color-surface));
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgb(var(--color-primary));
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  .stat-card p {
+    color: rgb(var(--color-text));
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .stat-source {
+    display: block;
+    font-size: 0.75rem;
+    color: rgb(var(--color-text-muted));
+    font-style: italic;
+  }
+
+  .market-insight {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background: rgba(var(--color-primary), 0.05);
+    border: 2px solid rgba(var(--color-primary), 0.2);
+    border-radius: var(--radius-lg);
+  }
+
+  .market-insight p {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text));
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  .market-insight p:last-child {
+    margin-bottom: 0;
+  }
+
+  .market-source {
+    font-size: 0.875rem !important;
+    color: rgb(var(--color-text-muted)) !important;
+    margin-top: 1rem !important;
+  }
+
+  @media (max-width: 1024px) {
+    .market-stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .market-stats {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .stat-card {
+      padding: 1.5rem;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+    }
+
+    .market-insight {
+      padding: 1.5rem;
+    }
+
+    .market-insight p {
+      font-size: 1rem;
     }
   }
 </style>
