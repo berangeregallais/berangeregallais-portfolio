@@ -42,6 +42,19 @@ const allCategories = [
     <div class="container">
       <h2 class="section-title">Projets</h2>
       <div class="projects-grid">
+        <!-- Agent RAG Neolens - Featured -->
+        <div class="project-wrapper featured-project">
+          <PortfolioCard
+            title="Agent RAG Neolens"
+            client="Assistant IA médical"
+            description="Agent RAG spécialisé dans l'analyse d'images médicales. Recherche intelligente dans la documentation Neolens, citations sources."
+            tags={["Python", "FastAPI", "LangGraph", "FAISS", "React"]}
+            image="/portfolio/01-home-welcome.png"
+            link="/fr/portfolio/neolens-support-agent"
+            category={["ai-agent"]}
+          />
+        </div>
+
         {
           projects.map((project, index) => (
             <div
@@ -68,38 +81,39 @@ const allCategories = [
 <section class="portfolio-cta">
   <div class="container">
     <div class="cta-content">
-      <h2>Prêt·e à créer votre agent conversationnel ?</h2>
+      <h2>Prêt à créer votre agent IA ?</h2>
       <p>
-        Chaque projet est unique. Je vous accompagne de l'analyse de vos besoins jusqu'au déploiement et à la formation de vos équipes.
+        Discutons de votre projet et trouvons la solution adaptée à vos besoins. 
+        Agent RAG, conversationnel, ou sur-mesure - je vous accompagne de A à Z.
       </p>
       <div class="cta-benefits">
         <div class="benefit">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20 6 9 17l-5-5"></path>
           </svg>
-          Solution sur-mesure
+          Agent IA sur-mesure
         </div>
         <div class="benefit">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20 6 9 17l-5-5"></path>
           </svg>
-          Documentation complète incluse
+          Code + Documentation + Tests
         </div>
         <div class="benefit">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20 6 9 17l-5-5"></path>
           </svg>
-          Suivi personnalisé sur 10 jours
+          Solution complète incluse
         </div>
       </div>
       <div class="cta-buttons">
         <a href="/fr/contact" class="btn btn-primary btn-large">
-          <span>Discuter de votre projet</span>
+          <span>Discutons de votre projet</span>
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M5 12h14m-7-7 7 7-7 7"></path>
           </svg>
         </a>
-        <a href="/fr/services" class="btn btn-secondary">Découvrir mes services</a>
+        <a href="/fr/#offres" class="btn btn-secondary">Voir mes offres</a>
       </div>
     </div>
   </div>

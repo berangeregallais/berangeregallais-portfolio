@@ -6,7 +6,7 @@ import BackToTop from "../../../components/BackToTop.astro";
 
 <BaseLayout
   title="Neolens Support Agent | Agent RAG Enterprise-Grade"
-  description="Agent conversationnel RAG pour support technique API. Architecture LangGraph 7 nœuds, recherche vectorielle FAISS, multilingue FR/EN."
+  description="Agent conversationnel RAG pour support technique API. Orchestration LangGraph 7 nœuds, recherche vectorielle FAISS, multilingue FR/EN."
   lang="fr"
 >
   <!-- Hero Section -->
@@ -20,7 +20,7 @@ import BackToTop from "../../../components/BackToTop.astro";
         <h1>Neolens Support Agent</h1>
         <p class="hero-subtitle">
           Agent conversationnel enterprise-grade pour support technique API. 
-          Architecture LangGraph à 7 nœuds, RAG avancé avec FAISS, 
+          Orchestration LangGraph à 7 nœuds, RAG avancé avec FAISS, 
           streaming temps réel. Déployable en production.
         </p>
         <div class="hero-image">
@@ -43,14 +43,14 @@ import BackToTop from "../../../components/BackToTop.astro";
           <h3>Objectif</h3>
           <p>
             Automatiser le support technique pour une API d'imagerie médicale. 
-            Répondre instantanément aux questions des développeurs sur 200+ pages de documentation.
+            Répondre instantanément aux questions des développeurs sur 34 documents (50k mots) de documentation technique.
           </p>
         </div>
         <div class="overview-card">
           <div class="overview-icon">⚡</div>
           <h3>Performance</h3>
           <p>
-            Temps de réponse en quelques secondes, recherche vectorielle &lt; 500ms, 
+            Temps de réponse 2-10 secondes selon complexité, recherche vectorielle &lt; 500ms, 
             disponible 24/7 en français et anglais.
           </p>
         </div>
@@ -58,7 +58,7 @@ import BackToTop from "../../../components/BackToTop.astro";
           <div class="overview-icon">🔒</div>
           <h3>Fiabilité</h3>
           <p>
-            93 tests automatisés (76% couverture), validation double input/output, 
+            137 tests automatisés (76% couverture), validation double input/output, 
             citations sources systématiques.
           </p>
         </div>
@@ -85,7 +85,7 @@ import BackToTop from "../../../components/BackToTop.astro";
           <div class="video-info">
             <h3>RAG Intelligent avec Citations</h3>
             <p>
-              Recherche sémantique dans 200+ pages de documentation, 
+              Recherche sémantique dans 34 documents (50k mots), 
               citations automatiques des sources, streaming temps réel.
             </p>
             <ul class="video-features">
@@ -196,10 +196,45 @@ import BackToTop from "../../../components/BackToTop.astro";
       <h2 class="section-title">Architecture Technique</h2>
       
       <div class="architecture-overview">
-        <h3>Pipeline LangGraph à 7 Nœuds Spécialisés</h3>
+        <h3>Orchestration LangGraph à 7 Nœuds Spécialisés</h3>
         <p>
-          Architecture state-of-the-art avec gestion d'état avancée, 
+          Architecture state-of-the-art avec orchestration avancée, 
           routing conditionnel et validation multi-niveau.
+        </p>
+      </div>
+
+      <!-- Schéma d'architecture -->
+      <div class="architecture-diagram">
+        <div class="mermaid">
+          graph TD;
+            __start__([<p>__start__</p>]):::first
+            memory(memory)
+            validation_input(validation_input)
+            retrieve(retrieve)
+            validation_output(validation_output)
+            generate(generate)
+            fallback(fallback)
+            reject(reject)
+            __end__([<p>__end__</p>]):::last
+            __start__ --> memory;
+            generate -. &nbsp;success&nbsp; .-> __end__;
+            generate -.-> fallback;
+            memory --> validation_input;
+            retrieve --> validation_output;
+            validation_input -.-> fallback;
+            validation_input -.-> generate;
+            validation_input -.-> reject;
+            validation_input -.-> retrieve;
+            validation_output -.-> fallback;
+            validation_output -.-> generate;
+            fallback --> __end__;
+            reject --> __end__;
+            classDef default fill:#f2f0ff,line-height:1.2
+            classDef first fill-opacity:0
+            classDef last fill:#bfb6fc
+        </div>
+        <p class="diagram-caption">
+          Orchestration LangGraph : flux de données entre les 7 nœuds
         </p>
       </div>
 
@@ -219,7 +254,7 @@ import BackToTop from "../../../components/BackToTop.astro";
         <div class="architecture-card">
           <div class="node-number">3</div>
           <h4>Retrieval Node</h4>
-          <p>Recherche sémantique FAISS dans 200+ chunks, expansion de requêtes, priorisation</p>
+          <p>Recherche sémantique FAISS dans 250 chunks (50k mots), expansion de requêtes, priorisation</p>
         </div>
 
         <div class="architecture-card">
@@ -260,8 +295,8 @@ import BackToTop from "../../../components/BackToTop.astro";
           <ul>
             <li><strong>Python 3.11+</strong> - Langage principal</li>
             <li><strong>FastAPI</strong> - Framework web async haute performance</li>
-            <li><strong>LangGraph</strong> - Machine à états avancée pour agents IA</li>
-            <li><strong>LangChain</strong> - Orchestration des composants IA</li>
+            <li><strong>LangGraph</strong> - Orchestration et machine à états pour agents IA</li>
+            <li><strong>LangChain</strong> - Framework et outils pour agents IA</li>
             <li><strong>OpenAI GPT-4</strong> - Modèle de langage</li>
             <li><strong>FAISS</strong> - Recherche vectorielle Facebook</li>
             <li><strong>SQLite</strong> - Persistance des conversations</li>
@@ -282,7 +317,7 @@ import BackToTop from "../../../components/BackToTop.astro";
         <div class="stack-category">
           <h3>Tests & Qualité</h3>
           <ul>
-            <li><strong>Pytest</strong> - 93 tests automatisés</li>
+            <li><strong>Pytest</strong> - 93 tests backend automatisés</li>
             <li><strong>Jest</strong> - Tests frontend</li>
             <li><strong>React Testing Library</strong> - Tests composants</li>
             <li><strong>Couverture</strong> - 76% de code coverage</li>
@@ -311,8 +346,8 @@ import BackToTop from "../../../components/BackToTop.astro";
       
       <div class="metrics-grid">
         <div class="metric-card">
-          <div class="metric-value">&lt; 2s</div>
-          <div class="metric-label">Temps de réponse (P95)</div>
+          <div class="metric-value">2-10s</div>
+          <div class="metric-label">Temps de réponse (selon complexité)</div>
         </div>
 
         <div class="metric-card">
@@ -321,8 +356,8 @@ import BackToTop from "../../../components/BackToTop.astro";
         </div>
 
         <div class="metric-card">
-          <div class="metric-value">93</div>
-          <div class="metric-label">Tests automatisés</div>
+          <div class="metric-value">137</div>
+          <div class="metric-label">Tests automatisés (Backend + Frontend)</div>
         </div>
 
         <div class="metric-card">
@@ -331,8 +366,13 @@ import BackToTop from "../../../components/BackToTop.astro";
         </div>
 
         <div class="metric-card">
-          <div class="metric-value">200+</div>
-          <div class="metric-label">Pages de documentation indexées</div>
+          <div class="metric-value">50k mots</div>
+          <div class="metric-label">Contenu technique indexé (34 docs)</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-value">250</div>
+          <div class="metric-label">Chunks vectoriels (1000 chars, overlap 200)</div>
         </div>
 
         <div class="metric-card">
@@ -350,7 +390,7 @@ import BackToTop from "../../../components/BackToTop.astro";
         <h2>Prêt à déployer un agent similaire ?</h2>
         <p>
           Cette architecture est réplicable et adaptable à votre cas d'usage. 
-          Du POC (5 000€) aux solutions enterprise (30 000€).
+          Du POC aux solutions enterprise.
         </p>
         <div class="cta-buttons">
           <a href="/fr/#offres" class="btn btn-primary btn-large">Voir les offres et tarifs</a>
@@ -793,6 +833,32 @@ import BackToTop from "../../../components/BackToTop.astro";
     flex-wrap: wrap;
   }
 
+  /* Architecture Diagram */
+  .architecture-diagram {
+    margin: 3rem 0;
+    text-align: center;
+    background: rgba(var(--color-primary), 0.02);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border: 1px solid rgba(var(--color-border), 0.1);
+  }
+
+  .mermaid {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    overflow-x: auto;
+  }
+
+  .diagram-caption {
+    color: rgb(var(--color-text-muted));
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 0;
+  }
+
   /* Responsive */
   @media (max-width: 1024px) {
     .overview-grid {
@@ -835,4 +901,16 @@ import BackToTop from "../../../components/BackToTop.astro";
     }
   }
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+<script>
+  declare const mermaid: any;
+  mermaid.initialize({ 
+    startOnLoad: true,
+    theme: 'default',
+    flowchart: {
+      curve: 'linear'
+    }
+  });
+</script>
 
