@@ -8,7 +8,7 @@ const blogCollection = defineCollection({
     description: z.string(),
     publishDate: z.date(),
     author: z.string().default('Bérangère Gallais'),
-    category: z.enum(['API Documentation', 'AI Compliance', 'Ghostwriting', 'Documentation Strategy', 'Tools & Workflows']),
+    category: z.enum(['API Documentation', 'Ghostwriting', 'Documentation Strategy', 'Tools & Workflows']),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
     image: z.string().optional(),

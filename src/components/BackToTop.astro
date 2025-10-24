@@ -16,8 +16,8 @@
     right: 2rem;
     width: 54px;
     height: 54px;
-    background: linear-gradient(135deg, #e6b7d4, #db7093);
-    color: #1e3a5f;
+    background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-primary-hover)));
+    color: white;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -34,11 +34,11 @@
     align-items: center;
     justify-content: center;
     
-    box-shadow: 
-      0 4px 15px rgba(230, 183, 212, 0.4),
-      0 2px 8px rgba(219, 112, 147, 0.3);
+    box-shadow:
+      0 4px 15px rgba(var(--color-primary), 0.4),
+      0 2px 8px rgba(var(--color-primary-hover), 0.3);
   }
-
+  
   .button-content {
     display: flex;
     flex-direction: column;
@@ -46,16 +46,16 @@
     justify-content: center;
     gap: 0;
   }
-
+  
   /* Flèche */
   .arrow-up {
     font-size: 18px;
     font-weight: 900;
     line-height: 1;
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     margin-bottom: -2px;
   }
-
+  
   /* Barre verticale sous la flèche */
   .bar {
     width: 2px;
@@ -63,33 +63,33 @@
     background: currentColor;
     border-radius: 1px;
     opacity: 0.9;
-    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   }
-
+  
   /* État VISIBLE */
   .back-to-top-btn.visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(0) scale(1);
   }
-
+  
   /* Hover */
   .back-to-top-btn:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 
-      0 8px 25px rgba(230, 183, 212, 0.5),
-      0 4px 15px rgba(219, 112, 147, 0.4);
+    box-shadow:
+      0 8px 25px rgba(var(--color-primary), 0.5),
+      0 4px 15px rgba(var(--color-primary-hover), 0.4);
   }
-
+  
   .back-to-top-btn:hover .arrow-up {
     transform: translateY(-1px);
   }
-
+  
   .back-to-top-btn:hover .bar {
     transform: translateY(-1px);
     opacity: 1;
   }
-
+  
   /* Responsive */
   @media (max-width: 768px) {
     .back-to-top-btn {
@@ -108,7 +108,7 @@
       height: 12px;
     }
   }
-
+  
   @media (max-width: 480px) {
     .back-to-top-btn {
       bottom: 1rem;
@@ -126,21 +126,16 @@
       height: 10px;
     }
   }
-
-  /* Mode sombre */
-  [data-theme="dark"] .back-to-top-btn {
-    background: linear-gradient(135deg, rgba(230, 183, 212, 0.95), rgba(219, 112, 147, 0.95));
-  }
 </style>
 
 <script>
   function initBackToTop(): void {
     const btn = document.getElementById('back-to-top-btn') as HTMLButtonElement | null;
     if (!btn) return;
-
+    
     const THRESHOLD = 300;
     let ticking = false;
-
+    
     function updateButton(): void {
       const scrollY = window.scrollY;
       
@@ -152,29 +147,29 @@
       
       ticking = false;
     }
-
+    
     function onScroll(): void {
       if (!ticking) {
         requestAnimationFrame(updateButton);
         ticking = true;
       }
     }
-
+    
     function scrollToTop(): void {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     }
-
+    
     // Events
     window.addEventListener('scroll', onScroll, { passive: true });
     btn.addEventListener('click', scrollToTop);
-
+    
     // Init
     updateButton();
   }
-
+  
   // Démarrage
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initBackToTop);

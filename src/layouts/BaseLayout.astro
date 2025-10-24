@@ -3,6 +3,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BackToTop from "../components/BackToTop.astro";
+import '../styles/globals.css';
 
 export interface Props {
   title: string;
@@ -11,7 +12,7 @@ export interface Props {
   image?: string;
 }
 
-// Déduire la langue depuis l’URL si la prop n’est pas fournie
+// Déduire la langue depuis l'URL si la prop n'est pas fournie
 const path = Astro.url.pathname;
 const detectedLang: "en" | "fr" = path.startsWith("/fr/") ? "fr" : "en";
 
@@ -47,7 +48,6 @@ const ogImageURL = new URL(image, Astro.site);
       sizes="16x16"
       href="/favicons/favicon-16x16.png"
     />
-    <!-- <link rel="manifest" href="/favicons/site.webmanifest" /> -->
     <meta name="generator" content={Astro.generator} />
 
     <!-- SEO -->
@@ -61,13 +61,10 @@ const ogImageURL = new URL(image, Astro.site);
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Fonts - NOUVELLE PALETTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Theme initialization script -->
     <script is:inline>
@@ -149,19 +146,22 @@ const ogImageURL = new URL(image, Astro.site);
 </html>
 
 <style is:global>
-  /* Sticky footer */
+  /* ===============================
+     LAYOUT & STICKY FOOTER
+     =============================== */
   html,
   body {
     height: 100%;
   }
+  
   body {
     margin: 0;
     background-color: rgb(var(--color-background));
     color: rgb(var(--color-text));
     line-height: 1.6;
     transition:
-      background-color var(--transition-normal),
-      color var(--transition-normal);
+      background-color 250ms ease,
+      color 250ms ease;
   }
 
   .layout {
@@ -175,35 +175,46 @@ const ogImageURL = new URL(image, Astro.site);
     min-height: calc(100vh - 120px);
   }
 
-  /* THEME COLORS */
+  /* ===============================
+     THEME COLORS - DEEP BLUE ELEGANCE
+     =============================== */
   :root {
-    --color-primary: 230 183 212; /* #e6b7d4 */
-    --color-secondary: 219 112 147;
-    --color-accent: 192 132 252;
+    /* Couleurs principales - NOUVELLE PALETTE */
+    --color-background: 10, 22, 40; /* #0A1628 - Bleu nuit profond */
+    --color-surface: 19, 32, 56; /* #132038 - Bleu ardoise */
+    --color-surface-variant: 42, 63, 95; /* #2A3F5F - Bleu moyen */
 
-    --color-text: 30 58 138;
-    --color-text-muted: 71 85 105;
-    --color-text-inverse: 255 255 255;
+    /* Couleurs d'action - NOUVELLE PALETTE ROSE PÂLE */
+    --color-primary: 244, 166, 184; /* #F4A6B8 - Rose poudré (CTA) */
+    --color-secondary: 219, 112, 147; /* #DB7093 - Rose secondary */
+    --color-primary-hover: 255, 182, 193; /* #FFB6C1 - Rose pâle (hover) */
+    --color-accent: 230, 183, 212; /* #E6B7D4 - Rose doux (accents) */
 
-    --color-background: 255 255 255;
-    --color-surface: 248 250 252;
-    --color-surface-variant: 241 245 249;
+    /* Textes - NOUVELLE PALETTE */
+    --color-text: 232, 234, 240; /* #E8EAF0 - Blanc cassé */
+    --color-text-muted: 156, 163, 184; /* #9CA3B8 - Gris-bleu */
+    --color-text-inverse: 10, 22, 40; /* Bleu foncé pour texte sur fond clair */
 
-    --color-border: 226 232 240;
-    --color-border-muted: 241 245 249;
+    /* Bordures & séparateurs - NOUVELLE PALETTE */
+    --color-border: 42, 63, 95; /* #2A3F5F */
+    --color-border-muted: 30, 41, 59;
 
-    --color-shadow: 30 58 138;
+    /* Statuts */
+    --color-success: 16, 185, 129; /* #10B981 - Vert validation */
+    --color-warning: 251, 191, 36;
+    --color-error: 239, 68, 68;
 
-    --color-success: 34 197 94;
-    --color-warning: 251 191 36;
-    --color-error: 239 68 68;
+    --color-shadow: 0, 0, 0;
 
-    --font-logo: "Merriweather", "Lora", Georgia, serif;
-    --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
-    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      "Roboto", sans-serif;
+    /* Typographie - NOUVELLE PALETTE */
+    --font-logo: "Space Grotesk", sans-serif;
+    --font-hero: "Space Grotesk", sans-serif; /* H1 Hero */
+    --font-heading: "Inter", sans-serif; /* H2, H3 */
+    --font-serif: "Inter", sans-serif;
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --font-mono: "JetBrains Mono", "Menlo", "Monaco", "Courier New", monospace;
 
+    /* Espacements */
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -212,102 +223,113 @@ const ogImageURL = new URL(image, Astro.site);
     --space-2xl: 3rem;
     --space-3xl: 4rem;
 
-    --radius-sm: 0.25rem;
+    /* Bordures arrondies */
+    --radius-sm: 0.375rem;
     --radius-md: 0.5rem;
-    --radius-lg: 0.75rem;
-    --radius-xl: 1rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
 
+    /* Transitions */
     --transition-fast: 150ms ease;
     --transition-normal: 250ms ease;
     --transition-slow: 350ms ease;
   }
 
-  [data-theme="dark"] {
-    --color-text: 248 250 252;
-    --color-text-muted: 148 163 184;
-    --color-text-inverse: 15 23 42;
+  /* Mode sombre déjà actif par défaut avec la palette Deep Blue */
+  /* Pas besoin de [data-theme="dark"] car le fond est déjà sombre */
 
-    --color-background: 2 6 23;
-    --color-surface: 15 23 42;
-    --color-surface-variant: 30 41 59;
-
-    --color-border: 51 65 85;
-    --color-border-muted: 30 41 59;
-
-    --color-shadow: 0 0 0;
-  }
-
-  /* Base styles */
+  /* ===============================
+     BASE STYLES
+     =============================== */
   * {
     box-sizing: border-box;
   }
+  
   html {
     font-family: var(--font-sans);
     scroll-behavior: smooth;
+    font-size: 16px;
   }
 
-  /* Typography */
+  /* ===============================
+     TYPOGRAPHY
+     =============================== */
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: var(--font-serif);
     font-weight: 600;
     line-height: 1.2;
     margin-top: 0;
     color: rgb(var(--color-text));
   }
+  
   h1 {
-    font-size: 3.5rem;
+    font-family: var(--font-hero);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 700;
   }
+  
   h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
   }
+  
   h3 {
-    font-size: 2rem;
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 600;
   }
+  
   h4 {
     font-size: 1.5rem;
     font-weight: 500;
   }
+  
   h5 {
     font-size: 1.25rem;
     font-weight: 500;
   }
+  
   h6 {
     font-size: 1.125rem;
     font-weight: 500;
   }
+  
   p {
     margin-top: 0;
     margin-bottom: 1rem;
+    color: rgb(var(--color-text-muted));
   }
 
-  /* Links */
+  /* ===============================
+     LINKS
+     =============================== */
   a {
     color: rgb(var(--color-primary));
     text-decoration: none;
     transition: opacity var(--transition-fast);
   }
+  
   a:hover {
-    opacity: 0.8;
+    opacity: 0.85;
   }
 
-  /* Buttons */
+  /* ===============================
+     BUTTONS - NOUVELLE PALETTE
+     =============================== */
   .btn {
     display: inline-flex;
     align-items: center;
-    justify-content: center !important;
-    text-align: center !important;
-    padding: 1rem 2rem;
+    justify-content: center;
+    text-align: center;
+    padding: 0.875rem 1.75rem;
     border: none;
-    border-radius: 2rem;
-    font-size: 0.9rem;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
@@ -315,7 +337,9 @@ const ogImageURL = new URL(image, Astro.site);
     white-space: nowrap;
     position: relative;
     overflow: hidden;
+    gap: 0.5rem;
   }
+
   .btn::before {
     content: "";
     position: absolute;
@@ -331,6 +355,7 @@ const ogImageURL = new URL(image, Astro.site);
     );
     transition: left 0.5s;
   }
+  
   .btn:hover::before {
     left: 100%;
   }
@@ -339,70 +364,100 @@ const ogImageURL = new URL(image, Astro.site);
     background: linear-gradient(
       135deg,
       rgb(var(--color-primary)),
-      rgb(var(--color-secondary))
+      rgb(var(--color-primary-hover))
     );
-    color: rgb(var(--color-text-inverse));
-    box-shadow: 0 10px 25px rgb(var(--color-primary) / 0.3);
+    color: white;
+    box-shadow: 0 4px 15px rgba(var(--color-primary), 0.3);
   }
+  
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 35px rgb(var(--color-primary) / 0.4);
+    box-shadow: 0 8px 25px rgba(var(--color-primary), 0.4);
+    opacity: 1;
   }
 
   .btn-secondary {
     background: transparent;
     color: rgb(var(--color-text));
-    border: 2px solid rgb(var(--color-primary) / 0.5);
-    backdrop-filter: blur(10px);
+    border: 2px solid rgba(var(--color-border), 1);
   }
+  
   .btn-secondary:hover {
-    background: rgb(var(--color-primary) / 0.1);
+    background: rgba(var(--color-surface-variant), 0.5);
     border-color: rgb(var(--color-primary));
     transform: translateY(-2px);
-  }
-  .btn-large {
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    opacity: 1;
   }
 
-  /* Container */
+  .btn-large {
+    padding: 1.125rem 2.5rem;
+    font-size: 1.125rem;
+  }
+
+  /* ===============================
+     CONTAINER
+     =============================== */
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
   }
 
-  /* Section titles */
+  @media (max-width: 1024px) {
+    .container {
+      padding: 0 1.5rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 0 1rem;
+    }
+  }
+
+  /* ===============================
+     SECTION TITLES
+     =============================== */
   .section-title {
     text-align: center;
     margin-bottom: 2rem;
     color: rgb(var(--color-text));
+    font-family: var(--font-heading);
   }
 
-  /* Code blocks */
+  /* ===============================
+     CODE BLOCKS
+     =============================== */
   pre,
   code {
     font-family: var(--font-mono);
-    background: rgb(var(--color-surface-variant));
+    background: rgba(var(--color-surface-variant), 0.5);
     border-radius: var(--radius-sm);
   }
+  
   pre {
     padding: 1rem;
     overflow-x: auto;
     line-height: 1.5;
   }
+  
   code:not(pre code) {
-    padding: 0.125rem 0.25rem;
+    padding: 0.2rem 0.4rem;
     font-size: 0.875em;
+    color: rgb(var(--color-accent));
   }
 
-  /* Focus styles */
+  /* ===============================
+     FOCUS STYLES (ACCESSIBILITÉ)
+     =============================== */
   :focus-visible {
     outline: 2px solid rgb(var(--color-primary));
     outline-offset: 2px;
   }
 
-  /* Reduced motion */
+  /* ===============================
+     REDUCED MOTION
+     =============================== */
   @media (prefers-reduced-motion: reduce) {
     * {
       animation-duration: 0.01ms !important;
@@ -412,34 +467,67 @@ const ogImageURL = new URL(image, Astro.site);
     }
   }
 
-  /* Print */
+  /* ===============================
+     PRINT
+     =============================== */
   @media print {
     .no-print {
       display: none !important;
     }
   }
 
-  /* ===== Mobile : centrage sans largeur forcée ===== */
+  /* ===============================
+     MOBILE : CENTRAGE SANS LARGEUR FORCÉE
+     =============================== */
   @media (max-width: 768px) {
     .btn {
-      justify-content: center !important;
-      text-align: center !important;
-      width: auto;         /* largeur naturelle */
-      max-width: 100%;     /* sécurité anti-overflow */
+      justify-content: center;
+      text-align: center;
+      width: auto;
+      max-width: 100%;
     }
 
-    /* Option : si tu veux un bouton plein écran,
-       ajoute .btn--full à ton HTML */
     .btn--full {
       width: 100%;
       display: flex;
     }
 
-    /* CTA en colonne → éviter le stretch */
     .cta-buttons {
       flex-direction: column;
       align-items: center;
       gap: 1rem;
     }
+  }
+
+  /* ===============================
+     GRADIENT TEXT UTILITY
+     =============================== */
+  .gradient-text {
+    background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-primary-hover)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+  }
+
+  /* ===============================
+     SCROLLBAR CUSTOM
+     =============================== */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgb(var(--color-surface));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--color-surface-variant));
+    border-radius: var(--radius-sm);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--color-primary));
   }
 </style>
