@@ -14,18 +14,158 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <div class="hero-content">
         <h1>Agents IA Conversationnels sur-mesure</h1>
         <p class="hero-subtitle">
-          Des agents intelligents construits avec LangGraph pour automatiser 
-          vos interactions métier et support technique
+          Des agents intelligents qui automatisent vos processus métier :
+          support, ventes, opérations internes, documentation technique
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Services Grid -->
+  <!-- Services Cards Grid -->
+  <section class="services-cards-section">
+    <div class="container">
+      <div class="services-cards-grid">
+        <!-- Card 1 : Expérience Client -->
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3>Expérience Client</h3>
+          <p class="service-card-tagline">
+            Support automatisé 24/7 qui réduit vos coûts et améliore la
+            satisfaction
+          </p>
+          <ul class="service-card-features">
+            <li>Support technique automatisé</li>
+            <li>E-commerce & SAV</li>
+            <li>FAQ intelligentes</li>
+            <li>Assistance SaaS B2B</li>
+          </ul>
+          <div class="service-card-metrics">
+            <span class="metric">-60% tickets support</span>
+            <span class="metric">Disponible 24/7</span>
+          </div>
+          <a href="#customer" class="service-card-link">Voir les détails →</a>
+        </div>
+
+        <!-- Card 2 : Performance Commerciale -->
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+              ></path>
+            </svg>
+          </div>
+          <h3>Performance Commerciale</h3>
+          <p class="service-card-tagline">
+            Qualification de leads et accompagnement prospects automatisés
+          </p>
+          <ul class="service-card-features">
+            <li>Qualification automatique</li>
+            <li>Démo produit interactive</li>
+            <li>Onboarding clients</li>
+            <li>Prise de rendez-vous</li>
+          </ul>
+          <div class="service-card-metrics">
+            <span class="metric">Leads qualifiés</span>
+            <span class="metric">+30% conversion</span>
+          </div>
+          <a href="#business" class="service-card-link">Voir les détails →</a>
+        </div>
+
+        <!-- Card 3 : Opérations Internes -->
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="9" y1="9" x2="15" y2="9"></line>
+              <line x1="9" y1="15" x2="15" y2="15"></line>
+            </svg>
+          </div>
+          <h3>Opérations Internes</h3>
+          <p class="service-card-tagline">
+            Automatisation RH, compliance, formation et helpdesk IT
+          </p>
+          <ul class="service-card-features">
+            <li>Onboarding employés</li>
+            <li>Helpdesk IT niveau 1</li>
+            <li>Compliance & procédures</li>
+            <li>Formation continue</li>
+          </ul>
+          <div class="service-card-metrics">
+            <span class="metric">-50% temps admin</span>
+            <span class="metric">Conformité garantie</span>
+          </div>
+          <a href="#internal" class="service-card-link">Voir les détails →</a>
+        </div>
+
+        <!-- Card 4 : Documentation Technique -->
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <h3>Documentation Technique</h3>
+          <p class="service-card-tagline">
+            Transformez votre doc statique en assistant conversationnel
+            intelligent
+          </p>
+          <ul class="service-card-features">
+            <li>Assistant documentation API</li>
+            <li>Support développeurs</li>
+            <li>Guides interactifs</li>
+            <li>Troubleshooting technique</li>
+          </ul>
+          <div class="service-card-metrics">
+            <span class="metric">Réponses instantanées</span>
+            <span class="metric">Citations sources</span>
+          </div>
+          <a href="#technical" class="service-card-link">Voir les détails →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sections détaillées -->
   <section class="services-main">
     <div class="container">
-      
-      <!-- Bloc 1 : Expérience Client -->
+      <!-- ============================================ -->
+      <!-- BLOC 1 : EXPÉRIENCE CLIENT -->
+      <!-- ============================================ -->
       <div class="service-block" id="customer">
         <div class="service-content">
           <div class="service-header">
@@ -42,319 +182,703 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                 <circle cx="12" cy="7" r="4"></circle>
               </svg>
             </div>
-            <h2>Expérience Client</h2>
-            <p class="service-tagline">
-              Agents conversationnels qui améliorent la satisfaction tout en réduisant vos coûts support
-            </p>
+            <div>
+              <h2>Expérience Client</h2>
+              <p class="service-tagline">
+                Agents conversationnels qui améliorent la satisfaction tout en
+                réduisant vos coûts support
+              </p>
+            </div>
           </div>
 
           <div class="service-details">
             <div class="service-description">
               <p>
-                Je crée des agents conversationnels intelligents qui gèrent vos interactions clients 24/7. Support technique, conseils produits, SAV, suivi commandes - chaque agent est adapté à vos besoins métier spécifiques et s'intègre à vos outils existants.
+                Automatisez votre support client avec un agent IA qui répond
+                24/7. Support technique, conseil produit, SAV, suivi commandes —
+                l'agent s'intègre à vos outils existants (Zendesk, Slack, votre
+                CRM) et réduit vos coûts de 40-60%.
               </p>
             </div>
 
             <div class="service-features">
-              <h3>Use cases types :</h3>
+              <h3>Ce que ça automatise :</h3>
               <ul>
                 <li>
-                  <strong>Support technique automatisé :</strong> résolution des questions courantes, aide au dépannage, transfert vers équipe support pour cas complexes
+                  <strong>Support technique :</strong> résout 60% des questions courantes,
+                  transfère les cas complexes à vos équipes avec contexte complet
                 </li>
                 <li>
-                  <strong>E-commerce :</strong> conseils produits personnalisés, suivi commandes, gestion retours et SAV
+                  <strong>E-commerce & SAV :</strong> conseils produit personnalisés,
+                  suivi commandes en temps réel, gestion retours et remboursements
                 </li>
                 <li>
-                  <strong>SaaS B2B :</strong> assistance utilisateur, guide fonctionnalités, résolution des problèmes techniques courants
+                  <strong>Assistance SaaS B2B :</strong> guide utilisateurs, explique
+                  les fonctionnalités, dépanne les problèmes techniques courants
                 </li>
                 <li>
-                  <strong>Services financiers :</strong> questions compte, transactions, procédures réglementaires
+                  <strong>Services financiers :</strong> questions compte, historique
+                  transactions, procédures réglementaires (RGPD, KYC)
                 </li>
                 <li>
-                  <strong>FAQ intelligentes :</strong> réponses contextualisées qui s'adaptent au parcours utilisateur
+                  <strong>FAQ intelligente :</strong> réponses contextuelles adaptées
+                  au parcours utilisateur et à son historique
                 </li>
               </ul>
             </div>
 
             <div class="service-deliverables">
-              <h3>Bénéfices mesurables :</h3>
+              <h3>Impact mesurable :</h3>
               <ul>
-                <li>Réduction significative du volume de tickets support</li>
-                <li>Disponibilité 24/7 sans coûts supplémentaires</li>
-                <li>Temps de réponse inférieur à 30 secondes</li>
-                <li>Satisfaction client améliorée (mesurée via analytics)</li>
-                <li>Équipes support libérées pour requêtes complexes</li>
-                <li>ROI mesurable via analytics intégrées</li>
+                <li>
+                  <strong>-60% de tickets support</strong> récurrents en 3 mois
+                </li>
+                <li>
+                  <strong>Disponible 24/7</strong> sans embaucher (économie de 40-50k€/an
+                  par ETP)
+                </li>
+                <li>
+                  <strong>Réponse en moins de 30 secondes</strong> vs 2h en moyenne
+                  par email
+                </li>
+                <li>
+                  <strong>ROI en 3-6 mois</strong> (coût agent moins cher qu'un salaire
+                  support niveau 1)
+                </li>
+                <li>
+                  <strong>Satisfaction client +25%</strong> (mesurée via CSAT/NPS)
+                </li>
+                <li>
+                  <strong>Équipes support libérées</strong> pour traiter les cas
+                  à forte valeur
+                </li>
               </ul>
             </div>
 
             <div class="service-cta">
               <a href="/fr/contact?service=customer" class="btn btn-primary">
-                Discuter de votre projet support client
+                Analyser la faisabilité pour votre support
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Bloc 2 : Performance Commerciale -->
+      <!-- ============================================ -->
+      <!-- BLOC 2 : PERFORMANCE COMMERCIALE -->
+      <!-- ============================================ -->
       <div class="service-block" id="business">
         <div class="service-content">
           <div class="service-header">
             <div class="service-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
                 <line x1="12" y1="1" x2="12" y2="23"></line>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                ></path>
               </svg>
             </div>
-            <h2>Performance Commerciale</h2>
-            <p class="service-tagline">
-              Agents qui qualifient vos leads et accompagnent vos prospects 24/7
-            </p>
+            <div>
+              <h2>Performance Commerciale</h2>
+              <p class="service-tagline">
+                Agents qui qualifient vos leads et accompagnent vos prospects
+                24/7
+              </p>
+            </div>
           </div>
 
           <div class="service-details">
             <div class="service-description">
               <p>
-                Des agents conversationnels qui prennent en charge la qualification de vos prospects, répondent aux questions commerciales et accompagnent vos nouveaux clients. Disponibles en permanence, ils libèrent vos équipes commerciales pour les deals stratégiques et clients à fort potentiel.
+                Automatisez la qualification de vos prospects et
+                l'accompagnement commercial. Vos équipes se concentrent sur les
+                deals stratégiques et les clients à fort potentiel, l'agent gère
+                le reste : réponses aux questions commerciales, démos
+                interactives, prise de rendez-vous qualifiée.
               </p>
             </div>
 
             <div class="service-features">
-              <h3>Use cases types :</h3>
+              <h3>Ce que ça automatise :</h3>
               <ul>
-                <li><strong>Qualification de leads :</strong> budget, besoins métier, décideurs identifiés, scoring automatique selon vos critères</li>
-                <li><strong>Démonstration produit :</strong> présentation interactive des fonctionnalités, réponses aux questions techniques préalables</li>
-                <li><strong>Onboarding clients :</strong> accompagnement des nouveaux utilisateurs, configuration guidée, premiers pas dans votre solution</li>
-                <li><strong>Prise de rendez-vous :</strong> calendrier intégré, qualification avant mise en relation avec commercial</li>
-                <li><strong>Opportunités commerciales :</strong> l'agent détecte quand un client pourrait bénéficier d'une offre supérieure et alerte vos équipes</li>
+                <li>
+                  <strong>Qualification de leads :</strong> collecte budget, timeline,
+                  décideurs, pain points — scoring automatique selon vos critères
+                  métier
+                </li>
+                <li>
+                  <strong>Démonstration produit :</strong> présentation interactive
+                  des fonctionnalités, réponses aux objections courantes, envoi de
+                  ressources personnalisées
+                </li>
+                <li>
+                  <strong>Onboarding nouveaux clients :</strong> configuration guidée
+                  pas à pas, explication des premières actions, réduction du time-to-value
+                </li>
+                <li>
+                  <strong>Prise de rendez-vous :</strong> intégration calendrier
+                  (Calendly, Cal.com), qualification avant mise en relation avec
+                  commercial
+                </li>
+                <li>
+                  <strong>Détection d'opportunités :</strong> identifie les clients
+                  qui pourraient passer à l'offre supérieure, alerte vos équipes
+                  en temps réel
+                </li>
               </ul>
             </div>
 
             <div class="service-deliverables">
-              <h3>Bénéfices mesurables :</h3>
+              <h3>Impact mesurable :</h3>
               <ul>
-                <li>Qualification préliminaire automatisée des prospects</li>
-                <li>Engagement prospect maintenu en dehors des heures ouvrées</li>
-                <li>Temps commercial optimisé sur leads qualifiés</li>
-                <li>Taux de conversion amélioré via accompagnement personnalisé</li>
-                <li>Données d'interaction enrichies pour votre CRM</li>
-                <li>Parcours client cohérent de la découverte à l'adoption</li>
+                <li>
+                  <strong>Qualification 100% des leads entrants</strong> avant transfert
+                  commercial
+                </li>
+                <li>
+                  <strong>Engagement maintenu 24/7</strong> — aucun lead perdu hors
+                  heures ouvrées
+                </li>
+                <li>
+                  <strong>Temps commercial optimisé</strong> — focus sur les leads
+                  qualifiés uniquement
+                </li>
+                <li>
+                  <strong>+20-30% taux de conversion</strong> grâce à l'accompagnement
+                  personnalisé
+                </li>
+                <li>
+                  <strong>Données CRM enrichies</strong> automatiquement (budget,
+                  besoins, timeline)
+                </li>
+                <li>
+                  <strong>Parcours client cohérent</strong> de la découverte à l'activation
+                </li>
               </ul>
             </div>
 
             <div class="service-cta">
               <a href="/fr/contact?service=business" class="btn btn-primary">
-                Discuter de votre projet commercial
+                Évaluer le potentiel pour vos ventes
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Bloc 3 : Opérations Internes -->
+      <!-- ============================================ -->
+      <!-- BLOC 3 : OPÉRATIONS INTERNES -->
+      <!-- ============================================ -->
       <div class="service-block" id="internal">
         <div class="service-content">
           <div class="service-header">
             <div class="service-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                 <line x1="9" y1="9" x2="15" y2="9"></line>
                 <line x1="9" y1="15" x2="15" y2="15"></line>
               </svg>
             </div>
-            <h2>Opérations Internes</h2>
-            <p class="service-tagline">
-              Automatisation de vos processus RH, compliance, formation et helpdesk
-            </p>
+            <div>
+              <h2>Opérations Internes</h2>
+              <p class="service-tagline">
+                Automatisation de vos processus RH, compliance, formation et
+                helpdesk
+              </p>
+            </div>
           </div>
 
           <div class="service-details">
             <div class="service-description">
               <p>
-                Des agents conversationnels qui optimisent vos opérations internes et libèrent vos équipes des tâches répétitives. Accueil employés, procédures administratives, formations, helpdesk IT... Chaque agent s'intègre à votre système d'information existant.
+                Libérez vos équipes RH, IT et administratives des tâches
+                répétitives. L'agent répond aux questions courantes des employés
+                24/7 : congés, notes de frais, accès outils internes, procédures
+                compliance. S'intègre à votre SIRH, Active Directory, et bases
+                de connaissances internes.
               </p>
             </div>
 
             <div class="service-features">
-              <h3>Use cases types :</h3>
+              <h3>Ce que ça automatise :</h3>
               <ul>
-                <li><strong>RH et onboarding :</strong> accueil nouveaux employés, explications procédures internes, gestion congés et demandes administratives</li>
-                <li><strong>Helpdesk IT :</strong> assistance technique niveau 1, réinitialisation mots de passe, guide outils internes</li>
-                <li><strong>Compliance et procédures :</strong> règlements internes, normes de sécurité, procédures qualité accessibles instantanément</li>
-                <li><strong>Formation continue :</strong> accompagnement apprentissage, quiz interactifs, suivi progression</li>
-                <li><strong>Gestion des incidents :</strong> déclaration et suivi tickets, transfert automatique vers équipe spécialisée pour incidents critiques</li>
+                <li>
+                  <strong>RH & onboarding :</strong> accueil nouveaux employés, procédures
+                  internes, demandes de congés, notes de frais, questions administratives
+                  courantes
+                </li>
+                <li>
+                  <strong>Helpdesk IT niveau 1 :</strong> réinitialisation mots de
+                  passe, accès logiciels internes, guide outils (Slack, Google Workspace,
+                  VPN)
+                </li>
+                <li>
+                  <strong>Compliance & procédures :</strong> règlements internes,
+                  normes ISO/sécurité, procédures qualité accessibles instantanément
+                </li>
+                <li>
+                  <strong>Formation continue :</strong> accompagnement e-learning,
+                  quiz interactifs, suivi progression, certification interne
+                </li>
+                <li>
+                  <strong>Gestion des incidents :</strong> déclaration tickets, suivi
+                  statut, escalade automatique vers équipe spécialisée si critique
+                </li>
               </ul>
             </div>
 
             <div class="service-deliverables">
-              <h3>Bénéfices mesurables :</h3>
+              <h3>Impact mesurable :</h3>
               <ul>
-                <li>Temps administratif réduit pour RH et IT</li>
-                <li>Employés autonomes sur questions courantes</li>
-                <li>Conformité des procédures garantie et traçable</li>
-                <li>Onboarding accéléré des nouveaux arrivants</li>
-                <li>Base de connaissances centralisée et accessible</li>
-                <li>Satisfaction des employés améliorée</li>
+                <li>
+                  <strong>-50% temps administratif</strong> pour RH et IT sur questions
+                  répétitives
+                </li>
+                <li>
+                  <strong>Employés autonomes</strong> — 70% des questions résolues
+                  sans intervention humaine
+                </li>
+                <li>
+                  <strong>Conformité garantie</strong> — procédures toujours à jour,
+                  traçabilité complète
+                </li>
+                <li>
+                  <strong>Onboarding 3x plus rapide</strong> — nouveaux arrivants
+                  opérationnels en 48h
+                </li>
+                <li>
+                  <strong>Base de connaissances centralisée</strong> — fini les docs
+                  éparpillées
+                </li>
+                <li>
+                  <strong>Satisfaction employés +30%</strong> (réponses instantanées
+                  vs délais de plusieurs jours)
+                </li>
               </ul>
             </div>
 
             <div class="service-cta">
               <a href="/fr/contact?service=internal" class="btn btn-primary">
-                Discuter de votre projet opérations internes
+                Découvrir les gains pour vos équipes
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Bloc 4 : Documentation Technique -->
+      <!-- ============================================ -->
+      <!-- BLOC 4 : DOCUMENTATION TECHNIQUE -->
+      <!-- ============================================ -->
       <div class="service-block" id="technical">
         <div class="service-content">
           <div class="service-header">
             <div class="service-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
                 <polyline points="16 18 22 12 16 6"></polyline>
                 <polyline points="8 6 2 12 8 18"></polyline>
               </svg>
             </div>
-            <h2>Documentation Technique</h2>
-            <p class="service-tagline">
-              Je transforme vos documentations statiques en assistants conversationnels intelligents
-            </p>
+            <div>
+              <h2>Documentation Technique</h2>
+              <p class="service-tagline">
+                Transformez votre documentation statique en assistant
+                conversationnel intelligent
+              </p>
+            </div>
           </div>
 
           <div class="service-details">
             <div class="service-description">
               <p>
-                Je transforme vos documentations API, guides développeur et contenus techniques en agents conversationnels qui comprennent le contexte et répondent précisément aux questions. Vos développeurs obtiennent des réponses instantanées et contextualisées au lieu de chercher pendant des heures dans des centaines de pages de documentation.
+                Transformez votre documentation technique en assistant
+                conversationnel. Vos développeurs trouvent l'info en 10 secondes
+                au lieu de chercher pendant 20 minutes. L'agent comprend votre
+                doc API, vos guides techniques, et répond avec des exemples de
+                code adaptés au contexte. Citation des sources à chaque réponse.
               </p>
             </div>
 
             <div class="service-features">
-              <h3>Use cases types :</h3>
+              <h3>Ce que ça automatise :</h3>
               <ul>
-                <li><strong>Assistance API :</strong> authentification, endpoints, paramètres, codes erreur expliqués en conversation naturelle</li>
-                <li><strong>Troubleshooting guidé :</strong> diagnostic problèmes techniques, solutions étape par étape adaptées au contexte</li>
-                <li><strong>Onboarding développeur :</strong> premiers pas, exemples de code, intégration guidée selon le langage utilisé</li>
-                <li><strong>Documentation interactive :</strong> SDK, libraries, outils - explications adaptées au niveau technique de l'utilisateur</li>
-                <li><strong>Knowledge base technique :</strong> architecture système, best practices, spécifications accessibles en conversation</li>
+                <li>
+                  <strong>Assistant documentation API :</strong> recherche instantanée
+                  dans vos endpoints, paramètres, codes d'erreur, limites de rate-limiting,
+                  exemples de requêtes
+                </li>
+                <li>
+                  <strong>Support développeurs :</strong> troubleshooting guidé,
+                  best practices adaptées à votre stack, guides d'intégration pas-à-pas
+                </li>
+                <li>
+                  <strong>Guides interactifs :</strong> onboarding développeurs,
+                  tutoriels contextuels, configuration SDK/CLI, authentification
+                  OAuth
+                </li>
+                <li>
+                  <strong>Base de connaissances technique :</strong> architecture
+                  système, design patterns, standards de code internes, conventions
+                  de nommage
+                </li>
+                <li>
+                  <strong>Troubleshooting automatisé :</strong> diagnostic des erreurs
+                  courantes, explication messages d'erreur, solutions étape par étape
+                </li>
               </ul>
             </div>
 
             <div class="service-deliverables">
-              <h3>Bénéfices mesurables :</h3>
+              <h3>Impact mesurable :</h3>
               <ul>
-                <li>Temps de recherche d'information drastiquement réduit</li>
-                <li>Adoption développeur accélérée</li>
-                <li>Questions support technique réduites</li>
-                <li>Documentation toujours accessible et à jour</li>
-                <li>Expérience développeur moderne et fluide</li>
-                <li>Intégration produit facilitée</li>
+                <li>
+                  <strong>-70% temps de recherche</strong> pour vos développeurs
+                  (10s vs 20min)
+                </li>
+                <li>
+                  <strong>Documentation toujours à jour</strong> — synchro automatique
+                  avec vos sources
+                </li>
+                <li>
+                  <strong>Onboarding dev 2x plus rapide</strong> — nouveaux dev opérationnels
+                  en 1 semaine vs 3
+                </li>
+                <li>
+                  <strong>-50% tickets support technique internes</strong> (questions
+                  doc résolues instantanément)
+                </li>
+                <li>
+                  <strong>Adoption API accélérée</strong> — time-to-first-integration
+                  réduit de 60%
+                </li>
+                <li>
+                  <strong>Citations sources précises</strong> — lien direct vers
+                  la section exacte de la doc
+                </li>
               </ul>
             </div>
 
             <div class="service-cta">
               <a href="/fr/contact?service=technical" class="btn btn-primary">
-                Discuter de votre projet documentation
+                Obtenir une démo sur votre documentation
               </a>
             </div>
           </div>
         </div>
       </div>
-
-    </div> 
+    </div>
   </section>
 
-  <!-- Process Section -->
+  <!-- ============================================ -->
+  <!-- SECTION : COMMENT JE TRAVAILLE -->
+  <!-- ============================================ -->
   <section class="process-section">
     <div class="container">
-      <h2 class="section-title">Déroulement des projets</h2>
+      <h2 class="section-title">Comment je travaille</h2>
+      <p class="process-intro">
+        Une approche structurée héritée de mon expérience QA automation : tests
+        à chaque étape, code propre, documentation complète.
+      </p>
+
       <div class="process-grid">
+        <!-- Étape 1 -->
         <div class="process-step">
           <div class="step-number">1</div>
-          <h3>Analyse de vos besoins</h3>
+          <h3>Audit & Faisabilité</h3>
           <p>
-            Audit de vos processus actuels et définition des objectifs : cas d'usage prioritaires, publics visés, intégrations nécessaires et contraintes techniques.
+            J'analyse vos données (docs, FAQ, base de connaissances) pour
+            valider que l'IA peut répondre correctement à vos cas d'usage.
+            Évaluation de la qualité des sources et identification des gaps.
           </p>
+          <p class="process-duration">📅 1 semaine</p>
         </div>
+
+        <!-- Étape 2 -->
         <div class="process-step">
           <div class="step-number">2</div>
-          <h3>Proposition & plan d'action</h3>
+          <h3>Cadrage détaillé</h3>
           <p>
-            Périmètre, livrables, planning et méthode de travail présentés de façon claire. Validation conjointe avant démarrage.
+            Spécifications fonctionnelles, architecture technique,
+            identification des intégrations nécessaires. Validation du périmètre
+            et du planning.
           </p>
+          <p class="process-duration">📅 3-5 jours</p>
         </div>
+
+        <!-- Étape 3 -->
         <div class="process-step">
           <div class="step-number">3</div>
-          <h3>Développement & validations</h3>
+          <h3>Développement itératif</h3>
           <p>
-            Développement progressif de l'agent avec validations régulières. Tests sur scénarios réels pour garantir la qualité.
+            Construction de l'agent avec tests automatisés à chaque étape.
+            Backend (Python/FastAPI), frontend (React/Next.js), intégrations
+            API. Points de contrôle réguliers pour ajuster si besoin.
           </p>
+          <p class="process-duration">📅 3-8 semaines selon l'offre</p>
         </div>
+
+        <!-- Étape 4 -->
         <div class="process-step">
           <div class="step-number">4</div>
-          <h3>Livraison & accompagnement</h3>
+          <h3>Livraison & Suivi</h3>
           <p>
-            Déploiement de l'agent, intégration à vos outils et documentation complète du produit. Formation de vos équipes (vidéo Loom + session live) et suivi personnalisé pendant 10 jours pour garantir une adoption réussie.
+            Déploiement en production, documentation technique et utilisateur
+            complète, formation de vos équipes. Support post-lancement (2-4
+            semaines selon l'offre) pour ajustements et optimisations.
           </p>
+          <p class="process-duration">📅 1 semaine + support inclus</p>
         </div>
+      </div>
+
+      <!-- Note sur le POC optionnel -->
+      <div class="process-note">
+        <p>
+          💡 <strong
+            >Vous préférez valider l'approche avant de vous engager ?</strong
+          ><br />
+          Commencez par un POC (6 000 €, 2-3 semaines). Si vous passez à une offre
+          complète dans les 15 jours, 1 800 € sont déduits du montant total.
+        </p>
+      </div>
+
+      <!-- Différenciateur qualité -->
+      <div class="process-quality">
+        <div class="quality-badge">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <strong>Garantie qualité :</strong>
+        </div>
+        <p>
+          Chaque livraison inclut tests automatisés, documentation technique, et
+          un rapport de couverture de tests. Mon background QA automation
+          garantit la fiabilité en production.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
+  <!-- CTA Final -->
   <section class="services-cta">
     <div class="container">
-      <div class="cta-content">
-        <h2>Prêt à démarrer ?</h2>
-        <p>
-          Réduisez vos coûts, améliorez l'expérience utilisateur et libérez vos équipes avec des agents IA conversationnels adaptés à vos besoins.
+      <h2>Prêt à automatiser vos processus ?</h2>
+      <p>
+        Discutons de votre projet pour identifier le meilleur cas d'usage et
+        valider la faisabilité technique.
+      </p>
+      <div class="cta-pricing-highlight">
+        <p class="pricing-intro">
+          Plusieurs forfaits selon la complexité. Le POC est recommandé pour valider l'approche avant développement complet.
         </p>
-        <div class="cta-pricing-highlight">
-          <p class="pricing-intro">
-            <strong>Du POC</strong> pour valider votre concept, 
-            aux <strong>solutions entreprise</strong> pour des architectures complexes.
-          </p>
-        </div>
-        <div class="cta-buttons">
-          <a href="/fr/#offres" class="btn btn-primary btn-large">Voir les offres et tarifs</a>
-          <a href="/fr/contact" class="btn btn-secondary">Discuter de votre projet</a>
-        </div>
+      </div>
+      <div class="cta-buttons">
+        <a href="/fr/contact" class="btn btn-primary btn-large"
+          >Réserver un appel découverte</a
+        >
+        <a href="/#offres" class="btn btn-secondary btn-large"
+          >Voir les tarifs détaillés</a
+        >
       </div>
     </div>
   </section>
-
 </BaseLayout>
 
 <style>
-  /* ===============================
-   Services — Styles globaux - PALETTE ROSE LAVANDE A+
-   =============================== */
-  /* Services Hero */
+  /* Hero */
   .services-hero {
-    padding: 6rem 0 4rem;
+    padding: 8rem 0 6rem;
+    text-align: center;
     background: linear-gradient(
       135deg,
       rgb(var(--color-background)) 0%,
       rgba(var(--color-primary), 0.05) 100%
     );
-    text-align: center;
+    position: relative;
+    overflow: hidden;
   }
+
+  .services-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at 20% 80%,
+        rgba(var(--color-primary), 0.08) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 20%,
+        rgba(var(--color-accent), 0.05) 0%,
+        transparent 50%
+      );
+    pointer-events: none;
+  }
+
   .services-hero h1 {
+    font-family: var(--font-hero);
     font-size: clamp(2.5rem, 5vw, 4rem);
     margin-bottom: 1.5rem;
     color: rgb(var(--color-text));
+    position: relative;
+    z-index: 1;
   }
+
   .hero-subtitle {
     font-size: 1.25rem;
     color: rgb(var(--color-text-muted));
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
+    position: relative;
+    z-index: 1;
   }
 
-  /* Services Main */
+  /* Services Cards Section */
+  .services-cards-section {
+    padding: 6rem 0;
+    background: transparent;
+  }
+
+  .services-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    background: rgba(var(--color-surface), 0.6);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(var(--color-primary), 0.15);
+    border-color: rgb(var(--color-primary));
+  }
+
+  .service-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-primary-hover))
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-card-icon svg {
+    color: white;
+  }
+
+  .service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: rgb(var(--color-text));
+  }
+
+  .service-card-tagline {
+    font-size: 1rem;
+    color: rgb(var(--color-text-muted));
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
+  }
+
+  .service-card-features li {
+    font-size: 0.95rem;
+    color: rgb(var(--color-text-muted));
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .service-card-features li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: rgb(var(--color-primary));
+    font-size: 0.8em;
+  }
+
+  .service-card-metrics {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(var(--color-border), 0.3);
+  }
+
+  .metric {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgb(var(--color-primary));
+    background: rgba(var(--color-primary), 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .service-card-link {
+    color: rgb(var(--color-primary));
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+  }
+
+  .service-card-link:hover {
+    color: rgb(var(--color-primary-hover));
+    opacity: 0.85;
+  }
+
+  /* Services Main - Sections détaillées */
   .services-main {
     padding: 6rem 0;
   }
@@ -363,6 +887,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     margin-bottom: 6rem;
     scroll-margin-top: 6rem;
   }
+
   .service-block:last-child {
     margin-bottom: 3rem;
   }
@@ -370,28 +895,156 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   .service-content {
     background: rgba(var(--color-surface), 0.6);
     border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: 1.5rem;
-    padding: clamp(1.5rem, 2.5vw, 3rem);
-    backdrop-filter: blur(10px);
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
+    border-radius: var(--radius-xl);
+    padding: 3rem;
+    transition: all var(--transition-normal);
   }
 
-  /* ===============================
-   En-tête de card : icône + titre + tagline
-   =============================== */
+  .service-content:hover {
+    box-shadow: 0 12px 24px rgba(var(--color-primary), 0.08);
+  }
+
   .service-header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-auto-rows: auto;
-    column-gap: 1rem;
-    align-items: center; 
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .service-icon {
-    grid-column: 1;
-    grid-row: 1 / span 2;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-primary-hover))
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .service-icon svg {
+    color: white;
+  }
+
+  .service-header h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    margin-bottom: 0.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .service-tagline {
+    font-size: 1.1rem;
+    color: rgb(var(--color-text-muted));
+    line-height: 1.5;
+  }
+
+  .service-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .service-description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgb(var(--color-text-muted));
+  }
+
+  .service-features h3,
+  .service-deliverables h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .service-features ul,
+  .service-deliverables ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .service-features li,
+  .service-deliverables li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: rgb(var(--color-text-muted));
+    line-height: 1.6;
+  }
+
+  .service-features li::before,
+  .service-deliverables li::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    color: rgb(var(--color-primary));
+    font-weight: 700;
+  }
+
+  .service-features strong {
+    color: rgb(var(--color-primary));
+    font-weight: 600;
+  }
+
+  .service-cta {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  /* Process Section */
+  .process-section {
+    padding: 6rem 0;
+    background: rgba(var(--color-surface), 0.3);
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    margin-bottom: 2rem;
+    color: rgb(var(--color-text));
+  }
+
+  .process-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgb(var(--color-text-muted));
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .process-step {
+    background: rgba(var(--color-surface), 0.4);
+    border: 1px solid rgba(var(--color-border), 0.2);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+    transition: all var(--transition-normal);
+  }
+
+  .process-step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(var(--color-primary), 0.1);
+    border-color: rgba(var(--color-primary), 0.3);
+  }
+
+  .step-number {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -399,183 +1052,127 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     height: 3.5rem;
     background: linear-gradient(
       135deg,
-      rgba(var(--color-primary), 0.2),
-      rgba(var(--color-accent), 0.1)
-    );
-    color: rgb(var(--color-primary));
-    border-radius: 1rem;
-    flex: 0 0 auto;
-  }
-
-  .service-header h2 {
-    grid-column: 2;
-    grid-row: 1;
-    margin: 0 0 0.25rem 0;
-    font-size: clamp(1.35rem, 2vw, 1.75rem); 
-    line-height: 1.25;
-    color: rgb(var(--color-text));
-    max-width: 24ch; 
-    white-space: normal; 
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    hyphens: auto;
-    margin-bottom: 0.35rem;
-  }
-
-  .service-tagline {
-    grid-column: 2;
-    grid-row: 2;
-    color: rgb(var(--color-text-muted));
-    font-size: 1rem; 
-    line-height: 1.45;
-    margin: 0.15rem 0 0 0;
-    max-width: 65ch;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    hyphens: auto;
-    margin-bottom: 1.25rem;
-  }
-
-  /* ===============================
-   Corps de card
-   =============================== */
-  .service-details {
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 1.75rem;
-  }
-  .service-details > * {
-    margin-top: 0.6rem;
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  .service-description {
-    color: rgb(var(--color-text-muted));
-    font-size: 1.125rem;
-    line-height: 1.6;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    hyphens: auto;
-  }
-
-  .service-features h3,
-  .service-deliverables h3 {
-    color: rgb(var(--color-text));
-    margin-bottom: 0.75rem;
-    font-size: 1.25rem;
-  }
-  .service-features ul,
-  .service-deliverables ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 0.5rem 1rem;
-  }
-  .service-features li,
-  .service-deliverables li {
-    position: relative;
-    padding: 0.75rem 0 0.75rem 1.5rem;
-    border-bottom: 1px solid rgba(var(--color-border), 0.15);
-    color: rgb(var(--color-text-muted));
-    line-height: 1.5;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    hyphens: auto;
-  }
-  .service-features li:last-child,
-  .service-deliverables li:last-child {
-    border-bottom: none;
-  }
-  .service-features strong {
-    color: rgb(var(--color-primary));
-    font-weight: 600;
-  }
-  /* Puces personnalisées */
-  .service-features li::before,
-  .service-deliverables li::before {
-    content: "●";
-    position: absolute;
-    left: 0;
-    top: 0.75rem;
-    color: rgb(var(--color-primary));
-    font-size: 1.1rem;
-    font-weight: 700;
-  }
-
-  @media (max-width: 600px) {
-    .service-features ul,
-    .service-deliverables ul {
-      gap: 0.35rem 1rem;
-    }
-  }
-
-  .service-cta {
-    margin-top: 0.75rem;
-    text-align: center;
-  }
-
-  .service-cta .btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* ===============================
-   Process Section - PALETTE ROSE LAVANDE A+
-   =============================== */
-  .process-section {
-    padding: 3rem 0;
-    background: rgba(var(--color-surface-variant), 0.3);
-    margin-bottom: 4rem;
-  }
-  .process-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-  .process-step {
-    text-align: center;
-    min-width: 0;
-  }
-  .step-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    background: linear-gradient(
-      135deg,
       rgb(var(--color-primary)),
       rgb(var(--color-primary-hover))
     );
-    color: rgb(var(--color-text-button));
+    color: white;
     border-radius: 50%;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 1.25rem;
-  }
-  .process-step h3 {
-    margin-bottom: 0.75rem;
-    color: rgb(var(--color-text));
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    hyphens: auto;
-  }
-  .process-step p {
-    color: rgb(var(--color-text-muted));
-    line-height: 1.6;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    hyphens: auto;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(var(--color-primary), 0.3);
   }
 
-  /* ===============================
-   Services CTA - PALETTE ROSE LAVANDE A+
-   =============================== */
+  .process-step h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .process-step p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+  }
+
+  .process-duration {
+    font-size: 0.9rem;
+    color: rgb(var(--color-primary));
+    font-weight: 600;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(var(--color-border), 0.2);
+    white-space: nowrap;
+  }
+
+  .process-note {
+    background: linear-gradient(
+      135deg,
+      rgba(var(--color-primary), 0.08) 0%,
+      rgba(var(--color-primary), 0.04) 100%
+    );
+    border: 1px solid rgba(var(--color-primary), 0.2);
+    border-left: 4px solid rgb(var(--color-primary));
+    border-radius: var(--radius-lg);
+    padding: 1.75rem 2rem;
+    max-width: 850px;
+    margin: 3rem auto 4rem;
+    box-shadow: 0 2px 8px rgba(var(--color-primary), 0.05);
+  }
+
+  .process-note p {
+    margin: 0;
+    color: rgb(var(--color-text));
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
+
+  .process-note strong {
+    color: rgb(var(--color-primary));
+    font-weight: 600;
+  }
+
+  .process-quality {
+    background: linear-gradient(
+      135deg,
+      rgba(var(--color-surface), 0.6) 0%,
+      rgba(var(--color-surface), 0.4) 100%
+    );
+    border: 2px solid rgba(var(--color-primary), 0.25);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 4px 16px rgba(var(--color-primary), 0.08);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .process-quality::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-primary-hover))
+    );
+  }
+
+  .quality-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    color: rgb(var(--color-primary));
+    font-size: 1.2rem;
+  }
+
+  .quality-badge svg {
+    width: 32px;
+    height: 32px;
+    stroke-width: 2.5;
+    filter: drop-shadow(0 2px 4px rgba(var(--color-primary), 0.2));
+  }
+
+  .quality-badge strong {
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  .process-quality p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.75;
+    margin: 0;
+    font-size: 1.05rem;
+  }
+
+  /* Services CTA */
   .services-cta {
     padding: 6rem 0;
     background: linear-gradient(
@@ -584,40 +1181,67 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       rgba(var(--color-accent), 0.05) 100%
     );
     text-align: center;
+    position: relative;
+    overflow: hidden;
   }
+
+  .services-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at 20% 50%,
+      rgba(var(--color-primary), 0.05) 0%,
+      transparent 50%
+    );
+    pointer-events: none;
+  }
+
+  .services-cta > .container {
+    position: relative;
+    z-index: 1;
+  }
+
   .services-cta h2 {
-    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 1.5rem;
     color: rgb(var(--color-text));
   }
+
   .services-cta p {
     font-size: 1.125rem;
     color: rgb(var(--color-text-muted));
     margin-bottom: 2.5rem;
   }
-  
+
   .cta-pricing-highlight {
-    background: rgba(var(--color-primary), 0.08);
+    background: rgba(var(--color-primary), 0.05);
     border: 2px solid rgba(var(--color-primary), 0.3);
     border-radius: var(--radius-lg);
-    padding: 1.5rem 2rem;
+    padding: 1.25rem 2rem 1rem;
     margin-bottom: 2.5rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
   }
   
-  .pricing-intro {
-    font-size: 1.125rem !important;
-    color: rgb(var(--color-text)) !important;
-    margin: 0 !important;
-    line-height: 1.7;
+  .cta-pricing-highlight p {
+    margin: 0;
   }
-  
+
+  .pricing-intro {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text));
+    margin: 0;
+    line-height: 1.3;
+    padding-bottom: 0;
+  }
+
   .pricing-intro strong {
     color: rgb(var(--color-primary));
   }
-  
+
   .cta-buttons {
     display: flex;
     gap: 1.5rem;
@@ -625,145 +1249,88 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     flex-wrap: wrap;
   }
 
-  /* ===============================
-   Tablet (≤ 1024px)
-   =============================== */
-  @media (max-width: 1024px) {
-    .services-hero {
-      padding: 5rem 0 3rem;
-    }
-    .services-hero h1 {
-      font-size: 2.5rem;
-    }
-    .hero-subtitle {
-      font-size: 1.1rem;
-      max-width: 90%;
-    }
-
-    .service-content {
-      padding: 2.25rem;
-    }
-
-    .service-header h2 {
-      font-size: 1.6rem;
-      max-width: 26ch;
-    }
-    .service-tagline {
-      font-size: 1rem;
-    }
-
-    .service-features ul,
-    .service-deliverables ul {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .process-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .services-cta {
-      padding: 5rem 0;
-    }
-    .services-cta h2 {
-      font-size: 2.2rem;
-    }
-    .services-cta p {
-      font-size: 1.05rem;
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .services-cards-grid {
+      max-width: 900px;
     }
   }
 
-  /* ===============================
-   Small Tablet / Landscape Mobile (≤ 820px)
-   =============================== */
-  @media (max-width: 820px) {
+  @media (max-width: 1024px) {
+    .process-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .process-step {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .services-cards-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 600px;
+    }
+
+    .process-intro {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .service-card {
+      padding: 1.5rem;
+    }
+
+    .service-content {
+      padding: 2rem;
+    }
+
     .service-header {
-      display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 0.75rem;
+      gap: 1rem;
     }
-    .service-icon {
-      margin-bottom: 0.25rem;
-      width: 3.25rem;
-      height: 3.25rem;
-      border-radius: 0.9rem;
+
+    .process-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
-    .service-header h2 {
-      max-width: 100%;
+
+    .process-step {
+      padding: 1.5rem;
     }
-    .service-tagline {
-      max-width: 45rem;
+
+    .step-number {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.25rem;
+    }
+
+    .process-step h3 {
+      font-size: 1.15rem;
+    }
+
+    .process-quality {
+      padding: 1.5rem;
+    }
+
+    .quality-badge {
+      font-size: 1rem;
+    }
+
+    .quality-badge svg {
+      width: 24px;
+      height: 24px;
     }
 
     .cta-buttons {
       flex-direction: column;
-      gap: 1rem;
+      align-items: center;
     }
-
-    .service-features ul,
-    .service-deliverables ul {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  /* ===============================
-   Mobile (≤ 600px)
-   =============================== */
-  @media (max-width: 600px) {
-    .service-content {
-      padding: 1.5rem;
-    }
-    .service-icon {
-      width: 3rem;
-      height: 3rem;
-    }
-    .service-header h2 {
-      font-size: 1.35rem;
-    }
-    .service-tagline {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    .service-description {
-      font-size: 1rem;
-      line-height: 1.65;
-    }
-    .service-features li,
-    .service-deliverables li {
-      padding-left: 1.25rem;
-    }
-
-    .process-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  /* ===============================
-   Sécurités anti-débordements globales
-   =============================== */
-  .service-block .service-content,
-  .service-block .service-content * {
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-  .service-block .service-details > * {
-    min-width: 0 !important;
-  }
-  .service-block .service-content h2,
-  .service-block .service-content h3,
-  .service-block .service-content p,
-  .service-block .service-content li,
-  .service-block .service-content a,
-  .service-block .service-tagline,
-  .service-block .service-content strong {
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    hyphens: auto;
-    white-space: normal;
   }
 </style>

@@ -6,61 +6,154 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   title="Contact — Bérangère Gallais | Développeuse d'Agents IA Conversationnels"
   description="Discutons de votre projet d'agent conversationnel. Échange gratuit de 30 minutes pour analyser vos besoins."
 >
+  <!-- Hero Section -->
   <section class="contact-hero">
     <div class="container">
-      <h1 class="title">Contact</h1>
-      <p class="lead">
+      <h1 class="hero-title">Contact</h1>
+      <p class="hero-subtitle">
         Vous avez un projet d'agent conversationnel ?<br />
         Choisissez le moyen de contact qui vous convient le mieux.
       </p>
     </div>
   </section>
 
-  <section class="contact-info">
+  <!-- Contact Methods Section -->
+  <section class="contact-methods-section">
     <div class="container">
-      <h2>Discutons de votre projet</h2>
-      <div class="contact-methods">
-        <div class="contact-method">
-          <div class="contact-icon">✉️</div>
-          <div class="contact-details">
-            <strong>Email</strong>
-            <a href="mailto:contact@berangeregallais.com">
-              contact@berangeregallais.com
-            </a>
-          </div>
-        </div>
-
-        <div class="contact-method">
-          <div class="contact-icon">📅</div>
-          <div class="contact-details">
-            <strong>Appel découverte gratuit</strong>
-            <div id="google-calendar-button" class="google-calendar-wrapper">
-              <!-- Le bouton Google Calendar sera injecté ici -->
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-method">
-          <div class="contact-icon">💼</div>
-          <div class="contact-details">
-            <strong>LinkedIn</strong>
-            <a
-              href="https://www.linkedin.com/in/berangeregallais"
-              target="_blank"
-              rel="noopener"
+      <h2 class="section-title">Discutons de votre projet</h2>
+      <div class="contact-cards-grid">
+        <!-- Email Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
             >
-              Voir mon profil
-            </a>
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
           </div>
+          <h3>Email</h3>
+          <a href="mailto:contact@berangeregallais.com" class="contact-link">
+            contact@berangeregallais.com
+          </a>
+          <p class="contact-note">Réponse sous 24h en semaine</p>
         </div>
 
-        <div class="contact-method">
-          <div class="contact-icon">📱</div>
-          <div class="contact-details">
-            <strong>Réponse</strong>
-            <span>Sous 24h en semaine</span>
+        <!-- Calendar Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
           </div>
+          <h3>Appel découverte gratuit</h3>
+          <div id="google-calendar-button" class="google-calendar-wrapper">
+            <!-- Le bouton Google Calendar sera injecté ici -->
+          </div>
+          <p class="contact-note">30 minutes pour analyser vos besoins</p>
         </div>
+
+        <!-- LinkedIn Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </div>
+          <h3>LinkedIn</h3>
+          <a
+            href="https://www.linkedin.com/in/berangeregallais"
+            target="_blank"
+            rel="noopener"
+            class="contact-link"
+          >
+            Voir mon profil professionnel
+          </a>
+          <p class="contact-note">Connectons-nous sur LinkedIn</p>
+        </div>
+
+        <!-- Response Time Card -->
+        <div class="contact-card highlight-card">
+          <div class="contact-card-icon">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3>Réactivité</h3>
+          <p class="contact-highlight">Sous 24h en semaine</p>
+          <p class="contact-note">Réponse rapide garantie</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="contact-cta">
+    <div class="container">
+      <h2>Vous hésitez encore ?</h2>
+      <p>Quelques réponses aux questions les plus fréquentes</p>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>Comment se déroule un appel découverte ?</h4>
+          <p>
+            On discute de votre projet pendant 30 minutes. Je pose des questions sur vos besoins, 
+            votre contexte métier, et je vous donne mon avis d'expert sur la faisabilité technique.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Quels sont vos délais de livraison ?</h4>
+          <p>
+            De 4 à 9 semaines selon la complexité de l'offre choisie. Le POC (2-3 semaines) 
+            permet de valider l'approche avant développement complet.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Quel est le meilleur moment pour démarrer ?</h4>
+          <p>
+            Dès que vous avez identifié un cas d'usage précis à automatiser. Commencez par un POC 
+            si vous voulez valider la faisabilité avec un budget réduit.
+          </p>
+        </div>
+      </div>
+      <div class="cta-buttons">
+        <a href="/#offres" class="btn btn-primary btn-large">
+          Voir les offres et tarifs
+        </a>
+        <a href="/fr/services" class="btn btn-secondary btn-large">
+          Découvrir mes services
+        </a>
       </div>
     </div>
   </section>
@@ -87,138 +180,173 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </script>
 
 <style>
-  /* ========== HERO ========== */
+  /* ===============================
+     HERO SECTION
+     =============================== */
   .contact-hero {
-    padding: 4.5rem 0 2.25rem; 
+    padding: 8rem 0 6rem;
     text-align: center;
-  }
-  .title {
-    font-size: 2.125rem;
-    line-height: 1.2;
-    margin: 0 0 2.25rem; 
-  }
-  .lead {
-    font-size: 1.125rem;
-    color: rgb(var(--color-text));
-    line-height: 1.7; 
-    margin: 0;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-background)) 0%,
+      rgba(var(--color-primary), 0.05) 100%
+    );
+    position: relative;
+    overflow: hidden;
   }
 
-  /* ========== CONTACT SECTION ========== */
-  .contact-info {
-    padding: 2.5rem 0 3.5rem;
-    text-align: center;
-  }
-  .contact-info h2 {
-    margin: 0 0 2rem;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: rgb(var(--color-text));
-  }
-  .contact-info p {
-    margin: 0.35rem 0;
+  .contact-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at 20% 80%,
+        rgba(var(--color-primary), 0.08) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 20%,
+        rgba(var(--color-accent), 0.05) 0%,
+        transparent 50%
+      );
+    pointer-events: none;
   }
 
-  /* Grid more spacious */
-  .contact-methods {
+  .contact-hero .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-title {
+    font-family: var(--font-hero);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: rgb(var(--color-text-muted));
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* ===============================
+     CONTACT METHODS SECTION
+     =============================== */
+  .contact-methods-section {
+    padding: 6rem 0;
+    background: transparent;
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 3rem;
+    color: rgb(var(--color-text));
+  }
+
+  .contact-cards-grid {
     display: grid;
-    gap: 2.25rem; 
-    margin-top: 2.25rem;
-  }
-  @media (min-width: 768px) {
-    .contact-methods {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2.5rem; 
-    }
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
   }
 
-  /* Contact cards */
-  .contact-method {
-    display: flex;
-    align-items: center;
-    gap: 1.125rem;
-    padding: 1.5rem; 
-    background: rgb(var(--color-surface) / 1);
-    border: 1px solid rgb(var(--color-border) / 0.4);
+  .contact-card {
+    background: rgba(var(--color-surface), 0.6);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(var(--color-primary), 0.15);
+    border-color: rgb(var(--color-primary));
+  }
+
+  .contact-card.highlight-card {
+    background: linear-gradient(
+      135deg,
+      rgba(var(--color-primary), 0.08) 0%,
+      rgba(var(--color-primary), 0.04) 100%
+    );
+    border-color: rgba(var(--color-primary), 0.3);
+  }
+
+  .contact-card-icon {
+    width: 64px;
+    height: 64px;
     border-radius: var(--radius-lg);
-    transition:
-      transform var(--transition-fast),
-      box-shadow var(--transition-fast),
-      border-color var(--transition-fast);
-  }
-  .contact-method:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 28px rgb(var(--color-shadow) / 0.12);
-    border-color: rgb(var(--color-primary) / 0.35);
-  }
-
-  /* Icon */
-  .contact-icon {
-    font-size: 1.85rem;
-    width: 60px;
-    height: 60px;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-primary-hover))
+    );
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(
-      135deg,
-      rgb(var(--color-primary) / 0.9),
-      rgb(var(--color-secondary) / 0.9)
-    );
-    color: #fff;
-    border-radius: 50%;
-    flex-shrink: 0;
+    margin: 0 auto 1.5rem;
+    color: white;
+    box-shadow: 0 4px 12px rgba(var(--color-primary), 0.3);
   }
 
-  /* Details */
-  .contact-details {
-    flex: 1;
-    text-align: left;
-  }
-  .contact-details strong {
-    display: block;
-    margin: 0 0 0.5rem; 
+  .contact-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     color: rgb(var(--color-text));
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.3;
-  }
-  .contact-details a,
-  .contact-details span {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: rgb(var(--color-text-muted));
   }
 
-  /* Links */
-  .contact-details a {
+  .contact-link {
     color: rgb(var(--color-primary));
     text-decoration: none;
-    font-weight: 500;
-    transition:
-      opacity var(--transition-fast),
-      color var(--transition-fast);
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.2s ease;
+    display: block;
+    margin-bottom: 0.75rem;
   }
-  .contact-details a:hover {
-    opacity: 0.9;
+
+  .contact-link:hover {
+    color: rgb(var(--color-primary-hover));
+    opacity: 0.85;
+  }
+
+  .contact-highlight {
     color: rgb(var(--color-primary));
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-note {
+    font-size: 0.95rem;
+    color: rgb(var(--color-text-muted));
+    margin: 0;
   }
 
   /* Google Calendar Button Styling */
   .google-calendar-wrapper {
-    margin-top: 0.25rem;
+    margin: 1rem 0;
   }
 
-  /* Style pour le bouton Google Calendar */
   .google-calendar-wrapper :global(button) {
     background: linear-gradient(
       135deg,
       rgb(var(--color-primary)),
-      rgb(var(--color-secondary))
+      rgb(var(--color-primary-hover))
     ) !important;
     border: none !important;
-    border-radius: 6px !important;
-    padding: 8px 16px !important;
+    border-radius: var(--radius-md) !important;
+    padding: 0.75rem 1.5rem !important;
     font-weight: 600 !important;
     font-size: 1rem !important;
     color: white !important;
@@ -229,88 +357,152 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
   .google-calendar-wrapper :global(button:hover) {
     opacity: 0.9 !important;
-    transform: translateY(-1px) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(var(--color-primary), 0.3) !important;
   }
 
-  /* Fallback pour navigateurs qui ne supportent pas :global */
   :global(.calendar-scheduling-button) {
     background: linear-gradient(
       135deg,
       rgb(var(--color-primary)),
-      rgb(var(--color-secondary))
+      rgb(var(--color-primary-hover))
     ) !important;
     border: none !important;
-    border-radius: 6px !important;
-    padding: 8px 16px !important;
+    border-radius: var(--radius-md) !important;
+    padding: 0.75rem 1.5rem !important;
     font-weight: 600 !important;
     font-size: 1rem !important;
     color: white !important;
     cursor: pointer !important;
     transition: all 0.2s ease !important;
-    text-decoration: none !important;
   }
 
   :global(.calendar-scheduling-button:hover) {
     opacity: 0.9 !important;
-    transform: translateY(-1px) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(var(--color-primary), 0.3) !important;
   }
 
-  /* Responsive adjustments */
+  /* ===============================
+     CTA SECTION
+     =============================== */
+  .contact-cta {
+    padding: 6rem 0;
+    background: linear-gradient(
+      135deg,
+      rgba(var(--color-primary), 0.08) 0%,
+      rgba(var(--color-accent), 0.05) 100%
+    );
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at 20% 50%,
+      rgba(var(--color-primary), 0.05) 0%,
+      transparent 50%
+    );
+    pointer-events: none;
+  }
+
+  .contact-cta > .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact-cta h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .contact-cta > .container > p {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    margin-bottom: 3rem;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    text-align: left;
+  }
+
+  .faq-item {
+    background: rgba(var(--color-surface), 0.6);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    box-shadow: 0 8px 20px rgba(var(--color-primary), 0.1);
+    border-color: rgba(var(--color-primary), 0.3);
+  }
+
+  .faq-item h4 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .faq-item p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ===============================
+     RESPONSIVE
+     =============================== */
+  @media (max-width: 1024px) {
+    .faq-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 600px;
+    }
+  }
+
   @media (max-width: 768px) {
-    .title {
-      font-size: 1.9rem;
-      margin-bottom: 2rem;
+    .contact-cards-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
-    .contact-method {
-      padding: 1.25rem; 
+
+    .contact-card {
+      padding: 2rem;
     }
-    .contact-icon {
+
+    .contact-card-icon {
       width: 56px;
       height: 56px;
-      font-size: 1.7rem;
     }
-  }
 
-  /* Dark mode tweaks */
-  :root[data-theme="dark"] .contact-method {
-    background: rgb(var(--color-surface) / 0.75);
-    border-color: rgb(var(--color-border) / 0.25);
-  }
-  :root[data-theme="dark"] .contact-details a,
-  :root[data-theme="dark"] .contact-details span {
-    color: rgb(var(--color-text)); 
-  }
-
-  /* Fix mobile: no cards stuck to the right */
-  @media (max-width: 768px) {
-    .contact-info .container {
-      padding-left: 1rem;
-      padding-right: 1rem;
+    .contact-card h3 {
+      font-size: 1.3rem;
     }
-    .contact-methods {
-      grid-template-columns: 1fr;
-      justify-items: stretch;
-    }
-    .contact-method {
-      width: 100%;
-      box-sizing: border-box;
-      margin: 0;
-    }
-  }
 
-  /* Robust links */
-  .contact-details a {
-    word-break: break-word;
-    overflow-wrap: anywhere;
-  }
-
-  /* Pink links in dark mode */
-  :root[data-theme="dark"] a,
-  :root[data-theme="dark"] .contact-details a {
-    color: #e6b7d4;
-  }
-  :root[data-theme="dark"] a:hover,
-  :root[data-theme="dark"] .contact-details a:hover {
-    opacity: 0.85;
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 </style>

@@ -19,26 +19,30 @@ import BackToTop from "../../components/BackToTop.astro";
           class="hero-tagline"
           style="font-size: 1.5rem; font-weight: 600; margin: 1rem 0 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
         >
-          Agent IA production-ready : pas juste du code, une solution complète
+          Des agents IA qui répondent avec précision. Zéro hallucination.
         </p>
         <p class="hero-subtitle">
-          Backend + Frontend + Documentation + Tests automatisés. Des agents IA
-          maintenables qui réduisent vos coûts et automatisent votre support.
-          Livrés en 4-6 semaines.
+          Je construis des agents IA conversationnels qui automatisent vos
+          processus métier : support technique, qualification commerciale,
+          onboarding, assistants internes. Backend + Frontend + Tests +
+          Documentation inclus.
         </p>
-        <div class="tech-badges">
-          <span class="badge">Python</span>
-          <span class="badge">LangGraph</span>
-          <span class="badge">LangChain</span>
-          <span class="badge">FastAPI</span>
-          <span class="badge">React</span>
-          <span class="badge">OpenAI</span>
-          <span class="badge">Gemini</span>
-          <span class="badge">Claude</span>
-          <span class="badge">RAG</span>
-          <span class="badge">📚 Doc + Tests inclus</span>
-          <span class="badge">Multilingue FR/EN</span>
+
+        <div class="value-props">
+          <div class="value-prop">
+            ◆ <strong>Répond sans halluciner</strong> — RAG sur vos docs/FAQ
+          </div>
+          <div class="value-prop">
+            ◆ <strong>S'intègre à vos outils</strong> — API, CRM, Slack, Zendesk
+          </div>
+          <div class="value-prop">
+            ◆ <strong>Prêt pour la prod</strong> — Tests automatisés + monitoring
+          </div>
+          <div class="value-prop">
+            ◆ <strong>Multilingue</strong> — FR/EN (autres langues sur demande)
+          </div>
         </div>
+
         <div class="hero-cta">
           <a href="#offres" class="btn btn-primary">Voir les offres</a>
         </div>
@@ -48,7 +52,7 @@ import BackToTop from "../../components/BackToTop.astro";
         <div class="chat-header">
           <div class="agent-avatar">🤖</div>
           <div class="agent-info">
-            <span class="agent-name">Assistant IA</span>
+            <span class="agent-name">Assistant Documentation</span>
             <span class="agent-status">En ligne</span>
           </div>
         </div>
@@ -56,19 +60,31 @@ import BackToTop from "../../components/BackToTop.astro";
           <div class="message user-message">
             <div class="message-avatar">👤</div>
             <div class="message-content">
-              Comment authentifier mes requêtes API ?
+              Comment gérer les webhooks en cas d'erreur ?
             </div>
           </div>
           <div class="message agent-message">
             <div class="message-avatar">🤖</div>
             <div class="message-content">
-              Pour authentifier vos requêtes, utilisez un Bearer token dans le
-              header Authorization.<br /><br />
-              <code class="inline-code">Authorization: Bearer YOUR_TOKEN</code
+              D'après votre documentation technique, voici la bonne pratique :<br
+              /><br />
+
+              <strong>1. Implémentez un backoff exponentiel</strong><br />
+              Retry avec délais progressifs : 1s, 2s, 4s, 8s...<br /><br />
+
+              <strong>2. Stockez les événements échoués</strong><br />
+              Utilisez une queue de messages (Redis, SQS) pour rejouer les webhooks
+              plus tard<br /><br />
+
+              <strong>3. Activez les notifications d'échec</strong><br />
+              Configurez des alertes dans votre dashboard pour surveiller le taux
+              d'erreur<br /><br />
+
+              📄 <em style="color: #667eea;"
+                >Source : Documentation Webhooks v2.1 (section 3.4)</em
               ><br /><br />
-              Vous pouvez générer votre token dans les paramètres de votre compte.
-              Le token a une durée de validité de 30 jours.<br /><br />
-              Besoin d'aide pour générer votre token ?
+
+              Besoin d'un exemple de code ?
             </div>
           </div>
         </div>
@@ -152,28 +168,33 @@ import BackToTop from "../../components/BackToTop.astro";
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">◆</div>
-          <h3>Recherche intelligente dans vos données</h3>
+          <h3>Réduit le temps de réponse de 80%</h3>
           <p>
-            L'agent accède à votre documentation, FAQ, base de connaissances et
-            répond avec précision en citant ses sources.
+            Votre agent répond en 3-5 secondes en cherchant dans votre
+            documentation, FAQ ou base de connaissances. Il cite ses sources
+            pour chaque réponse.
+            <strong>Résultat :</strong> vos équipes ne gèrent que les cas complexes.
           </p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">◆</div>
-          <h3>Intégrations métier</h3>
+          <h3>S'intègre à vos outils existants</h3>
           <p>
-            Connexion à vos outils existants : CRM, ticketing, Slack, base de
-            données. L'agent s'intègre dans votre écosystème.
+            Connexion native à Slack, Zendesk, votre CRM ou votre base de
+            données. Pas de changement de workflow pour vos équipes.
+            <strong>Résultat :</strong> l'agent travaille dans votre écosystème actuel.
           </p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">◆</div>
-          <h3>Fiable et évolutif</h3>
+          <h3>Testé comme du code en production</h3>
           <p>
-            Architecture testée, monitoring en temps réel, documentation
-            complète. Prêt pour la production.
+            Architecture avec tests automatisés, monitoring des conversations,
+            documentation technique complète. Mon background de QA Automation
+            Engineer garantit la fiabilité.
+            <strong>Résultat :</strong> zéro surprise en production.
           </p>
         </div>
       </div>
@@ -182,20 +203,24 @@ import BackToTop from "../../components/BackToTop.astro";
         <h3>Cas d'usage typiques</h3>
         <ul class="use-cases-list">
           <li>
-            Support client automatisé (FAQ, troubleshooting, suivi commandes)
+            <strong>Support client automatisé</strong> — FAQ, troubleshooting, suivi
+            de commandes
           </li>
           <li>
-            Assistant développeur (documentation API, authentification, exemples
-            de code)
+            <strong>Assistant développeur</strong> — Documentation API, authentification,
+            exemples de code
           </li>
           <li>
-            Onboarding utilisateurs (guides interactifs, formation produit)
+            <strong>Onboarding utilisateurs</strong> — Guides interactifs, formation
+            produit
           </li>
-          <li>Support interne (RH, IT, compliance, procédures)</li>
+          <li>
+            <strong>Support interne</strong> — RH, IT, compliance, procédures
+          </li>
         </ul>
         <p class="metrics-text">
-          <strong>Impact mesurable :</strong> Réduction des coûts support • Automatisation
-          du support récurrent • Disponible 24/7
+          <strong>Impact mesurable :</strong> -60% de tickets support récurrents
+          • Disponibilité 24/7 • ROI en 3-6 mois
         </p>
       </div>
     </div>
@@ -302,13 +327,17 @@ import BackToTop from "../../components/BackToTop.astro";
 
       <div class="proof-content">
         <div class="proof-image">
-          <img src="/portfolio/06-python-code-example.png" alt="Agent de support API" />
+          <img
+            src="/portfolio/06-python-code-example.png"
+            alt="Agent de support API"
+          />
         </div>
         <div class="proof-text">
           <p>
-            Agent conversationnel pour support technique API. Il répond aux questions
-            sur l'authentification, les endpoints, les codes erreur. Il est disponible
-            24/7, multilingue (FR/EN), avec citations des sources.
+            Agent conversationnel pour support technique API. Il répond aux
+            questions sur l'authentification, les endpoints, les codes erreur.
+            Il est disponible 24/7, multilingue (FR/EN), avec citations des
+            sources.
           </p>
 
           <h4>Ce que l'agent peut faire :</h4>
@@ -322,7 +351,8 @@ import BackToTop from "../../components/BackToTop.astro";
               de documentation
             </li>
             <li>
-              <strong>Multilingue :</strong> Détecte automatiquement le français et l'anglais
+              <strong>Multilingue :</strong> Détecte automatiquement le français
+              et l'anglais
             </li>
             <li>
               <strong>Citations sources :</strong> il est toujours fiable et traçable
@@ -356,7 +386,9 @@ import BackToTop from "../../components/BackToTop.astro";
       <!-- Portfolio supplémentaire -->
       <div class="portfolio-intro">
         <h3>Deux approches complémentaires</h3>
-        <p>Je maîtrise différentes architectures d'agents IA selon vos besoins</p>
+        <p>
+          Je maîtrise différentes architectures d'agents IA selon vos besoins
+        </p>
       </div>
 
       <div class="portfolio-grid-featured">
@@ -398,7 +430,9 @@ import BackToTop from "../../components/BackToTop.astro";
         <div class="comparison-cards">
           <div class="comparison-card">
             <h4>Agent RAG</h4>
-            <p><strong>Pour :</strong> Répondre aux questions issues de votre documentation</p>
+            <p>
+              <strong>Pour :</strong> Répondre aux questions issues de votre documentation
+            </p>
             <p>Ex : Support client, FAQ, documentation technique</p>
           </div>
 
@@ -414,7 +448,6 @@ import BackToTop from "../../components/BackToTop.astro";
           de l'appel découverte.
         </p>
       </div>
-
     </div>
   </section>
 
@@ -475,11 +508,11 @@ import BackToTop from "../../components/BackToTop.astro";
 
       <!-- Main Offers Grid (3 colonnes) -->
       <div class="offers-grid-hero">
-        <!-- Starter -->
+        <!-- Agent conversationnel simple -->
         <div class="offer-card">
           <div class="offer-header">
-            <h3>Starter</h3>
-            <p class="offer-tagline">Agent conversationnel simple</p>
+            <h3>Agent conversationnel simple</h3>
+            <p class="offer-tagline">Guide interactif sans base documentaire</p>
             <div class="offer-price">8 000 €</div>
             <p class="offer-vat">TVA non applicable, art. 293 B du CGI</p>
             <p class="offer-after-poc">Ou 6 200 € après POC</p>
@@ -489,7 +522,7 @@ import BackToTop from "../../components/BackToTop.astro";
           </div>
           <div class="offer-value-prop">
             <p>
-              <strong>Pourquoi Starter ?</strong> Pour créer rapidement un assistant
+              <strong>Pourquoi cette offre ?</strong> Pour créer rapidement un assistant
               conversationnel guidé, sans base documentaire. Idéal pour onboarding,
               quiz produit, ou FAQ simple.
             </p>
@@ -498,13 +531,20 @@ import BackToTop from "../../components/BackToTop.astro";
             <h4>Livrables</h4>
             <ul>
               <li>Agent conversationnel fonctionnel</li>
-              <li>Frontend React + TypeScript</li>
-              <li>Backend serverless (Netlify/Vercel)</li>
-              <li>Intégration LLM (OpenAI/Gemini)</li>
-              <li>Tests basiques</li>
+              <li>Interface intégrée à votre site</li>
+              <li>Tests de fiabilité</li>
               <li>Documentation utilisateur</li>
               <li>2 semaines de support</li>
             </ul>
+            <details class="tech-details">
+              <summary>Détails techniques</summary>
+              <ul>
+                <li>Frontend React + TypeScript</li>
+                <li>Backend serverless (Netlify/Vercel)</li>
+                <li>Intégration LLM (OpenAI/Gemini)</li>
+                <li>Tests basiques</li>
+              </ul>
+            </details>
           </div>
           <div class="offer-use-cases">
             <p>
@@ -524,12 +564,13 @@ import BackToTop from "../../components/BackToTop.astro";
           </div>
         </div>
 
-        <!-- Scale (Recommandé) -->
-        <div class="offer-card offer-recommended">
-          <div class="offer-badge">⭐ Recommandé</div>
+        <!-- Agent avec recherche documentaire -->
+        <div class="offer-card">
           <div class="offer-header">
-            <h3>Scale</h3>
-            <p class="offer-tagline">Agent RAG production-ready</p>
+            <h3>Agent avec recherche documentaire</h3>
+            <p class="offer-tagline">
+              Répond automatiquement en interrogeant votre documentation
+            </p>
             <div class="offer-price">12 000 €</div>
             <p class="offer-vat">TVA non applicable, art. 293 B du CGI</p>
             <p class="offer-after-poc">Ou 10 200 € après POC</p>
@@ -539,7 +580,7 @@ import BackToTop from "../../components/BackToTop.astro";
           </div>
           <div class="offer-value-prop">
             <p>
-              <strong>Pourquoi Scale ?</strong> Pour interroger votre documentation
+              <strong>Pourquoi cette offre ?</strong> Pour interroger votre documentation
               (API, produit, technique) avec un agent qui comprend le contexte et
               donne des réponses précises.
             </p>
@@ -547,17 +588,23 @@ import BackToTop from "../../components/BackToTop.astro";
           <div class="offer-includes">
             <h4>Livrables</h4>
             <ul>
-              <li>
-                Agent RAG avec LangGraph (vs. simple chatbot dans Starter)
-              </li>
-              <li>Backend Python + FastAPI (vs. serverless dans Starter)</li>
-              <li>Frontend Next.js 14</li>
-              <li>Vector DB (FAISS ou Pinecone) pour recherche sémantique</li>
-              <li>Tests automatisés (90+ tests vs. basiques)</li>
-              <li>Monitoring & observabilité</li>
-              <li>Documentation complète (technique + utilisateur)</li>
+              <li>Agent intelligent connecté à votre documentation</li>
+              <li>Recherche sémantique dans vos docs/FAQ</li>
+              <li>Interface conversationnelle intégrée</li>
+              <li>Tests de fiabilité et monitoring des performances</li>
+              <li>Documentation technique pour votre équipe</li>
               <li>3 semaines de support</li>
             </ul>
+            <details class="tech-details">
+              <summary>Détails techniques</summary>
+              <ul>
+                <li>Architecture RAG avec LangGraph</li>
+                <li>Backend Python + FastAPI</li>
+                <li>Frontend Next.js 14</li>
+                <li>Base vectorielle (FAISS ou Pinecone)</li>
+                <li>Tests automatisés (90+ tests)</li>
+              </ul>
+            </details>
           </div>
           <div class="offer-use-cases">
             <p>
@@ -579,11 +626,13 @@ import BackToTop from "../../components/BackToTop.astro";
           </div>
         </div>
 
-        <!-- Scale+ -->
+        <!-- Agent multilingue + intégrations -->
         <div class="offer-card">
           <div class="offer-header">
-            <h3>Scale+</h3>
-            <p class="offer-tagline">RAG avancé + intégrations</p>
+            <h3>Agent multilingue + intégrations</h3>
+            <p class="offer-tagline">
+              Pour 1 agent complexe connecté à votre écosystème
+            </p>
             <div class="offer-price">15 000 €</div>
             <p class="offer-vat">TVA non applicable, art. 293 B du CGI</p>
             <p class="offer-after-poc">Ou 13 200 € après POC</p>
@@ -593,20 +642,20 @@ import BackToTop from "../../components/BackToTop.astro";
           </div>
           <div class="offer-value-prop">
             <p>
-              <strong>Pourquoi Scale+ ?</strong> Pour un agent RAG qui s'intègre
-              à votre écosystème (Slack, CRM, API tierces) et qui supporte plusieurs
-              langues. Inclut CI/CD et formation pour votre équipe.
+              <strong>Pourquoi cette offre ?</strong> Pour un <strong
+                >1 agent complexe</strong
+              > qui s'intègre à votre écosystème (Slack, CRM, API tierces) et qui
+              supporte plusieurs langues. Inclut CI/CD et formation pour votre équipe.
             </p>
           </div>
           <div class="offer-includes">
             <h4>Livrables</h4>
             <ul>
-              <li>Tout ce qui est dans Scale</li>
-              <li>RAG multi-sources + reranking</li>
-              <li>2-3 intégrations (CRM, Slack, API...)</li>
+              <li>Tout ce qui est dans "Agent avec recherche documentaire"</li>
+              <li>Multi-sources (docs + CRM + base de connaissances)</li>
+              <li>2-3 intégrations tierces (Slack, Zendesk, API interne...)</li>
+              <li>Multilingue (2-3 langues)</li>
               <li>CI/CD complet</li>
-              <li>Multilingual (2-3 langues)</li>
-              <li>Documentation technique + utilisateur</li>
               <li>Formation équipe</li>
               <li>1 mois de support</li>
             </ul>
@@ -632,22 +681,22 @@ import BackToTop from "../../components/BackToTop.astro";
             <thead>
               <tr>
                 <th class="feature-column">Fonctionnalité</th>
-                <th>Starter</th>
-                <th class="recommended-column">Scale ⭐</th>
-                <th>Scale+</th>
+                <th>Agent conversationnel simple<br /><span>Pour FAQ et onboarding utilisateurs</span></th>
+                <th>Agent avec recherche documentaire<br /><span>Pour support technique et documentation API</span></th>
+                <th>Agent multilingue + intégrations<br /><span>Pour support client international</span></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="feature-name">💰 Prix</td>
                 <td>8 000 €</td>
-                <td class="recommended-cell">12 000 €</td>
+                <td>12 000 €</td>
                 <td>15 000 €</td>
               </tr>
               <tr>
                 <td class="feature-name">⏱️ Délai approximatif</td>
                 <td>3-4 semaines</td>
-                <td class="recommended-cell">6-7 semaines</td>
+                <td>6-7 semaines</td>
                 <td>7-9 semaines</td>
               </tr>
               <tr class="category-row">
@@ -656,19 +705,19 @@ import BackToTop from "../../components/BackToTop.astro";
               <tr>
                 <td class="feature-name">Architecture</td>
                 <td>Conversationnel simple</td>
-                <td class="recommended-cell">RAG + LangGraph</td>
+                <td>RAG + LangGraph</td>
                 <td>RAG avancé + reranking</td>
               </tr>
               <tr>
                 <td class="feature-name">Base documentaire</td>
                 <td>❌ Non</td>
-                <td class="recommended-cell">✅ Oui (FAISS/Pinecone)</td>
+                <td>✅ Oui (FAISS/Pinecone)</td>
                 <td>✅ Multi-sources</td>
               </tr>
               <tr>
                 <td class="feature-name">Recherche sémantique</td>
                 <td>❌ Non</td>
-                <td class="recommended-cell">✅ Oui</td>
+                <td>✅ Oui</td>
                 <td>✅ + Reranking</td>
               </tr>
               <tr class="category-row">
@@ -677,19 +726,19 @@ import BackToTop from "../../components/BackToTop.astro";
               <tr>
                 <td class="feature-name">Backend</td>
                 <td>Serverless (Netlify/Vercel)</td>
-                <td class="recommended-cell">Python + FastAPI</td>
+                <td>Python + FastAPI</td>
                 <td>Python + FastAPI</td>
               </tr>
               <tr>
                 <td class="feature-name">Frontend</td>
                 <td>React + TypeScript</td>
-                <td class="recommended-cell">Next.js 14</td>
+                <td>Next.js 14</td>
                 <td>Next.js 14</td>
               </tr>
               <tr>
                 <td class="feature-name">LLM</td>
                 <td>Au choix</td>
-                <td class="recommended-cell"
+                <td
                   >Au choix (compatibles LangGraph)</td
                 >
                 <td>Au choix (compatibles LangGraph)</td>
@@ -700,19 +749,19 @@ import BackToTop from "../../components/BackToTop.astro";
               <tr>
                 <td class="feature-name">Tests automatisés</td>
                 <td>Basiques</td>
-                <td class="recommended-cell">Complets</td>
+                <td>Complets</td>
                 <td>Complets</td>
               </tr>
               <tr>
                 <td class="feature-name">Monitoring</td>
                 <td>❌ Non</td>
-                <td class="recommended-cell">✅ Logs + métriques</td>
+                <td>✅ Logs + métriques</td>
                 <td>✅ Logs + métriques</td>
               </tr>
               <tr>
                 <td class="feature-name">CI/CD</td>
                 <td>❌ Non</td>
-                <td class="recommended-cell">❌ Non</td>
+                <td>❌ Non</td>
                 <td>✅ Déploiement automatisé</td>
               </tr>
               <tr class="category-row">
@@ -722,19 +771,19 @@ import BackToTop from "../../components/BackToTop.astro";
               <tr>
                 <td class="feature-name">Intégrations tierces</td>
                 <td>❌ Non</td>
-                <td class="recommended-cell">❌ Non</td>
+                <td>❌ Non</td>
                 <td>✅ Oui</td>
               </tr>
               <tr>
                 <td class="feature-name">Multilingue</td>
                 <td>❌ Non</td>
-                <td class="recommended-cell">❌ Non</td>
+                <td>❌ Non</td>
                 <td>✅ Oui</td>
               </tr>
               <tr>
                 <td class="feature-name">Formation équipe</td>
                 <td>❌ Non</td>
-                <td class="recommended-cell">❌ Non</td>
+                <td>❌ Non</td>
                 <td>✅ Oui</td>
               </tr>
               <tr class="category-row">
@@ -743,31 +792,20 @@ import BackToTop from "../../components/BackToTop.astro";
               <tr>
                 <td class="feature-name">Doc utilisateur</td>
                 <td>✅ Oui</td>
-                <td class="recommended-cell">✅ Oui</td>
+                <td>✅ Oui</td>
                 <td>✅ Oui</td>
               </tr>
               <tr>
                 <td class="feature-name">Doc technique</td>
                 <td>❌ Non</td>
-                <td class="recommended-cell">✅ Oui</td>
+                <td>✅ Oui</td>
                 <td>✅ Oui</td>
               </tr>
               <tr>
                 <td class="feature-name">Support post-lancement</td>
                 <td>2 semaines</td>
-                <td class="recommended-cell">3 semaines</td>
+                <td>3 semaines</td>
                 <td>1 mois</td>
-              </tr>
-              <tr class="category-row">
-                <td colspan="4"><strong>🎯 Cas d'usage idéaux</strong></td>
-              </tr>
-              <tr>
-                <td class="feature-name">Meilleur pour</td>
-                <td>Onboarding, FAQ simple, guide interactif</td>
-                <td class="recommended-cell"
-                  >Support doc API, FAQ intelligente, troubleshooting</td
-                >
-                <td>Support multilingue, intégrations complexes, compliance</td>
               </tr>
             </tbody>
           </table>
@@ -792,23 +830,33 @@ import BackToTop from "../../components/BackToTop.astro";
         <div class="enterprise-content">
           <div class="offer-card offer-card-enterprise">
             <div class="offer-header">
-              <h3>Enterprise</h3>
-              <p class="offer-tagline">Architecture multi-agents</p>
+              <h3>Plateforme multi-agents sur mesure</h3>
+              <p class="offer-tagline">Pour plusieurs agents qui collaborent</p>
               <div class="offer-price">30 000 €</div>
               <p class="offer-vat">TVA non applicable, art. 293 B du CGI</p>
             </div>
             <div class="offer-duration">
               ⏱️ Durée approximative : 8-10 semaines
             </div>
+            <div class="offer-value-prop">
+              <p>
+                <strong>Pourquoi cette offre ?</strong> Pour <strong
+                  >plusieurs agents qui collaborent</strong
+                > dans votre organisation. Exemple : agent de triage + agent spécialisé
+                support + agent escalade.
+              </p>
+            </div>
             <div class="offer-includes">
               <h4>Livrables</h4>
               <ul>
-                <li>Tout ce qui est dans Scale+</li>
-                <li>Architecture multi-agents avec orchestration</li>
-                <li>RAG très avancé (fine-tuning, hybrid search)</li>
-                <li>Intégrations complexes</li>
-                <li>Compliance (RGPD, HIPAA, sécurité renforcée)</li>
-                <li>Monitoring + LangSmith Insights</li>
+                <li>Tout ce qui est dans "Agent multilingue + intégrations"</li>
+                <li>
+                  Orchestration multi-agents (routage intelligent des demandes)
+                </li>
+                <li>Fine-tuning modèle sur vos données</li>
+                <li>Compliance et sécurité renforcée (RGPD, HIPAA)</li>
+                <li>Monitoring avancé (LangSmith ou équivalent)</li>
+                <li>Accompagnement stratégique</li>
                 <li>
                   Support pendant 3 mois + suivi hebdomadaire post-lancement
                 </li>
@@ -843,11 +891,23 @@ import BackToTop from "../../components/BackToTop.astro";
         <p>
           Commencez par le <strong>POC</strong> : j'analyse vos données (documentation,
           FAQ, base de connaissance) et crée un prototype pour valider que l'IA peut
-          répondre correctement à vos cas d'usage. Ou réservez un appel découverte (30 min) pour analyser votre
-          besoin ensemble.
+          répondre correctement à vos cas d'usage. Ou réservez un appel découverte
+          (30 min) pour analyser votre besoin ensemble.
         </p>
         <a href="/fr/contact" class="btn btn-primary"
           >Réserver un appel découverte</a
+        >
+        <p style="margin-top: 2rem; font-size: 1.1rem;">
+          <strong
+            >Ces forfaits ne correspondent pas exactement à votre besoin ?</strong
+          >
+        </p>
+        <p>
+          Parlons de votre projet spécifique pour construire une solution
+          adaptée.
+        </p>
+        <a href="/fr/contact" class="btn btn-secondary"
+          >Discuter de mon projet spécifique</a
         >
       </div>
     </div>
@@ -857,2116 +917,2247 @@ import BackToTop from "../../components/BackToTop.astro";
   <section class="payment-section section-spacing">
     <div class="container">
       <p class="payment-note">
-        💳 Paiement échelonné selon l'offre • 
-        Virement bancaire
+        💳 Paiement échelonné selon l'offre • Virement bancaire
       </p>
       <p>
-        Des questions sur les modalités ? 
+        Des questions sur les modalités ?
         <a href="/fr/contact">Parlons-en ensemble</a> 🤝
       </p>
     </div>
   </section>
 
   <!-- Services complémentaires -->
-<section class="complementary-services section-spacing">
-  <div class="container">
-    <h2 class="section-title">Autres services</h2>
+  <section class="complementary-services section-spacing">
+    <div class="container">
+      <h2 class="section-title">Autres services</h2>
 
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">◆</div>
-        <h3>Audit d'agent IA</h3>
-        <div class="service-price">2 500 €</div>
-        <p class="service-vat">TVA non applicable, art. 293 B du CGI</p>
-        <p>Vous avez déjà un agent IA qui ne fonctionne pas comme prévu ?</p>
-        <div class="service-includes">
-          <h4>Ce qui est inclus :</h4>
-          <ul>
-            <li>
-              Audit technique complet (architecture, RAG, performance, sécurité)
-            </li>
-            <li>Audit métier (analyse des logs, taux de succès)</li>
-            <li>Rapport détaillé (10-15 pages)</li>
-            <li>Recommandations priorisées</li>
-            <li>Call de restitution (1h)</li>
-          </ul>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">◆</div>
+          <h3>Audit d'agent IA</h3>
+          <div class="service-price">2 500 €</div>
+          <p class="service-vat">TVA non applicable, art. 293 B du CGI</p>
+          <p>Vous avez déjà un agent IA qui ne fonctionne pas comme prévu ?</p>
+          <div class="service-includes">
+            <h4>Ce qui est inclus :</h4>
+            <ul>
+              <li>
+                Audit technique complet (architecture, RAG, performance,
+                sécurité)
+              </li>
+              <li>Audit métier (analyse des logs, taux de succès)</li>
+              <li>Rapport détaillé (10-15 pages)</li>
+              <li>Recommandations priorisées</li>
+              <li>Call de restitution (1h)</li>
+            </ul>
+          </div>
+          <p class="service-duration">⏱️ Durée : 1 semaine</p>
+          <a href="#" class="btn btn-secondary">En savoir plus</a>
         </div>
-        <p class="service-duration">⏱️ Durée : 1 semaine</p>
-        <a href="#" class="btn btn-secondary">En savoir plus</a>
-      </div>
 
-      <div class="service-card">
-        <div class="service-icon">●</div>
-        <h3>Maintenance</h3>
-        <p>Après livraison de votre agent</p>
-        <div class="service-price">1 500 €/mois</div>
-        <p>Corrections, optimisations, suivi mensuel</p>
-        <a href="/fr/contact" class="btn btn-secondary">Discutons-en</a>
+        <div class="service-card">
+          <div class="service-icon">●</div>
+          <h3>Maintenance</h3>
+          <p>Après livraison de votre agent</p>
+          <div class="service-price">1 500 €/mois</div>
+          <p>Corrections, optimisations, suivi mensuel</p>
+          <a href="/fr/contact" class="btn btn-secondary">Discutons-en</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- CTA Final -->
+  <section class="cta-final section-spacing">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Discutons de votre projet</h2>
+        <p>
+          30 minutes pour analyser la faisabilité technique et vous proposer la
+          meilleure approche. Je vous dis si un agent IA est adapté à votre cas.
+        </p>
+        <a href="#" class="btn btn-primary btn-large">Prendre rendez-vous</a>
+      </div>
+    </div>
+  </section>
 
-<!-- CTA Final -->
-<section class="cta-final section-spacing">
-  <div class="container">
-    <div class="cta-content">
-      <h2>Discutons de votre projet</h2>
-      <p>
-        30 minutes pour analyser la faisabilité technique. Je vous dis si un
-        agent IA est adapté à votre cas, et comment le construire.
+  <!-- Stack technique (avant le footer) -->
+  <section class="tech-stack-section">
+    <div class="container">
+      <p class="tech-stack-label">Stack technique</p>
+      <div class="tech-stack-badges">
+        <span class="badge">Python</span>
+        <span class="badge">LangGraph</span>
+        <span class="badge">LangChain</span>
+        <span class="badge">FastAPI</span>
+        <span class="badge">React</span>
+        <span class="badge">Next.js 14</span>
+        <span class="badge">TypeScript</span>
+        <span class="badge">OpenAI</span>
+        <span class="badge">Anthropic Claude</span>
+        <span class="badge">Google Gemini</span>
+        <span class="badge">FAISS</span>
+        <span class="badge">Pinecone</span>
+      </div>
+      <p class="tech-stack-link">
+        <a href="/fr/about">En savoir plus sur ma méthode de travail →</a>
       </p>
-      <p class="cta-note">Pas de vente. Juste une discussion technique.</p>
-      <a href="#" class="btn btn-primary btn-large">Prendre rendez-vous</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<BackToTop />
+  <BackToTop />
 
-<style>
-  /* ===============================
+  <style>
+    /* ===============================
      HERO SECTION
      =============================== */
-  .hero {
-    padding: 8rem 0 6rem;
-    background: linear-gradient(
-      135deg,
-      rgb(var(--color-background)) 0%,
-      rgba(var(--color-primary), 0.05) 100%
-    );
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-        circle at 20% 80%,
-        rgba(var(--color-primary), 0.08) 0%,
-        transparent 50%
-      ),
-      radial-gradient(
-        circle at 80% 20%,
-        rgba(var(--color-accent), 0.05) 0%,
-        transparent 50%
+    .hero {
+      padding: 8rem 0 6rem;
+      background: linear-gradient(
+        135deg,
+        rgb(var(--color-background)) 0%,
+        rgba(var(--color-primary), 0.05) 100%
       );
-    pointer-events: none;
-  }
-
-  .hero .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-title {
-    font-family: var(--font-hero);
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
-    line-height: 1.15;
-    margin-bottom: 2rem;
-    color: rgb(var(--color-text));
-  }
-
-  .hero-subtitle {
-    font-size: 1.25rem;
-    line-height: 1.7;
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 2rem;
-  }
-
-  .hero-badge {
-    display: inline-flex;
-    padding: 0.75rem 1.5rem;
-    background: rgba(var(--color-accent), 0.15);
-    border: 1px solid rgba(var(--color-accent), 0.3);
-    border-radius: var(--radius-lg);
-    color: rgb(var(--color-accent));
-    font-size: 0.875rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
-  }
-
-  .hero-cta {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  /* Chat Preview */
-  .chat-preview {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-xl);
-    background: rgb(var(--color-surface));
-    border: 1px solid rgba(var(--color-border), 0.3);
-  }
-
-  .chat-header {
-    display: flex;
-    align-items: center;
-    padding: 1.25rem 1.5rem;
-    gap: 1rem;
-    background: rgba(var(--color-surface-variant), 0.3);
-    border-bottom: 1px solid rgba(var(--color-border), 0.2);
-  }
-
-  .agent-avatar {
-    font-size: 2rem;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: linear-gradient(
-      135deg,
-      rgb(var(--color-primary)),
-      rgb(var(--color-primary-hover))
-    );
-  }
-
-  .agent-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .agent-name {
-    font-weight: 600;
-    font-size: 1rem;
-    color: rgb(var(--color-text));
-  }
-
-  .agent-status {
-    font-size: 0.875rem;
-    color: rgb(var(--color-text-muted));
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .agent-status::before {
-    content: "●";
-    color: rgb(var(--color-success));
-    font-size: 0.75rem;
-  }
-
-  .chat-messages {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    min-height: 320px;
-    background: rgba(var(--color-surface-variant), 0.1);
-  }
-
-  .message {
-    display: flex;
-    gap: 0.75rem;
-    max-width: 90%;
-    animation: slideIn 0.3s ease;
-  }
-
-  .user-message {
-    align-self: flex-end;
-    flex-direction: row-reverse;
-  }
-
-  .agent-message {
-    align-self: flex-start;
-  }
-
-  .message-avatar {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-  }
-
-  .message-content {
-    padding: 1rem 1.25rem;
-    border-radius: var(--radius-lg);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    flex: 1;
-    text-align: left;
-  }
-
-  .user-message .message-content {
-    background: rgb(var(--color-primary));
-    color: rgb(var(--color-text-button));
-    border-bottom-right-radius: 0.25rem;
-  }
-
-  .agent-message .message-content {
-    background: rgba(var(--color-surface-variant), 0.8);
-    color: rgb(var(--color-text));
-    border-bottom-left-radius: 0.25rem;
-    border: 1px solid rgba(var(--color-border), 0.7);
-  }
-
-  .inline-code {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--radius-sm);
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
-    display: inline-block;
-    text-align: left;
-  }
-
-  /* ===============================
-   TECH BADGES (Hero)
-   =============================== */
-  .tech-badges {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-  }
-
-  .tech-badges .badge {
-    padding: 0.5rem 1rem;
-    background: rgba(var(--color-surface-variant), 0.5);
-    border: 1px solid rgba(var(--color-border), 0.5);
-    border-radius: var(--radius-md);
-    color: rgb(var(--color-text));
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-
-  /* ===============================
-   CONTEXT SECTION
-   =============================== */
-  .context-section {
-    background: rgb(var(--color-surface));
-  }
-
-  .context-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .context-card {
-    background: rgba(var(--color-surface-variant), 0.3);
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2.5rem;
-  }
-
-  .context-card--solution {
-    background: rgba(var(--color-primary), 0.03);
-    border: 1px solid rgba(var(--color-primary), 0.2);
-  }
-
-  .context-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1.5rem;
-  }
-
-  .context-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .context-card ul li {
-    padding-left: 1.75rem;
-    margin-bottom: 1rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-    line-height: 1.6;
-  }
-
-  .context-card ul li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-primary));
-    font-size: 1.5rem;
-    line-height: 1;
-  }
-
-  .context-card--solution ul li {
-    padding-left: 2rem;
-  }
-
-  .context-card--solution ul li::before {
-    content: "→";
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .context-card strong {
-    color: rgb(var(--color-text));
-    font-weight: 600;
-  }
-
-  .context-result {
-    text-align: center;
-    padding: 2rem 2.5rem;
-    background: rgba(var(--color-primary), 0.05);
-    border: 2px solid rgba(var(--color-primary), 0.3);
-    border-radius: var(--radius-lg);
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .context-result p {
-    font-size: 1.125rem;
-    color: rgb(var(--color-text));
-    margin: 0;
-    line-height: 1.7;
-  }
-
-  .context-result strong {
-    color: rgb(var(--color-primary));
-  }
-
-  .cta-services {
-    text-align: center;
-    margin-top: 2.5rem;
-    padding: 2rem;
-    background: rgba(var(--color-accent), 0.03);
-    border-radius: var(--radius-lg);
-  }
-
-  .cta-services p {
-    font-size: 1.125rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-  }
-
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .context-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .context-card {
-      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
     }
 
-    .context-result {
-      padding: 1.5rem;
-    }
-  }
-
-  /* ===============================
-   USE CASES & METRICS
-   =============================== */
-  .use-cases {
-    margin-top: 4rem;
-    padding: 2.5rem;
-    background: rgba(var(--color-surface-variant), 0.3);
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-  }
-
-  .use-cases h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-
-  .use-cases-list {
-    list-style: none;
-    padding: 0;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-  }
-
-  .use-cases-list li {
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-    font-size: 0.95rem;
-  }
-
-  .use-cases-list li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-primary));
-    font-weight: bold;
-  }
-
-  .metrics-text {
-    text-align: center;
-    color: rgb(var(--color-text));
-    font-size: 1rem;
-    margin: 0;
-  }
-
-  /* ===============================
-   APPROACH SECTION
-   =============================== */
-  .approach-section {
-    background: rgb(var(--color-surface));
-  }
-
-  .approach-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  .approach-card {
-    background: rgba(var(--color-surface-variant), 0.3);
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-  }
-
-  .approach-card h4 {
-    font-family: var(--font-heading);
-    font-size: 1.125rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 0.75rem;
-  }
-
-  .approach-card p {
-    color: rgb(var(--color-text-muted));
-    font-size: 0.95rem;
-    margin: 0;
-  }
-
-  /* ===============================
-   OFFERS - SIMPLIFIED
-   =============================== */
-  .offer-tagline {
-    font-size: 0.95rem;
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 1rem;
-    font-weight: 400;
-  }
-
-  .offer-use-cases {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background: rgba(var(--color-accent), 0.05);
-    border-radius: var(--radius-md);
-    font-size: 0.9rem;
-  }
-
-  .offer-use-cases p {
-    margin: 0;
-    color: rgb(var(--color-text-muted));
-  }
-
-  .offer-demo-ref {
-    margin-top: 1rem;
-    padding: 0.75rem 1rem;
-    background: linear-gradient(
-      135deg,
-      rgba(var(--color-primary), 0.08),
-      rgba(var(--color-accent), 0.08)
-    );
-    border-left: 3px solid rgb(var(--color-primary));
-    border-radius: var(--radius-md);
-    font-size: 0.85rem;
-  }
-
-  .offer-demo-ref p {
-    margin: 0;
-    color: rgb(var(--color-text));
-  }
-
-  .demo-link {
-    color: rgb(var(--color-primary));
-    text-decoration: none;
-    font-weight: 500;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom-color 0.2s ease;
-  }
-
-  .demo-link:hover {
-    border-bottom-color: rgb(var(--color-primary));
-  }
-
-  .offer-use-cases strong {
-    color: rgb(var(--color-text));
-  }
-
-  /* ===============================
-   RESPONSIVE
-   =============================== */
-  @media (max-width: 1024px) {
-    .approach-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .tech-badges {
-      justify-content: center;
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+          circle at 20% 80%,
+          rgba(var(--color-primary), 0.08) 0%,
+          transparent 50%
+        ),
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(var(--color-accent), 0.05) 0%,
+          transparent 50%
+        );
+      pointer-events: none;
     }
 
-    .use-cases {
-      padding: 1.5rem;
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
-    .approach-card {
-      padding: 1.5rem;
-    }
-  }
-
-  /* ===============================
-   SECTIONS COMMUNES
-   =============================== */
-  .section-title {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: rgb(var(--color-text));
-  }
-
-  .section-intro {
-    text-align: center;
-    font-size: 1.125rem;
-    color: rgb(var(--color-text-muted));
-    max-width: 800px;
-    margin: 0 auto 3rem;
-  }
-
-  /* ===============================
-     BLOC SOLUTION
-     =============================== */
-  .solution-section {
-    background: rgba(var(--color-surface-variant), 0.5);
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .feature-card {
-    background: rgb(var(--color-surface));
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    text-align: center;
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
-  }
-
-  .feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-  }
-
-  .feature-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: rgb(var(--color-primary));
-    font-weight: 300;
-    line-height: 1;
-  }
-
-  .feature-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-  }
-
-  .feature-card p {
-    color: rgb(var(--color-text-muted));
-    font-size: 0.95rem;
-  }
-
-  .solution-result {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(var(--color-primary), 0.05);
-    border: 2px solid rgba(var(--color-primary), 0.3);
-    border-radius: var(--radius-lg);
-  }
-
-  .solution-result p {
-    font-size: 1.125rem;
-    color: rgb(var(--color-text));
-    margin: 0;
-  }
-
-  .solution-result strong {
-    color: rgb(var(--color-primary));
-  }
-
-  /* ===============================
-     BLOC OFFRES
-     =============================== */
-  .offers-section {
-    background: rgba(var(--color-surface-variant), 0.5);
-  }
-
-  .offers-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 3rem;
-    align-items: start;
-  }
-
-  .offer-card {
-    background: rgb(var(--color-surface));
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    position: relative;
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .offer-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-  }
-
-  .offer-recommended {
-    border: 2px solid rgb(var(--color-primary));
-    box-shadow: 0 0 0 4px rgba(var(--color-primary), 0.1);
-  }
-
-  .offer-badge {
-    position: absolute;
-    top: -12px;
-    right: 20px;
-    background: linear-gradient(
-      135deg,
-      rgb(var(--color-primary)),
-      rgb(var(--color-primary-hover))
-    );
-    color: rgb(var(--color-text-button));
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-lg);
-    font-size: 0.875rem;
-    font-weight: 600;
-    box-shadow: var(--shadow-md);
-  }
-
-  .offer-header h3 {
-    font-family: var(--font-heading);
-    font-size: 1.75rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-  }
-
-  .offer-price {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: rgb(var(--color-primary));
-    margin-bottom: 0.5rem;
-  }
-
-  .offer-vat {
-    font-size: 0.75rem;
-    color: rgb(var(--color-text-muted));
-    font-style: italic;
-    margin-bottom: 1.5rem;
-  }
-
-  .offer-for {
-    background: rgba(var(--color-accent), 0.1);
-    padding: 1rem;
-    border-radius: var(--radius-md);
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-    color: rgb(var(--color-text-muted));
-  }
-
-  .offer-for strong {
-    color: rgb(var(--color-text));
-  }
-
-  .offer-subtitle {
-    font-size: 1rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-
-  .offer-duration {
-    font-size: 0.9rem;
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 1.5rem;
-  }
-
-  .offer-value-prop {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: linear-gradient(
-      135deg,
-      rgba(var(--color-accent), 0.08),
-      rgba(var(--color-primary), 0.08)
-    );
-    border-left: 3px solid rgb(var(--color-accent));
-    border-radius: var(--radius-sm);
-  }
-
-  .offer-value-prop p {
-    margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: rgb(var(--color-text));
-  }
-
-  .offer-value-prop p + p {
-    margin-top: 0.75rem;
-  }
-
-  .offer-value-prop strong {
-    color: rgb(var(--color-primary));
-  }
-
-  .offer-includes {
-    flex: 1;
-  }
-
-  .offer-includes h4 {
-    font-size: 1rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-  }
-
-  .offer-includes ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1.5rem;
-  }
-
-  .offer-includes ul li {
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-    font-size: 0.95rem;
-  }
-
-  .offer-includes ul li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-success));
-    font-weight: bold;
-  }
-
-  .offer-cta {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-top: auto;
-    margin-bottom: 1.5rem;
-  }
-
-  .offer-cta .btn {
-    width: 100%;
-  }
-
-  .offer-details {
-    border-top: 1px solid rgba(var(--color-border), 0.3);
-    padding-top: 1rem;
-    margin-top: auto;
-  }
-
-  .offer-details summary {
-    cursor: pointer;
-    color: rgb(var(--color-primary));
-    font-weight: 500;
-    user-select: none;
-    transition: opacity 0.2s ease;
-  }
-
-  .offer-details summary:hover {
-    opacity: 0.8;
-  }
-
-  .offer-full-details {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(var(--color-border), 0.2);
-  }
-
-  .offer-full-details p {
-    margin-bottom: 0.75rem;
-    color: rgb(var(--color-text));
-  }
-
-  .offer-full-details ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .offer-full-details ul li {
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-    font-size: 0.9rem;
-  }
-
-  .offer-full-details ul li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-accent));
-  }
-
-  .offer-unsure {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(var(--color-primary), 0.05);
-    border: 1px solid rgba(var(--color-primary), 0.2);
-    border-radius: var(--radius-lg);
-  }
-
-  .offer-unsure p:first-child {
-    font-size: 1.25rem;
-    color: rgb(var(--color-text));
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-  }
-
-  .offer-unsure p:last-of-type {
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 1.5rem;
-  }
-
-  /* ===============================
-   POC CARD - SPECIAL STYLING
-   =============================== */
-
-  /* ===============================
-     POC BANNER (Option 3 - Option B)
-     =============================== */
-  .poc-banner {
-    margin-bottom: 3rem;
-  }
-
-  .poc-banner .offer-card--poc {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: linear-gradient(
-      135deg,
-      rgba(var(--color-accent), 0.05),
-      rgba(var(--color-primary), 0.05)
-    );
-    border: 2px dashed rgba(var(--color-accent), 0.4);
-  }
-
-  .poc-banner-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .poc-main {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .poc-badge {
-    padding: 0.5rem 1rem;
-    background: linear-gradient(
-      135deg,
-      rgb(var(--color-accent)),
-      rgba(var(--color-accent), 0.8)
-    );
-    color: rgb(var(--color-text-button));
-    border-radius: var(--radius-md);
-    font-weight: 600;
-    font-size: 0.875rem;
-    white-space: nowrap;
-  }
-
-  .poc-info h3 {
-    font-size: 1.5rem;
-    margin: 0 0 0.25rem 0;
-    color: rgb(var(--color-text));
-  }
-
-  .poc-tagline {
-    margin: 0;
-    font-size: 0.95rem;
-    color: rgb(var(--color-text-muted));
-  }
-
-  .poc-price-block {
-    text-align: right;
-  }
-
-  .poc-price {
-    font-size: 2rem;
-    font-weight: 700;
-    color: rgb(var(--color-primary));
-    margin: 0;
-  }
-
-  .poc-vat {
-    margin: 0;
-    font-size: 0.75rem;
-    color: rgb(var(--color-text-muted));
-    white-space: nowrap;
-  }
-
-  .poc-highlights {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.75rem;
-    padding: 0.75rem;
-    background: rgba(var(--color-surface), 0.5);
-    border-radius: var(--radius-md);
-  }
-
-  .poc-highlight-item {
-    font-size: 0.8rem;
-    color: rgb(var(--color-text));
-    white-space: nowrap;
-  }
-
-  .poc-upgrade-banner {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1.25rem;
-    background: linear-gradient(
-      135deg,
-      rgba(var(--color-success), 0.1),
-      rgba(var(--color-primary), 0.1)
-    );
-    border-left: 3px solid rgb(var(--color-success));
-    border-radius: var(--radius-md);
-    font-size: 0.95rem;
-    color: rgb(var(--color-text));
-  }
-
-  .upgrade-icon {
-    font-size: 1.25rem;
-  }
-
-  .poc-cta {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-  }
-
-  .poc-cta .btn {
-    white-space: nowrap;
-    padding: 0.65rem 0.85rem !important;
-    font-size: 0.8rem !important;
-  }
-
-  @media (max-width: 1024px) {
-    .poc-banner .offer-card--poc {
-      flex-direction: column;
-      gap: 1.5rem;
+    .hero-title {
+      font-family: var(--font-hero);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 2rem;
+      color: rgb(var(--color-text));
     }
 
-    .poc-main {
-      grid-template-columns: 1fr;
-      text-align: center;
-      gap: 1rem;
+    .hero-subtitle {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: rgb(var(--color-text-muted));
+      margin-bottom: 2rem;
     }
 
-    .poc-price-block {
-      text-align: center;
-    }
-
-    .poc-highlights {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.75rem;
-    }
-
-    .poc-cta {
-      justify-content: center;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .poc-highlights {
-      grid-template-columns: 1fr;
-    }
-
-    .poc-highlight-item {
-      white-space: normal;
-    }
-  }
-
-  /* ===============================
-     HERO GRID (3 colonnes - Option 3)
-     =============================== */
-  .offers-grid-hero {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  @media (max-width: 1024px) {
-    .offers-grid-hero {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .poc-banner .offer-card--poc {
-      grid-template-columns: 1fr;
-      text-align: center;
-      gap: 1rem;
-    }
-  }
-
-  /* ===============================
-     ENTERPRISE ACCORDION (Option 3)
-     =============================== */
-  .enterprise-accordion {
-    margin: 3rem 0 2rem;
-    border: 2px solid rgba(var(--color-primary), 0.3);
-    border-radius: var(--radius-lg);
-    background: rgba(var(--color-surface-variant), 0.3);
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-
-  .enterprise-accordion[open] {
-    border-color: rgb(var(--color-primary));
-    box-shadow: 0 4px 20px rgba(var(--color-primary), 0.15);
-  }
-
-  .enterprise-summary {
-    display: grid;
-    grid-template-columns: auto 1fr auto auto;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem 2rem;
-    cursor: pointer;
-    list-style: none;
-    transition: all 0.3s ease;
-    user-select: none;
-  }
-
-  .enterprise-summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .enterprise-summary:hover {
-    background: rgba(var(--color-primary), 0.05);
-  }
-
-  .enterprise-icon {
-    font-size: 2rem;
-  }
-
-  .enterprise-title h3 {
-    font-size: 1.25rem;
-    margin: 0 0 0.25rem 0;
-    color: rgb(var(--color-text));
-  }
-
-  .enterprise-title p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: rgb(var(--color-text-muted));
-  }
-
-  .enterprise-price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: rgb(var(--color-primary));
-  }
-
-  .accordion-arrow {
-    font-size: 1.25rem;
-    color: rgb(var(--color-primary));
-    transition: transform 0.3s ease;
-  }
-
-  .enterprise-accordion[open] .accordion-arrow {
-    transform: rotate(180deg);
-  }
-
-  .enterprise-content {
-    padding: 0 2rem 2rem;
-    animation: slideDown 0.3s ease;
-  }
-
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .offer-card-enterprise {
-    margin-top: 1rem;
-  }
-
-  /* POC Card - Design distinct */
-  .offer-card--poc {
-    background: rgba(var(--color-accent), 0.03);
-    border: 2px dashed rgba(var(--color-accent), 0.4);
-  }
-
-  .offer-card--poc:hover {
-    border-color: rgba(var(--color-accent), 0.6);
-    background: rgba(var(--color-accent), 0.05);
-  }
-
-  /* POC Badge */
-  .offer-badge--poc {
-    background: linear-gradient(
-      135deg,
-      rgb(var(--color-accent)),
-      rgba(var(--color-accent), 0.8)
-    );
-  }
-
-  /* Upgrade highlight */
-  .offer-upgrade {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background: rgba(var(--color-success), 0.08);
-    border: 1px solid rgba(var(--color-success), 0.3);
-    border-radius: var(--radius-md);
-  }
-
-  .offer-upgrade-text {
-    margin: 0;
-    font-size: 0.9rem;
-    color: rgb(var(--color-text));
-    text-align: center;
-  }
-
-  .offer-upgrade-text strong {
-    color: rgb(var(--color-success));
-  }
-
-  /* Prix après POC */
-  .offer-after-poc {
-    font-size: 0.95rem;
-    color: rgb(var(--color-success));
-    margin-top: 0.5rem;
-    font-weight: 600;
-  }
-
-  /* ===============================
-   RESPONSIVE - POC
-   =============================== */
-
-  @media (max-width: 1400px) {
-    .offers-grid--with-poc {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 768px) {
-    .offers-grid--with-poc {
-      grid-template-columns: 1fr;
-    }
-
-    .offer-card--poc {
-      order: -1; /* POC en premier sur mobile */
-    }
-  }
-
-  /* ===============================
-     COMPARISON TABLE
-     =============================== */
-  .comparison-section {
-    margin: 4rem 0 3rem;
-  }
-
-  .comparison-section h3 {
-    text-align: center;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
-    color: rgb(var(--color-text));
-  }
-
-  .comparison-table-wrapper {
-    overflow-x: auto;
-    margin-bottom: 1.5rem;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: rgb(var(--color-surface));
-    font-size: 0.9rem;
-  }
-
-  .comparison-table thead {
-    background: linear-gradient(
-      135deg,
-      rgb(var(--color-primary)),
-      rgba(var(--color-primary), 0.8)
-    );
-    color: rgb(var(--color-text-button));
-  }
-
-  .comparison-table th {
-    padding: 1.25rem 1rem;
-    text-align: left;
-    font-weight: 600;
-    font-size: 1rem;
-  }
-
-  .comparison-table th.feature-column {
-    width: 25%;
-    min-width: 200px;
-  }
-
-  .comparison-table th.recommended-column {
-    background: linear-gradient(
-      135deg,
-      rgb(var(--color-accent)),
-      rgba(var(--color-accent), 0.8)
-    );
-    position: relative;
-  }
-
-  .comparison-table td {
-    padding: 1rem;
-    border-bottom: 1px solid rgba(var(--color-text-muted), 0.1);
-  }
-
-  .comparison-table tr:last-child td {
-    border-bottom: none;
-  }
-
-  .comparison-table tr:hover {
-    background: rgba(var(--color-primary), 0.03);
-  }
-
-  .comparison-table .feature-name {
-    font-weight: 500;
-    color: rgb(var(--color-text));
-  }
-
-  .comparison-table .recommended-cell {
-    background: linear-gradient(
-      135deg,
-      rgba(var(--color-accent), 0.08),
-      rgba(var(--color-primary), 0.05)
-    );
-    font-weight: 500;
-  }
-
-  .comparison-table .category-row {
-    background: linear-gradient(
-      135deg,
-      rgba(var(--color-primary), 0.1),
-      rgba(var(--color-accent), 0.05)
-    );
-  }
-
-  .comparison-table .category-row td {
-    padding: 0.75rem 1rem;
-    font-size: 0.95rem;
-    color: rgb(var(--color-primary));
-    border-top: 2px solid rgba(var(--color-primary), 0.2);
-    border-bottom: 2px solid rgba(var(--color-primary), 0.2);
-  }
-
-  .comparison-note {
-    text-align: center;
-    font-size: 0.95rem;
-    color: rgb(var(--color-text-muted));
-    margin: 0;
-    padding: 1rem;
-    background: rgba(var(--color-accent), 0.05);
-    border-radius: var(--radius-md);
-  }
-
-  .comparison-note strong {
-    color: rgb(var(--color-primary));
-  }
-
-  @media (max-width: 768px) {
-    .comparison-table {
-      font-size: 0.8rem;
-    }
-
-    .comparison-table th,
-    .comparison-table td {
-      padding: 0.75rem 0.5rem;
-    }
-
-    .comparison-table th.feature-column {
-      min-width: 150px;
-    }
-
-    .comparison-section h3 {
-      font-size: 1.5rem;
-    }
-  }
-
-  /* ===============================
-     MODALITÉS DE PAIEMENT
-     =============================== */
-  .payment-section {
-    background: rgba(var(--color-primary), 0.05);
-    border-top: 1px solid rgba(var(--color-primary), 0.1);
-    text-align: center;
-  }
-
-  .payment-note {
-    font-size: 1.1rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-
-  .payment-section p:last-child {
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 0;
-  }
-
-  .payment-section a {
-    color: rgb(var(--color-primary));
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .payment-section a:hover {
-    text-decoration: underline;
-  }
-
-  /* ===============================
-     SERVICES COMPLÉMENTAIRES
-     =============================== */
-  .complementary-services {
-    background: rgb(var(--color-surface));
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  .service-card {
-    background: rgba(var(--color-surface-variant), 0.3);
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-  }
-
-  .service-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: rgb(var(--color-primary));
-  }
-
-  .service-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-  }
-
-  .service-price {
-    font-size: 2rem;
-    font-weight: 700;
-    color: rgb(var(--color-primary));
-    margin-bottom: 0.5rem;
-  }
-
-  .service-vat {
-    font-size: 0.75rem;
-    color: rgb(var(--color-text-muted));
-    font-style: italic;
-    margin-bottom: 1rem;
-  }
-
-  .service-includes h4 {
-    font-size: 1rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
-  }
-
-  .service-includes ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1.5rem;
-  }
-
-  .service-includes ul li {
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-    font-size: 0.95rem;
-  }
-
-  .service-includes ul li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-success));
-    font-weight: bold;
-  }
-
-  .service-duration {
-    font-size: 0.9rem;
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 1.5rem;
-  }
-
-  .maintenance-options {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .maintenance-option {
-    background: rgba(var(--color-surface-variant), 0.5);
-    padding: 1.5rem;
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(var(--color-border), 0.3);
-  }
-
-  .maintenance-option h4 {
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-    font-size: 1.125rem;
-  }
-
-  .maintenance-option ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .maintenance-option ul li {
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-    font-size: 0.9rem;
-  }
-
-  .maintenance-option ul li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-success));
-  }
-
-  /* ===============================
-     BLOC PREUVE
-     =============================== */
-  .proof-section {
-    background: rgba(var(--color-surface-variant), 0.5);
-  }
-
-  .proof-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    margin-bottom: 4rem;
-  }
-
-  .proof-image img {
-    width: 100%;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-xl);
-    border: 1px solid rgba(var(--color-border), 0.3);
-  }
-
-  .proof-text p {
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 1.5rem;
-  }
-
-  .proof-text h4 {
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-  }
-
-  .tech-stack {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2rem;
-  }
-
-  .tech-stack li {
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-  }
-
-  .tech-stack li::before {
-    content: "▸";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-primary));
-  }
-
-  .tech-stack strong {
-    color: rgb(var(--color-text));
-  }
-
-  /* ===============================
-     PORTFOLIO - INTRO
-     =============================== */
-  .portfolio-intro {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  .portfolio-intro h3 {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-  }
-
-  .portfolio-intro p {
-    font-size: 1.125rem;
-    color: rgb(var(--color-text-muted));
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  /* ===============================
-     PORTFOLIO - FEATURED GRID
-     =============================== */
-  .portfolio-grid-featured {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 3rem;
-    margin-bottom: 4rem;
-  }
-
-  .portfolio-featured-card {
-    position: relative;
-    background: rgba(var(--color-surface-variant), 0.3);
-    border: 2px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    transition: all 0.3s ease;
-  }
-
-  .portfolio-featured-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-    border-color: rgba(var(--color-primary), 0.5);
-  }
-
-  .featured-badge {
-    position: absolute;
-    top: -12px;
-    left: 20px;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-md);
-    font-size: 0.875rem;
-    font-weight: 600;
-    box-shadow: var(--shadow-md);
-    z-index: 1;
-  }
-
-  .featured-badge-rag {
-    background: linear-gradient(
-      135deg,
-      rgb(var(--color-primary)),
-      rgb(var(--color-primary-hover))
-    );
-    color: rgb(var(--color-text-button));
-  }
-
-  .featured-badge-conversational {
-    background: linear-gradient(
-      135deg,
-      rgb(var(--color-accent)),
-      rgba(var(--color-accent), 0.8)
-    );
-    color: rgb(var(--color-text-button));
-  }
-
-  .use-case-label {
-    margin-top: 1rem;
-    padding: 1rem;
-    background: rgba(var(--color-primary), 0.05);
-    border-radius: var(--radius-md);
-    font-size: 0.9rem;
-    color: rgb(var(--color-text-muted));
-    border-left: 3px solid rgb(var(--color-primary));
-  }
-
-  .use-case-label strong {
-    color: rgb(var(--color-text));
-  }
-
-  .demo-status {
-    margin-top: 1rem;
-    padding: 1rem;
-    background: rgba(var(--color-accent), 0.05);
-    border-radius: var(--radius-md);
-    text-align: center;
-  }
-
-  .status-badge {
-    display: inline-block;
-    padding: 0.375rem 0.75rem;
-    background: rgba(var(--color-accent), 0.15);
-    border: 1px solid rgba(var(--color-accent), 0.3);
-    border-radius: var(--radius-sm);
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: rgb(var(--color-text));
-    margin-bottom: 0.5rem;
-  }
-
-  .demo-status p {
-    margin: 0.5rem 0 0 0;
-    font-size: 0.875rem;
-    color: rgb(var(--color-text-muted));
-  }
-
-  /* ===============================
-     AGENT COMPARISON
-     =============================== */
-  .agent-comparison {
-    margin: 4rem 0;
-    padding: 3rem 2rem;
-    background: rgba(var(--color-surface-variant), 0.2);
-    border-radius: var(--radius-lg);
-  }
-
-  .agent-comparison h3 {
-    font-family: var(--font-heading);
-    font-size: 1.75rem;
-    color: rgb(var(--color-text));
-    text-align: center;
-    margin-bottom: 2.5rem;
-  }
-
-  .comparison-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .comparison-card {
-    background: rgb(var(--color-surface));
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-  }
-
-  .comparison-card h4 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    color: rgb(var(--color-primary));
-    margin-bottom: 1rem;
-  }
-
-  .comparison-card p {
-    margin-bottom: 0.75rem;
-    color: rgb(var(--color-text));
-  }
-
-  .comparison-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-  }
-
-  .comparison-card ul li {
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-    font-size: 0.9rem;
-  }
-
-  .comparison-card ul li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-success));
-    font-weight: bold;
-  }
-
-  .comparison-card .example {
-    margin-top: 1rem;
-    padding: 0.75rem;
-    background: rgba(var(--color-accent), 0.05);
-    border-radius: var(--radius-md);
-    font-size: 0.875rem;
-    color: rgb(var(--color-text-muted));
-    font-style: italic;
-  }
-
-  .comparison-note {
-    text-align: center;
-    font-size: 1.125rem;
-    color: rgb(var(--color-text));
-    padding: 1.5rem;
-    background: rgba(var(--color-primary), 0.05);
-    border-radius: var(--radius-md);
-    margin: 0;
-  }
-
-  .comparison-note strong {
-    color: rgb(var(--color-primary));
-  }
-
-  /* ===============================
-     PORTFOLIO GRID (autres projets)
-     =============================== */
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-  }
-
-  /* ===============================
-     RESPONSIVE - PORTFOLIO
-     =============================== */
-  @media (max-width: 1024px) {
-    .portfolio-grid-featured {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .comparison-cards {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .portfolio-featured-card {
-      padding: 1.5rem;
-    }
-
-    .agent-comparison {
-      padding: 2rem 1rem;
-    }
-
-    .comparison-card {
-      padding: 1.5rem;
-    }
-  }
-
-  /* ===============================
-     CTA FINAL
-     =============================== */
-  .cta-final {
-    background: linear-gradient(
-      135deg,
-      rgba(var(--color-primary), 0.08) 0%,
-      rgba(var(--color-accent), 0.05) 100%
-    );
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cta-final::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-      circle at 30% 70%,
-      rgba(var(--color-primary), 0.1) 0%,
-      transparent 50%
-    );
-    pointer-events: none;
-  }
-
-  .cta-content {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
-
-  .cta-content h2 {
-    font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: rgb(var(--color-text));
-  }
-
-  .cta-content p {
-    font-size: 1.125rem;
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 1rem;
-  }
-
-  .cta-no-bs {
-    color: rgb(var(--color-primary)) !important;
-    font-size: 1rem !important;
-    margin-bottom: 2rem !important;
-  }
-
-  .cta-note {
-    color: rgb(var(--color-text)) !important;
-    font-size: 1rem !important;
-    margin-bottom: 2rem !important;
-    font-weight: 500;
-  }
-
-  /* ===============================
-     RESPONSIVE
-     =============================== */
-  @media (max-width: 1024px) {
-    .hero .container,
-    .proof-content {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      text-align: center;
+    .hero-badge {
+      display: inline-flex;
+      padding: 0.75rem 1.5rem;
+      background: rgba(var(--color-accent), 0.15);
+      border: 1px solid rgba(var(--color-accent), 0.3);
+      border-radius: var(--radius-lg);
+      color: rgb(var(--color-accent));
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
     }
 
     .hero-cta {
-      justify-content: center;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
+    /* Value Props */
+    .value-props {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .value-prop {
+      font-size: 1rem;
+      color: rgb(var(--color-text));
+      padding: 0.75rem 1rem;
+      background: rgba(var(--color-surface-variant), 0.5);
+      border-left: 3px solid rgb(var(--color-primary));
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+    }
+
+    .value-prop:hover {
+      background: rgba(var(--color-surface-variant), 0.7);
+      transform: translateX(4px);
+    }
+
+    .value-prop strong {
+      color: rgb(var(--color-primary));
+      font-weight: 600;
+    }
+
+    /* Chat Preview */
     .chat-preview {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      background: rgb(var(--color-surface));
+      border: 1px solid rgba(var(--color-border), 0.3);
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      padding: 1.25rem 1.5rem;
+      gap: 1rem;
+      background: rgba(var(--color-surface-variant), 0.3);
+      border-bottom: 1px solid rgba(var(--color-border), 0.2);
+    }
+
+    .agent-avatar {
+      font-size: 2rem;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(
+        135deg,
+        rgb(var(--color-primary)),
+        rgb(var(--color-primary-hover))
+      );
+    }
+
+    .agent-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .agent-name {
+      font-weight: 600;
+      font-size: 1rem;
+      color: rgb(var(--color-text));
+    }
+
+    .agent-status {
+      font-size: 0.875rem;
+      color: rgb(var(--color-text-muted));
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .agent-status::before {
+      content: "●";
+      color: rgb(var(--color-success));
+      font-size: 0.75rem;
+    }
+
+    .chat-messages {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      min-height: 320px;
+      background: rgba(var(--color-surface-variant), 0.1);
+    }
+
+    .message {
+      display: flex;
+      gap: 0.75rem;
+      max-width: 90%;
+      animation: slideIn 0.3s ease;
+    }
+
+    .user-message {
+      align-self: flex-end;
+      flex-direction: row-reverse;
+    }
+
+    .agent-message {
+      align-self: flex-start;
+      animation: slideIn 0.3s ease 1s backwards;
+    }
+
+    .message-avatar {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .message-content {
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-lg);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      flex: 1;
+      text-align: left;
+    }
+
+    .user-message .message-content {
+      background: rgb(var(--color-primary));
+      color: rgb(var(--color-text-button));
+      border-bottom-right-radius: 0.25rem;
+    }
+
+    .agent-message .message-content {
+      background: rgba(var(--color-surface-variant), 0.8);
+      color: rgb(var(--color-text));
+      border-bottom-left-radius: 0.25rem;
+      border: 1px solid rgba(var(--color-border), 0.7);
+    }
+
+    .inline-code {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 0.25rem 0.5rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      display: inline-block;
+      text-align: left;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===============================
+   BADGES
+   =============================== */
+    .badge {
+      padding: 0.5rem 0.9rem;
+      background: rgba(var(--color-surface-variant), 0.5);
+      border: 1px solid rgba(var(--color-border), 0.5);
+      border-radius: var(--radius-md);
+      color: rgb(var(--color-text));
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .badge:hover {
+      background: rgba(var(--color-primary), 0.1);
+      border-color: rgb(var(--color-primary));
+      transform: translateY(-2px);
+    }
+
+    /* ===============================
+   TECH STACK SECTION
+   =============================== */
+    .tech-stack-section {
+      margin-top: 4rem;
+      padding: 3rem 0 2rem;
+      background: linear-gradient(
+        180deg,
+        rgb(var(--color-background)) 0%,
+        rgba(var(--color-surface-variant), 0.3) 100%
+      );
+    }
+
+    .tech-stack-label {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      color: rgb(var(--color-text-muted));
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .tech-stack-badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .tech-stack-link {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .tech-stack-link a {
+      color: rgb(var(--color-primary));
+      text-decoration: none;
+      border-bottom: 1px solid rgb(var(--color-primary));
+      transition: all 0.2s ease;
+    }
+
+    .tech-stack-link a:hover {
+      color: rgb(var(--color-primary-hover));
+      border-bottom-color: rgb(var(--color-primary-hover));
+    }
+
+    /* ===============================
+   CONTEXT SECTION
+   =============================== */
+    .context-section {
+      background: rgb(var(--color-surface));
+    }
+
+    .context-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .context-card {
+      background: rgba(var(--color-surface-variant), 0.3);
+      border: 1px solid rgba(var(--color-border), 0.3);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+    }
+
+    .context-card--solution {
+      background: rgba(var(--color-primary), 0.03);
+      border: 1px solid rgba(var(--color-primary), 0.2);
+    }
+
+    .context-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 1.5rem;
+    }
+
+    .context-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .context-card ul li {
+      padding-left: 1.75rem;
+      margin-bottom: 1rem;
+      position: relative;
+      color: rgb(var(--color-text-muted));
+      line-height: 1.6;
+    }
+
+    .context-card ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: rgb(var(--color-primary));
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .context-card--solution ul li {
+      padding-left: 2rem;
+    }
+
+    .context-card--solution ul li::before {
+      content: "→";
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .context-card strong {
+      color: rgb(var(--color-text));
+      font-weight: 600;
+    }
+
+    .context-result {
+      text-align: center;
+      padding: 2rem 2.5rem;
+      background: rgba(var(--color-primary), 0.05);
+      border: 2px solid rgba(var(--color-primary), 0.3);
+      border-radius: var(--radius-lg);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .context-result p {
+      font-size: 1.125rem;
+      color: rgb(var(--color-text));
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .context-result strong {
+      color: rgb(var(--color-primary));
+    }
+
+    .cta-services {
+      text-align: center;
+      margin-top: 2.5rem;
+      padding: 2rem;
+      background: rgba(var(--color-accent), 0.03);
+      border-radius: var(--radius-lg);
+    }
+
+    .cta-services p {
+      font-size: 1.125rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .context-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .context-card {
+        padding: 1.5rem;
+      }
+
+      .context-result {
+        padding: 1.5rem;
+      }
+    }
+
+    /* ===============================
+   USE CASES & METRICS
+   =============================== */
+    .use-cases {
+      margin-top: 4rem;
+      padding: 2.5rem;
+      background: rgba(var(--color-surface-variant), 0.3);
+      border: 1px solid rgba(var(--color-border), 0.3);
+      border-radius: var(--radius-lg);
+    }
+
+    .use-cases h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .use-cases-list {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .use-cases-list li {
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      color: rgb(var(--color-text-muted));
+      font-size: 0.95rem;
+    }
+
+    .use-cases-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: rgb(var(--color-primary));
+      font-weight: bold;
+    }
+
+    .use-cases-list li strong {
+      color: rgb(var(--color-text));
+      font-weight: 600;
+    }
+
+    .metrics-text {
+      text-align: center;
+      color: rgb(var(--color-text));
+      font-size: 1rem;
+      margin: 0;
+      padding-top: 1rem;
+    }
+
+    .metrics-text strong {
+      color: rgb(var(--color-primary));
+    }
+
+    /* ===============================
+   APPROACH SECTION
+   =============================== */
+    .approach-section {
+      background: rgb(var(--color-surface));
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .approach-card {
+      background: rgba(var(--color-surface-variant), 0.3);
+      border: 1px solid rgba(var(--color-border), 0.3);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+    }
+
+    .approach-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 0.75rem;
+    }
+
+    .approach-card p {
+      color: rgb(var(--color-text-muted));
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    /* ===============================
+   OFFERS - SIMPLIFIED
+   =============================== */
+    .offer-tagline {
+      font-size: 0.95rem;
+      color: rgb(var(--color-text-muted));
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .offer-use-cases {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: rgba(var(--color-accent), 0.05);
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+    }
+
+    .offer-use-cases p {
+      margin: 0;
+      color: rgb(var(--color-text-muted));
+    }
+
+    .offer-demo-ref {
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      background: linear-gradient(
+        135deg,
+        rgba(var(--color-primary), 0.08),
+        rgba(var(--color-accent), 0.08)
+      );
+      border-left: 3px solid rgb(var(--color-primary));
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+    }
+
+    .offer-demo-ref p {
+      margin: 0;
+      color: rgb(var(--color-text));
+    }
+
+    .demo-link {
+      color: rgb(var(--color-primary));
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom-color 0.2s ease;
+    }
+
+    .demo-link:hover {
+      border-bottom-color: rgb(var(--color-primary));
+    }
+
+    .offer-use-cases strong {
+      color: rgb(var(--color-text));
+    }
+
+    /* ===============================
+   RESPONSIVE
+   =============================== */
+    @media (max-width: 1024px) {
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .use-cases {
+        padding: 1.5rem;
+      }
+
+      .approach-card {
+        padding: 1.5rem;
+      }
+
+      .value-prop {
+        font-size: 0.9rem;
+      }
+
+      .tech-stack-section {
+        padding: 2rem 0 1.5rem !important;
+        margin-top: 2rem;
+      }
+    }
+
+    /* ===============================
+   SECTIONS COMMUNES
+   =============================== */
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: rgb(var(--color-text));
+    }
+
+    .section-intro {
+      text-align: center;
+      font-size: 1.125rem;
+      color: rgb(var(--color-text-muted));
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+
+    /* ===============================
+     BLOC SOLUTION
+     =============================== */
+    .solution-section {
+      background: rgba(var(--color-surface-variant), 0.5);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .feature-card {
+      background: rgb(var(--color-surface));
+      border: 1px solid rgba(var(--color-border), 0.3);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      text-align: center;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: rgb(var(--color-primary));
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .feature-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 1rem;
+    }
+
+    .feature-card p {
+      color: rgb(var(--color-text-muted));
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .feature-card p strong {
+      color: rgb(var(--color-primary));
+      font-weight: 600;
+    }
+
+    .solution-result {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(var(--color-primary), 0.05);
+      border: 2px solid rgba(var(--color-primary), 0.3);
+      border-radius: var(--radius-lg);
+    }
+
+    .solution-result p {
+      font-size: 1.125rem;
+      color: rgb(var(--color-text));
+      margin: 0;
+    }
+
+    .solution-result strong {
+      color: rgb(var(--color-primary));
+    }
+
+    /* ===============================
+     BLOC OFFRES
+     =============================== */
+    .offers-section {
+      background: rgba(var(--color-surface-variant), 0.5);
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+      align-items: start;
+    }
+
+    .offer-card {
+      background: rgb(var(--color-surface));
+      border: 1px solid rgba(var(--color-border), 0.3);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      position: relative;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+
+
+
+    .offer-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 1rem;
+    }
+
+    .offer-price {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: rgb(var(--color-primary));
+      margin-bottom: 0.5rem;
+    }
+
+    .offer-vat {
+      font-size: 0.75rem;
+      color: rgb(var(--color-text-muted));
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .offer-for {
+      background: rgba(var(--color-accent), 0.1);
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: rgb(var(--color-text-muted));
+    }
+
+    .offer-for strong {
+      color: rgb(var(--color-text));
+    }
+
+    .offer-subtitle {
+      font-size: 1rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .offer-duration {
+      font-size: 0.9rem;
+      color: rgb(var(--color-text-muted));
+      margin-bottom: 1.5rem;
+    }
+
+    .offer-value-prop {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: linear-gradient(
+        135deg,
+        rgba(var(--color-accent), 0.08),
+        rgba(var(--color-primary), 0.08)
+      );
+      border-left: 3px solid rgb(var(--color-accent));
+      border-radius: var(--radius-sm);
+    }
+
+    .offer-value-prop p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: rgb(var(--color-text));
+    }
+
+    .offer-value-prop p + p {
+      margin-top: 0.75rem;
+    }
+
+    .offer-value-prop strong {
+      color: rgb(var(--color-primary));
+    }
+
+    .offer-includes {
+      flex: 1;
+    }
+
+    .offer-includes h4 {
+      font-size: 1rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 1rem;
+    }
+
+    .offer-includes ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .offer-includes ul li {
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      color: rgb(var(--color-text-muted));
+      font-size: 0.95rem;
+    }
+
+    .offer-includes ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: rgb(var(--color-success));
+      font-weight: bold;
+    }
+
+    .offer-includes details.tech-details {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(var(--color-border), 0.2);
+    }
+
+    .offer-includes details.tech-details summary {
+      cursor: pointer;
+      color: rgb(var(--color-text-muted));
+      font-size: 0.85rem;
+      font-weight: 500;
+      user-select: none;
+      transition: color 0.2s ease;
+    }
+
+    .offer-includes details.tech-details summary:hover {
+      color: rgb(var(--color-primary));
+    }
+
+    .offer-includes details.tech-details ul {
+      margin-top: 0.75rem;
+      padding-left: 1.5rem;
+    }
+
+    .offer-includes details.tech-details ul li {
+      font-size: 0.85rem;
+    }
+
+    .offer-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    .offer-cta .btn {
+      width: 100%;
+    }
+
+    .offer-details {
+      border-top: 1px solid rgba(var(--color-border), 0.3);
+      padding-top: 1rem;
+      margin-top: auto;
+    }
+
+    .offer-details summary {
+      cursor: pointer;
+      color: rgb(var(--color-primary));
+      font-weight: 500;
+      user-select: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .offer-details summary:hover {
+      opacity: 0.8;
+    }
+
+    .offer-full-details {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(var(--color-border), 0.2);
+    }
+
+    .offer-full-details p {
+      margin-bottom: 0.75rem;
+      color: rgb(var(--color-text));
+    }
+
+    .offer-full-details ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .offer-full-details ul li {
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      color: rgb(var(--color-text-muted));
+      font-size: 0.9rem;
+    }
+
+    .offer-full-details ul li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: rgb(var(--color-accent));
+    }
+
+    .offer-unsure {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(var(--color-primary), 0.05);
+      border: 1px solid rgba(var(--color-primary), 0.2);
+      border-radius: var(--radius-lg);
+    }
+
+    .offer-unsure p:first-child {
+      font-size: 1.25rem;
+      color: rgb(var(--color-text));
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .offer-unsure p:last-of-type {
+      color: rgb(var(--color-text-muted));
+      margin-bottom: 1.5rem;
+    }
+
+    /* ===============================
+   POC CARD - SPECIAL STYLING
+   =============================== */
+
+    /* ===============================
+     POC BANNER (Option 3 - Option B)
+     =============================== */
+    .poc-banner {
+      margin-bottom: 3rem;
+    }
+
+    .poc-banner .offer-card--poc {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: linear-gradient(
+        135deg,
+        rgba(var(--color-accent), 0.05),
+        rgba(var(--color-primary), 0.05)
+      );
+      border: 2px dashed rgba(var(--color-accent), 0.4);
+    }
+
+    .poc-banner-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .poc-main {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .poc-badge {
+      padding: 0.5rem 1rem;
+      background: linear-gradient(
+        135deg,
+        rgb(var(--color-accent)),
+        rgba(var(--color-accent), 0.8)
+      );
+      color: rgb(var(--color-text-button));
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.875rem;
+      white-space: nowrap;
+    }
+
+    .poc-info h3 {
+      font-size: 1.5rem;
+      margin: 0 0 0.25rem 0;
+      color: rgb(var(--color-text));
+    }
+
+    .poc-tagline {
+      margin: 0;
+      font-size: 0.95rem;
+      color: rgb(var(--color-text-muted));
+    }
+
+    .poc-price-block {
+      text-align: right;
+    }
+
+    .poc-price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: rgb(var(--color-primary));
+      margin: 0;
+    }
+
+    .poc-vat {
+      margin: 0;
+      font-size: 0.75rem;
+      color: rgb(var(--color-text-muted));
+      white-space: nowrap;
+    }
+
+    .poc-highlights {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      padding: 0.75rem;
+      background: rgba(var(--color-surface), 0.5);
+      border-radius: var(--radius-md);
+    }
+
+    .poc-highlight-item {
+      font-size: 0.8rem;
+      color: rgb(var(--color-text));
+      white-space: nowrap;
+    }
+
+    .poc-upgrade-banner {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.875rem 1.25rem;
+      background: linear-gradient(
+        135deg,
+        rgba(var(--color-success), 0.1),
+        rgba(var(--color-primary), 0.1)
+      );
+      border-left: 3px solid rgb(var(--color-success));
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      color: rgb(var(--color-text));
+    }
+
+    .upgrade-icon {
+      font-size: 1.25rem;
+    }
+
+    .poc-cta {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .poc-cta .btn {
+      white-space: nowrap;
+      padding: 0.65rem 0.85rem !important;
+      font-size: 0.8rem !important;
+    }
+
+    @media (max-width: 1024px) {
+      .poc-banner .offer-card--poc {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .poc-main {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .poc-price-block {
+        text-align: center;
+      }
+
+      .poc-highlights {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+      }
+
+      .poc-cta {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .poc-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .poc-highlight-item {
+        white-space: normal;
+      }
+    }
+
+    /* ===============================
+     HERO GRID (3 colonnes - Option 3)
+     =============================== */
+    .offers-grid-hero {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 1024px) {
+      .offers-grid-hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .poc-banner .offer-card--poc {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1rem;
+      }
+    }
+
+    /* ===============================
+     ENTERPRISE ACCORDION (Option 3)
+     =============================== */
+    .enterprise-accordion {
+      margin: 3rem 0 2rem;
+      border: 2px solid rgba(var(--color-primary), 0.3);
+      border-radius: var(--radius-lg);
+      background: rgba(var(--color-surface-variant), 0.3);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .enterprise-accordion[open] {
+      border-color: rgb(var(--color-primary));
+      box-shadow: 0 4px 20px rgba(var(--color-primary), 0.15);
+    }
+
+    .enterprise-summary {
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem 2rem;
+      cursor: pointer;
+      list-style: none;
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+
+    .enterprise-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .enterprise-summary:hover {
+      background: rgba(var(--color-primary), 0.05);
+    }
+
+    .enterprise-icon {
+      font-size: 2rem;
+    }
+
+    .enterprise-title h3 {
+      font-size: 1.25rem;
+      margin: 0 0 0.25rem 0;
+      color: rgb(var(--color-text));
+    }
+
+    .enterprise-title p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: rgb(var(--color-text-muted));
+    }
+
+    .enterprise-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: rgb(var(--color-primary));
+    }
+
+    .accordion-arrow {
+      font-size: 1.25rem;
+      color: rgb(var(--color-primary));
+      transition: transform 0.3s ease;
+    }
+
+    .enterprise-accordion[open] .accordion-arrow {
+      transform: rotate(180deg);
+    }
+
+    .enterprise-content {
+      padding: 0 2rem 2rem;
+      animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .offer-card-enterprise {
+      margin-top: 1rem;
+    }
+
+    /* POC Card - Design distinct */
+    .offer-card--poc {
+      background: rgba(var(--color-accent), 0.03);
+      border: 2px dashed rgba(var(--color-accent), 0.4);
+    }
+
+    .offer-card--poc:hover {
+      border-color: rgba(var(--color-accent), 0.6);
+      background: rgba(var(--color-accent), 0.05);
+    }
+
+    /* POC Badge */
+    .offer-badge--poc {
+      background: linear-gradient(
+        135deg,
+        rgb(var(--color-accent)),
+        rgba(var(--color-accent), 0.8)
+      );
+    }
+
+    /* Upgrade highlight */
+    .offer-upgrade {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: rgba(var(--color-success), 0.08);
+      border: 1px solid rgba(var(--color-success), 0.3);
+      border-radius: var(--radius-md);
+    }
+
+    .offer-upgrade-text {
+      margin: 0;
+      font-size: 0.9rem;
+      color: rgb(var(--color-text));
+      text-align: center;
+    }
+
+    .offer-upgrade-text strong {
+      color: rgb(var(--color-success));
+    }
+
+    /* Prix après POC */
+    .offer-after-poc {
+      font-size: 0.95rem;
+      color: rgb(var(--color-success));
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+
+    /* ===============================
+   RESPONSIVE - POC
+   =============================== */
+
+    @media (max-width: 1400px) {
+      .offers-grid--with-poc {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .offers-grid--with-poc {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-card--poc {
+        order: -1; /* POC en premier sur mobile */
+      }
+    }
+
+    /* ===============================
+     COMPARISON TABLE
+     =============================== */
+    .comparison-section {
+      margin: 4rem 0 3rem;
+    }
+
+    .comparison-section h3 {
+      text-align: center;
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+      color: rgb(var(--color-text));
+    }
+
+    .comparison-table-wrapper {
+      overflow-x: auto;
+      margin-bottom: 1.5rem;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgb(var(--color-surface));
+      font-size: 0.9rem;
+    }
+
+    .comparison-table thead {
+      background: linear-gradient(
+        135deg,
+        rgb(var(--color-primary)),
+        rgba(var(--color-primary), 0.8)
+      );
+      color: rgb(var(--color-text-button));
+    }
+
+    .comparison-table th {
+      padding: 1.25rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .comparison-table th span {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 0.8rem;
+      font-weight: 400;
+      opacity: 0.9;
+      line-height: 1.3;
+    }
+
+    .comparison-table th.feature-column {
+      width: 25%;
+      min-width: 200px;
+    }
+
+    .comparison-table td {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(var(--color-text-muted), 0.1);
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison-table tr:hover {
+      background: rgba(var(--color-primary), 0.03);
+    }
+
+    .comparison-table .feature-name {
+      font-weight: 500;
+      color: rgb(var(--color-text));
+    }
+
+    .comparison-table .category-row {
+      background: linear-gradient(
+        135deg,
+        rgba(var(--color-primary), 0.1),
+        rgba(var(--color-accent), 0.05)
+      );
+    }
+
+    .comparison-table .category-row td {
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      color: rgb(var(--color-primary));
+      border-top: 2px solid rgba(var(--color-primary), 0.2);
+      border-bottom: 2px solid rgba(var(--color-primary), 0.2);
+    }
+
+    .comparison-note {
+      text-align: center;
+      font-size: 0.95rem;
+      color: rgb(var(--color-text-muted));
+      margin: 0;
+      padding: 1rem;
+      background: rgba(var(--color-accent), 0.05);
+      border-radius: var(--radius-md);
+    }
+
+    .comparison-note strong {
+      color: rgb(var(--color-primary));
+    }
+
+    @media (max-width: 768px) {
+      .comparison-table {
+        font-size: 0.8rem;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 0.75rem 0.5rem;
+      }
+
+      .comparison-table th.feature-column {
+        min-width: 150px;
+      }
+
+      .comparison-table th span {
+        font-size: 0.7rem;
+        margin-top: 0.2rem;
+      }
+
+      .comparison-section h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* ===============================
+     MODALITÉS DE PAIEMENT
+     =============================== */
+    .payment-section {
+      background: rgba(var(--color-primary), 0.05);
+      border-top: 1px solid rgba(var(--color-primary), 0.1);
+      text-align: center;
+    }
+
+    .payment-note {
+      font-size: 1.1rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .payment-section p:last-child {
+      color: rgb(var(--color-text-muted));
+      margin-bottom: 0;
+    }
+
+    .payment-section a {
+      color: rgb(var(--color-primary));
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .payment-section a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===============================
+     SERVICES COMPLÉMENTAIRES
+     =============================== */
+    .complementary-services {
+      background: rgb(var(--color-surface));
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: rgba(var(--color-surface-variant), 0.3);
+      border: 1px solid rgba(var(--color-border), 0.3);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: rgb(var(--color-primary));
+    }
+
+    .service-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 1rem;
+    }
+
+    .service-price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: rgb(var(--color-primary));
+      margin-bottom: 0.5rem;
+    }
+
+    .service-vat {
+      font-size: 0.75rem;
+      color: rgb(var(--color-text-muted));
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .service-includes h4 {
+      font-size: 1rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .service-includes ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-includes ul li {
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      color: rgb(var(--color-text-muted));
+      font-size: 0.95rem;
+    }
+
+    .service-includes ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: rgb(var(--color-success));
+      font-weight: bold;
+    }
+
+    .service-duration {
+      font-size: 0.9rem;
+      color: rgb(var(--color-text-muted));
+      margin-bottom: 1.5rem;
+    }
+
+    .maintenance-options {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .maintenance-option {
+      background: rgba(var(--color-surface-variant), 0.5);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(var(--color-border), 0.3);
+    }
+
+    .maintenance-option h4 {
+      color: rgb(var(--color-text));
+      margin-bottom: 1rem;
+      font-size: 1.125rem;
+    }
+
+    .maintenance-option ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .maintenance-option ul li {
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      color: rgb(var(--color-text-muted));
+      font-size: 0.9rem;
+    }
+
+    .maintenance-option ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: rgb(var(--color-success));
+    }
+
+    /* ===============================
+     BLOC PREUVE
+     =============================== */
+    .proof-section {
+      background: rgba(var(--color-surface-variant), 0.5);
+    }
+
+    .proof-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .proof-image img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      border: 1px solid rgba(var(--color-border), 0.3);
+    }
+
+    .proof-text p {
+      color: rgb(var(--color-text-muted));
+      margin-bottom: 1.5rem;
+    }
+
+    .proof-text h4 {
+      color: rgb(var(--color-text));
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+
+    .tech-stack {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+
+    .tech-stack li {
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      color: rgb(var(--color-text-muted));
+    }
+
+    .tech-stack li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: rgb(var(--color-primary));
+    }
+
+    .tech-stack strong {
+      color: rgb(var(--color-text));
+    }
+
+    /* ===============================
+     PORTFOLIO - INTRO
+     =============================== */
+    .portfolio-intro {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .portfolio-intro h3 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 1rem;
+    }
+
+    .portfolio-intro p {
+      font-size: 1.125rem;
+      color: rgb(var(--color-text-muted));
       max-width: 600px;
       margin: 0 auto;
     }
 
-    .offers-grid,
-    .differentiation-points,
-    .features-grid {
-      grid-template-columns: 1fr;
+    /* ===============================
+     PORTFOLIO - FEATURED GRID
+     =============================== */
+    .portfolio-grid-featured {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 3rem;
+      margin-bottom: 4rem;
     }
 
-    .problem-grid,
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .hero {
-      padding: 5rem 0 4rem;
+    .portfolio-featured-card {
+      position: relative;
+      background: rgba(var(--color-surface-variant), 0.3);
+      border: 2px solid rgba(var(--color-border), 0.3);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: all 0.3s ease;
     }
 
-    .section-spacing {
-      padding: 3rem 0;
+    .portfolio-featured-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+      border-color: rgba(var(--color-primary), 0.5);
     }
 
-    .comparison-table {
-      font-size: 0.8rem;
+    .featured-badge {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-md);
+      z-index: 1;
     }
 
-    .comparison-table th,
-    .comparison-table td {
-      padding: 0.75rem 0.5rem;
+    .featured-badge-rag {
+      background: linear-gradient(
+        135deg,
+        rgb(var(--color-primary)),
+        rgb(var(--color-primary-hover))
+      );
+      color: rgb(var(--color-text-button));
     }
 
-    .offer-card {
-      padding: 1.5rem;
+    .featured-badge-conversational {
+      background: linear-gradient(
+        135deg,
+        rgb(var(--color-accent)),
+        rgba(var(--color-accent), 0.8)
+      );
+      color: rgb(var(--color-text-button));
     }
 
-    .message {
-      max-width: 95%;
-    }
-
-    .message-avatar {
-      font-size: 1.25rem;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .hero-title {
-      font-size: 2rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1rem;
-    }
-
-    .section-title {
-      font-size: 1.75rem;
-    }
-
-    .btn {
-      width: 100%;
-    }
-
-    .hero-cta .btn,
-    .offer-cta .btn {
-      font-size: 0.9rem;
-      padding: 0.75rem 1.25rem;
-    }
-
-    .chat-messages {
-      min-height: 280px;
+    .use-case-label {
+      margin-top: 1rem;
       padding: 1rem;
+      background: rgba(var(--color-primary), 0.05);
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      color: rgb(var(--color-text-muted));
+      border-left: 3px solid rgb(var(--color-primary));
     }
 
-    .comparison-table th,
-    .comparison-table td {
-      padding: 0.5rem 0.25rem;
-      font-size: 0.75rem;
+    .use-case-label strong {
+      color: rgb(var(--color-text));
     }
-  }
 
-  /* ===============================
+    .demo-status {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(var(--color-accent), 0.05);
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 0.375rem 0.75rem;
+      background: rgba(var(--color-accent), 0.15);
+      border: 1px solid rgba(var(--color-accent), 0.3);
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: rgb(var(--color-text));
+      margin-bottom: 0.5rem;
+    }
+
+    .demo-status p {
+      margin: 0.5rem 0 0 0;
+      font-size: 0.875rem;
+      color: rgb(var(--color-text-muted));
+    }
+
+    /* ===============================
+     AGENT COMPARISON
+     =============================== */
+    .agent-comparison {
+      margin: 4rem 0;
+      padding: 3rem 2rem;
+      background: rgba(var(--color-surface-variant), 0.2);
+      border-radius: var(--radius-lg);
+    }
+
+    .agent-comparison h3 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      color: rgb(var(--color-text));
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .comparison-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .comparison-card {
+      background: rgb(var(--color-surface));
+      border: 1px solid rgba(var(--color-border), 0.3);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+    }
+
+    .comparison-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: rgb(var(--color-primary));
+      margin-bottom: 1rem;
+    }
+
+    .comparison-card p {
+      margin-bottom: 0.75rem;
+      color: rgb(var(--color-text));
+    }
+
+    .comparison-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .comparison-card ul li {
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      color: rgb(var(--color-text-muted));
+      font-size: 0.9rem;
+    }
+
+    .comparison-card ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: rgb(var(--color-success));
+      font-weight: bold;
+    }
+
+    .comparison-card .example {
+      margin-top: 1rem;
+      padding: 0.75rem;
+      background: rgba(var(--color-accent), 0.05);
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      color: rgb(var(--color-text-muted));
+      font-style: italic;
+    }
+
+    .comparison-note {
+      text-align: center;
+      font-size: 1.125rem;
+      color: rgb(var(--color-text));
+      padding: 1.5rem;
+      background: rgba(var(--color-primary), 0.05);
+      border-radius: var(--radius-md);
+      margin: 0;
+    }
+
+    .comparison-note strong {
+      color: rgb(var(--color-primary));
+    }
+
+    /* ===============================
+     PORTFOLIO GRID (autres projets)
+     =============================== */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    /* ===============================
+     RESPONSIVE - PORTFOLIO
+     =============================== */
+    @media (max-width: 1024px) {
+      .portfolio-grid-featured {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .comparison-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-featured-card {
+        padding: 1.5rem;
+      }
+
+      .agent-comparison {
+        padding: 2rem 1rem;
+      }
+
+      .comparison-card {
+        padding: 1.5rem;
+      }
+    }
+
+    /* ===============================
+     CTA FINAL
+     =============================== */
+    .cta-final {
+      background: linear-gradient(
+        135deg,
+        rgba(var(--color-primary), 0.08) 0%,
+        rgba(var(--color-accent), 0.05) 100%
+      );
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-final::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at 30% 70%,
+        rgba(var(--color-primary), 0.1) 0%,
+        transparent 50%
+      );
+      pointer-events: none;
+    }
+
+    .cta-content {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-content h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: rgb(var(--color-text));
+    }
+
+    .cta-content p {
+      font-size: 1.125rem;
+      color: rgb(var(--color-text-muted));
+      margin-bottom: 1rem;
+    }
+
+    .cta-no-bs {
+      color: rgb(var(--color-primary)) !important;
+      font-size: 1rem !important;
+      margin-bottom: 2rem !important;
+    }
+
+    /* ===============================
+     RESPONSIVE
+     =============================== */
+    @media (max-width: 1024px) {
+      .hero .container,
+      .proof-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+      }
+
+      .hero-cta {
+        justify-content: center;
+      }
+
+      .chat-preview {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .offers-grid,
+      .differentiation-points,
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .problem-grid,
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 5rem 0 4rem;
+      }
+
+      .section-spacing {
+        padding: 3rem 0;
+      }
+
+      .comparison-table {
+        font-size: 0.8rem;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 0.75rem 0.5rem;
+      }
+
+      .offer-card {
+        padding: 1.5rem;
+      }
+
+      .message {
+        max-width: 95%;
+      }
+
+      .message-avatar {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-cta .btn,
+      .offer-cta .btn {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.25rem;
+      }
+
+      .chat-messages {
+        min-height: 280px;
+        padding: 1rem;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.75rem;
+      }
+    }
+
+    /* ===============================
      SECTION MARCHÉ
      =============================== */
-  .market-section {
-    background: linear-gradient(
-      135deg,
-      rgba(var(--color-primary), 0.03) 0%,
-      rgba(var(--color-accent), 0.02) 100%
-    );
-  }
-
-  .market-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .stat-card {
-    background: rgb(var(--color-surface));
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    text-align: center;
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
-  }
-
-  .stat-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-  }
-
-  .stat-number {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: rgb(var(--color-primary));
-    margin-bottom: 1rem;
-    line-height: 1;
-  }
-
-  .stat-card p {
-    color: rgb(var(--color-text));
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-  }
-
-  .stat-source {
-    display: block;
-    font-size: 0.75rem;
-    color: rgb(var(--color-text-muted));
-    font-style: italic;
-  }
-
-  .market-insight {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2.5rem;
-    background: rgba(var(--color-primary), 0.05);
-    border: 2px solid rgba(var(--color-primary), 0.2);
-    border-radius: var(--radius-lg);
-  }
-
-  .market-insight p {
-    font-size: 1.125rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-    line-height: 1.7;
-  }
-
-  .market-insight p:last-child {
-    margin-bottom: 0;
-  }
-
-  .market-source {
-    font-size: 0.875rem !important;
-    color: rgb(var(--color-text-muted)) !important;
-    margin-top: 1rem !important;
-  }
-
-  @media (max-width: 1024px) {
-    .market-stats {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
+    .market-section {
+      background: linear-gradient(
+        135deg,
+        rgba(var(--color-primary), 0.03) 0%,
+        rgba(var(--color-accent), 0.02) 100%
+      );
     }
 
-    .stat-number {
-      font-size: 3rem;
-    }
-  }
-
-  @media (max-width: 600px) {
     .market-stats {
-      grid-template-columns: 1fr;
-      gap: 1rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
     }
 
     .stat-card {
-      padding: 1.5rem;
+      background: rgb(var(--color-surface));
+      border: 1px solid rgba(var(--color-border), 0.3);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      text-align: center;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
     }
 
     .stat-number {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: rgb(var(--color-primary));
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .stat-card p {
+      color: rgb(var(--color-text));
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .stat-source {
+      display: block;
+      font-size: 0.75rem;
+      color: rgb(var(--color-text-muted));
+      font-style: italic;
     }
 
     .market-insight {
-      padding: 1.5rem;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem;
+      background: rgba(var(--color-primary), 0.05);
+      border: 2px solid rgba(var(--color-primary), 0.2);
+      border-radius: var(--radius-lg);
     }
 
     .market-insight p {
-      font-size: 1rem;
+      font-size: 1.125rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 1rem;
+      line-height: 1.7;
     }
-  }
-</style>
+
+    .market-insight p:last-child {
+      margin-bottom: 0;
+    }
+
+    .market-source {
+      font-size: 0.875rem !important;
+      color: rgb(var(--color-text-muted)) !important;
+      margin-top: 1rem !important;
+    }
+
+    @media (max-width: 1024px) {
+      .market-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .market-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .stat-card {
+        padding: 1.5rem;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+      }
+
+      .market-insight {
+        padding: 1.5rem;
+      }
+
+      .market-insight p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </BaseLayout>
