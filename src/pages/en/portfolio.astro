@@ -21,8 +21,8 @@ const allCategories = [
 ---
 
 <BaseLayout
-  title="About — Bérangère Gallais | Conversational AI Agent Developer"
-  description="Conversational AI agent specialist, I transform your business interactions into intelligent conversations through my technical and documentation expertise."
+  title="Portfolio | Conversational AI Agents & Technical Documentation"
+  description="Examples of my projects: conversational AI agents, API documentation and intelligent solutions for businesses."
   lang="en"
 >
   <!-- Hero Section -->
@@ -42,6 +42,19 @@ const allCategories = [
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
+        <!-- Agent RAG Neolens - Featured -->
+        <div class="project-wrapper featured-project">
+          <PortfolioCard
+            title="Neolens RAG Agent"
+            client="Medical AI Assistant"
+            description="RAG agent specialized in medical image analysis. Intelligent search in Neolens documentation, source citations."
+            tags={["Python", "FastAPI", "LangGraph", "FAISS", "React"]}
+            image="/portfolio/01-home-welcome.png"
+            link="/en/portfolio/neolens-support-agent"
+            category={["ai-agent"]}
+          />
+        </div>
+
         {
           projects.map((project, index) => (
             <div
@@ -65,45 +78,46 @@ const allCategories = [
   </section>
 
   <!-- CTA Section -->
-  <section class="portfolio-cta">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Ready to build your conversational agent?</h2>
-        <p>
-          Every project is unique. I support you from needs analysis through deployment and team training.
-        </p>
-        <div class="cta-benefits">
-          <div class="benefit">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 6 9 17l-5-5"></path>
-            </svg>
-            Custom solution
-          </div>
-          <div class="benefit">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 6 9 17l-5-5"></path>
-            </svg>
-            Complete documentation included
-          </div>
-          <div class="benefit">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 6 9 17l-5-5"></path>
-            </svg>
-            10-day personalized support
-          </div>
+<section class="portfolio-cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to create your AI agent?</h2>
+      <p>
+        Let's discuss your project and find the solution that fits your needs. 
+        RAG agent, conversational, or custom - I'll guide you from A to Z.
+      </p>
+      <div class="cta-benefits">
+        <div class="benefit">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+          Custom AI Agent
         </div>
-        <div class="cta-buttons">
-          <a href="/en/contact" class="btn btn-primary btn-large">
-            <span>Discuss your project</span>
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M5 12h14m-7-7 7 7-7 7"></path>
-            </svg>
-          </a>
-          <a href="/en/services" class="btn btn-secondary">Discover my services</a>
+        <div class="benefit">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+          Code + Documentation + Tests
+        </div>
+        <div class="benefit">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+          Complete solution included
         </div>
       </div>
+      <div class="cta-buttons">
+        <a href="/en/contact" class="btn btn-primary btn-large">
+          <span>Let's discuss your project</span>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M5 12h14m-7-7 7 7-7 7"></path>
+          </svg>
+        </a>
+        <a href="/en/#offers" class="btn btn-secondary">View my offers</a>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 </BaseLayout>
 
 <style>
@@ -388,13 +402,13 @@ const allCategories = [
     padding: 4rem 0; 
   }
   .portfolio-cta {
-    padding: 4rem 0; 
+    padding: 4rem 0;
   }
 
   /* Ajustement du titre/intro */
   .portfolio-hero .hero-subtitle {
     margin-top: 0.75rem;
-    margin-bottom: 0;
+    margin-bottom: 0; 
   }
 
   /* Empêche les boutons CTA de s’étirer en largeur sur mobile */
@@ -404,7 +418,7 @@ const allCategories = [
       width: auto !important;
       max-width: 100%;
       flex: 0 0 auto; 
-      align-self: center;
+      align-self: center; 
     }
 
     .cta-buttons {

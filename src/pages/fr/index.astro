@@ -10,6 +10,7 @@ import BackToTop from "../../components/BackToTop.astro";
   description="Je construis des agents IA conversationnels avec LangGraph, FastAPI et React. Code propre, testé, documenté. Livré en 4-6 semaines."
   lang="fr"
 >
+<div id="fr-index-root">
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
@@ -1008,6 +1009,26 @@ import BackToTop from "../../components/BackToTop.astro";
   <BackToTop />
 
   <style>
+    /* ===============================
+     COULEURS PERSONNALISÉES POUR CETTE PAGE
+     =============================== */
+    :root {
+      --color-background-custom: 5, 10, 48; /* #050a30 - Bleu foncé */
+      --color-primary-custom: 255, 107, 255; /* #ff6bff - Rose */
+      --color-primary-hover-custom: 255, 137, 255; /* Rose clair pour hover */
+      --color-accent-custom: 255, 157, 255; /* Rose doux pour accents */
+    }
+
+    /* Override des variables de couleur pour cette page */
+    #fr-index-root {
+      --color-background: 5, 10, 48;
+      --color-primary: 255, 107, 255;
+      --color-primary-hover: 255, 137, 255;
+      --color-accent: 255, 157, 255;
+      --color-surface: 15, 25, 65;
+      --color-surface-variant: 25, 40, 90;
+    }
+
     /* ===============================
      HERO SECTION
      =============================== */
@@ -3160,4 +3181,5 @@ import BackToTop from "../../components/BackToTop.astro";
       }
     }
   </style>
+</div>
 </BaseLayout>
