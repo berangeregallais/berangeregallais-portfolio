@@ -478,7 +478,7 @@ import BackToTop from "../../components/BackToTop.astro";
             <strong>What you get:</strong>
             <ul>
               <li>A clear vision of feasibility</li>
-              <li>An approach recommendation (POC or direct)</li>
+              <li>An approach recommendation (validation or direct)</li>
               <li>A timeline and budget estimate</li>
             </ul>
           </div>
@@ -488,9 +488,9 @@ import BackToTop from "../../components/BackToTop.astro";
         <div class="process-card">
           <div class="process-number">2</div>
           <div class="process-icon">🧪</div>
-          <h3>POC or direct development</h3>
+          <h3>Validation or direct development</h3>
           <p>
-            <strong>Option A: POC (recommended if uncertainty)</strong><br>
+            <strong>Option A: Validation (recommended if uncertainty)</strong><br>
             I validate feasibility on your real case before committing to the full project.
           </p>
           <p>
@@ -500,7 +500,7 @@ import BackToTop from "../../components/BackToTop.astro";
           <div class="process-outcome">
             <strong>What you get:</strong>
             <ul>
-              <li>POC: Functional prototype + feasibility report</li>
+              <li>Validation: Functional prototype + feasibility report</li>
               <li>Direct: Complete agent ready to deploy</li>
             </ul>
           </div>
@@ -1798,25 +1798,9 @@ import BackToTop from "../../components/BackToTop.astro";
       margin-top: 1rem;
     }
 
-    /* POC Card - Design distinct */
-    .offer-card--poc {
-      background: rgba(var(--color-accent), 0.03);
-      border: 2px dashed rgba(var(--color-accent), 0.4);
-    }
-
-    .offer-card--poc:hover {
-      border-color: rgba(var(--color-accent), 0.6);
-      background: rgba(var(--color-accent), 0.05);
-    }
-
-    /* POC Badge */
-    .offer-badge--poc {
-      background: linear-gradient(
-        135deg,
-        rgb(var(--color-accent)),
-        rgba(var(--color-accent), 0.8)
-      );
-    }
+  /* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
 
     /* Upgrade highlight */
     .offer-upgrade {
@@ -1838,33 +1822,9 @@ import BackToTop from "../../components/BackToTop.astro";
       color: rgb(var(--color-success));
     }
 
-    /* Prix après POC */
-    .offer-after-poc {
-      font-size: 0.95rem;
-      color: rgb(var(--color-success));
-      margin-top: 0.5rem;
-      font-weight: 600;
-    }
-
-    /* ===============================
-   RESPONSIVE - POC
+  /* ===============================
+   RESPONSIVE DESIGN
    =============================== */
-
-    @media (max-width: 1400px) {
-      .offers-grid--with-poc {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .offers-grid--with-poc {
-        grid-template-columns: 1fr;
-      }
-
-      .offer-card--poc {
-        order: -1; /* POC en premier sur mobile */
-      }
-    }
 
     /* ===============================
      COMPARISON TABLE

@@ -6,7 +6,7 @@ import BackToTop from "../../components/BackToTop.astro";
 
 <BaseLayout
     title="Offres & Tarifs | Agents IA Conversationnels"
-    description="POC de validation à 6K€, puis 3 offres pour passer en production. Agent simple, avec recherche documentaire, ou multilingue. Comparatif détaillé et FAQ pricing."
+    description="Validation en 2 temps à 7K€, puis 3 offres pour passer en production. Agent simple, avec recherche documentaire, ou multilingue. Comparatif détaillé et FAQ pricing."
     lang="fr"
 >
     <!-- Hero Section -->
@@ -21,143 +21,157 @@ import BackToTop from "../../components/BackToTop.astro";
         </div>
     </section>
 
-    <!-- POC Banner -->
-    <section class="poc-section">
+    <!-- Validation en 2 temps -->
+    <section class="validation-section">
         <div class="container">
-            <div class="poc-intro">
+            <div class="validation-intro">
                 <h2>Pas sûr de ce dont vous avez besoin ?</h2>
                 <p>
-                    Pas sûr que l'IA réponde bien à votre cas ? Commençons par
-                    un <strong>POC de validation</strong> Je construis un prototype
-                    fonctionnel sur vos vraies données et vous obtenez un rapport
-                    clair : <em>ça fonctionne ou pas</em>, combien ça coûtera en
-                    production, et ma recommandation.
+                    Pas certain que l'IA réponde à votre cas ? Je propose une
+                    <strong>validation en 2 temps</strong> : d'abord un audit stratégique
+                    pour décider, puis un MVP si vous êtes convaincu. Vous ne payez
+                    que ce dont vous avez besoin.
                 </p>
             </div>
 
-            <div class="poc-banner">
-                <div class="offer-card offer-card--poc">
-                    <div class="poc-banner-content">
-                        <div class="poc-main">
-                            <div class="poc-badge">🧪 Validation</div>
-                            <div class="poc-info">
-                                <h3>POC - Validez avant d'investir</h3>
-                                <p class="poc-tagline">
-                                    Prototype fonctionnel + Rapport Go/No-Go
-                                    basé sur vos données réelles
-                                </p>
-                            </div>
-                            <div class="poc-price-block">
-                                <div class="poc-price">6 000 €</div>
-                                <p class="poc-vat">
-                                    TVA non applicable, art. 293 B du CGI
-                                </p>
-                            </div>
+            <div class="validation-steps">
+                <!-- Étape 1 : Audit stratégique -->
+                <div class="validation-step">
+                    <div class="step-badge">📊 Étape 1</div>
+                    <div class="step-content">
+                        <h3>Audit stratégique & faisabilité</h3>
+                        <div class="step-price">2 000 €</div>
+                        <p class="step-vat">
+                            TVA non applicable, art. 293 B du CGI
+                        </p>
+                        <p class="step-promise">
+                            <strong>Promesse :</strong> Vous obtenez un rapport clair
+                            qui dit si ça vaut le coup ou non.
+                        </p>
+
+                        <div class="step-deliverables">
+                            <h4>Livrables</h4>
+                            <ul>
+                                <li>
+                                    Analyse de vos documents/FAQ/base de
+                                    connaissances
+                                </li>
+                                <li>
+                                    Identification des 10-15 questions clés à
+                                    tester
+                                </li>
+                                <li>Recommandation d'architecture technique</li>
+                                <li>
+                                    <strong
+                                        >Go/No-Go argumenté avec estimation
+                                        budgétaire détaillée</strong>
+                                </li>
+                            </ul>
                         </div>
 
-                        <div class="poc-highlights">
-                            <div class="poc-highlight-item">
-                                ✓ Agent qui répond à 10-15 questions types de
-                                votre métier
-                            </div>
-                            <div class="poc-highlight-item">
-                                ✓ Tests manuels : je mesure si les réponses sont
-                                correctes
-                            </div>
-                            <div class="poc-highlight-item">
-                                ✓ Chiffrage précis du projet complet (délai +
-                                budget)
-                            </div>
-                            <div class="poc-highlight-item">
-                                ✓ Ma recommandation : Go ou No-Go
-                            </div>
-                        </div>
-
-                        <div class="poc-upgrade-banner">
-                            <span class="upgrade-icon">🎁</span>
-                            <strong>1 800 € déduits</strong> si upgrade sous 15 jours
-                        </div>
+                        <div class="step-duration">⏱️ Durée approximative : 3-5 jours</div>
+                        <p class="step-note">
+                            À ce stade, vous savez s'il faut continuer. Si vous
+                            abandonnez, vous n'avez payé que 2 000 € pour une <strong
+                                >décision éclairée</strong
+                            >.
+                        </p>
                     </div>
+                </div>
 
-                    <div class="poc-cta">
-                        <a href="/fr/contact" class="btn btn-primary"
-                            >🗓️ Réserver un appel</a
-                        >
+                <!-- Étape 2 : MVP fonctionnel -->
+                <div class="validation-step">
+                    <div class="step-badge">🛠️ Étape 2</div>
+                    <div class="step-content">
+                        <h3>MVP fonctionnel</h3>
+                        <div class="step-price">5 000 €</div>
+                        <p class="step-vat">
+                            TVA non applicable, art. 293 B du CGI
+                        </p>
+                        <p class="step-promise">
+                            <strong>Promesse :</strong> Vous obtenez un prototype
+                            qui répond aux 10-15 questions, avec tests manuels et
+                            rapport de performance.
+                        </p>
+
+                        <div class="step-deliverables">
+                            <h4>Livrables</h4>
+                            <ul>
+                                <li>
+                                    Prototype fonctionnel intégrant vos données
+                                </li>
+                                <li>Tests manuels : taux de réussite mesuré</li>
+                                <li>
+                                    Rapport final avec chiffrage prod détaillé
+                                </li>
+                                <li>Code source + documentation technique</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-duration">⏱️ Durée approximative : 2-3 semaines</div>
+                        <p class="step-note">
+                            Le MVP est <strong>optionnel</strong> : vous ne le commandez
+                            que si l'audit vous a convaincu.
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Détail du POC -->
-            <div class="poc-details-section">
-                <h3>Que contient exactement le POC ?</h3>
-
-                <div class="poc-details-grid">
-                    <div class="poc-detail-card">
-                        <div class="detail-icon">📊</div>
-                        <h4>Audit & Préparation</h4>
-                        <ul>
-                            <li>
-                                Analyse de vos documents/FAQ/base de
-                                connaissances
-                            </li>
-                            <li>
-                                Identification des 10-15 questions clés à tester
-                            </li>
-                            <li>Choix de l'architecture technique adaptée</li>
-                        </ul>
-                    </div>
-
-                    <div class="poc-detail-card">
-                        <div class="detail-icon">🛠️</div>
-                        <h4>Développement du prototype</h4>
-                        <ul>
-                            <li>Construction du prototype fonctionnel</li>
-                            <li>Intégration de vos données</li>
-                            <li>Tests basiques de fiabilité</li>
-                        </ul>
-                    </div>
-
-                    <div class="poc-detail-card">
-                        <div class="detail-icon">📋</div>
-                        <h4>Validation & Rapport</h4>
-                        <ul>
-                            <li>
-                                Tests manuels : je pose 10-15 questions à
-                                l'agent
-                            </li>
-                            <li>
-                                Mesure du taux de réussite (% de bonnes
-                                réponses)
-                            </li>
-                            <li>
-                                Rapport final avec estimation détaillée pour la
-                                prod
-                            </li>
-                            <li>Recommandation Go/No-Go argumentée</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="poc-scope-note">
-                    <strong>⚠️ Ce qui n'est PAS dans le POC :</strong>
-                    <ul>
-                        <li>
-                            Interface graphique élaborée (juste une démo
-                            fonctionnelle)
-                        </li>
-                        <li>
-                            Tests automatisés complets (tests manuels
-                            uniquement)
-                        </li>
-                        <li>Déploiement en production</li>
-                        <li>Intégrations complexes (Slack, CRM, etc.)</li>
-                    </ul>
-                    <p>
-                        <strong>Objectif du POC :</strong> Valider que l'IA répond
-                        correctement à vos questions métier et vous donner un chiffrage
-                        fiable avant d'investir dans la production.
+            <!-- Résumé total + Bonus upgrade -->
+            <div class="validation-summary">
+                <div class="summary-total">
+                    <h3>Total validation complète</h3>
+                    <div class="summary-price">7 000 €</div>
+                    <p class="summary-breakdown">
+                        Étape 1 (2 000 €) + Étape 2 (5 000 €)
                     </p>
                 </div>
+            </div>
+
+            <div class="upgrade-bonus">
+                <div class="bonus-content">
+                    <div class="bonus-text">
+                        <strong
+                            >Upgrade vers la production sous 15 jours ?</strong
+                        >
+                        <p>
+                            Je déduis <strong>2 500 €</strong> du prix de l'offre
+                            prod.
+                        </p>
+                        <p class="bonus-result">
+                            Résultat : seulement <strong>4 500 €</strong> investis
+                            dans la validation (contre 7 000 € pour l'Agent conversationnel
+                            simple).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note de scope -->
+            <div class="validation-scope-note">
+                <strong>⚠️ Ce qui n'est PAS dans cette validation :</strong>
+                <ul>
+                    <li>
+                        Interface graphique élaborée (démo fonctionnelle
+                        uniquement)
+                    </li>
+                    <li>
+                        Tests automatisés complets (tests manuels seulement)
+                    </li>
+                    <li>Déploiement en production</li>
+                    <li>Intégrations complexes (Slack, CRM, etc.)</li>
+                </ul>
+                <p>
+                    <strong>Objectif :</strong> Valider que l'IA fonctionne sur votre
+                    cas d'usage et vous donner un chiffrage fiable avant d'investir
+                    dans la production.
+                </p>
+            </div>
+
+            <div class="validation-cta">
+                <a href="/fr/contact" class="btn btn-primary"
+                    >🗓️ Réserver un appel</a
+                >
             </div>
         </div>
     </section>
@@ -176,11 +190,13 @@ import BackToTop from "../../components/BackToTop.astro";
                         <p class="offer-tagline">
                             Guide interactif sans base documentaire
                         </p>
-                        <div class="offer-price">8 000 €</div>
+                        <div class="offer-price">7 000 €</div>
                         <p class="offer-vat">
                             TVA non applicable, art. 293 B du CGI
                         </p>
-                        <p class="offer-after-poc">Ou 6 200 € après POC</p>
+                        <p class="offer-after-poc">
+                            Ou 4 500 € après validation
+                        </p>
                     </div>
                     <div class="offer-duration">
                         ⏱️ Durée approximative : 3-4 semaines
@@ -243,11 +259,13 @@ import BackToTop from "../../components/BackToTop.astro";
                             Répond automatiquement en interrogeant votre
                             documentation
                         </p>
-                        <div class="offer-price">12 000 €</div>
+                        <div class="offer-price">14 000 €</div>
                         <p class="offer-vat">
                             TVA non applicable, art. 293 B du CGI
                         </p>
-                        <p class="offer-after-poc">Ou 10 200 € après POC</p>
+                        <p class="offer-after-poc">
+                            Ou 11 500 € après validation
+                        </p>
                     </div>
                     <div class="offer-duration">
                         ⏱️ Durée approximative : 6-7 semaines
@@ -318,11 +336,13 @@ import BackToTop from "../../components/BackToTop.astro";
                         <p class="offer-tagline">
                             Pour 1 agent complexe connecté à votre écosystème
                         </p>
-                        <div class="offer-price">15 000 €</div>
+                        <div class="offer-price">19 500 €</div>
                         <p class="offer-vat">
                             TVA non applicable, art. 293 B du CGI
                         </p>
-                        <p class="offer-after-poc">Ou 13 200 € après POC</p>
+                        <p class="offer-after-poc">
+                            Ou 17 000 € après validation
+                        </p>
                     </div>
                     <div class="offer-duration">
                         ⏱️ Durée approximative : 7-9 semaines
@@ -390,9 +410,9 @@ import BackToTop from "../../components/BackToTop.astro";
                         <tbody>
                             <tr>
                                 <td class="feature-name">💰 Prix</td>
-                                <td>8 000 €</td>
-                                <td>12 000 €</td>
-                                <td>15 000 €</td>
+                                <td>7 000 €</td>
+                                <td>14 000 €</td>
+                                <td>19 500 €</td>
                             </tr>
                             <tr>
                                 <td class="feature-name"
@@ -453,20 +473,38 @@ import BackToTop from "../../components/BackToTop.astro";
                                 <td class="feature-name">Tests automatisés</td>
                                 <td>
                                     <div class="progress-container">
-                                        <div class="progress-bar" data-progress="30"></div>
-                                        <span class="progress-text">Basiques</span>
+                                        <div
+                                            class="progress-bar"
+                                            data-progress="30"
+                                        >
+                                        </div>
+                                        <span class="progress-text"
+                                            >Basiques</span
+                                        >
                                     </div>
                                 </td>
                                 <td>
                                     <div class="progress-container">
-                                        <div class="progress-bar" data-progress="80"></div>
-                                        <span class="progress-text">Complets</span>
+                                        <div
+                                            class="progress-bar"
+                                            data-progress="80"
+                                        >
+                                        </div>
+                                        <span class="progress-text"
+                                            >Complets</span
+                                        >
                                     </div>
                                 </td>
                                 <td>
                                     <div class="progress-container">
-                                        <div class="progress-bar" data-progress="100"></div>
-                                        <span class="progress-text">Complets</span>
+                                        <div
+                                            class="progress-bar"
+                                            data-progress="100"
+                                        >
+                                        </div>
+                                        <span class="progress-text"
+                                            >Complets</span
+                                        >
                                     </div>
                                 </td>
                             </tr>
@@ -474,20 +512,37 @@ import BackToTop from "../../components/BackToTop.astro";
                                 <td class="feature-name">Monitoring</td>
                                 <td>
                                     <div class="progress-container">
-                                        <div class="progress-bar" data-progress="0"></div>
-                                        <span class="progress-text">❌ Non</span>
+                                        <div
+                                            class="progress-bar"
+                                            data-progress="0"
+                                        >
+                                        </div>
+                                        <span class="progress-text">❌ Non</span
+                                        >
                                     </div>
                                 </td>
                                 <td>
                                     <div class="progress-container">
-                                        <div class="progress-bar" data-progress="70"></div>
-                                        <span class="progress-text">✅ Logs + métriques</span>
+                                        <div
+                                            class="progress-bar"
+                                            data-progress="70"
+                                        >
+                                        </div>
+                                        <span class="progress-text"
+                                            >✅ Logs + métriques</span
+                                        >
                                     </div>
                                 </td>
                                 <td>
                                     <div class="progress-container">
-                                        <div class="progress-bar" data-progress="100"></div>
-                                        <span class="progress-text">✅ Logs + métriques</span>
+                                        <div
+                                            class="progress-bar"
+                                            data-progress="100"
+                                        >
+                                        </div>
+                                        <span class="progress-text"
+                                            >✅ Logs + métriques</span
+                                        >
                                     </div>
                                 </td>
                             </tr>
@@ -845,25 +900,254 @@ import BackToTop from "../../components/BackToTop.astro";
         margin: 0 auto;
     }
 
-    /* POC Section */
-    .poc-section {
+    /* Validation Section */
+    .validation-section {
         padding: 4rem 0;
+        background: rgba(var(--color-surface-variant), 0.1);
     }
 
-    .poc-intro {
+    .validation-intro {
         text-align: center;
-        max-width: 800px;
-        margin: 0 auto 3rem;
+        margin-bottom: 3rem;
     }
 
-    .poc-intro h2 {
-        font-size: 2rem;
+    .validation-intro h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-text));
+    }
+
+    .validation-intro p {
+        font-size: 1.1rem;
+        color: rgb(var(--color-text-muted));
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .validation-steps {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .validation-step {
+        background: rgb(var(--color-surface));
+        border: 1px solid rgba(var(--color-border), 0.3);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        position: relative;
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .validation-step:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(var(--color-primary), 0.1);
+    }
+
+    .step-badge {
+        display: inline-block;
+        background: rgba(var(--color-primary), 0.1);
+        color: rgb(var(--color-primary));
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-md);
+        font-size: 0.9rem;
+        font-weight: 600;
         margin-bottom: 1rem;
     }
 
-    .poc-intro p {
-        font-size: 1.125rem;
+    .step-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-text));
+    }
+
+    .step-price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: rgb(var(--color-primary));
+        margin-bottom: 0.5rem;
+    }
+
+    .step-vat {
+        font-size: 0.75rem;
         color: rgb(var(--color-text-muted));
+        font-style: italic;
+        margin-bottom: 1rem;
+    }
+
+    .step-promise {
+        background: rgba(var(--color-accent), 0.1);
+        padding: 1rem;
+        border-radius: var(--radius-md);
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+        color: rgb(var(--color-text));
+    }
+
+    .step-deliverables h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+        color: rgb(var(--color-text));
+    }
+
+    .step-deliverables ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .step-deliverables li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        color: rgb(var(--color-text-muted));
+    }
+
+    .step-deliverables li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: rgb(var(--color-primary));
+        font-weight: 600;
+    }
+
+    .step-duration {
+        background: rgba(var(--color-primary), 0.05);
+        padding: 0.75rem 1rem;
+        border-radius: var(--radius-md);
+        font-size: 0.9rem;
+        color: rgb(var(--color-primary));
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .step-note {
+        font-size: 0.9rem;
+        color: rgb(var(--color-text-muted));
+        font-style: italic;
+    }
+
+    .upgrade-bonus {
+        background: linear-gradient(
+            135deg,
+            rgba(var(--color-primary), 0.1),
+            rgba(var(--color-accent), 0.05)
+        );
+        border: 2px solid rgba(var(--color-primary), 0.2);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .bonus-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .bonus-text {
+        font-size: 1.1rem;
+        color: rgb(var(--color-text));
+    }
+
+    .bonus-calculation {
+        font-size: 1rem;
+        color: rgb(var(--color-text-muted));
+    }
+
+    .validation-cta {
+        text-align: center;
+    }
+
+    /* Validation Summary */
+    .validation-summary {
+        background: linear-gradient(135deg, 
+            rgba(var(--color-primary), 0.05), 
+            rgba(var(--color-accent), 0.03)
+        );
+        border: 1px solid rgba(var(--color-primary), 0.2);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .summary-total h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-text));
+    }
+
+    .summary-price {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: rgb(var(--color-primary));
+        margin-bottom: 0.5rem;
+    }
+
+    .summary-breakdown {
+        font-size: 1rem;
+        color: rgb(var(--color-text-muted));
+    }
+
+    /* Validation Scope Note */
+    .validation-scope-note {
+        background: rgba(var(--color-warning), 0.05);
+        border: 1px solid rgba(var(--color-warning), 0.2);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .validation-scope-note strong {
+        color: rgb(var(--color-text));
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .validation-scope-note ul {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+    .validation-scope-note li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        color: rgb(var(--color-text-muted));
+    }
+
+    .validation-scope-note li::before {
+        content: "⚠️";
+        position: absolute;
+        left: 0;
+    }
+
+    .validation-scope-note p {
+        margin: 1.5rem 0 0 0;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(var(--color-border), 0.3);
+        color: rgb(var(--color-text));
+        line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .validation-steps {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .validation-step {
+            padding: 1.5rem;
+        }
     }
 
     /* Offers Section */
@@ -879,10 +1163,6 @@ import BackToTop from "../../components/BackToTop.astro";
     }
 
     /* Copy all the offer card styles from index.astro */
-    .poc-banner {
-        max-width: 900px;
-        margin: 0 auto 4rem;
-    }
 
     .offer-card {
         background: rgb(var(--color-surface));
@@ -892,8 +1172,15 @@ import BackToTop from "../../components/BackToTop.astro";
         transition:
             transform 0.2s ease,
             box-shadow 0.2s ease;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-rows: auto auto auto minmax(120px, auto) minmax(60px, auto) minmax(60px, auto) auto;
+        gap: 1.5rem;
+        height: 100%;
+    }
+
+    /* Troisième carte sans section "Projet similaire" */
+    .offer-card:last-child {
+        grid-template-rows: auto auto auto minmax(120px, auto) minmax(60px, auto) auto;
     }
 
     .offer-card:hover {
@@ -901,102 +1188,7 @@ import BackToTop from "../../components/BackToTop.astro";
         box-shadow: var(--shadow-xl);
     }
 
-    .offer-card--poc {
-        border: 2px solid rgb(var(--color-primary));
-        background: linear-gradient(
-            135deg,
-            rgba(var(--color-primary), 0.03),
-            rgba(var(--color-accent), 0.03)
-        );
-    }
-
-    .poc-banner-content {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .poc-main {
-        display: flex;
-        gap: 1rem;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-
-    .poc-badge {
-        background: linear-gradient(
-            135deg,
-            rgb(var(--color-primary)),
-            rgb(var(--color-primary-hover))
-        );
-        color: rgb(var(--color-text-button));
-        padding: 0.5rem 1rem;
-        border-radius: var(--radius-md);
-        font-size: 0.875rem;
-        font-weight: 600;
-        white-space: nowrap;
-    }
-
-    .poc-info {
-        flex: 1;
-        min-width: 250px;
-    }
-
-    .poc-info h3 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .poc-tagline {
-        color: rgb(var(--color-text-muted));
-        font-size: 0.95rem;
-    }
-
-    .poc-price-block {
-        text-align: right;
-    }
-
-    .poc-price {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: rgb(var(--color-primary));
-    }
-
-    .poc-vat {
-        font-size: 0.75rem;
-        color: rgb(var(--color-text-muted));
-        font-style: italic;
-    }
-
-    .poc-highlights {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-    }
-
-    .poc-highlight-item {
-        font-size: 0.95rem;
-        color: rgb(var(--color-text));
-    }
-
-    .poc-upgrade-banner {
-        background: rgba(var(--color-accent), 0.1);
-        padding: 1rem;
-        border-radius: var(--radius-md);
-        text-align: center;
-        border: 1px solid rgba(var(--color-accent), 0.3);
-    }
-
-    .upgrade-icon {
-        font-size: 1.25rem;
-        margin-right: 0.5rem;
-    }
-
-    .poc-cta {
-        display: flex;
-        justify-content: center;
-        margin-top: 1rem;
-    }
+    /* Validation section styles */
 
     /* Offers Grid */
     .offers-grid-hero {
@@ -1034,7 +1226,6 @@ import BackToTop from "../../components/BackToTop.astro";
     .offer-duration {
         color: rgb(var(--color-text-muted));
         font-size: 0.9rem;
-        margin-bottom: 1.5rem;
     }
 
     .offer-value-prop {
@@ -1046,7 +1237,6 @@ import BackToTop from "../../components/BackToTop.astro";
         padding: 1rem;
         border-radius: var(--radius-md);
         border-left: 3px solid rgb(var(--color-accent));
-        margin-bottom: 1.5rem;
     }
 
     .offer-value-prop p {
@@ -1100,12 +1290,10 @@ import BackToTop from "../../components/BackToTop.astro";
     }
 
     .offer-use-cases {
-        margin: 1rem 0;
         font-size: 0.9rem;
     }
 
     .offer-demo-ref {
-        margin: 1rem 0;
         font-size: 0.9rem;
     }
 
@@ -1118,7 +1306,7 @@ import BackToTop from "../../components/BackToTop.astro";
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
-        margin-top: 1.5rem;
+        margin-top: auto;
     }
 
     /* Comparison Table */
