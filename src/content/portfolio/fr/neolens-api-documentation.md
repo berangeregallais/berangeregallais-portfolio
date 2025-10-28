@@ -18,7 +18,6 @@ technologies: ["Docusaurus", "Markdown/MDX", "TypeScript", "Netlify", "GitHub Pa
 results: "Onboarding accéléré grâce à une structure claire, positionnement premium par la rigueur documentaire, et une base réutilisable pour des projets réels."
 image: "/portfolio/neolens-api-docs.png"
 demoUrl: "https://neolens-api-docs.netlify.app"
-githubUrl: "https://github.com/berangeregallais/neolens"
 category: ["api", "imagerie-medicale", "ia"]
 language: "fr"
 ---

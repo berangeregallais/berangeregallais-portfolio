@@ -16,7 +16,7 @@ technologies: ["React", "TypeScript", "Gemini AI", "Netlify Functions", "Tailwin
 results: "Démonstration fonctionnelle de l'approche conversationnelle pour documentation technique, avec réponses instantanées et contextuelles."
 image: "/portfolio/visionary-ai-agent.png"
 demoUrl: "https://visionary-ai-agent.netlify.app/"
-githubUrl: "https://github.com/berangeregallais/visionary-ai-agent"
+githubUrl: "https://github.com/berangeregallais/visionary-ai-docs-assistant"
 category: ["ai-agent", "conversational-ai"]
 language: "fr"
 featured: true

@@ -16,7 +16,6 @@ technologies: ["MkDocs", "Markdown", "GitHub Pages", "YAML", "Material for MkDoc
 results: "Mise en ligne rapide avec une structure minimaliste et une base saine pour itérer facilement."
 image: "/portfolio/chatbot-api-docs.png"
 demoUrl: "https://berangeregallais.github.io/chatbot-api-documentation/"
-githubUrl: "https://github.com/berangeregallais/chatbot-api-documentation"
 category: ["doc-site", "mkdocs"]
 language: "fr"
 ---

@@ -16,7 +16,6 @@ technologies: ["Docusaurus", "SDK iOS/Android (exemples)", "CI/CD", "Markdown", 
 results: "Réduction des erreurs d’intégration et meilleure adoption par les équipes mobiles grâce à des guides ciblés."
 image: "/portfolio/visionary-ai-docs.png"
 demoUrl: "https://berangeregallais.github.io/visionary-ai/introduction"
-githubUrl: "https://github.com/berangeregallais/visionary-ai"
 category: ["api", "sdk", "mobile"]
 language: "fr"
 ---

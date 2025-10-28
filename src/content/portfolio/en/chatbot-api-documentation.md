@@ -19,7 +19,6 @@ technologies: ["GitHub Pages", "Markdown", "JavaScript", "API Documentation", "I
 results: "Modern documentation portal that serves as both technical reference and developer education platform, hosted on GitHub Pages for easy maintenance and updates"
 image: "/portfolio/chatbot-api-docs.png"
 demoUrl: "https://berangeregallais.github.io/chatbot-api-documentation/"
-githubUrl: "https://github.com/berangeregallais/chatbot-api-documentation"
 category: ["api-docs", "ai-platform"]
 language: "en"
 ---

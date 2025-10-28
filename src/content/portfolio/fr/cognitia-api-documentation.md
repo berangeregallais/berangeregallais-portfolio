@@ -17,7 +17,6 @@ technologies: ["GitBook", "OpenAPI", "Markdown", "Git", "Custom CSS"]
 results: "Lecture aisée et moderne, expérience accessible en dark/light mode et support convaincant pour présenter l’API à des prospects."
 image: "/portfolio/cognitia-api-docs.png"
 demoUrl: "https://cognitia-api-documentation.gitbook.io/bgallais"
-githubUrl: "https://github.com/berangeregallais/cognitia-api"
 category: ["api", "nlp", "gitbook"]
 language: "fr"
 ---

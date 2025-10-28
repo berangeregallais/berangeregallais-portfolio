@@ -19,7 +19,6 @@ technologies: ["GitHub Pages", "AI Act Compliance", "Model Documentation", "Risk
 results: "Comprehensive documentation platform that serves as both technical reference and compliance framework, ensuring responsible AI development while maintaining developer accessibility"
 image: "/portfolio/visionary-ai-docs.png"
 demoUrl: "https://berangeregallais.github.io/visionary-ai/introduction"
-githubUrl: "https://github.com/berangeregallais/visionary-ai"
 category: ["ai-compliance", "regulatory", "responsible-ai"]
 language: "en"
 ---
