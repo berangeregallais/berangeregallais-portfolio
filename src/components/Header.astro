@@ -11,11 +11,13 @@ const navItems = {
   en: [
     { label: "Services", href: "/en/services" },
     { label: "Portfolio", href: "/en/portfolio" },
+    { label: "Offers", href: "/en/offers" },
     { label: "About", href: "/en/about" },
   ],
   fr: [
     { label: "Services", href: "/fr/services" },
     { label: "Portfolio", href: "/fr/portfolio" },
+    { label: "Offres", href: "/fr/offres" },
     { label: "À propos", href: "/fr/about" },
   ],
 };
@@ -34,7 +36,7 @@ const shouldHideLangSwitch = hideLangSwitch || false;
     <div class="header-content">
       <!-- Logo -->
       <a href={`/${lang}/`} class="logo">
-        <img src="/logo-bleu.png" alt="blue logo 'BG'" class="logo-image" />
+        <img src="/logo-favicon.png" alt="logo 'BG'" class="logo-image" />
         <span class="logo-text">Bérangère Gallais</span>
       </a>
 
@@ -520,7 +522,24 @@ const shouldHideLangSwitch = hideLangSwitch || false;
         const currentLang = currentPath.startsWith("/fr/") ? "fr" : "en";
         const newLang = currentLang === "en" ? "fr" : "en";
 
-        const newPath = currentPath.replace(/^\/(en|fr)\//, `/${newLang}/`);
+        // Mapping des pages spéciales
+        const pageMapping = {
+          "offers": "offres",
+          "offres": "offers"
+        };
+
+        let newPath = currentPath.replace(/^\/(en|fr)\//, `/${newLang}/`);
+        
+        // Appliquer le mapping si nécessaire
+        const pathSegments = newPath.split('/');
+        if (pathSegments.length >= 2) {
+          const pageName = pathSegments[2];
+          if (pageName in pageMapping) {
+            pathSegments[2] = pageMapping[pageName as keyof typeof pageMapping];
+            newPath = pathSegments.join('/');
+          }
+        }
+
         window.location.href = newPath;
       });
     });

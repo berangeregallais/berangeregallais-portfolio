@@ -33,7 +33,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
               stroke="currentColor"
               stroke-width="2"
             >
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
           </div>
@@ -79,7 +81,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
               stroke="currentColor"
               stroke-width="2"
             >
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              ></path>
               <rect x="2" y="9" width="4" height="12"></rect>
               <circle cx="4" cy="4" r="2"></circle>
             </svg>
@@ -128,27 +132,29 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         <div class="faq-item">
           <h4>Comment se déroule un appel découverte ?</h4>
           <p>
-            On discute de votre projet pendant 30 minutes. Je pose des questions sur vos besoins, 
-            votre contexte métier, et je vous donne mon avis d'expert sur la faisabilité technique.
+            On discute de votre projet. Je pose des questions sur vos besoins,
+            votre contexte métier, et je vous donne mon avis sur la faisabilité
+            technique.
           </p>
         </div>
         <div class="faq-item">
           <h4>Quels sont vos délais de livraison ?</h4>
           <p>
-            De 4 à 9 semaines selon la complexité de l'offre choisie. Le POC (2-3 semaines) 
-            permet de valider l'approche avant développement complet.
+            De 4 à 9 semaines environ selon la complexité de l'offre choisie. Le
+            POC permet de valider l'approche avant développement complet.
           </p>
         </div>
         <div class="faq-item">
           <h4>Quel est le meilleur moment pour démarrer ?</h4>
           <p>
-            Dès que vous avez identifié un cas d'usage précis à automatiser. Commencez par un POC 
-            si vous voulez valider la faisabilité avec un budget réduit.
+            Dès que vous avez identifié un cas d'usage précis à automatiser.
+            Commencez par un POC si vous voulez valider la faisabilité avec un
+            budget réduit.
           </p>
         </div>
       </div>
       <div class="cta-buttons">
-        <a href="/#offres" class="btn btn-primary btn-large">
+        <a href="/fr/offres" class="btn btn-primary btn-large">
           Voir les offres et tarifs
         </a>
         <a href="/fr/services" class="btn btn-secondary btn-large">
@@ -160,23 +166,28 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </BaseLayout>
 
 <!-- Google Calendar Appointment Scheduling -->
-<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<link
+  href="https://calendar.google.com/calendar/scheduling-button-script.css"
+  rel="stylesheet"
+/>
+<script
+  src="https://calendar.google.com/calendar/scheduling-button-script.js"
+  async></script>
 <script>
-(function() {
-  window.addEventListener('load', function() {
-    const target = document.getElementById('google-calendar-button');
-    const googleCalendar = (window as any)['calendar'];
-    if (target && googleCalendar && googleCalendar.schedulingButton) {
-      googleCalendar.schedulingButton.load({
-        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3BhtGuapsUUSewuJZ3Vpo5ay4B8cZ4Nzy1ZjOBIsNJMr1RTW2zKE_w0fuLFYgfA_Hke7AJjoAZ?gv=true',
-        color: '#e6b7d4',
-        label: 'Réserver un appel (30 min)',
-        target,
-      });
-    }
-  });
-})();
+  (function () {
+    window.addEventListener("load", function () {
+      const target = document.getElementById("google-calendar-button");
+      const googleCalendar = (window as any)["calendar"];
+      if (target && googleCalendar && googleCalendar.schedulingButton) {
+        googleCalendar.schedulingButton.load({
+          url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3BhtGuapsUUSewuJZ3Vpo5ay4B8cZ4Nzy1ZjOBIsNJMr1RTW2zKE_w0fuLFYgfA_Hke7AJjoAZ?gv=true",
+          color: "#e6b7d4",
+          label: "Réserver un appel (30 min)",
+          target,
+        });
+      }
+    });
+  })();
 </script>
 
 <style>

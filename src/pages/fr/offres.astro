@@ -1,0 +1,1599 @@
+---
+// src/pages/fr/offres.astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BackToTop from "../../components/BackToTop.astro";
+---
+
+<BaseLayout
+    title="Offres & Tarifs | Agents IA Conversationnels"
+    description="POC de validation à 6K€, puis 3 offres pour passer en production. Agent simple, avec recherche documentaire, ou multilingue. Comparatif détaillé et FAQ pricing."
+    lang="fr"
+>
+    <!-- Hero Section -->
+    <section class="pricing-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Offres & Tarifs</h1>
+                <p class="hero-subtitle">
+                    Choisissez l'offre qui correspond à votre besoin
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- POC Banner -->
+    <section class="poc-section">
+        <div class="container">
+            <div class="poc-intro">
+                <h2>Pas sûr de ce dont vous avez besoin ?</h2>
+                <p>
+                    Pas sûr que l'IA réponde bien à votre cas ? Commençons par
+                    un <strong>POC de validation</strong> Je construis un prototype
+                    fonctionnel sur vos vraies données et vous obtenez un rapport
+                    clair : <em>ça fonctionne ou pas</em>, combien ça coûtera en
+                    production, et ma recommandation.
+                </p>
+            </div>
+
+            <div class="poc-banner">
+                <div class="offer-card offer-card--poc">
+                    <div class="poc-banner-content">
+                        <div class="poc-main">
+                            <div class="poc-badge">🧪 Validation</div>
+                            <div class="poc-info">
+                                <h3>POC - Validez avant d'investir</h3>
+                                <p class="poc-tagline">
+                                    Prototype fonctionnel + Rapport Go/No-Go
+                                    basé sur vos données réelles
+                                </p>
+                            </div>
+                            <div class="poc-price-block">
+                                <div class="poc-price">6 000 €</div>
+                                <p class="poc-vat">
+                                    TVA non applicable, art. 293 B du CGI
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="poc-highlights">
+                            <div class="poc-highlight-item">
+                                ✓ Agent qui répond à 10-15 questions types de
+                                votre métier
+                            </div>
+                            <div class="poc-highlight-item">
+                                ✓ Tests manuels : je mesure si les réponses sont
+                                correctes
+                            </div>
+                            <div class="poc-highlight-item">
+                                ✓ Chiffrage précis du projet complet (délai +
+                                budget)
+                            </div>
+                            <div class="poc-highlight-item">
+                                ✓ Ma recommandation : Go ou No-Go
+                            </div>
+                        </div>
+
+                        <div class="poc-upgrade-banner">
+                            <span class="upgrade-icon">🎁</span>
+                            <strong>1 800 € déduits</strong> si upgrade sous 15 jours
+                        </div>
+                    </div>
+
+                    <div class="poc-cta">
+                        <a href="/fr/contact" class="btn btn-primary"
+                            >🗓️ Réserver un appel</a
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Détail du POC -->
+            <div class="poc-details-section">
+                <h3>Que contient exactement le POC ?</h3>
+
+                <div class="poc-details-grid">
+                    <div class="poc-detail-card">
+                        <div class="detail-icon">📊</div>
+                        <h4>Audit & Préparation</h4>
+                        <ul>
+                            <li>
+                                Analyse de vos documents/FAQ/base de
+                                connaissances
+                            </li>
+                            <li>
+                                Identification des 10-15 questions clés à tester
+                            </li>
+                            <li>Choix de l'architecture technique adaptée</li>
+                        </ul>
+                    </div>
+
+                    <div class="poc-detail-card">
+                        <div class="detail-icon">🛠️</div>
+                        <h4>Développement du prototype</h4>
+                        <ul>
+                            <li>Construction du prototype fonctionnel</li>
+                            <li>Intégration de vos données</li>
+                            <li>Tests basiques de fiabilité</li>
+                        </ul>
+                    </div>
+
+                    <div class="poc-detail-card">
+                        <div class="detail-icon">📋</div>
+                        <h4>Validation & Rapport</h4>
+                        <ul>
+                            <li>
+                                Tests manuels : je pose 10-15 questions à
+                                l'agent
+                            </li>
+                            <li>
+                                Mesure du taux de réussite (% de bonnes
+                                réponses)
+                            </li>
+                            <li>
+                                Rapport final avec estimation détaillée pour la
+                                prod
+                            </li>
+                            <li>Recommandation Go/No-Go argumentée</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="poc-scope-note">
+                    <strong>⚠️ Ce qui n'est PAS dans le POC :</strong>
+                    <ul>
+                        <li>
+                            Interface graphique élaborée (juste une démo
+                            fonctionnelle)
+                        </li>
+                        <li>
+                            Tests automatisés complets (tests manuels
+                            uniquement)
+                        </li>
+                        <li>Déploiement en production</li>
+                        <li>Intégrations complexes (Slack, CRM, etc.)</li>
+                    </ul>
+                    <p>
+                        <strong>Objectif du POC :</strong> Valider que l'IA répond
+                        correctement à vos questions métier et vous donner un chiffrage
+                        fiable avant d'investir dans la production.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Offers Section -->
+    <section class="offers-section">
+        <div class="container">
+            <h2 class="section-title">3 offres pour passer en production</h2>
+
+            <!-- Main Offers Grid (3 colonnes) -->
+            <div class="offers-grid-hero">
+                <!-- Agent conversationnel simple -->
+                <div class="offer-card">
+                    <div class="offer-header">
+                        <h3>Agent conversationnel simple</h3>
+                        <p class="offer-tagline">
+                            Guide interactif sans base documentaire
+                        </p>
+                        <div class="offer-price">8 000 €</div>
+                        <p class="offer-vat">
+                            TVA non applicable, art. 293 B du CGI
+                        </p>
+                        <p class="offer-after-poc">Ou 6 200 € après POC</p>
+                    </div>
+                    <div class="offer-duration">
+                        ⏱️ Durée approximative : 3-4 semaines
+                    </div>
+                    <div class="offer-value-prop">
+                        <p>
+                            <strong>Pourquoi cette offre ?</strong> Pour créer rapidement
+                            un assistant conversationnel guidé, sans base documentaire.
+                            Idéal pour onboarding, quiz produit, ou FAQ simple.
+                        </p>
+                    </div>
+                    <div class="offer-includes">
+                        <h4>Livrables</h4>
+                        <ul>
+                            <li>Agent conversationnel fonctionnel</li>
+                            <li>Interface intégrée à votre site</li>
+                            <li>Tests de fiabilité</li>
+                            <li>Documentation utilisateur</li>
+                            <li>2 semaines de support</li>
+                        </ul>
+                        <details class="tech-details">
+                            <summary>Détails techniques</summary>
+                            <ul>
+                                <li>Frontend React + TypeScript</li>
+                                <li>Backend serverless (Netlify/Vercel)</li>
+                                <li>Intégration LLM (OpenAI/Gemini)</li>
+                                <li>Tests basiques</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="offer-use-cases">
+                        <p>
+                            <strong>Exemples :</strong> Assistant onboarding, configurateur
+                            produit, FAQ pré-définie
+                        </p>
+                    </div>
+                    <div class="offer-demo-ref">
+                        <p>
+                            💡 <strong>Projet similaire :</strong>
+                            <a href="/fr/portfolio" class="demo-link"
+                                >Visionary AI Agent</a
+                            >
+                        </p>
+                    </div>
+                    <div class="offer-cta">
+                        <a href="/fr/contact" class="btn btn-primary"
+                            >🗓️ Réserver un appel</a
+                        >
+                        <a href="/fr/contact" class="btn btn-secondary"
+                            >✉️ Être recontacté</a
+                        >
+                    </div>
+                </div>
+
+                <!-- Agent avec recherche documentaire -->
+                <div class="offer-card">
+                    <div class="offer-header">
+                        <h3>Agent avec recherche documentaire</h3>
+                        <p class="offer-tagline">
+                            Répond automatiquement en interrogeant votre
+                            documentation
+                        </p>
+                        <div class="offer-price">12 000 €</div>
+                        <p class="offer-vat">
+                            TVA non applicable, art. 293 B du CGI
+                        </p>
+                        <p class="offer-after-poc">Ou 10 200 € après POC</p>
+                    </div>
+                    <div class="offer-duration">
+                        ⏱️ Durée approximative : 6-7 semaines
+                    </div>
+                    <div class="offer-value-prop">
+                        <p>
+                            <strong>Pourquoi cette offre ?</strong> Pour interroger
+                            votre documentation (API, produit, technique) avec un
+                            agent qui comprend le contexte et donne des réponses
+                            précises.
+                        </p>
+                    </div>
+                    <div class="offer-includes">
+                        <h4>Livrables</h4>
+                        <ul>
+                            <li>
+                                Agent intelligent connecté à votre documentation
+                            </li>
+                            <li>Recherche sémantique dans vos docs/FAQ</li>
+                            <li>Interface conversationnelle intégrée</li>
+                            <li>
+                                Tests de fiabilité et monitoring des
+                                performances
+                            </li>
+                            <li>Documentation technique pour votre équipe</li>
+                            <li>3 semaines de support</li>
+                        </ul>
+                        <details class="tech-details">
+                            <summary>Détails techniques</summary>
+                            <ul>
+                                <li>Architecture RAG avec LangGraph</li>
+                                <li>Backend Python + FastAPI</li>
+                                <li>Frontend Next.js 14</li>
+                                <li>Base vectorielle (FAISS ou Pinecone)</li>
+                                <li>Tests automatisés</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="offer-use-cases">
+                        <p>
+                            <strong>Exemples :</strong> Support documentation API,
+                            FAQ intelligente, troubleshooting
+                        </p>
+                    </div>
+                    <div class="offer-demo-ref">
+                        <p>
+                            💡 <strong>Projet similaire :</strong>
+                            <a
+                                href="/fr/portfolio/neolens-support-agent"
+                                class="demo-link">Neolens Support Agent</a
+                            >
+                        </p>
+                    </div>
+                    <div class="offer-cta">
+                        <a href="/fr/contact" class="btn btn-primary"
+                            >🗓️ Réserver un appel</a
+                        >
+                        <a href="/fr/contact" class="btn btn-secondary"
+                            >✉️ Être recontacté</a
+                        >
+                    </div>
+                </div>
+
+                <!-- Agent multilingue + intégrations -->
+                <div class="offer-card">
+                    <div class="offer-header">
+                        <h3>Agent multilingue + intégrations</h3>
+                        <p class="offer-tagline">
+                            Pour 1 agent complexe connecté à votre écosystème
+                        </p>
+                        <div class="offer-price">15 000 €</div>
+                        <p class="offer-vat">
+                            TVA non applicable, art. 293 B du CGI
+                        </p>
+                        <p class="offer-after-poc">Ou 13 200 € après POC</p>
+                    </div>
+                    <div class="offer-duration">
+                        ⏱️ Durée approximative : 7-9 semaines
+                    </div>
+                    <div class="offer-value-prop">
+                        <p>
+                            <strong>Pourquoi cette offre ?</strong> Pour un <strong
+                                >1 agent complexe</strong
+                            > qui s'intègre à votre écosystème (Slack, CRM, API tierces)
+                            et qui supporte plusieurs langues. Inclut CI/CD et formation
+                            pour votre équipe.
+                        </p>
+                    </div>
+                    <div class="offer-includes">
+                        <h4>Livrables</h4>
+                        <ul>
+                            <li>
+                                Tout ce qui est dans "Agent avec recherche
+                                documentaire"
+                            </li>
+                            <li>
+                                Multi-sources (docs + CRM + base de
+                                connaissances)
+                            </li>
+                            <li>
+                                2-3 intégrations tierces (Slack, Zendesk, API
+                                interne...)
+                            </li>
+                            <li>Multilingue (2-3 langues)</li>
+                            <li>CI/CD complet</li>
+                            <li>Formation équipe</li>
+                            <li>1 mois de support</li>
+                        </ul>
+                    </div>
+                    <div class="offer-use-cases">
+                        <p>
+                            <strong>Exemples :</strong> Support multilingue, onboarding
+                            complexe, assistant compliance
+                        </p>
+                    </div>
+                    <div class="offer-cta">
+                        <a href="/fr/contact" class="btn btn-primary"
+                            >🗓️ Réserver un appel</a
+                        >
+                        <a href="/fr/contact" class="btn btn-secondary"
+                            >✉️ Être recontacté</a
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tableau Comparatif -->
+            <div class="comparison-section">
+                <h3>📊 Comparaison détaillée des offres</h3>
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th class="feature-column">Fonctionnalité</th>
+                                <th>Agent conversationnel simple</th>
+                                <th>Agent avec recherche documentaire</th>
+                                <th>Agent multilingue + intégrations</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-name">💰 Prix</td>
+                                <td>8 000 €</td>
+                                <td>12 000 €</td>
+                                <td>15 000 €</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name"
+                                    >⏱️ Délai approximatif</td
+                                >
+                                <td>3-4 semaines</td>
+                                <td>6-7 semaines</td>
+                                <td>7-9 semaines</td>
+                            </tr>
+                            <tr class="category-row">
+                                <td colspan="4"
+                                    ><strong>🤖 Type d'agent</strong></td
+                                >
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Architecture</td>
+                                <td>Conversationnel simple</td>
+                                <td>RAG + LangGraph</td>
+                                <td>RAG avancé + reranking</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Base documentaire</td>
+                                <td>❌ Non</td>
+                                <td>✅ Oui (FAISS/Pinecone)</td>
+                                <td>✅ Multi-sources</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name"
+                                    >Recherche sémantique</td
+                                >
+                                <td>❌ Non</td>
+                                <td>✅ Oui</td>
+                                <td>✅ + Reranking</td>
+                            </tr>
+                            <tr class="category-row">
+                                <td colspan="4"
+                                    ><strong>💻 Stack technique</strong></td
+                                >
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Backend</td>
+                                <td>Serverless (Netlify/Vercel)</td>
+                                <td>Python + FastAPI</td>
+                                <td>Python + FastAPI</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Frontend</td>
+                                <td>React + TypeScript</td>
+                                <td>Next.js 14</td>
+                                <td>Next.js 14</td>
+                            </tr>
+                            <tr class="category-row">
+                                <td colspan="4"
+                                    ><strong>🧪 Qualité & Tests</strong></td
+                                >
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Tests automatisés</td>
+                                <td>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" data-progress="30"></div>
+                                        <span class="progress-text">Basiques</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" data-progress="80"></div>
+                                        <span class="progress-text">Complets</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" data-progress="100"></div>
+                                        <span class="progress-text">Complets</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Monitoring</td>
+                                <td>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" data-progress="0"></div>
+                                        <span class="progress-text">❌ Non</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" data-progress="70"></div>
+                                        <span class="progress-text">✅ Logs + métriques</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" data-progress="100"></div>
+                                        <span class="progress-text">✅ Logs + métriques</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">CI/CD</td>
+                                <td>❌ Non</td>
+                                <td>❌ Non</td>
+                                <td>✅ Déploiement automatisé</td>
+                            </tr>
+                            <tr class="category-row">
+                                <td colspan="4"
+                                    ><strong>🔧 Fonctionnalités avancées</strong
+                                    ></td
+                                >
+                            </tr>
+                            <tr>
+                                <td class="feature-name"
+                                    >Intégrations tierces</td
+                                >
+                                <td>❌ Non</td>
+                                <td>❌ Non</td>
+                                <td>✅ Oui</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Multilingue</td>
+                                <td>❌ Non</td>
+                                <td>❌ Non</td>
+                                <td>✅ Oui</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Formation équipe</td>
+                                <td>❌ Non</td>
+                                <td>❌ Non</td>
+                                <td>✅ Oui</td>
+                            </tr>
+                            <tr class="category-row">
+                                <td colspan="4"
+                                    ><strong>📚 Documentation & Support</strong
+                                    ></td
+                                >
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Doc utilisateur</td>
+                                <td>✅ Oui</td>
+                                <td>✅ Oui</td>
+                                <td>✅ Oui</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Doc technique</td>
+                                <td>❌ Non</td>
+                                <td>✅ Oui</td>
+                                <td>✅ Oui</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name"
+                                    >Support post-lancement</td
+                                >
+                                <td>2 semaines</td>
+                                <td>3 semaines</td>
+                                <td>1 mois</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="comparison-note">
+                    💡 <strong>Besoin d'aide pour choisir ?</strong> Réservez un
+                    appel découverte gratuit (30 min) pour discuter de votre projet.
+                </p>
+            </div>
+
+            <!-- Enterprise Accordion -->
+            <details class="enterprise-accordion">
+                <summary class="enterprise-summary">
+                    <span class="enterprise-icon">🏢</span>
+                    <div class="enterprise-title">
+                        <h3>Besoin d'une solution Enterprise ?</h3>
+                        <p>
+                            Architecture multi-agents, compliance stricte, SLA
+                            garanti
+                        </p>
+                    </div>
+                    <span class="enterprise-price">À partir de 30 000 €</span>
+                    <span class="accordion-arrow">▼</span>
+                </summary>
+                <div class="enterprise-content">
+                    <div class="offer-card offer-card-enterprise">
+                        <div class="offer-header">
+                            <h3>Plateforme multi-agents sur mesure</h3>
+                            <p class="offer-tagline">
+                                Pour plusieurs agents qui collaborent
+                            </p>
+                            <div class="offer-price">30 000 €</div>
+                            <p class="offer-vat">
+                                TVA non applicable, art. 293 B du CGI
+                            </p>
+                        </div>
+                        <div class="offer-duration">
+                            ⏱️ Durée approximative : 8-10 semaines
+                        </div>
+                        <div class="offer-value-prop">
+                            <p>
+                                <strong>Pourquoi cette offre ?</strong> Pour <strong
+                                    >plusieurs agents qui collaborent</strong
+                                > dans votre organisation. Exemple : agent de triage
+                                + agent spécialisé support + agent escalade.
+                            </p>
+                        </div>
+                        <div class="offer-includes">
+                            <h4>Livrables</h4>
+                            <ul>
+                                <li>
+                                    Tout ce qui est dans "Agent multilingue +
+                                    intégrations"
+                                </li>
+                                <li>
+                                    Orchestration multi-agents (routage
+                                    intelligent des demandes)
+                                </li>
+                                <li>Fine-tuning modèle sur vos données</li>
+                                <li>
+                                    Compliance et sécurité renforcée (RGPD,
+                                    HIPAA)
+                                </li>
+                                <li>
+                                    Monitoring avancé (LangSmith ou équivalent)
+                                </li>
+                                <li>Accompagnement stratégique</li>
+                                <li>
+                                    Support pendant 3 mois + suivi hebdomadaire
+                                    post-lancement
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="offer-use-cases">
+                            <p>
+                                <strong>Exemples :</strong> Plateforme multi-agents
+                                (Support + RH + IT), orchestration complexe, compliance
+                                stricte
+                            </p>
+                        </div>
+                        <div class="offer-value-prop">
+                            <p><strong>Exemple concret :</strong></p>
+                            <p>
+                                Une banque en ligne a besoin d'un système
+                                multi-agents : support client automatisé,
+                                vérification d'identité et anti-fraude,
+                                assistant RH. Il lui faut donc une orchestration
+                                intelligente pour router les demandes et
+                                transférer vers un humain si nécessaire.
+                            </p>
+                        </div>
+                        <div class="offer-cta">
+                            <a href="/fr/contact" class="btn btn-primary"
+                                >🗓️ Réserver un appel</a
+                            >
+                            <a href="/fr/contact" class="btn btn-secondary"
+                                >✉️ Être recontacté</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- FAQ Pricing -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Questions fréquentes</h2>
+
+            <div class="faq-grid">
+                <details class="faq-item">
+                    <summary>Pourquoi commencer par un POC ?</summary>
+                    <p>
+                        Le POC permet de <strong
+                            >valider la faisabilité technique</strong
+                        > avant d'investir dans un projet complet. Je teste si l'IA
+                        peut répondre correctement à vos cas d'usage avec vos données
+                        réelles. Vous recevez une recommandation Go/No-Go honnête
+                        + une estimation des coûts de production.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Les tarifs incluent-ils l'hébergement ?</summary>
+                    <p>
+                        Non, l'hébergement et les coûts d'API (OpenAI,
+                        Anthropic, etc.) sont à votre charge. Je vous fournis
+                        une <strong
+                            >estimation détaillée des coûts mensuels</strong
+                        > (généralement 50-300€/mois selon l'usage). Je vous aide
+                        aussi à optimiser ces coûts.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Puis-je échelonner les paiements ?</summary>
+                    <p>
+                        Oui ! Paiement en <strong>2 ou 3 fois</strong> selon l'offre
+                        :
+                    </p>
+                    <ul>
+                        <li>30% au démarrage</li>
+                        <li>40% à mi-parcours</li>
+                        <li>30% à la livraison</li>
+                    </ul>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Que se passe-t-il après la livraison ?</summary>
+                    <p>
+                        Vous recevez <strong>tout le code source</strong>, la
+                        documentation complète, et un support post-lancement
+                        (durée selon l'offre). Après, vous êtes <strong
+                            >autonome</strong
+                        > ou vous pouvez souscrire à une maintenance mensuelle (1
+                        500€/mois).
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary
+                        >Puis-je modifier/faire évoluer l'agent après ?</summary
+                    >
+                    <p>
+                        Absolument ! Vous êtes propriétaire du code. Vous pouvez
+                        :
+                    </p>
+                    <ul>
+                        <li>
+                            Le modifier vous-même (documentation technique
+                            fournie)
+                        </li>
+                        <li>
+                            Me demander des évolutions (tarif horaire ou
+                            forfait)
+                        </li>
+                        <li>Faire intervenir un autre développeur</li>
+                    </ul>
+                </details>
+
+                <details class="faq-item">
+                    <summary
+                        >Ces forfaits ne correspondent pas à mon besoin</summary
+                    >
+                    <p>
+                        Pas de problème ! <a href="/fr/contact"
+                            >Discutons de votre projet spécifique</a
+                        >
+                        pour construire une solution sur mesure. Je peux également
+                        faire de l'audit, de la maintenance, ou des évolutions d'agents
+                        existants.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services complémentaires -->
+    <section class="complementary-services">
+        <div class="container">
+            <h2 class="section-title">Autres services</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">◆</div>
+                    <h3>Audit d'agent IA</h3>
+                    <div class="service-price">2 500 €</div>
+                    <p class="service-vat">
+                        TVA non applicable, art. 293 B du CGI
+                    </p>
+                    <p>
+                        Vous avez déjà un agent IA qui ne fonctionne pas comme
+                        prévu ?
+                    </p>
+                    <div class="service-includes">
+                        <h4>Ce qui est inclus :</h4>
+                        <ul>
+                            <li>
+                                Audit technique complet (architecture, RAG,
+                                performance, sécurité)
+                            </li>
+                            <li>
+                                Audit métier (analyse des logs, taux de succès)
+                            </li>
+                            <li>Rapport détaillé (10-15 pages)</li>
+                            <li>Recommandations priorisées</li>
+                            <li>Call de restitution (1h)</li>
+                        </ul>
+                    </div>
+                    <p class="service-duration">⏱️ Durée : 1 semaine</p>
+                    <a href="/fr/contact" class="btn btn-secondary"
+                        >En savoir plus</a
+                    >
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">●</div>
+                    <h3>Maintenance</h3>
+                    <p>Après livraison de votre agent</p>
+                    <div class="service-price">1 500 €/mois</div>
+                    <p>Corrections, optimisations, suivi mensuel</p>
+                    <a href="/fr/contact" class="btn btn-secondary"
+                        >Discutons-en</a
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à démarrer ?</h2>
+                <p>
+                    Réservez un appel découverte gratuit (30 min). Je vous dis
+                    si un agent IA est adapté à votre cas et quelle approche
+                    serait la plus efficace.
+                </p>
+                <a href="/fr/contact" class="btn btn-primary btn-large"
+                    >Prendre rendez-vous</a
+                >
+                <p class="cta-note">
+                    <a href="/fr/">← Retour à l'accueil</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <BackToTop />
+</BaseLayout>
+
+<style>
+    /* Pricing Hero */
+    .pricing-hero {
+        padding: 8rem 0 4rem;
+        background: linear-gradient(
+            135deg,
+            rgb(var(--color-background)) 0%,
+            rgba(var(--color-primary), 0.05) 100%
+        );
+        text-align: center;
+    }
+
+    .pricing-hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+        color: rgb(var(--color-text-muted));
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* POC Section */
+    .poc-section {
+        padding: 4rem 0;
+    }
+
+    .poc-intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 3rem;
+    }
+
+    .poc-intro h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .poc-intro p {
+        font-size: 1.125rem;
+        color: rgb(var(--color-text-muted));
+    }
+
+    /* Offers Section */
+    .offers-section {
+        padding: 4rem 0;
+        background: rgba(var(--color-surface-variant), 0.1);
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Copy all the offer card styles from index.astro */
+    .poc-banner {
+        max-width: 900px;
+        margin: 0 auto 4rem;
+    }
+
+    .offer-card {
+        background: rgb(var(--color-surface));
+        border: 1px solid rgba(var(--color-border), 0.3);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .offer-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-xl);
+    }
+
+    .offer-card--poc {
+        border: 2px solid rgb(var(--color-primary));
+        background: linear-gradient(
+            135deg,
+            rgba(var(--color-primary), 0.03),
+            rgba(var(--color-accent), 0.03)
+        );
+    }
+
+    .poc-banner-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .poc-main {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .poc-badge {
+        background: linear-gradient(
+            135deg,
+            rgb(var(--color-primary)),
+            rgb(var(--color-primary-hover))
+        );
+        color: rgb(var(--color-text-button));
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-md);
+        font-size: 0.875rem;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .poc-info {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .poc-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .poc-tagline {
+        color: rgb(var(--color-text-muted));
+        font-size: 0.95rem;
+    }
+
+    .poc-price-block {
+        text-align: right;
+    }
+
+    .poc-price {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: rgb(var(--color-primary));
+    }
+
+    .poc-vat {
+        font-size: 0.75rem;
+        color: rgb(var(--color-text-muted));
+        font-style: italic;
+    }
+
+    .poc-highlights {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .poc-highlight-item {
+        font-size: 0.95rem;
+        color: rgb(var(--color-text));
+    }
+
+    .poc-upgrade-banner {
+        background: rgba(var(--color-accent), 0.1);
+        padding: 1rem;
+        border-radius: var(--radius-md);
+        text-align: center;
+        border: 1px solid rgba(var(--color-accent), 0.3);
+    }
+
+    .upgrade-icon {
+        font-size: 1.25rem;
+        margin-right: 0.5rem;
+    }
+
+    .poc-cta {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    /* Offers Grid */
+    .offers-grid-hero {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .offer-header h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .offer-tagline {
+        color: rgb(var(--color-text-muted));
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .offer-price {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: rgb(var(--color-primary));
+        margin-bottom: 0.5rem;
+    }
+
+    .offer-after-poc {
+        color: rgb(var(--color-accent));
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .offer-duration {
+        color: rgb(var(--color-text-muted));
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .offer-value-prop {
+        background: linear-gradient(
+            135deg,
+            rgba(var(--color-accent), 0.08),
+            rgba(var(--color-primary), 0.08)
+        );
+        padding: 1rem;
+        border-radius: var(--radius-md);
+        border-left: 3px solid rgb(var(--color-accent));
+        margin-bottom: 1.5rem;
+    }
+
+    .offer-value-prop p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: rgb(var(--color-text));
+    }
+
+    .offer-includes h4 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .offer-includes ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    .offer-includes ul li {
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+        position: relative;
+        color: rgb(var(--color-text-muted));
+        font-size: 0.95rem;
+    }
+
+    .offer-includes ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: rgb(var(--color-success));
+        font-weight: bold;
+    }
+
+    .tech-details {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(var(--color-border), 0.2);
+    }
+
+    .tech-details summary {
+        cursor: pointer;
+        color: rgb(var(--color-text-muted));
+        font-size: 0.85rem;
+        transition: color 0.2s ease;
+    }
+
+    .tech-details summary:hover {
+        color: rgb(var(--color-primary));
+    }
+
+    .offer-use-cases {
+        margin: 1rem 0;
+        font-size: 0.9rem;
+    }
+
+    .offer-demo-ref {
+        margin: 1rem 0;
+        font-size: 0.9rem;
+    }
+
+    .demo-link {
+        color: rgb(var(--color-primary));
+        text-decoration: underline;
+    }
+
+    .offer-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+
+    /* Comparison Table */
+    .comparison-section {
+        margin: 4rem 0;
+    }
+
+    .comparison-section h3 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .comparison-table-wrapper {
+        overflow-x: auto;
+        margin-bottom: 2rem;
+    }
+
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: rgb(var(--color-surface));
+        border-radius: var(--radius-lg);
+    }
+
+    .comparison-table thead {
+        background: rgba(var(--color-primary), 0.1);
+    }
+
+    .comparison-table th {
+        padding: 1.5rem 1rem;
+        text-align: left;
+        font-weight: 600;
+        color: rgb(var(--color-text));
+        border-bottom: 2px solid rgba(var(--color-border), 0.3);
+    }
+
+    .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(var(--color-border), 0.2);
+        color: rgb(var(--color-text-muted));
+    }
+
+    .feature-name {
+        font-weight: 600;
+        color: rgb(var(--color-text)) !important;
+    }
+
+    .category-row {
+        background: rgba(var(--color-surface-variant), 0.3);
+    }
+
+    .category-row td {
+        padding: 0.75rem 1rem;
+        color: rgb(var(--color-primary)) !important;
+    }
+
+    .comparison-note {
+        text-align: center;
+        color: rgb(var(--color-text-muted));
+    }
+
+    /* Enterprise Accordion */
+    .enterprise-accordion {
+        margin: 3rem 0;
+        background: rgb(var(--color-surface));
+        border: 1px solid rgba(var(--color-border), 0.3);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+    }
+
+    .enterprise-summary {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+
+    .enterprise-summary:hover {
+        background: rgba(var(--color-surface-variant), 0.3);
+    }
+
+    .enterprise-icon {
+        font-size: 2rem;
+    }
+
+    .enterprise-title {
+        flex: 1;
+    }
+
+    .enterprise-title h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .enterprise-title p {
+        color: rgb(var(--color-text-muted));
+        font-size: 0.95rem;
+    }
+
+    .enterprise-price {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: rgb(var(--color-primary));
+    }
+
+    .accordion-arrow {
+        font-size: 1.25rem;
+        transition: transform 0.2s ease;
+    }
+
+    .enterprise-accordion[open] .accordion-arrow {
+        transform: rotate(180deg);
+    }
+
+    .enterprise-content {
+        padding: 0 2rem 2rem;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+        padding: 4rem 0;
+    }
+
+    .faq-grid {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .faq-item {
+        background: rgb(var(--color-surface));
+        border: 1px solid rgba(var(--color-border), 0.3);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+    }
+
+    .faq-item summary {
+        font-weight: 600;
+        font-size: 1.125rem;
+        cursor: pointer;
+        color: rgb(var(--color-text));
+        transition: color 0.2s ease;
+    }
+
+    .faq-item summary:hover {
+        color: rgb(var(--color-primary));
+    }
+
+    .faq-item p {
+        margin-top: 1rem;
+        color: rgb(var(--color-text-muted));
+        line-height: 1.7;
+    }
+
+    .faq-item ul {
+        margin-top: 0.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .faq-item ul li {
+        color: rgb(var(--color-text-muted));
+        margin-bottom: 0.5rem;
+    }
+
+    /* Complementary Services */
+    .complementary-services {
+        padding: 4rem 0;
+        background: rgba(var(--color-surface-variant), 0.1);
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+
+    .service-card {
+        background: rgb(var(--color-surface));
+        border: 1px solid rgba(var(--color-border), 0.3);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+    }
+
+    .service-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: rgb(var(--color-primary));
+        margin: 1rem 0;
+    }
+
+    .service-vat {
+        font-size: 0.75rem;
+        color: rgb(var(--color-text-muted));
+        font-style: italic;
+        margin-bottom: 1rem;
+    }
+
+    .service-includes {
+        margin: 1.5rem 0;
+    }
+
+    .service-includes h4 {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .service-includes ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .service-includes ul li {
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        color: rgb(var(--color-text-muted));
+        font-size: 0.9rem;
+    }
+
+    .service-includes ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: rgb(var(--color-success));
+    }
+
+    .service-duration {
+        color: rgb(var(--color-text-muted));
+        font-size: 0.9rem;
+        margin: 1rem 0;
+    }
+
+    /* CTA Final */
+    .cta-final {
+        padding: 6rem 0;
+        text-align: center;
+        background: linear-gradient(
+            135deg,
+            rgba(var(--color-primary), 0.05),
+            rgba(var(--color-accent), 0.03)
+        );
+    }
+
+    .cta-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-content p {
+        font-size: 1.125rem;
+        color: rgb(var(--color-text-muted));
+        max-width: 700px;
+        margin: 0 auto 2rem;
+    }
+
+    .btn-large {
+        font-size: 1.125rem;
+        padding: 1rem 2.5rem;
+    }
+
+    .cta-note {
+        margin-top: 2rem;
+        font-size: 0.95rem;
+    }
+
+    .cta-note a {
+        color: rgb(var(--color-text-muted));
+        text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .offers-grid-hero {
+            grid-template-columns: 1fr;
+        }
+
+        .poc-main {
+            flex-direction: column;
+        }
+
+        .poc-price-block {
+            text-align: left;
+        }
+
+        .comparison-table {
+            font-size: 0.85rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 0.75rem 0.5rem;
+        }
+    }
+
+    /* ===============================
+   POC DETAILS SECTION
+   =============================== */
+    .poc-details-section {
+        margin: 4rem 0;
+        padding: 3rem;
+        background: rgba(var(--color-surface-variant), 0.3);
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(var(--color-border), 0.3);
+    }
+
+    .poc-details-section h3 {
+        font-family: var(--font-heading);
+        font-size: 1.75rem;
+        text-align: center;
+        color: rgb(var(--color-text));
+        margin-bottom: 2.5rem;
+    }
+
+    .poc-details-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .poc-detail-card {
+        background: rgb(var(--color-surface));
+        border: 1px solid rgba(var(--color-border), 0.3);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+    }
+
+    .detail-icon {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .poc-detail-card h4 {
+        font-size: 1.125rem;
+        color: rgb(var(--color-primary));
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .poc-detail-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .poc-detail-card ul li {
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+        position: relative;
+        color: rgb(var(--color-text-muted));
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .poc-detail-card ul li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: rgb(var(--color-accent));
+        font-weight: bold;
+    }
+
+    .poc-scope-note {
+        margin-top: 2rem;
+        padding: 2rem;
+        background: rgba(var(--color-warning), 0.08);
+        border: 1px solid rgba(var(--color-warning), 0.3);
+        border-radius: var(--radius-md);
+        border-left: 4px solid rgb(var(--color-warning));
+    }
+
+    .poc-scope-note strong {
+        color: rgb(var(--color-text));
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 1.05rem;
+    }
+
+    .poc-scope-note ul {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+    .poc-scope-note ul li {
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        color: rgb(var(--color-text-muted));
+        font-size: 0.95rem;
+    }
+
+    .poc-scope-note ul li::before {
+        content: "✗";
+        position: absolute;
+        left: 0;
+        color: rgb(var(--color-warning));
+        font-weight: bold;
+    }
+
+    .poc-scope-note p {
+        margin: 1.5rem 0 0 0;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(var(--color-border), 0.3);
+        color: rgb(var(--color-text));
+        line-height: 1.6;
+    }
+
+    @media (max-width: 1024px) {
+        .poc-details-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .poc-details-section {
+            padding: 2rem 1.5rem;
+        }
+
+        .poc-scope-note {
+            padding: 1.5rem;
+        }
+
+        /* Enterprise Accordion Mobile */
+        .enterprise-summary {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+        }
+
+        .enterprise-title {
+            width: 100%;
+        }
+
+        .enterprise-title h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .enterprise-title p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .enterprise-price {
+            font-size: 1.1rem;
+            align-self: flex-end;
+        }
+
+        .accordion-arrow {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+        }
+
+        .enterprise-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+    }
+</style>

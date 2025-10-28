@@ -37,6 +37,73 @@ const allCategories = [
     </div>
   </section>
 
+  <!-- Featured Video Demo -->
+  <section class="featured-demo">
+    <div class="container">
+      <div class="demo-header">
+        <span class="demo-badge">✨ Featured Project</span>
+        <h2>Neolens RAG Agent in Action</h2>
+        <p>
+          Discover how this conversational agent answers technical questions 
+          with source citations, multilingual support, and zero hallucination.
+        </p>
+      </div>
+      
+      <div class="demo-grid">
+        <div class="demo-video">
+          <video controls preload="metadata" poster="/portfolio/01-home-welcome.png">
+            <source src="/portfolio/videos/02-source-citation-demo.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+        </div>
+        
+        <div class="demo-features">
+          <h3>Key Features</h3>
+          <ul>
+            <li>
+              <div class="feature-icon">🎯</div>
+              <div class="feature-content">
+                <strong>Intelligent RAG</strong>
+                <span>FAISS vector search in 34 documents (50k words)</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-icon">📚</div>
+              <div class="feature-content">
+                <strong>Source Citations</strong>
+                <span>Automatic references with page numbers</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-icon">🌍</div>
+              <div class="feature-content">
+                <strong>Multilingual FR/EN</strong>
+                <span>Automatic detection and localized responses</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-icon">✅</div>
+              <div class="feature-content">
+                <strong>Zero Hallucination</strong>
+                <span>Strict input/output validation</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-icon">🔧</div>
+              <div class="feature-content">
+                <strong>Production-Ready</strong>
+                <span>137 tests, CI/CD, monitoring</span>
+              </div>
+            </li>
+          </ul>
+          <a href="/en/portfolio/neolens-support-agent" class="demo-link">
+            View full project →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Projects Grid -->
   <section class="portfolio-projects">
     <div class="container">
@@ -113,7 +180,7 @@ const allCategories = [
             <path d="M5 12h14m-7-7 7 7-7 7"></path>
           </svg>
         </a>
-        <a href="/en/#offers" class="btn btn-secondary">View my offers</a>
+        <a href="/en/offers" class="btn btn-secondary">View my offers</a>
       </div>
     </div>
   </div>
@@ -175,6 +242,161 @@ const allCategories = [
     line-height: 1.7;
     font-weight: 400;
     max-width: 800px;
+  }
+
+  /* ===============================
+   FEATURED DEMO SECTION
+   =============================== */
+  .featured-demo {
+    padding: 6rem 0;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary) / 0.05) 0%,
+      rgb(var(--color-accent) / 0.03) 100%
+    );
+  }
+
+  .demo-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+  }
+
+  .demo-badge {
+    display: inline-block;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-primary-hover))
+    );
+    color: rgb(var(--color-text-button));
+    padding: 0.5rem 1.25rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(var(--color-primary), 0.2);
+  }
+
+  .demo-header h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .demo-header p {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+  }
+
+  .demo-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .demo-video {
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .demo-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000;
+  }
+
+  .demo-features {
+    background: rgb(var(--color-surface));
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .demo-features h3 {
+    font-size: 1.5rem;
+    color: rgb(var(--color-text));
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  .demo-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+  }
+
+  .demo-features li {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(var(--color-border), 0.2);
+  }
+
+  .demo-features li:last-child {
+    border-bottom: none;
+  }
+
+  .feature-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .feature-content strong {
+    color: rgb(var(--color-text));
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .feature-content span {
+    color: rgb(var(--color-text-muted));
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .demo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)),
+      rgb(var(--color-primary-hover))
+    );
+    color: rgb(var(--color-text-button));
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(var(--color-primary), 0.2);
+  }
+
+  .demo-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(var(--color-primary), 0.3);
+  }
+
+  @media (max-width: 1024px) {
+    .demo-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   /* ===============================

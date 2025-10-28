@@ -75,60 +75,97 @@ import BackToTop from "../../../components/BackToTop.astro";
       </p>
 
       <div class="videos-grid">
-        <!-- Vidéo 1 : RAG Intelligent -->
+        <!-- Vidéo 1 : Code Snippet -->
         <div class="video-card">
-          <div class="video-placeholder">
-            <div class="video-icon">🎥</div>
-            <p>Vidéo : RAG Intelligent avec Sources</p>
-            <span class="video-duration">45s</span>
-          </div>
+          <video controls preload="metadata" poster="/portfolio/06-python-code-example.png">
+            <source src="/portfolio/videos/01-code-snippet-demo.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
           <div class="video-info">
-            <h3>RAG Intelligent avec Citations</h3>
+            <h3>Extraits de Code avec Syntax Highlighting</h3>
             <p>
-              Recherche sémantique dans 34 documents (50k mots), 
-              citations automatiques des sources, streaming temps réel.
+              Affichage professionnel des exemples de code Python, JavaScript, cURL avec 
+              syntax highlighting Prism.js et boutons copy fonctionnels.
             </p>
             <ul class="video-features">
-              <li>✓ Recherche vectorielle FAISS &lt; 500ms</li>
-              <li>✓ Citations sources avec numéros de page</li>
-              <li>✓ Réponses contextuelles précises</li>
+              <li>✓ Syntax highlighting multi-langages</li>
+              <li>✓ Boutons copy to clipboard</li>
+              <li>✓ Rendu markdown professionnel</li>
             </ul>
           </div>
         </div>
 
-        <!-- Vidéo 2 : Support Multilingue -->
+        <!-- Vidéo 2 : Citations Sources -->
         <div class="video-card">
-          <div class="video-placeholder">
-            <div class="video-icon">🎥</div>
-            <p>Vidéo : Support Multilingue FR/EN</p>
-            <span class="video-duration">40s</span>
-          </div>
+          <video controls preload="metadata" poster="/portfolio/01-home-welcome.png">
+            <source src="/portfolio/videos/02-source-citation-demo.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
           <div class="video-info">
-            <h3>Support Multilingue</h3>
+            <h3>Citations Sources Automatiques</h3>
+            <p>
+              RAG intelligent avec recherche vectorielle FAISS, citations automatiques 
+              des sources avec noms de documents.
+            </p>
+            <ul class="video-features">
+              <li>✓ Recherche vectorielle &lt; 500ms</li>
+              <li>✓ Citations sources systématiques</li>
+              <li>✓ Réponses basées sur la documentation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Vidéo 3 : Pas d'Hallucination -->
+        <div class="video-card">
+          <video controls preload="metadata" poster="/portfolio/01-home-welcome.png">
+            <source src="/portfolio/videos/03-no-hallucination-demo.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          <div class="video-info">
+            <h3>Zéro Hallucination - Validation Robuste</h3>
+            <p>
+              Validation double input/output, rejet des questions hors-scope, 
+              messages pédagogiques pour guider l'utilisateur.
+            </p>
+            <ul class="video-features">
+              <li>✓ Validation input/output stricte</li>
+              <li>✓ Rejet questions hors-scope</li>
+              <li>✓ Messages d'erreur clairs</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Vidéo 4 : Support Multilingue -->
+        <div class="video-card">
+          <video controls preload="metadata" poster="/portfolio/01-home-welcome.png">
+            <source src="/portfolio/videos/04-multilingual-demo.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          <div class="video-info">
+            <h3>Support Multilingue FR/EN</h3>
             <p>
               Détection automatique français/anglais, cohérence conversationnelle, 
-              réponses localisées.
+              réponses adaptées selon la langue de l'utilisateur.
             </p>
             <ul class="video-features">
               <li>✓ Détection automatique de la langue</li>
-              <li>✓ Maintien de la cohérence conversationnelle</li>
-              <li>✓ Messages d'erreur localisés</li>
+              <li>✓ Cohérence conversationnelle</li>
+              <li>✓ Messages d'erreur adaptés</li>
             </ul>
           </div>
         </div>
 
-        <!-- Vidéo 3 : Contexte Conversationnel -->
+        <!-- Vidéo 5 : Contexte Conversationnel -->
         <div class="video-card">
-          <div class="video-placeholder">
-            <div class="video-icon">🎥</div>
-            <p>Vidéo : Contexte Conversationnel</p>
-            <span class="video-duration">50s</span>
-          </div>
+          <video controls preload="metadata" poster="/portfolio/01-home-welcome.png">
+            <source src="/portfolio/videos/05-contextual-conversation-demo.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
           <div class="video-info">
-            <h3>Contexte Conversationnel</h3>
+            <h3>Mémoire Conversationnelle</h3>
             <p>
-              Résolution d'anaphores ("it", "this", "that"), mémoire conversationnelle, 
-              reformulation intelligente.
+              Résolution d'anaphores ("it", "this", "that"), mémoire des 5 derniers échanges, 
+              reformulation intelligente pour améliorer la recherche.
             </p>
             <ul class="video-features">
               <li>✓ Mémoire des 5 derniers échanges</li>
@@ -138,54 +175,25 @@ import BackToTop from "../../../components/BackToTop.astro";
           </div>
         </div>
 
-        <!-- Vidéo 4 : Gestion d'Erreurs (optionnelle) -->
+        <!-- Vidéo 6 : Requête Courte → Réponse Complète -->
         <div class="video-card">
-          <div class="video-placeholder">
-            <div class="video-icon">🎥</div>
-            <p>Vidéo : Gestion d'Erreurs Gracieuse</p>
-            <span class="video-duration">45s</span>
-          </div>
+          <video controls preload="metadata" poster="/portfolio/01-home-welcome.png">
+            <source src="/portfolio/videos/06-short-query-full-answer-demo.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
           <div class="video-info">
-            <h3>Gestion d'Erreurs</h3>
+            <h3>Requête Courte → Réponse Complète</h3>
             <p>
-              Validation robuste, messages pédagogiques, fallback gracieux 
-              pour maintenir l'expérience utilisateur.
+              Reformulation automatique des requêtes courtes pour enrichir le contexte, 
+              réponses détaillées et structurées même pour des questions minimales.
             </p>
             <ul class="video-features">
-              <li>✓ Validation input/output double</li>
-              <li>✓ Messages d'erreur clairs et actionnables</li>
-              <li>✓ Fallback gracieux sans interruption</li>
+              <li>✓ Reformulation intelligente</li>
+              <li>✓ Enrichissement du contexte</li>
+              <li>✓ Réponses complètes et détaillées</li>
             </ul>
           </div>
         </div>
-
-        <!-- Vidéo 5 : Rendu Markdown (optionnelle) -->
-        <div class="video-card">
-          <div class="video-placeholder">
-            <div class="video-icon">🎥</div>
-            <p>Vidéo : Rendu Markdown Professionnel</p>
-            <span class="video-duration">45s</span>
-          </div>
-          <div class="video-info">
-            <h3>Rendu Markdown</h3>
-            <p>
-              Tableaux professionnels, code avec syntax highlighting, 
-              boutons copy fonctionnels.
-            </p>
-            <ul class="video-features">
-              <li>✓ Tableaux avec alignement et bordures</li>
-              <li>✓ Syntax highlighting Prism.js</li>
-              <li>✓ Boutons copy to clipboard</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="video-note">
-        <p>
-          📹 <strong>Vidéos disponibles prochainement</strong> - 
-          En attendant, découvrez l'architecture technique complète ci-dessous
-        </p>
       </div>
     </div>
   </section>
@@ -196,10 +204,10 @@ import BackToTop from "../../../components/BackToTop.astro";
       <h2 class="section-title">Architecture Technique</h2>
       
       <div class="architecture-overview">
-        <h3>Orchestration LangGraph à 7 Nœuds Spécialisés</h3>
+        <h3>Orchestration LangGraph à 7 nœuds</h3>
         <p>
           Architecture state-of-the-art avec orchestration avancée, 
-          routing conditionnel et validation multi-niveau.
+          routing conditionnel et validation multi-niveaux.
         </p>
       </div>
 
@@ -298,7 +306,7 @@ import BackToTop from "../../../components/BackToTop.astro";
             <li><strong>LangGraph</strong> - Orchestration et machine à états pour agents IA</li>
             <li><strong>LangChain</strong> - Framework et outils pour agents IA</li>
             <li><strong>OpenAI GPT-4</strong> - Modèle de langage</li>
-            <li><strong>FAISS</strong> - Recherche vectorielle Facebook</li>
+            <li><strong>FAISS</strong> - Recherche vectorielle</li>
             <li><strong>SQLite</strong> - Persistance des conversations</li>
           </ul>
         </div>
@@ -393,7 +401,7 @@ import BackToTop from "../../../components/BackToTop.astro";
           Du POC aux solutions enterprise.
         </p>
         <div class="cta-buttons">
-          <a href="/fr/#offres" class="btn btn-primary btn-large">Voir les offres et tarifs</a>
+          <a href="/fr/offres" class="btn btn-primary btn-large">Voir les offres et tarifs</a>
           <a href="/fr/contact" class="btn btn-secondary">Discuter de votre projet</a>
         </div>
       </div>
@@ -556,6 +564,14 @@ import BackToTop from "../../../components/BackToTop.astro";
   .video-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
+  }
+
+  .video-card video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000;
+    aspect-ratio: 16 / 9;
   }
 
   .video-placeholder {

@@ -514,20 +514,28 @@ const ogImageURL = new URL(image, Astro.site);
      SCROLLBAR CUSTOM
      =============================== */
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
   }
 
   ::-webkit-scrollbar-track {
-    background: rgb(var(--color-surface));
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: rgb(var(--color-surface-variant));
+    background: rgba(var(--color-border), 0.1);
     border-radius: var(--radius-sm);
   }
 
+  ::-webkit-scrollbar-thumb {
+    background: rgba(var(--color-primary), 0.3);
+    border-radius: var(--radius-sm);
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(var(--color-primary));
+    background: rgba(var(--color-primary), 0.6);
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: rgba(var(--color-border), 0.1);
   }
 </style>
