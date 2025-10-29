@@ -64,17 +64,20 @@ import BackToTop from "../../components/BackToTop.astro";
                                 <li>
                                     <strong
                                         >Go/No-Go argumenté avec estimation
-                                        budgétaire détaillée</strong>
+                                        budgétaire détaillée</strong
+                                    >
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="step-duration">⏱️ Durée approximative : 3-5 jours</div>
+                        <div class="step-duration">
+                            ⏱️ Durée approximative : 3-5 jours
+                        </div>
                         <p class="step-note">
-                            À ce stade, vous savez s'il faut continuer. Si vous
-                            abandonnez, vous n'avez payé que 2 000 € pour une <strong
+                            À ce stade, vous savez s'il faut continuer. Si c'est
+                            "No-Go", vous avez investi 2 000€ pour une <strong
                                 >décision éclairée</strong
-                            >.
+                            > qui vous évite de perdre 7 000 à 20 000€.
                         </p>
                     </div>
                 </div>
@@ -108,7 +111,9 @@ import BackToTop from "../../components/BackToTop.astro";
                             </ul>
                         </div>
 
-                        <div class="step-duration">⏱️ Durée approximative : 2-3 semaines</div>
+                        <div class="step-duration">
+                            ⏱️ Durée approximative : 2-3 semaines
+                        </div>
                         <p class="step-note">
                             Le MVP est <strong>optionnel</strong> : vous ne le commandez
                             que si l'audit vous a convaincu.
@@ -152,8 +157,8 @@ import BackToTop from "../../components/BackToTop.astro";
                 <strong>⚠️ Ce qui n'est PAS dans cette validation :</strong>
                 <ul>
                     <li>
-                        Interface graphique élaborée (démo fonctionnelle
-                        uniquement)
+                        Interface graphique élaborée (vous testez via une
+                        interface simple, pas la version finale)
                     </li>
                     <li>
                         Tests automatisés complets (tests manuels seulement)
@@ -604,95 +609,105 @@ import BackToTop from "../../components/BackToTop.astro";
                 </p>
             </div>
 
-            <!-- Enterprise Accordion -->
-            <details class="enterprise-accordion">
-                <summary class="enterprise-summary">
-                    <span class="enterprise-icon">🏢</span>
-                    <div class="enterprise-title">
-                        <h3>Besoin d'une solution Enterprise ?</h3>
-                        <p>
-                            Architecture multi-agents, compliance stricte, SLA
-                            garanti
-                        </p>
-                    </div>
-                    <span class="enterprise-price">À partir de 30 000 €</span>
-                    <span class="accordion-arrow">▼</span>
-                </summary>
-                <div class="enterprise-content">
-                    <div class="offer-card offer-card-enterprise">
-                        <div class="offer-header">
-                            <h3>Plateforme multi-agents sur mesure</h3>
-                            <p class="offer-tagline">
-                                Pour plusieurs agents qui collaborent
-                            </p>
-                            <div class="offer-price">30 000 €</div>
-                            <p class="offer-vat">
-                                TVA non applicable, art. 293 B du CGI
-                            </p>
-                        </div>
-                        <div class="offer-duration">
-                            ⏱️ Durée approximative : 8-10 semaines
-                        </div>
-                        <div class="offer-value-prop">
-                            <p>
-                                <strong>Pourquoi cette offre ?</strong> Pour <strong
-                                    >plusieurs agents qui collaborent</strong
-                                > dans votre organisation. Exemple : agent de triage
-                                + agent spécialisé support + agent escalade.
-                            </p>
-                        </div>
-                        <div class="offer-includes">
-                            <h4>Livrables</h4>
-                            <ul>
-                                <li>
-                                    Tout ce qui est dans "Agent multilingue +
-                                    intégrations"
-                                </li>
-                                <li>
-                                    Orchestration multi-agents (routage
-                                    intelligent des demandes)
-                                </li>
-                                <li>Fine-tuning modèle sur vos données</li>
-                                <li>
-                                    Compliance et sécurité renforcée (RGPD,
-                                    HIPAA)
-                                </li>
-                                <li>
-                                    Monitoring avancé (LangSmith ou équivalent)
-                                </li>
-                                <li>Accompagnement stratégique</li>
-                                <li>
-                                    Support pendant 3 mois + suivi hebdomadaire
-                                    post-lancement
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="offer-use-cases">
-                            <p>
-                                <strong>Exemples :</strong> Plateforme multi-agents
-                                (Support + RH + IT), orchestration complexe, compliance
-                                stricte
-                            </p>
-                        </div>
-                        <div class="offer-value-prop">
-                            <p><strong>Exemple concret :</strong></p>
-                            <p>
-                                Une banque en ligne a besoin d'un système
-                                multi-agents : support client automatisé,
-                                vérification d'identité et anti-fraude,
-                                assistant RH. Il lui faut donc une orchestration
-                                intelligente pour router les demandes et
-                                transférer vers un humain si nécessaire.
-                            </p>
-                        </div>
-                        <div class="offer-cta">
-                            <a href="/fr/contact" class="btn btn-primary"
-                                >🗓️ Réserver un appel</a
-                            >
-                        </div>
-                    </div>
+            <!-- Offre Enterprise - Sur devis -->
+            <div class="offer-card offer-card--enterprise">
+                <div class="offer-header">
+                    <div class="enterprise-badge">🏢 Enterprise</div>
+                    <h3>Plateforme multi-agents sur mesure</h3>
+                    <p class="offer-tagline">
+                        Pour orchestrer plusieurs agents qui collaborent dans
+                        votre organisation
+                    </p>
+                    <div class="offer-price">Sur devis</div>
+                    <p class="offer-duration">
+                        ⏱️ Durée : Variable selon périmètre
+                    </p>
                 </div>
-            </details>
+
+                <div class="offer-value-prop">
+                    <p>
+                        <strong>Pourquoi sur devis ?</strong> Chaque projet multi-agents
+                        est unique. La complexité dépend du nombre d'agents, des
+                        intégrations, des exigences de compliance et de votre contexte
+                        métier.
+                    </p>
+                </div>
+
+                <div class="offer-includes">
+                    <h4>Exemples de fonctionnalités</h4>
+                    <ul>
+                        <li>
+                            Orchestration multi-agents (routage intelligent des
+                            demandes)
+                        </li>
+                        <li>
+                            Fine-tuning de modèle sur vos données propriétaires
+                        </li>
+                        <li>
+                            Compliance renforcée (RGPD, HIPAA, secteur
+                            bancaire...)
+                        </li>
+                        <li>
+                            Monitoring avancé avec outils spécialisés (LangSmith
+                            ou équivalent)
+                        </li>
+                        <li>
+                            Accompagnement stratégique et formation des équipes
+                        </li>
+                        <li>Support post-lancement sur mesure</li>
+                    </ul>
+                </div>
+
+                <div class="offer-use-cases">
+                    <p>
+                        <strong>Cas d'usage :</strong> Plateforme support client
+                        + RH + IT desk, système de triage automatisé avec agents
+                        spécialisés, orchestration complexe avec escalade vers humains
+                    </p>
+                </div>
+
+                <div class="enterprise-example">
+                    <h4>Exemple concret</h4>
+                    <p>
+                        Une banque en ligne nécessite un système multi-agents :
+                        support client automatisé, vérification d'identité
+                        anti-fraude, assistant RH interne. L'orchestration
+                        intelligente route les demandes selon leur nature et
+                        transfère vers un humain quand nécessaire.
+                    </p>
+                </div>
+
+                <div class="enterprise-process">
+                    <h4>Comment ça fonctionne ?</h4>
+                    <ol>
+                        <li>
+                            <strong>Audit obligatoire (2 000€)</strong> : j'analyse
+                            votre besoin et estime la charge
+                        </li>
+                        <li>
+                            <strong>Devis personnalisé</strong> : je vous propose
+                            un forfait ou une régie adaptée
+                        </li>
+                        <li>
+                            <strong>Si signature :</strong> les 2 000€ de l'audit
+                            sont déduits du projet
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="enterprise-note">
+                    <p>
+                        <strong>À partir de 30 000€</strong> selon la complexité.
+                        Durée typique : 3 à 6 mois incluant développement et accompagnement.
+                    </p>
+                </div>
+
+                <div class="offer-cta">
+                    <a href="/fr/contact" class="btn btn-primary">
+                        🗓️ Réserver un audit
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -703,14 +718,21 @@ import BackToTop from "../../components/BackToTop.astro";
 
             <div class="faq-grid">
                 <details class="faq-item">
-                    <summary>Pourquoi commencer par un POC ?</summary>
+                    <summary>Pourquoi commencer par une validation ?</summary>
                     <p>
-                        Le POC permet de <strong
-                            >valider la faisabilité technique</strong
-                        > avant d'investir dans un projet complet. Je teste si l'IA
-                        peut répondre correctement à vos cas d'usage avec vos données
-                        réelles. Vous recevez une recommandation Go/No-Go honnête
-                        + une estimation des coûts de production.
+                        Pour éviter de dépenser entre 7 000€ et 20 000€ sur un
+                        projet qui ne fonctionnera pas. La validation en 2 temps
+                        vous permet de <strong
+                            >tester la faisabilité technique avant d'investir</strong
+                        > dans le développement complet.
+                    </p>
+                    <p>
+                        Concrètement : je teste si l'IA répond correctement à
+                        vos questions métier avec vos vraies données. Vous
+                        recevez une recommandation Go/No-Go honnête + un
+                        chiffrage précis pour passer en production. Si c'est
+                        "No-Go", vous avez investi 2 000€ pour une décision
+                        éclairée qui vous évite de perdre 7 000 à 20 000€.
                     </p>
                 </details>
 
@@ -1054,8 +1076,9 @@ import BackToTop from "../../components/BackToTop.astro";
 
     /* Validation Summary */
     .validation-summary {
-        background: linear-gradient(135deg, 
-            rgba(var(--color-primary), 0.05), 
+        background: linear-gradient(
+            135deg,
+            rgba(var(--color-primary), 0.05),
             rgba(var(--color-accent), 0.03)
         );
         border: 1px solid rgba(var(--color-primary), 0.2);
@@ -1161,14 +1184,18 @@ import BackToTop from "../../components/BackToTop.astro";
             transform 0.2s ease,
             box-shadow 0.2s ease;
         display: grid;
-        grid-template-rows: auto auto auto minmax(120px, auto) minmax(60px, auto) minmax(60px, auto) auto;
+        grid-template-rows:
+            auto auto auto minmax(120px, auto) minmax(60px, auto)
+            minmax(60px, auto) auto;
         gap: 1.5rem;
         height: 100%;
     }
 
     /* Troisième carte sans section "Projet similaire" */
     .offer-card:last-child {
-        grid-template-rows: auto auto auto minmax(120px, auto) minmax(60px, auto) auto;
+        grid-template-rows:
+            auto auto auto minmax(120px, auto) minmax(60px, auto)
+            auto;
     }
 
     .offer-card:hover {
@@ -1357,7 +1384,92 @@ import BackToTop from "../../components/BackToTop.astro";
         color: rgb(var(--color-text-muted));
     }
 
-    /* Enterprise Accordion */
+    /* Enterprise Offer Styles */
+    .offer-card--enterprise {
+        border: 2px solid rgba(var(--color-primary), 0.4);
+        background: linear-gradient(
+            135deg,
+            rgba(var(--color-primary), 0.05),
+            rgba(var(--color-surface), 0.8)
+        );
+    }
+
+    .enterprise-badge {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: rgba(var(--color-primary), 0.15);
+        color: rgb(var(--color-primary));
+        border-radius: var(--radius-md);
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .enterprise-example {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: rgba(var(--color-accent), 0.05);
+        border-radius: var(--radius-md);
+        border-left: 3px solid rgb(var(--color-accent));
+    }
+
+    .enterprise-example h4 {
+        font-size: 1rem;
+        color: rgb(var(--color-text));
+        margin-bottom: 0.75rem;
+    }
+
+    .enterprise-example p {
+        margin: 0;
+        color: rgb(var(--color-text-muted));
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+    .enterprise-process {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: rgb(var(--color-surface));
+        border-radius: var(--radius-md);
+        border: 1px solid rgba(var(--color-border), 0.3);
+    }
+
+    .enterprise-process h4 {
+        font-size: 1rem;
+        color: rgb(var(--color-text));
+        margin-bottom: 1rem;
+    }
+
+    .enterprise-process ol {
+        margin: 0;
+        padding-left: 1.5rem;
+    }
+
+    .enterprise-process ol li {
+        margin-bottom: 0.75rem;
+        color: rgb(var(--color-text-muted));
+        line-height: 1.6;
+    }
+
+    .enterprise-process ol li strong {
+        color: rgb(var(--color-text));
+    }
+
+    .enterprise-note {
+        margin: 2rem 0 1.5rem;
+        padding: 1rem 1.5rem;
+        background: rgba(var(--color-primary), 0.08);
+        border-radius: var(--radius-md);
+        border-left: 3px solid rgb(var(--color-primary));
+    }
+
+    .enterprise-note p {
+        margin: 0;
+        color: rgb(var(--color-text));
+        font-size: 0.95rem;
+    }
+
+    /* Legacy Enterprise Accordion */
     .enterprise-accordion {
         margin: 3rem 0;
         background: rgb(var(--color-surface));

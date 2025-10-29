@@ -148,7 +148,7 @@ import BackToTop from "../../components/BackToTop.astro";
         <strong>⚠️ What's NOT in this validation:</strong>
         <ul>
           <li>
-            Elaborate graphical interface (functional demo
+            Elaborate graphical interface (functional interface
             only)
           </li>
           <li>
@@ -482,74 +482,78 @@ import BackToTop from "../../components/BackToTop.astro";
         </p>
       </div>
 
-      <!-- Enterprise Accordion -->
-      <details class="enterprise-accordion">
-        <summary class="enterprise-summary">
-          <span class="enterprise-icon">🏢</span>
-          <div class="enterprise-title">
-            <h3>Need an Enterprise solution?</h3>
-            <p>Multi-agent architecture, strict compliance, guaranteed SLA</p>
-          </div>
-          <span class="enterprise-price">Starting from €30,000</span>
-          <span class="accordion-arrow">▼</span>
-        </summary>
-        <div class="enterprise-content">
-          <div class="offer-card offer-card-enterprise">
-            <div class="offer-header">
-              <h3>Custom multi-agent platform</h3>
-              <p class="offer-tagline">For multiple collaborating agents</p>
-              <div class="offer-price">€30,000</div>
-              <p class="offer-vat">VAT not applicable, art. 293 B CGI</p>
-            </div>
-            <div class="offer-duration">
-              ⏱️ Approximate duration: 8-10 weeks
-            </div>
-            <div class="offer-value-prop">
-              <p>
-                <strong>Why this offer?</strong> For <strong
-                  >multiple collaborating agents</strong
-                > in your organization. Example: triage agent + specialized
-                support agent + escalation agent.
-              </p>
-            </div>
-            <div class="offer-includes">
-              <h4>Deliverables</h4>
-              <ul>
-                <li>Everything in "Multilingual agent + integrations"</li>
-                <li>
-                  Multi-agent orchestration (intelligent request routing)
-                </li>
-                <li>Model fine-tuning on your data</li>
-                <li>Enhanced compliance and security (GDPR, HIPAA)</li>
-                <li>Advanced monitoring (LangSmith or equivalent)</li>
-                <li>Strategic support</li>
-                <li>
-                  Support for 3 months + weekly follow-up post-launch
-                </li>
-              </ul>
-            </div>
-            <div class="offer-use-cases">
-              <p>
-                <strong>Examples:</strong> Multi-agent platform (Support + HR
-                + IT), complex orchestration, strict compliance
-              </p>
-            </div>
-            <div class="offer-value-prop">
-              <p><strong>Concrete example:</strong></p>
-              <p>
-                An online bank needs a multi-agent system: automated customer
-                support, identity verification and anti-fraud, HR assistant.
-                It therefore requires intelligent orchestration to route requests
-                and transfer to a human if necessary.
-              </p>
-            </div>
-            <div class="offer-cta">
-              <a href="/en/contact" class="btn btn-primary">🗓️ Book a call</a>
-              <a href="/en/contact" class="btn btn-secondary">✉️ Get contacted</a>
-            </div>
-          </div>
+      <!-- Enterprise Offer - On quote -->
+      <div class="offer-card offer-card--enterprise">
+        <div class="offer-header">
+          <div class="enterprise-badge">🏢 Enterprise</div>
+          <h3>Custom multi-agent platform</h3>
+          <p class="offer-tagline">
+            To orchestrate multiple agents collaborating in your organization
+          </p>
+          <div class="offer-price">On quote</div>
+          <p class="offer-duration">⏱️ Duration: Variable according to scope</p>
         </div>
-      </details>
+
+        <div class="offer-value-prop">
+          <p>
+            <strong>Why on quote?</strong> Each multi-agent project is unique. 
+            Complexity depends on the number of agents, integrations, compliance 
+            requirements, and your business context.
+          </p>
+        </div>
+
+        <div class="offer-includes">
+          <h4>Example features</h4>
+          <ul>
+            <li>Multi-agent orchestration (intelligent request routing)</li>
+            <li>Model fine-tuning on your proprietary data</li>
+            <li>Enhanced compliance (GDPR, HIPAA, banking sector...)</li>
+            <li>Advanced monitoring with specialized tools (LangSmith or equivalent)</li>
+            <li>Strategic support and team training</li>
+            <li>Custom post-launch support</li>
+          </ul>
+        </div>
+
+        <div class="offer-use-cases">
+          <p>
+            <strong>Use cases:</strong> Customer support + HR + IT desk platform, 
+            automated triage system with specialized agents, complex orchestration 
+            with escalation to humans
+          </p>
+        </div>
+
+        <div class="enterprise-example">
+          <h4>Concrete example</h4>
+          <p>
+            An online bank needs a multi-agent system: automated customer support, 
+            anti-fraud identity verification, internal HR assistant. Intelligent 
+            orchestration routes requests according to their nature and transfers 
+            to a human when necessary.
+          </p>
+        </div>
+
+        <div class="enterprise-process">
+          <h4>How does it work?</h4>
+          <ol>
+            <li><strong>Mandatory audit (€2,000)</strong>: I analyze your needs and estimate the workload</li>
+            <li><strong>Personalized quote</strong>: I propose a fixed-price or time-based option adapted to you</li>
+            <li><strong>If signed:</strong> the €2,000 audit fee is deducted from the project</li>
+          </ol>
+        </div>
+
+        <div class="enterprise-note">
+          <p>
+            <strong>Starting from €30,000</strong> depending on complexity. 
+            Typical duration: 3 to 6 months including development and support.
+          </p>
+        </div>
+
+        <div class="offer-cta">
+          <a href="/en/contact" class="btn btn-primary">
+            🗓️ Book an audit
+          </a>
+        </div>
+      </div>
 
       <div class="offer-unsure">
         <p>Not sure about your choice?</p>
@@ -1295,8 +1299,93 @@ import BackToTop from "../../components/BackToTop.astro";
       color: rgb(var(--color-primary));
     }
 
+    /* Enterprise Offer Styles */
+    .offer-card--enterprise {
+      border: 2px solid rgba(var(--color-primary), 0.4);
+      background: linear-gradient(
+        135deg,
+        rgba(var(--color-primary), 0.05),
+        rgba(var(--color-surface), 0.8)
+      );
+    }
+
+    .enterprise-badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(var(--color-primary), 0.15);
+      color: rgb(var(--color-primary));
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .enterprise-example {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: rgba(var(--color-accent), 0.05);
+      border-radius: var(--radius-md);
+      border-left: 3px solid rgb(var(--color-accent));
+    }
+
+    .enterprise-example h4 {
+      font-size: 1rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 0.75rem;
+    }
+
+    .enterprise-example p {
+      margin: 0;
+      color: rgb(var(--color-text-muted));
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .enterprise-process {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: rgb(var(--color-surface));
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(var(--color-border), 0.3);
+    }
+
+    .enterprise-process h4 {
+      font-size: 1rem;
+      color: rgb(var(--color-text));
+      margin-bottom: 1rem;
+    }
+
+    .enterprise-process ol {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+
+    .enterprise-process ol li {
+      margin-bottom: 0.75rem;
+      color: rgb(var(--color-text-muted));
+      line-height: 1.6;
+    }
+
+    .enterprise-process ol li strong {
+      color: rgb(var(--color-text));
+    }
+
+    .enterprise-note {
+      margin: 2rem 0 1.5rem;
+      padding: 1rem 1.5rem;
+      background: rgba(var(--color-primary), 0.08);
+      border-radius: var(--radius-md);
+      border-left: 3px solid rgb(var(--color-primary));
+    }
+
+    .enterprise-note p {
+      margin: 0;
+      color: rgb(var(--color-text));
+      font-size: 0.95rem;
+    }
+
     /* ===============================
-     ENTERPRISE ACCORDION
+     LEGACY ENTERPRISE ACCORDION
      =============================== */
     .enterprise-accordion {
       margin: 3rem 0 2rem;
