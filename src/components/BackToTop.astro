@@ -21,7 +21,8 @@
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 9999;
+    pointer-events: auto;
     
     /* INVISIBLE par défaut */
     opacity: 0;
@@ -37,6 +38,11 @@
     box-shadow:
       0 4px 15px rgba(var(--color-primary), 0.4),
       0 2px 8px rgba(var(--color-primary-hover), 0.3);
+  }
+  
+  /* S'assurer que le bouton est cliquable même quand invisible */
+  .back-to-top-btn.visible {
+    pointer-events: auto;
   }
   
   .button-content {
@@ -97,6 +103,8 @@
       right: 1.5rem;
       width: 50px;
       height: 50px;
+      z-index: 9999;
+      pointer-events: auto;
     }
     
     .arrow-up {
@@ -111,69 +119,83 @@
   
   @media (max-width: 480px) {
     .back-to-top-btn {
-      bottom: 1rem;
-      right: 1rem;
-      width: 46px;
-      height: 46px;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      width: 48px;
+      height: 48px;
+      z-index: 9999;
+      pointer-events: auto;
     }
     
     .arrow-up {
-      font-size: 14px;
+      font-size: 15px;
     }
     
     .bar {
       width: 2px;
-      height: 10px;
+      height: 11px;
+    }
+  }
+  
+  /* S'assurer que le bouton n'est pas masqué par d'autres éléments */
+  @media (max-width: 768px) {
+    .back-to-top-btn.visible {
+      opacity: 1 !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
     }
   }
 </style>
 
-<script>
-  function initBackToTop(): void {
-    const btn = document.getElementById('back-to-top-btn') as HTMLButtonElement | null;
-    if (!btn) return;
-    
-    const THRESHOLD = 300;
-    let ticking = false;
-    
-    function updateButton(): void {
-      const scrollY = window.scrollY;
+<script is:inline>
+  (function() {
+    function initBackToTop() {
+      const btn = document.getElementById('back-to-top-btn');
+      if (!btn) return;
       
-      if (scrollY > THRESHOLD) {
-        btn!.classList.add('visible');
-      } else {
-        btn!.classList.remove('visible');
+      // Seuil plus bas sur mobile pour une meilleure visibilité
+      const THRESHOLD = window.innerWidth <= 768 ? 200 : 300;
+      let ticking = false;
+      
+      function updateButton() {
+        const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollY > THRESHOLD) {
+          btn.classList.add('visible');
+        } else {
+          btn.classList.remove('visible');
+        }
+        
+        ticking = false;
       }
       
-      ticking = false;
-    }
-    
-    function onScroll(): void {
-      if (!ticking) {
-        requestAnimationFrame(updateButton);
-        ticking = true;
+      function onScroll() {
+        if (!ticking) {
+          requestAnimationFrame(updateButton);
+          ticking = true;
+        }
       }
+      
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+      
+      // Events
+      window.addEventListener('scroll', onScroll, { passive: true });
+      btn.addEventListener('click', scrollToTop);
+      
+      // Init
+      updateButton();
     }
     
-    function scrollToTop(): void {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+    // Démarrage
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initBackToTop);
+    } else {
+      initBackToTop();
     }
-    
-    // Events
-    window.addEventListener('scroll', onScroll, { passive: true });
-    btn.addEventListener('click', scrollToTop);
-    
-    // Init
-    updateButton();
-  }
-  
-  // Démarrage
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initBackToTop);
-  } else {
-    initBackToTop();
-  }
+  })();
 </script>

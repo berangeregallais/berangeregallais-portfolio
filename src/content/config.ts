@@ -35,7 +35,12 @@ const portfolioCollection = defineCollection({
     image: z.string(),
     imageAlt: z.string().optional(),
     gallery: z.array(z.string()).optional(),
-    demoUrl: z.string().url().optional(),
+    demoUrl: z.union([
+      z.string().url(),
+      z.string().refine((val) => val.startsWith('/'), {
+        message: "Must be a valid URL or start with '/'"
+      })
+    ]).optional(),
     githubUrl: z.string().url().optional(),
     category: z.array(z.string()).default([]),
     testimonial: z.object({

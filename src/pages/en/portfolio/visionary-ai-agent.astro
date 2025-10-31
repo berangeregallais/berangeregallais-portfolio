@@ -1,0 +1,909 @@
+---
+// src/pages/en/portfolio/visionary-ai-agent.astro
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Visionary AI Agent | Conversational assistant for image analysis API"
+  description="Intelligent conversational agent for Visionary.ai technical assistance. React UI, Gemini integration, structured knowledge base."
+  lang="en"
+>
+  <!-- Hero Section -->
+  <section class="project-hero">
+    <div class="container">
+      <div class="hero-back">
+        <a href="/en/portfolio" class="back-link">← Back to portfolio</a>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">Conversational Agent</div>
+        <h1>Visionary AI Agent</h1>
+        <p class="hero-subtitle">
+          Conversational agent specialized in technical assistance for the
+          Visionary.ai image analysis API. Modern interface, contextual answers,
+          and Gemini integration.
+        </p>
+        <div class="hero-image">
+          <img
+            src="/portfolio/visionary-ai-agent.png"
+            alt="Visionary AI Agent Interface"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section class="overview-section">
+    <div class="container">
+      <h2 class="section-title">Overview</h2>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="overview-icon">🎯</div>
+          <h3>Objective</h3>
+          <p>
+            Turn static documentation into intelligent, contextual conversation
+            to help developers integrate Visionary.ai quickly.
+          </p>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">⚙️</div>
+          <h3>Solution</h3>
+          <p>
+            Hybrid system combining a structured knowledge base and Gemini
+            generation with a modern chat UI and robust fallbacks.
+          </p>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">🚀</div>
+          <h3>Results</h3>
+          <p>
+            Functional demo with instant, contextual responses, ready to adapt
+            to other APIs and use cases.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Demo -->
+  <section class="demo-section">
+    <div class="container">
+      <h2 class="section-title">Live Demo</h2>
+      <p class="section-intro">
+        The agent is available online and ready to be tested. Try it directly on
+        the hosted demo.
+      </p>
+
+      <div class="demo-notice">
+        <div class="demo-notice-icon">ℹ️</div>
+        <div class="demo-notice-content">
+          <strong>Limited demo version</strong>
+          <p>
+            The public demo runs in demo mode with pre-written responses to
+            limit API costs and prevent abuse. The agent can run in
+            <span class="highlight-text">live mode with Gemini AI</span> for dynamic and
+            contextual responses (see <a href="#operating-modes">Operating Modes</a> section).
+          </p>
+        </div>
+      </div>
+
+      <div class="demo-container">
+        <div class="demo-content">
+          <div class="demo-info">
+            <h3>Try the agent now</h3>
+            <p>
+              The Visionary AI agent is hosted and functional. You can try it
+              immediately to discover its capabilities in action.
+            </p>
+            <ul class="demo-features">
+              <li>✓ Interactive 4-step guided tour</li>
+              <li>✓ One-click sample image testing</li>
+              <li>✓ 8+ response categories (auth, endpoints, SDKs, etc.)</li>
+              <li>
+                ✓ Multi-language code examples (React, Node.js, Python, Swift,
+                Kotlin)
+              </li>
+              <li>✓ Animated interface with smooth transitions</li>
+              <li>✓ Dark/light theme toggle</li>
+            </ul>
+            <a
+              href="https://visionary-ai-agent.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary btn-large demo-button"
+            >
+              Try the live demo →
+            </a>
+          </div>
+          <div class="demo-image-wrapper">
+            <img
+              src="/portfolio/visionary-ai-agent.png"
+              alt="Visionary AI Agent Interface"
+              class="demo-image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title">Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">🎯</div>
+          <h3>Enhanced Demo Experience</h3>
+          <p>
+            Rich contextual answers with code examples, 8+ categories
+            (authentication, endpoints, SDKs, performance, integration),
+            practical examples for React, Node.js, Python.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🖼️</div>
+          <h3>Sample Image Testing</h3>
+          <p>
+            Click-to-analyze sample images, instant analysis, multiple scenarios
+            (portrait, landscape, urban scenes), visual previews with hover
+            effects.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🎨</div>
+          <h3>Advanced UI/UX</h3>
+          <p>
+            Smooth animations, interactive buttons, copy-to-clipboard with
+            feedback, toast notifications, responsive mobile-first design.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🎓</div>
+          <h3>Guided Onboarding</h3>
+          <p>
+            Interactive 4-step tour, progressive feature introduction, skip
+            option, visual indicators with progress dots.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📊</div>
+          <h3>Rich Demo Data</h3>
+          <p>
+            8+ categories of detailed responses, ready-to-use code snippets,
+            practical use cases, performance optimization tips.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <h3>Optimized Performance</h3>
+          <p>
+            Optimized bundle with code splitting, hardware-accelerated
+            animations, optimized React rendering, smart response caching.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Stack -->
+  <section class="stack-section">
+    <div class="container">
+      <h2 class="section-title">Technical Stack</h2>
+      <div class="stack-grid">
+        <div class="stack-category">
+          <h3>Frontend</h3>
+          <ul>
+            <li>
+              <strong>React 18 + TypeScript</strong> — Type-safe development
+            </li>
+            <li>
+              <strong>Tailwind CSS</strong> — Utility-first design system with custom
+              animations
+            </li>
+            <li>
+              <strong>Vite</strong> — Fast build tool and optimized builds
+            </li>
+            <li><strong>Custom Hooks</strong> — Reactive state management</li>
+          </ul>
+        </div>
+        <div class="stack-category">
+          <h3>Backend & AI</h3>
+          <ul>
+            <li>
+              <strong>Google Gemini 2.5 Flash API</strong> — Contextual generation
+            </li>
+            <li>
+              <strong>Netlify Functions</strong> — Serverless architecture
+            </li>
+            <li>
+              <strong>Demo Mode</strong> — Environment-based configuration
+            </li>
+          </ul>
+        </div>
+        <div class="stack-category">
+          <h3>Features</h3>
+          <ul>
+            <li>Responsive mobile-first design</li>
+            <li>Dark/light theme toggle with transitions</li>
+            <li>Real-time conversation with context retention</li>
+            <li>Advanced markdown parsing with syntax highlighting</li>
+            <li>Robust error handling and fallback responses</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Operating Modes -->
+  <section id="operating-modes" class="modes-section">
+    <div class="container">
+      <h2 class="section-title">Operating Modes</h2>
+      <p class="section-intro">
+        The architecture supports two modes to adapt to your needs: demo mode
+        for public demonstrations, and live mode with Gemini AI for dynamic
+        responses.
+      </p>
+
+      <div class="modes-grid">
+        <div class="mode-card mode-card--demo">
+          <div class="mode-header">
+            <div class="mode-icon">🎯</div>
+            <h3>Demo Mode</h3>
+            <span class="mode-badge mode-badge--free">Free</span>
+          </div>
+          <div class="mode-content">
+            <p class="mode-description">
+              Pre-written optimized and professional responses, perfect for
+              public demonstrations.
+            </p>
+            <ul class="mode-features">
+              <li>✓ Instant responses (0 latency)</li>
+              <li>✓ 8+ pre-written response categories</li>
+              <li>✓ Ready-to-use code examples</li>
+              <li>✓ No API costs</li>
+              <li>✓ Works for all visitors</li>
+            </ul>
+            <div class="mode-examples">
+              <strong>Examples:</strong>
+              <ul>
+                <li>"mountain" → Specific mountain landscape response</li>
+                <li>"portrait" → Specific emotion analysis response</li>
+                <li>"analyze" → General object detection response</li>
+              </ul>
+            </div>
+            <div class="mode-use-case">
+              <strong>Ideal for:</strong> Public portfolio, demonstrations, capability
+              showcase
+            </div>
+          </div>
+        </div>
+
+        <div class="mode-card mode-card--live">
+          <div class="mode-header">
+            <div class="mode-icon">🚀</div>
+            <h3>Live Mode (Gemini AI)</h3>
+            <span class="mode-badge mode-badge--ai">Dynamic AI</span>
+          </div>
+          <div class="mode-content">
+            <p class="mode-description">
+              Dynamically generated responses by Gemini AI, adapted to the exact
+              context of each question.
+            </p>
+            <ul class="mode-features">
+              <li>✓ Contextually adapted responses</li>
+              <li>✓ Advanced context understanding</li>
+              <li>✓ Personalized suggestions</li>
+              <li>✓ Responses in 1-3 seconds</li>
+              <li>✓ Total personalization</li>
+            </ul>
+            <div class="mode-config">
+              <strong>Configuration:</strong>
+              <code>DEMO_MODE=false</code><br />
+              <code>GEMINI_API_KEY=your_key</code>
+            </div>
+            <div class="mode-use-case">
+              <strong>Ideal for:</strong> Personal testing, specific integrations,
+              advanced customization
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modes-comparison">
+        <h3>Comparison</h3>
+        <div class="comparison-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Aspect</th>
+                <th>Demo Mode</th>
+                <th>Gemini AI Mode</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cost</strong></td>
+                <td>Free</td>
+                <td>Paid (after free quota)</td>
+              </tr>
+              <tr>
+                <td><strong>Responses</strong></td>
+                <td>Pre-written</td>
+                <td>Dynamic</td>
+              </tr>
+              <tr>
+                <td><strong>Specificity</strong></td>
+                <td>Fixed categories</td>
+                <td>Context-adapted</td>
+              </tr>
+              <tr>
+                <td><strong>Performance</strong></td>
+                <td>Instant</td>
+                <td>1-3 seconds</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Want a similar agent for your API&nbsp;?</h2>
+        <p>
+          This concept is replicable and customizable. Let's discuss your use
+          case and the required integrations.
+        </p>
+        <div class="cta-buttons">
+          <a
+            href="https://visionary-ai-agent.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-large">View live demo</a
+          >
+          <a
+            href="https://github.com/berangeregallais/visionary-ai-docs-assistant"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary">View code on GitHub</a
+          >
+          <a href="/en/contact" class="btn btn-secondary"
+            >Discuss your project</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  :root {
+    --section-spacing: 6rem;
+  }
+  .project-hero {
+    padding: 4rem 0 6rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-background)) 0%,
+      rgba(var(--color-accent), 0.06) 100%
+    );
+  }
+  .hero-back {
+    margin-bottom: 2rem;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(var(--color-text-muted));
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+  .back-link:hover {
+    color: rgb(var(--color-primary));
+  }
+  .hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-accent)),
+      rgba(var(--color-accent), 0.8)
+    );
+    color: rgb(var(--color-text-button));
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  .project-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+  .hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: rgb(var(--color-text-muted));
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+  .hero-image {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(var(--color-border), 0.3);
+  }
+  .hero-image img {
+    width: 100%;
+    display: block;
+  }
+
+  .overview-section {
+    padding: var(--section-spacing) 0;
+    background: rgb(var(--color-surface));
+  }
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .overview-card {
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+  }
+  .overview-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .demo-section {
+    padding: var(--section-spacing) 0;
+  }
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+  .section-intro {
+    text-align: center;
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    max-width: 700px;
+    margin: 0 auto 3rem;
+  }
+
+  .demo-notice {
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    background: rgba(var(--color-primary), 0.1);
+    border: 2px solid rgba(var(--color-primary), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .demo-notice-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  .demo-notice-content {
+    flex: 1;
+  }
+  .demo-notice-content strong {
+    display: block;
+    color: rgb(var(--color-text));
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .demo-notice-content p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .demo-notice-content .highlight-text {
+    color: rgb(var(--color-primary));
+    font-weight: 700;
+  }
+  .demo-notice-content a {
+    color: rgb(var(--color-primary));
+    text-decoration: underline;
+    text-decoration-color: rgba(var(--color-primary), 0.4);
+    transition: text-decoration-color 0.2s ease;
+  }
+  .demo-notice-content a:hover {
+    text-decoration-color: rgb(var(--color-primary));
+  }
+
+  .demo-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .demo-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+  }
+  .demo-info h3 {
+    font-size: 1.75rem;
+    color: rgb(var(--color-text));
+    margin-bottom: 1rem;
+  }
+  .demo-info p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .demo-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+  }
+  .demo-features li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+    color: rgb(var(--color-text-muted));
+    font-size: 0.95rem;
+  }
+  .demo-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: rgb(var(--color-success));
+    font-weight: bold;
+  }
+  .demo-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .demo-image-wrapper {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(var(--color-border), 0.3);
+  }
+  .demo-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .features-section {
+    padding: var(--section-spacing) 0;
+    background: rgb(var(--color-surface));
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .feature-item {
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  .feature-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .feature-item h3 {
+    font-size: 1.25rem;
+    color: rgb(var(--color-text));
+    margin-bottom: 1rem;
+  }
+  .feature-item p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  .stack-section {
+    padding: var(--section-spacing) 0;
+  }
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .stack-category {
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+  }
+  .stack-category h3 {
+    font-size: 1.5rem;
+    color: rgb(var(--color-primary));
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(var(--color-primary), 0.3);
+    padding-bottom: 0.75rem;
+  }
+  .stack-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .stack-category ul li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(var(--color-border), 0.2);
+    color: rgb(var(--color-text-muted));
+    line-height: 1.6;
+  }
+  .stack-category ul li:last-child {
+    border-bottom: none;
+  }
+  .stack-category strong {
+    color: rgb(var(--color-text));
+  }
+
+  .modes-section {
+    padding: var(--section-spacing) 0;
+    background: linear-gradient(
+      135deg,
+      rgba(var(--color-primary), 0.05) 0%,
+      rgba(var(--color-accent), 0.03) 100%
+    );
+  }
+  .modes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .mode-card {
+    background: rgb(var(--color-surface));
+    border: 2px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  .mode-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+  .mode-card--demo {
+    border-color: rgba(var(--color-accent), 0.5);
+  }
+  .mode-card--live {
+    border-color: rgba(var(--color-primary), 0.5);
+  }
+  .mode-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .mode-icon {
+    font-size: 2.5rem;
+  }
+  .mode-header h3 {
+    font-size: 1.5rem;
+    color: rgb(var(--color-text));
+    margin: 0;
+    flex: 1;
+  }
+  .mode-badge {
+    padding: 0.375rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .mode-badge--free {
+    background: rgba(var(--color-success), 0.2);
+    color: rgb(var(--color-success));
+  }
+  .mode-badge--ai {
+    background: rgba(var(--color-primary), 0.2);
+    color: rgb(var(--color-primary));
+  }
+  .mode-content {
+    color: rgb(var(--color-text-muted));
+  }
+  .mode-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  .mode-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+  }
+  .mode-features li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    font-size: 0.95rem;
+  }
+  .mode-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: rgb(var(--color-success));
+    font-weight: bold;
+  }
+  .mode-examples,
+  .mode-config,
+  .mode-use-case {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(var(--color-surface-variant), 0.3);
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+  }
+  .mode-examples strong,
+  .mode-config strong,
+  .mode-use-case strong {
+    color: rgb(var(--color-text));
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .mode-examples ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+  }
+  .mode-examples ul li {
+    padding-left: 1rem;
+    margin-bottom: 0.25rem;
+    position: relative;
+  }
+  .mode-examples ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: rgb(var(--color-primary));
+  }
+  .mode-config code {
+    display: inline-block;
+    background: rgba(var(--color-background), 0.5);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin: 0.25rem 0;
+  }
+  .modes-comparison {
+    margin-top: 3rem;
+  }
+  .modes-comparison h3 {
+    font-size: 1.5rem;
+    color: rgb(var(--color-text));
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .comparison-table {
+    overflow-x: auto;
+  }
+  .comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgb(var(--color-surface));
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .comparison-table thead {
+    background: rgba(var(--color-primary), 0.1);
+  }
+  .comparison-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: rgb(var(--color-text));
+    border-bottom: 2px solid rgba(var(--color-border), 0.3);
+  }
+  .comparison-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(var(--color-border), 0.2);
+    color: rgb(var(--color-text-muted));
+  }
+  .comparison-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .comparison-table tbody tr:hover {
+    background: rgba(var(--color-primary), 0.03);
+  }
+
+  .cta-section {
+    padding: var(--section-spacing) 0;
+    text-align: center;
+  }
+  .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .cta-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: rgb(var(--color-text));
+    margin-bottom: 1.5rem;
+  }
+  .cta-content p {
+    font-size: 1.25rem;
+    color: rgb(var(--color-text-muted));
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 1024px) {
+    .overview-grid {
+      grid-template-columns: 1fr;
+    }
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .stack-grid {
+      grid-template-columns: 1fr;
+    }
+    .modes-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .demo-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .demo-image-wrapper {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    :root {
+      --section-spacing: 4rem;
+    }
+    .project-hero {
+      padding: 3rem 0 4rem;
+    }
+    .demo-content {
+      padding: 2rem;
+    }
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
