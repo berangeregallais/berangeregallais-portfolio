@@ -17,6 +17,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           Intelligent agents that automate your business processes:
           support, sales, internal operations, technical documentation
         </p>
+        <div class="hero-cta">
+          <a href="/en/agent-types" class="btn btn-secondary">
+            View all available agent types →
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -746,8 +751,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     font-size: 1.25rem;
     color: rgb(var(--color-text-muted));
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
     line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-cta {
+    margin-top: 2rem;
     position: relative;
     z-index: 1;
   }

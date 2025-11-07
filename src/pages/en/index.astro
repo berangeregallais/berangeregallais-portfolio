@@ -147,9 +147,14 @@ import BackToTop from "../../components/BackToTop.astro";
 
       <div class="cta-services">
         <p>Want concrete examples for your industry?</p>
-        <a href="/en/services" class="btn btn-secondary">
-          Discover all detailed use cases →
-        </a>
+        <div class="cta-services-buttons">
+          <a href="/en/services" class="btn btn-secondary">
+            Discover all detailed use cases →
+          </a>
+          <a href="/en/agent-types" class="btn btn-secondary">
+            View all agent types →
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -470,7 +475,6 @@ import BackToTop from "../../components/BackToTop.astro";
         <!-- Step 1 -->
         <div class="process-card">
           <div class="process-number">1</div>
-          <div class="process-icon">💬</div>
           <h3>Discovery call (30 min)</h3>
           <p>
             We discuss your project: what problem you want to solve, what data you have available,
@@ -489,7 +493,6 @@ import BackToTop from "../../components/BackToTop.astro";
         <!-- Step 2 -->
         <div class="process-card">
           <div class="process-number">2</div>
-          <div class="process-icon">🧪</div>
           <h3>Validation or direct development</h3>
           <p>
             <strong>Option A: Validation (recommended if uncertainty)</strong><br>
@@ -511,7 +514,6 @@ import BackToTop from "../../components/BackToTop.astro";
         <!-- Step 3 -->
         <div class="process-card">
           <div class="process-number">3</div>
-          <div class="process-icon">🚀</div>
           <h3>Deployment & follow-up</h3>
           <p>
             I deploy the agent to production, train your team, and remain available during the
@@ -553,17 +555,17 @@ import BackToTop from "../../components/BackToTop.astro";
      =============================== */
     :root {
       --color-background-custom: 5, 10, 48; /* #050a30 - Bleu foncé */
-      --color-primary-custom: 255, 107, 255; /* #ff6bff - Rose */
-      --color-primary-hover-custom: 255, 137, 255; /* Rose clair pour hover */
-      --color-accent-custom: 255, 157, 255; /* Rose doux pour accents */
+      --color-primary-custom: 238, 130, 255; /* #ee82ff - Rose moins saturé */
+      --color-primary-hover-custom: 245, 150, 255; /* #f596ff - Rose clair pour hover */
+      --color-accent-custom: 240, 170, 255; /* #f0aaff - Rose doux pour accents */
     }
 
     /* Override des variables de couleur pour cette page */
     #en-index-root {
       --color-background: 5, 10, 48;
-      --color-primary: 255, 107, 255;
-      --color-primary-hover: 255, 137, 255;
-      --color-accent: 255, 157, 255;
+      --color-primary: 238, 130, 255;
+      --color-primary-hover: 245, 150, 255;
+      --color-accent: 240, 170, 255;
       --color-surface: 15, 25, 65;
       --color-surface-variant: 25, 40, 90;
     }
@@ -981,6 +983,13 @@ import BackToTop from "../../components/BackToTop.astro";
       color: rgb(var(--color-text));
       margin-bottom: 1.5rem;
       font-weight: 500;
+    }
+
+    .cta-services-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     /* Responsive */
@@ -1971,6 +1980,7 @@ import BackToTop from "../../components/BackToTop.astro";
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
       margin-bottom: 3rem;
+      align-items: start;
     }
 
     .process-card {
@@ -1980,6 +1990,9 @@ import BackToTop from "../../components/BackToTop.astro";
       padding: 2rem;
       position: relative;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .process-card:hover {
@@ -2004,18 +2017,13 @@ import BackToTop from "../../components/BackToTop.astro";
       box-shadow: 0 2px 8px rgba(var(--color-primary), 0.3);
     }
 
-    .process-icon {
-      font-size: 3rem;
-      text-align: center;
-      margin: 1rem 0;
-    }
-
     .process-card h3 {
       font-family: var(--font-heading);
       font-size: 1.5rem;
       color: rgb(var(--color-text));
       margin-bottom: 1rem;
       text-align: center;
+      margin-top: 0.5rem;
     }
 
     .process-card > p {
@@ -2029,6 +2037,7 @@ import BackToTop from "../../components/BackToTop.astro";
       padding: 1rem;
       border-radius: var(--radius-md);
       border-left: 3px solid rgb(var(--color-accent));
+      margin-top: auto;
     }
 
     .process-outcome strong {
