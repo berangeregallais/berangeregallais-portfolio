@@ -5,7 +5,7 @@ import BackToTop from "../../components/BackToTop.astro";
 ---
 
 <BaseLayout
-  title="Offers & Pricing | Conversational AI Agents"
+  title="Offers & Pricing | AI Agents"
   description="Validation in 2 steps at 7K€, then 3 offers for production. Simple agent, with document search, or multilingual. Detailed comparison and pricing FAQ."
   lang="en"
 >
@@ -136,7 +136,7 @@ import BackToTop from "../../components/BackToTop.astro";
             </p>
             <p class="bonus-result">
               Result: only <strong>€4,500</strong> invested
-              in validation (vs €7,000 for the Simple conversational agent).
+              in validation (vs €7,000 for the Simple AI agent).
             </p>
           </div>
         </div>
@@ -176,10 +176,10 @@ import BackToTop from "../../components/BackToTop.astro";
       
       <!-- Main Offers Grid (3 columns) -->
       <div class="offers-grid-hero">
-        <!-- Simple conversational agent -->
+        <!-- Simple AI agent -->
         <div class="offer-card">
           <div class="offer-header">
-            <h3>Simple conversational agent</h3>
+            <h3>Simple AI agent</h3>
             <p class="offer-tagline">Interactive guide without document base</p>
             <div class="offer-price">€7,000</div>
             <p class="offer-vat">VAT not applicable, art. 293 B CGI</p>
@@ -190,14 +190,14 @@ import BackToTop from "../../components/BackToTop.astro";
           </div>
           <div class="offer-value-prop">
             <p>
-              <strong>Why this offer?</strong> To quickly create a guided conversational
+              <strong>Why this offer?</strong> To quickly create a guided AI
               assistant without a document base. Ideal for onboarding, product quiz, or simple FAQ.
             </p>
           </div>
           <div class="offer-includes">
             <h4>Deliverables</h4>
             <ul>
-              <li>Functional conversational agent</li>
+              <li>Functional AI agent</li>
               <li>Interface integrated into your site</li>
               <li>Reliability tests</li>
               <li>User documentation</li>
@@ -348,7 +348,7 @@ import BackToTop from "../../components/BackToTop.astro";
             <thead>
               <tr>
                 <th class="feature-column">Feature</th>
-                <th>Simple conversational agent<br /><span>For FAQ and user onboarding</span></th>
+                <th>Simple AI agent<br /><span>For FAQ and user onboarding</span></th>
                 <th>Agent with document search<br /><span>For technical support and API documentation</span></th>
                 <th>Multilingual agent + integrations<br /><span>For international customer support</span></th>
               </tr>
@@ -371,7 +371,7 @@ import BackToTop from "../../components/BackToTop.astro";
               </tr>
               <tr>
                 <td class="feature-name">Architecture</td>
-                <td>Simple conversational</td>
+                <td>Simple AI agent</td>
                 <td>RAG + LangGraph</td>
                 <td>Advanced RAG + reranking</td>
               </tr>
@@ -1036,6 +1036,7 @@ import BackToTop from "../../components/BackToTop.astro";
       );
       border-left: 3px solid rgb(var(--color-accent));
       border-radius: var(--radius-sm);
+      margin-bottom: 1rem;
     }
 
     .offer-value-prop p {
@@ -1054,19 +1055,19 @@ import BackToTop from "../../components/BackToTop.astro";
     }
 
     .offer-includes {
-      /* Grid will handle spacing */
+      margin-bottom: 1rem;
     }
 
     .offer-includes h4 {
       font-size: 1rem;
       color: rgb(var(--color-text));
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
 
     .offer-includes ul {
       list-style: none;
       padding: 0;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0;
     }
 
     .offer-includes ul li {
@@ -1115,6 +1116,7 @@ import BackToTop from "../../components/BackToTop.astro";
 
     .offer-use-cases {
       font-size: 0.9rem;
+      margin-bottom: 1rem;
     }
 
     .offer-use-cases p {
@@ -1320,8 +1322,8 @@ import BackToTop from "../../components/BackToTop.astro";
     }
 
     .enterprise-example {
-      margin: 2rem 0;
-      padding: 1.5rem;
+      margin: 1rem 0;
+      padding: 1.25rem;
       background: rgba(var(--color-accent), 0.05);
       border-radius: var(--radius-md);
       border-left: 3px solid rgb(var(--color-accent));
@@ -1330,7 +1332,7 @@ import BackToTop from "../../components/BackToTop.astro";
     .enterprise-example h4 {
       font-size: 1rem;
       color: rgb(var(--color-text));
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
 
     .enterprise-example p {
@@ -1341,8 +1343,8 @@ import BackToTop from "../../components/BackToTop.astro";
     }
 
     .enterprise-process {
-      margin: 2rem 0;
-      padding: 1.5rem;
+      margin: 1rem 0;
+      padding: 1.25rem;
       background: rgb(var(--color-surface));
       border-radius: var(--radius-md);
       border: 1px solid rgba(var(--color-border), 0.3);
@@ -1351,7 +1353,7 @@ import BackToTop from "../../components/BackToTop.astro";
     .enterprise-process h4 {
       font-size: 1rem;
       color: rgb(var(--color-text));
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
 
     .enterprise-process ol {
@@ -1370,8 +1372,8 @@ import BackToTop from "../../components/BackToTop.astro";
     }
 
     .enterprise-note {
-      margin: 2rem 0 1.5rem;
-      padding: 1rem 1.5rem;
+      margin: 1rem 0 1rem;
+      padding: 1rem 1.25rem;
       background: rgba(var(--color-primary), 0.08);
       border-radius: var(--radius-md);
       border-left: 3px solid rgb(var(--color-primary));

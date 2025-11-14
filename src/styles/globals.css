@@ -176,12 +176,12 @@ code {
 }
 
 .section-spacing {
-  padding: calc(var(--spacing-2xl) * 2) 0;
+  padding: 4rem 0;
 }
 
 @media (max-width: 768px) {
   .section-spacing {
-    padding: var(--spacing-2xl) 0;
+    padding: 2.5rem 0;
   }
 }
 

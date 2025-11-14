@@ -3,15 +3,15 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-  title="Contact — Bérangère Gallais | Conversational AI Agent Developer"
-  description="Let's discuss your conversational agent project. Free 30-minute exchange to analyze your needs."
+  title="Contact — Bérangère Gallais | AI Agent Developer"
+  description="Let's discuss your AI agent project. Free 30-minute exchange to analyze your needs."
 >
   <!-- Hero Section -->
   <section class="contact-hero">
     <div class="container">
       <h1 class="hero-title">Contact</h1>
       <p class="hero-subtitle">
-        Do you have a conversational agent project?<br />
+        Do you have an AI agent project?<br />
         Choose the contact method that suits you best.
       </p>
     </div>
@@ -341,8 +341,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   .google-calendar-wrapper :global(button) {
     background: linear-gradient(
       135deg,
-      rgb(var(--color-primary)),
-      rgb(var(--color-primary-hover))
+      #e6b7d4,
+      #f0c9e3
     ) !important;
     border: none !important;
     border-radius: var(--radius-md) !important;
@@ -353,19 +353,25 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     cursor: pointer !important;
     transition: all 0.2s ease !important;
     text-decoration: none !important;
+    box-shadow: 0 4px 12px rgba(230, 183, 212, 0.3) !important;
   }
 
   .google-calendar-wrapper :global(button:hover) {
     opacity: 0.9 !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 4px 12px rgba(var(--color-primary), 0.3) !important;
+    box-shadow: 0 6px 16px rgba(230, 183, 212, 0.4) !important;
+    background: linear-gradient(
+      135deg,
+      #f0c9e3,
+      #e6b7d4
+    ) !important;
   }
 
   :global(.calendar-scheduling-button) {
     background: linear-gradient(
       135deg,
-      rgb(var(--color-primary)),
-      rgb(var(--color-primary-hover))
+      #e6b7d4,
+      #f0c9e3
     ) !important;
     border: none !important;
     border-radius: var(--radius-md) !important;
@@ -375,12 +381,18 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     color: white !important;
     cursor: pointer !important;
     transition: all 0.2s ease !important;
+    box-shadow: 0 4px 12px rgba(230, 183, 212, 0.3) !important;
   }
 
   :global(.calendar-scheduling-button:hover) {
     opacity: 0.9 !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 4px 12px rgba(var(--color-primary), 0.3) !important;
+    box-shadow: 0 6px 16px rgba(230, 183, 212, 0.4) !important;
+    background: linear-gradient(
+      135deg,
+      #f0c9e3,
+      #e6b7d4
+    ) !important;
   }
 
   /* ===============================

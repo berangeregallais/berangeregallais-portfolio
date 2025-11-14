@@ -34,7 +34,7 @@ const text = content[lang];
     <div class="footer-content">
       <div class="footer-links">
         <a href={`/${lang}/services`}>{text.services}</a>
-        <a href={`/${lang}/offers`}>{text.offers}</a>
+        <a href={lang === "fr" ? `/${lang}/offres` : `/${lang}/offers`}>{text.offers}</a>
         <a href={`/${lang}/portfolio`}>{text.portfolio}</a>
         <a href={`/${lang}/contact`}>{text.contact}</a>
         <a href={`/${lang}/legal-notice`}>{text.legal}</a>
