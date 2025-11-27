@@ -1,0 +1,655 @@
+---
+// src/pages/en/portfolio/mapmyai.astro
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="MapMyAI | AI Recommendation Agent - Use Case Recommendations"
+  description="Free tool that analyzes 500+ generative AI use cases and recommends the 3 most relevant AI agents for your business."
+  lang="en"
+>
+  <!-- Hero Section -->
+  <section class="project-hero">
+    <div class="container">
+      <div class="hero-back">
+        <a href="/en/portfolio" class="back-link">← Back to portfolio</a>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">AI Recommendation Agent</div>
+        <h1>MapMyAI</h1>
+        <p class="hero-subtitle">
+          Free tool that analyzes 500+ generative AI use cases and recommends the 3 most relevant AI agents for your business.
+        </p>
+        <div class="hero-image">
+          <img
+            src="/portfolio/questionnaire-short.png"
+            alt="MapMyAI Interface - AI Use Case Recommendations"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Context -->
+  <section class="context-section">
+    <div class="container">
+      <h2 class="section-title">Context</h2>
+
+      <div class="context-content">
+        <div class="context-block">
+          <h3>The Problem</h3>
+          <p>
+            Companies waste time exploring AI use cases that don't fit their context. 
+            They don't know where to start with generative AI.
+          </p>
+        </div>
+
+        <div class="context-block">
+          <h3>The Solution</h3>
+          <p>
+            A free tool that recommends in 2 minutes the 3 best AI agents for your business, 
+            with detailed project plans automatically generated.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Demo -->
+  <section class="demo-section">
+    <div class="container">
+      <h2 class="section-title">Live Demo</h2>
+      <p class="section-intro">
+        MapMyAI is available online. <br />Test it to discover your 3 best AI agents.
+      </p>
+    </div>
+
+    <div class="demo-container">
+      <div class="demo-content">
+        <div class="demo-info">
+          <p>
+            Answer 4 simple questions and receive in 30-40 seconds your recommendations 
+            with detailed project plans.
+          </p>
+          <ul class="demo-features">
+            <li>4-question questionnaire</li>
+            <li>Personalized recommendations based on 500+ use cases</li>
+            <li>Detailed project plans automatically generated</li>
+            <li>Professional PDF export</li>
+          </ul>
+          <a
+            href="https://mapmyai.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-large demo-button"
+          >
+            Test MapMyAI →
+          </a>
+        </div>
+        <div class="demo-image-wrapper">
+          <img
+            src="/portfolio/recos-mindmap.png"
+            alt="MapMyAI Interface"
+            class="demo-image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title">Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">🔍</div>
+          <h3>Personalized Recommendations</h3>
+          <p>
+            The system analyzes your profile (industry, objectives, size, prerequisites) 
+            and searches through 500+ use cases to identify the 3 best matches.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📋</div>
+          <h3>Generated Project Plans</h3>
+          <p>
+            Each recommendation includes a detailed plan with steps, estimated duration, 
+            success criteria, risks, and benefits.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📄</div>
+          <h3>Professional Export</h3>
+          <p>
+            Download your complete report in PDF format to share with your team or keep 
+            for reference.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🎨</div>
+          <h3>Modern UX</h3>
+          <p>
+            Interactive progress bar to track generation in real-time. Multilingual EN/FR 
+            support with automatic detection.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works-section">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+
+      <div class="how-it-works-content">
+        <div class="how-block">
+          <h3>Intelligent Backend</h3>
+          <p>
+            FastAPI + LangGraph orchestrate an 8-step workflow: semantic search in 500+ 
+            use cases, selection of the 3 best, project plan generation with Claude Sonnet 4.
+          </p>
+        </div>
+
+        <div class="how-block">
+          <h3>Modern Frontend</h3>
+          <p>
+            Next.js + React with interactive progress bar to track generation in real-time 
+            and offer a smooth user experience.
+          </p>
+        </div>
+
+        <div class="how-block">
+          <h3>Database</h3>
+          <p>
+            Qdrant for vector search in use cases, SQLite to save sessions and enable 
+            later retrieval.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges -->
+  <section class="challenges-section">
+    <div class="container">
+      <h2 class="section-title">Challenges Resolved</h2>
+      <div class="challenges-grid">
+        <div class="challenge-item">
+          <h3>Generation Time</h3>
+          <p>
+            <strong>Challenge:</strong> 30-40 seconds of waiting can seem long without feedback.
+          </p>
+          <p>
+            <strong>Solution:</strong> Interactive progress bar with 8 visual steps and contextual 
+            messages to reduce perceived wait time.
+          </p>
+        </div>
+        <div class="challenge-item">
+          <h3>API Costs</h3>
+          <p>
+            <strong>Challenge:</strong> High costs to generate project plans by AI.
+          </p>
+          <p>
+            <strong>Solution:</strong> Intelligent caching system that avoids regenerating the same 
+            plans for similar profiles, significantly reducing costs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="results-section">
+    <div class="container">
+      <h2 class="section-title">Results</h2>
+
+      <div class="results-content">
+        <div class="result-block">
+          <h3>Production-ready recommendation agent</h3>
+          <p>
+            Free tool generating qualified leads for AI consulting services. Companies using 
+            the tool are already interested in AI.
+          </p>
+        </div>
+
+        <div class="result-block">
+          <h3>Response time: 30-40 seconds</h3>
+          <p>
+            For semantic search + generation of 3 complete plans with all necessary information 
+            to start a project.
+          </p>
+        </div>
+
+        <div class="result-block">
+          <h3>500+ use cases analyzed</h3>
+          <p>
+            Vector knowledge base regularly updated with real use cases from different industries.
+          </p>
+        </div>
+
+        <div class="result-block">
+          <h3>Multilingual support</h3>
+          <p>
+            French and English with automatic language detection. Results are adapted according 
+            to the user's language.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Need a custom AI agent?</h2>
+        <p>
+          MapMyAI is an example of an agent that helps companies identify their AI use cases.
+        </p>
+        <div class="cta-buttons">
+          <a
+            href="https://mapmyai.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-large">Test MapMyAI</a
+          >
+          <a href="/en/contact" class="btn btn-secondary"
+            >Discuss your project</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  :root {
+    --section-spacing: 4rem;
+  }
+
+  .project-hero {
+    padding: 4rem 0 6rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-background)) 0%,
+      rgba(var(--color-accent), 0.06) 100%
+    );
+  }
+
+  .hero-back {
+    margin-bottom: 2rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(var(--color-text-muted));
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+  .back-link:hover {
+    color: rgb(var(--color-primary));
+  }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-accent)),
+      rgba(var(--color-accent), 0.8)
+    );
+    color: rgb(var(--color-text-button));
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: rgb(var(--color-text-muted));
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-image {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(var(--color-border), 0.3);
+  }
+  .hero-image img {
+    width: 100%;
+    display: block;
+  }
+
+  /* Context Section */
+  .context-section {
+    padding: var(--section-spacing) 0;
+    background: rgb(var(--color-surface));
+  }
+
+  .context-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .context-block {
+    padding: 2rem;
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+  }
+
+  .context-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .context-block p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+    font-size: 1.125rem;
+  }
+
+  /* Demo Section */
+  .demo-section {
+    padding: var(--section-spacing) 0;
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .section-intro {
+    text-align: center;
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    max-width: 700px;
+    margin: 0 auto 3rem;
+  }
+
+  .demo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .demo-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .demo-info h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .demo-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .demo-features li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: rgb(var(--color-text-muted));
+  }
+
+  .demo-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: rgb(var(--color-success));
+    font-weight: 600;
+  }
+
+  .demo-button {
+    margin-top: 1.5rem;
+  }
+
+  .demo-image-wrapper {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(var(--color-border), 0.3);
+  }
+
+  .demo-image {
+    width: 100%;
+    display: block;
+  }
+
+  /* Features Section */
+  .features-section {
+    padding: var(--section-spacing) 0;
+    background: rgb(var(--color-surface));
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .feature-item {
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: rgb(var(--color-text));
+  }
+
+  .feature-item p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+  }
+
+  /* How It Works Section */
+  .how-it-works-section {
+    padding: var(--section-spacing) 0;
+  }
+
+  .how-it-works-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .how-block {
+    padding: 2rem;
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+  }
+
+  .how-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .how-block p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+    font-size: 1.125rem;
+  }
+
+  /* Challenges Section */
+  .challenges-section {
+    padding: var(--section-spacing) 0;
+    background: rgb(var(--color-surface));
+  }
+
+  .challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .challenge-item {
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+  }
+
+  .challenge-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .challenge-item p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+
+  .challenge-item strong {
+    color: rgb(var(--color-text));
+  }
+
+  /* Results Section */
+  .results-section {
+    padding: var(--section-spacing) 0;
+  }
+
+  .results-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .result-block {
+    padding: 2rem;
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+  }
+
+  .result-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .result-block p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+    font-size: 1.125rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: var(--section-spacing) 0;
+    background: rgb(var(--color-surface));
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .cta-content p {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    margin-bottom: 2rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .features-grid,
+    .challenges-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .demo-content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .project-hero {
+      padding: 3rem 0 4rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+    }
+
+    .context-block,
+    .how-block,
+    .result-block {
+      padding: 1.5rem;
+    }
+
+    .context-block h3,
+    .how-block h3,
+    .result-block h3 {
+      font-size: 1.25rem;
+    }
+  }
+</style>
+

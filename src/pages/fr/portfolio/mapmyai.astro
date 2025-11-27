@@ -1,0 +1,666 @@
+---
+// src/pages/fr/portfolio/mapmyai.astro
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="MapMyAI | Agent de Recommandation IA - Recommandation de Cas d'Usage"
+  description="Outil gratuit qui analyse 500+ cas d'usage d'IA générative et recommande les 3 agents IA les plus pertinents pour votre entreprise."
+  lang="fr"
+>
+  <!-- Hero Section -->
+  <section class="project-hero">
+    <div class="container">
+      <div class="hero-back">
+        <a href="/fr/portfolio" class="back-link">← Retour au portfolio</a>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">Agent de Recommandation IA</div>
+        <h1>MapMyAI</h1>
+        <p class="hero-subtitle">
+          Outil gratuit qui analyse 500+ cas d'usage d'IA générative et
+          recommande les 3 agents IA les plus pertinents pour votre entreprise.
+        </p>
+        <div class="hero-image">
+          <img
+            src="/portfolio/questionnaire-short.png"
+            alt="Interface MapMyAI - Recommandation de cas d'usage IA"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contexte -->
+  <section class="context-section">
+    <div class="container">
+      <h2 class="section-title">Contexte</h2>
+
+      <div class="context-content">
+        <div class="context-block">
+          <h3>Le Problème</h3>
+          <p>
+            Les entreprises perdent du temps à explorer des cas d'usage IA non
+            adaptés à leur contexte. Elles ne savent pas par où commencer avec
+            l'IA générative.
+          </p>
+        </div>
+
+        <div class="context-block">
+          <h3>La Solution</h3>
+          <p>
+            Un outil gratuit qui recommande en 2 minutes les 3 meilleurs agents
+            IA pour votre entreprise, avec plans de projet détaillés générés
+            automatiquement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Démonstration en direct -->
+  <section class="demo-section">
+    <div class="container">
+      <h2 class="section-title">Démonstration en direct</h2>
+      <p class="section-intro">
+        MapMyAI est disponible en ligne. <br />Testez-le pour découvrir vos 3
+        meilleurs agents IA.
+      </p>
+    </div>
+
+    <div class="demo-container">
+      <div class="demo-content">
+        <div class="demo-info">
+          <p>
+            Répondez à 4 questions simples et recevez en 30-40 secondes vos
+            recommandations avec plans de projet détaillés.
+          </p>
+          <ul class="demo-features">
+            <li>Questionnaire en 4 questions</li>
+            <li>Recommandations personnalisées basées sur 500+ cas d'usage</li>
+            <li>Plans de projet détaillés générés automatiquement</li>
+            <li>Export PDF professionnel</li>
+          </ul>
+          <a
+            href="https://mapmyai.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-large demo-button"
+          >
+            Tester MapMyAI →
+          </a>
+        </div>
+        <div class="demo-image-wrapper">
+          <img
+            src="/portfolio/recos-mindmap.png"
+            alt="Interface MapMyAI"
+            class="demo-image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<!-- Fonctionnalités principales -->
+<section class="features-section">
+  <div class="container">
+    <h2 class="section-title">Fonctionnalités clés</h2>
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🔍</div>
+        <h3>Recommandations Personnalisées</h3>
+        <p>
+          Le système analyse votre profil (secteur, objectifs, taille,
+          prérequis) et recherche dans 500+ cas d'usage pour identifier les 3
+          meilleures correspondances.
+        </p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📋</div>
+        <h3>Plans de Projet Générés</h3>
+        <p>
+          Chaque recommandation inclut un plan détaillé avec étapes, durée
+          estimée, critères de succès, risques et bénéfices.
+        </p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📄</div>
+        <h3>Export Professionnel</h3>
+        <p>
+          Téléchargez votre rapport complet au format PDF pour le partager avec
+          votre équipe ou le conserver pour référence.
+        </p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎨</div>
+        <h3>UX Moderne</h3>
+        <p>
+          Barre de progression interactive pour suivre la génération en temps
+          réel. Support multilingue FR/EN avec détection automatique.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comment ça marche -->
+<section class="how-it-works-section">
+  <div class="container">
+    <h2 class="section-title">Comment ça marche</h2>
+
+    <div class="how-it-works-content">
+      <div class="how-block">
+        <h3>Backend intelligent</h3>
+        <p>
+          FastAPI + LangGraph orchestrent un workflow en 8 étapes : recherche
+          sémantique dans 500+ cas d'usage, sélection des 3 meilleurs,
+          génération de plans de projet avec Claude Sonnet 4.
+        </p>
+      </div>
+
+      <div class="how-block">
+        <h3>Frontend moderne</h3>
+        <p>
+          Next.js + React avec barre de progression interactive pour suivre la
+          génération en temps réel et offrir une expérience utilisateur fluide.
+        </p>
+      </div>
+
+      <div class="how-block">
+        <h3>Base de données</h3>
+        <p>
+          Qdrant pour la recherche vectorielle dans les cas d'usage, SQLite pour
+          sauvegarder les sessions et permettre la récupération ultérieure.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Défis Techniques -->
+<section class="challenges-section">
+  <div class="container">
+    <h2 class="section-title">Défis Résolus</h2>
+    <div class="challenges-grid">
+      <div class="challenge-item">
+        <h3>Temps de Génération</h3>
+        <p>
+          <strong>Défi :</strong> 30-40 secondes d'attente peuvent sembler longues
+          sans feedback.
+        </p>
+        <p>
+          <strong>Solution :</strong> Barre de progression interactive avec 8 étapes
+          visuelles et messages contextuels pour réduire la perception d'attente.
+        </p>
+      </div>
+      <div class="challenge-item">
+        <h3>Coûts API</h3>
+        <p>
+          <strong>Défi :</strong> Coûts élevés pour générer les plans de projet par
+          l'IA.
+        </p>
+        <p>
+          <strong>Solution :</strong> Système de cache intelligent qui évite de régénérer
+          les mêmes plans pour des profils similaires, réduisant significativement
+          les coûts.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Résultats -->
+<section class="results-section">
+  <div class="container">
+    <h2 class="section-title">Résultats</h2>
+
+    <div class="results-content">
+      <div class="result-block">
+        <h3>Agent de recommandation production-ready</h3>
+        <p>
+          Outil gratuit générant des leads qualifiés pour services de conseil en
+          IA. Les entreprises qui utilisent l'outil sont déjà intéressées par
+          l'IA.
+        </p>
+      </div>
+
+      <div class="result-block">
+        <h3>Temps de réponse : 30-40 secondes</h3>
+        <p>
+          Pour recherche sémantique + génération de 3 plans complets avec toutes
+          les informations nécessaires pour démarrer un projet.
+        </p>
+      </div>
+
+      <div class="result-block">
+        <h3>500+ cas d'usage analysés</h3>
+        <p>
+          Base de connaissances vectorielle mise à jour régulièrement avec des
+          cas d'usage réels provenant de différentes industries.
+        </p>
+      </div>
+
+      <div class="result-block">
+        <h3>Support multilingue</h3>
+        <p>
+          Français et anglais avec détection automatique de la langue. Les
+          résultats sont adaptés selon la langue de l'utilisateur.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Besoin d'un agent IA sur-mesure ?</h2>
+      <p>
+        MapMyAI est un exemple d'agent qui aide les entreprises
+        à identifier leurs cas d'usage d'IA.
+      </p>
+      <div class="cta-buttons">
+        <a
+          href="https://mapmyai.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary btn-large">Tester MapMyAI</a
+        >
+        <a href="/fr/contact" class="btn btn-secondary"
+          >Discuter de votre projet</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --section-spacing: 4rem;
+  }
+
+  .project-hero {
+    padding: 4rem 0 6rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-background)) 0%,
+      rgba(var(--color-accent), 0.06) 100%
+    );
+  }
+
+  .hero-back {
+    margin-bottom: 2rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(var(--color-text-muted));
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+  .back-link:hover {
+    color: rgb(var(--color-primary));
+  }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--color-accent)),
+      rgba(var(--color-accent), 0.8)
+    );
+    color: rgb(var(--color-text-button));
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: rgb(var(--color-text-muted));
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-image {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(var(--color-border), 0.3);
+  }
+  .hero-image img {
+    width: 100%;
+    display: block;
+  }
+
+  /* Context Section */
+  .context-section {
+    padding: var(--section-spacing) 0;
+    background: rgb(var(--color-surface));
+  }
+
+  .context-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .context-block {
+    padding: 2rem;
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+  }
+
+  .context-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .context-block p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+    font-size: 1.125rem;
+  }
+
+  /* Demo Section */
+  .demo-section {
+    padding: var(--section-spacing) 0;
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-text));
+  }
+
+  .section-intro {
+    text-align: center;
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    max-width: 700px;
+    margin: 0 auto 3rem;
+  }
+
+  .demo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .demo-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .demo-info h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .demo-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .demo-features li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: rgb(var(--color-text-muted));
+  }
+
+  .demo-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: rgb(var(--color-success));
+    font-weight: 600;
+  }
+
+  .demo-button {
+    margin-top: 1.5rem;
+  }
+
+  .demo-image-wrapper {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(var(--color-border), 0.3);
+  }
+
+  .demo-image {
+    width: 100%;
+    display: block;
+  }
+
+  /* Features Section */
+  .features-section {
+    padding: var(--section-spacing) 0;
+    background: rgb(var(--color-surface));
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .feature-item {
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: rgb(var(--color-text));
+  }
+
+  .feature-item p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+  }
+
+  /* How It Works Section */
+  .how-it-works-section {
+    padding: var(--section-spacing) 0;
+  }
+
+  .how-it-works-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .how-block {
+    padding: 2rem;
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+  }
+
+  .how-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .how-block p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+    font-size: 1.125rem;
+  }
+
+  /* Challenges Section */
+  .challenges-section {
+    padding: var(--section-spacing) 0;
+    background: rgb(var(--color-surface));
+  }
+
+  .challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .challenge-item {
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+  }
+
+  .challenge-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .challenge-item p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+
+  .challenge-item strong {
+    color: rgb(var(--color-text));
+  }
+
+  /* Results Section */
+  .results-section {
+    padding: var(--section-spacing) 0;
+  }
+
+  .results-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .result-block {
+    padding: 2rem;
+    background: rgba(var(--color-surface-variant), 0.3);
+    border: 1px solid rgba(var(--color-border), 0.3);
+    border-radius: var(--radius-lg);
+  }
+
+  .result-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .result-block p {
+    color: rgb(var(--color-text-muted));
+    line-height: 1.7;
+    font-size: 1.125rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: var(--section-spacing) 0;
+    background: rgb(var(--color-surface));
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .cta-content p {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    margin-bottom: 2rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .features-grid,
+    .challenges-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .demo-content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .project-hero {
+      padding: 3rem 0 4rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+    }
+
+    .context-block,
+    .how-block,
+    .result-block {
+      padding: 1.5rem;
+    }
+
+    .context-block h3,
+    .how-block h3,
+    .result-block h3 {
+      font-size: 1.25rem;
+    }
+  }
+</style>

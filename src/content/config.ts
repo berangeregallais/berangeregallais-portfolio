@@ -52,7 +52,8 @@ const portfolioCollection = defineCollection({
     tags: z.array(z.string()).default([]),
     language: z.enum(['en', 'fr']),
     translationKey: z.string().optional(),
-    slug: z.string().optional()
+    slug: z.string().optional(),
+    featured: z.boolean().optional().default(false)
   })
 });
 
