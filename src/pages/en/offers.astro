@@ -6,7 +6,7 @@ import BackToTop from "../../components/BackToTop.astro";
 
 <BaseLayout
     title="Offers & Pricing | AI Agents"
-    description="3 production offers to develop your AI agent: Starter 7K€, Expert 14K€, Enterprise 19.5K€. Optional validation, custom projects, complete FAQ."
+    description="4 offers to develop your AI agent: API Backend €3.5K, Starter €7K, Expert €14K, Enterprise €19.5K. Optional validation, custom projects, complete FAQ."
     lang="en"
 >
     <!-- 1. HEADER -->
@@ -14,16 +14,87 @@ import BackToTop from "../../components/BackToTop.astro";
         <div class="container">
             <h1>Offers & Pricing</h1>
             <p class="hero-subtitle">
-                Three offers to develop your AI agent. 
+                Tailored offers to develop your AI agent. 
                 Choose the one that fits your needs.
             </p>
         </div>
     </section>
 
-    <!-- 2. THREE MAIN OFFERS -->
+    <!-- 2. OFFERS -->
     <section id="offers" class="offers-section">
         <div class="container">
             <div class="offers-grid">
+                <!-- API STARTER -->
+                <div class="offer-card offer-card--api">
+                    <div class="offer-badge offer-badge--api">BACKEND ONLY</div>
+                    <div class="offer-price">€3,500</div>
+                    <div class="offer-duration">1-2 weeks</div>
+                    
+                    <div class="offer-title-section">
+                        <h3>AI agent backend (API only)</h3>
+                        <p class="offer-subtitle">You already have your interface? I develop the intelligence.</p>
+                    </div>
+
+                    <div class="offer-includes">
+                        <h4>What's included:</h4>
+                        <ul>
+                            <li>Documented REST API (OpenAPI) in Python or JavaScript</li>
+                            <li>Functional conversational agent</li>
+                            <li>Unit and integration tests</li>
+                            <li>Complete technical documentation</li>
+                            <li>1 week of post-delivery support</li>
+                        </ul>
+                    </div>
+
+                    <div class="offer-tech">
+                        <small>+ Included: Python/FastAPI or JavaScript/Node.js, LangGraph, OpenAI/Anthropic</small>
+                    </div>
+
+                    <div class="offer-example">
+                        💡 <strong>Ideal for:</strong> Teams with existing frontend, fast POCs, integrations
+                    </div>
+
+                    <details class="offer-details">
+                        <summary>See details</summary>
+                        <div class="details-content">
+                            <h5>Development process</h5>
+                            <ol>
+                                <li>Free exchange (30 min) to define endpoints</li>
+                                <li>API development (1-2 weeks)</li>
+                                <li>Testing and documentation</li>
+                                <li>Delivery + support (1 week)</li>
+                            </ol>
+                            
+                            <h5>Technical deliverables</h5>
+                            <ul>
+                                <li>Complete REST API with OpenAPI documentation</li>
+                                <li>Backend source code (Python/FastAPI or JavaScript/Node.js)</li>
+                                <li>Automated tests (pytest or Jest)</li>
+                                <li>Detailed integration guide</li>
+                                <li>API call examples</li>
+                            </ul>
+
+                            <h5>What is NOT included</h5>
+                            <ul>
+                                <li>User interface (frontend)</li>
+                                <li>Hosting and deployment</li>
+                                <li>Document search (RAG) → see Expert offer</li>
+                            </ul>
+
+                            <h5>Terms</h5>
+                            <ul>
+                                <li>Payment in 2 installments: 50% start, 50% delivery</li>
+                                <li>You own the source code</li>
+                                <li>Hosting and API costs are your responsibility (estimate provided)</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <div class="offer-actions">
+                        <a href="/en/contact" class="btn btn-outline">Discuss this offer</a>
+                    </div>
+                </div>
+
                 <!-- STARTER -->
                 <div class="offer-card">
                     <div class="offer-badge">STARTER</div>
@@ -466,9 +537,9 @@ import BackToTop from "../../components/BackToTop.astro";
 
     .offers-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
-        max-width: 1400px;
+        max-width: 1500px;
         margin: 0 auto;
         align-items: stretch;
     }
@@ -501,6 +572,15 @@ import BackToTop from "../../components/BackToTop.astro";
         );
     }
 
+    .offer-card--api {
+        border: 1px solid rgba(var(--color-accent), 0.3);
+        background: linear-gradient(
+            135deg,
+            rgba(var(--color-accent), 0.02),
+            rgba(var(--color-surface), 0.9)
+        );
+    }
+
     .offer-badge {
         display: inline-block;
         background: rgba(var(--color-primary), 0.1);
@@ -512,6 +592,11 @@ import BackToTop from "../../components/BackToTop.astro";
         text-transform: uppercase;
         letter-spacing: 0.05em;
         width: fit-content;
+    }
+
+    .offer-badge--api {
+        background: rgba(var(--color-accent), 0.15);
+        color: rgb(var(--color-accent));
     }
 
     .offer-price {
@@ -972,6 +1057,12 @@ import BackToTop from "../../components/BackToTop.astro";
     /* ===============================
        RESPONSIVE
        =============================== */
+    @media (max-width: 1200px) {
+        .offers-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
     @media (max-width: 768px) {
         .hero-section {
             padding: 4rem 0 3rem;

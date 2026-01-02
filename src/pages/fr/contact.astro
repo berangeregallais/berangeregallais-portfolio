@@ -4,7 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="Contact — Bérangère Gallais | Développeuse d'Agents IA"
-  description="Discutons de votre projet d'agent IA. Échange gratuit de 30 minutes pour analyser vos besoins."
+  description="Discutons de votre projet d'agent IA. Contactez-moi pour analyser vos besoins."
 >
   <!-- Hero Section -->
   <section class="contact-hero">
@@ -44,30 +44,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             contact@berangeregallais.com
           </a>
           <p class="contact-note">Réponse sous 24h en semaine</p>
-        </div>
-
-        <!-- Calendar Card -->
-        <div class="contact-card">
-          <div class="contact-card-icon">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
-          </div>
-          <h3>Appel découverte gratuit</h3>
-          <div id="google-calendar-button" class="google-calendar-wrapper">
-            <!-- Le bouton Google Calendar sera injecté ici -->
-          </div>
-          <p class="contact-note">30 minutes pour analyser vos besoins</p>
         </div>
 
         <!-- LinkedIn Card -->
@@ -130,22 +106,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <p>Quelques réponses aux questions les plus fréquentes</p>
       <div class="faq-grid">
         <div class="faq-item">
-          <h4>Comment se déroule un appel découverte ?</h4>
-          <p>
-            On discute de votre projet. Je pose des questions sur vos besoins,
-            votre contexte métier, et je vous donne mon avis sur la faisabilité
-            technique.
-          </p>
-        </div>
-        <div class="faq-item">
-          <h4>Quels sont vos délais de livraison ?</h4>
+          <h4>Quels sont vos délais de livraison&nbsp;?</h4>
           <p>
             De 4 à 9 semaines environ selon la complexité de l'offre choisie. La
             validation permet de valider l'approche avant développement complet.
           </p>
         </div>
         <div class="faq-item">
-          <h4>Quel est le meilleur moment pour démarrer ?</h4>
+          <h4>Quel est le meilleur moment pour démarrer&nbsp;?</h4>
           <p>
             Dès que vous avez identifié un cas d'usage précis à automatiser.
             Commencez par une validation si vous voulez valider la faisabilité avec un
@@ -164,31 +132,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     </div>
   </section>
 </BaseLayout>
-
-<!-- Google Calendar Appointment Scheduling -->
-<link
-  href="https://calendar.google.com/calendar/scheduling-button-script.css"
-  rel="stylesheet"
-/>
-<script
-  src="https://calendar.google.com/calendar/scheduling-button-script.js"
-  async></script>
-<script>
-  (function () {
-    window.addEventListener("load", function () {
-      const target = document.getElementById("google-calendar-button");
-      const googleCalendar = (window as any)["calendar"];
-      if (target && googleCalendar && googleCalendar.schedulingButton) {
-        googleCalendar.schedulingButton.load({
-          url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3BhtGuapsUUSewuJZ3Vpo5ay4B8cZ4Nzy1ZjOBIsNJMr1RTW2zKE_w0fuLFYgfA_Hke7AJjoAZ?gv=true",
-          color: "#e6b7d4",
-          label: "Réserver un appel (30 min)",
-          target,
-        });
-      }
-    });
-  })();
-</script>
 
 <style>
   /* ===============================
@@ -344,68 +287,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     margin: 0;
   }
 
-  /* Google Calendar Button Styling */
-  .google-calendar-wrapper {
-    margin: 1rem 0;
-  }
-
-  .google-calendar-wrapper :global(button) {
-    background: linear-gradient(
-      135deg,
-      #e6b7d4,
-      #f0c9e3
-    ) !important;
-    border: none !important;
-    border-radius: var(--radius-md) !important;
-    padding: 0.75rem 1.5rem !important;
-    font-weight: 600 !important;
-    font-size: 1rem !important;
-    color: white !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
-    text-decoration: none !important;
-    box-shadow: 0 4px 12px rgba(230, 183, 212, 0.3) !important;
-  }
-
-  .google-calendar-wrapper :global(button:hover) {
-    opacity: 0.9 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 16px rgba(230, 183, 212, 0.4) !important;
-    background: linear-gradient(
-      135deg,
-      #f0c9e3,
-      #e6b7d4
-    ) !important;
-  }
-
-  :global(.calendar-scheduling-button) {
-    background: linear-gradient(
-      135deg,
-      #e6b7d4,
-      #f0c9e3
-    ) !important;
-    border: none !important;
-    border-radius: var(--radius-md) !important;
-    padding: 0.75rem 1.5rem !important;
-    font-weight: 600 !important;
-    font-size: 1rem !important;
-    color: white !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
-    box-shadow: 0 4px 12px rgba(230, 183, 212, 0.3) !important;
-  }
-
-  :global(.calendar-scheduling-button:hover) {
-    opacity: 0.9 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 16px rgba(230, 183, 212, 0.4) !important;
-    background: linear-gradient(
-      135deg,
-      #f0c9e3,
-      #e6b7d4
-    ) !important;
-  }
-
   /* ===============================
      CTA SECTION
      =============================== */
@@ -453,9 +334,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
   .faq-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto 3rem;
     text-align: left;
   }

@@ -159,6 +159,19 @@ import BackToTop from "../../components/BackToTop.astro";
     </div>
   </section>
 
+  <!-- API CTA -->
+  <section class="api-cta-section">
+    <div class="container">
+      <div class="api-cta-card">
+        <span class="api-cta-badge">BACKEND ONLY</span>
+        <h3>Need just the API?</h3>
+        <p>Backend-only AI agent, no interface. You integrate it into your existing app.</p>
+        <div class="api-cta-price">From €3,500</div>
+        <a href="/en/offers#offers" class="btn btn-outline-light">View API offer →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- How it works -->
   <section class="solution-section section-spacing">
     <div class="container">
@@ -992,12 +1005,100 @@ import BackToTop from "../../components/BackToTop.astro";
       flex-wrap: wrap;
     }
 
+  /* ===============================
+   API CTA SECTION
+   =============================== */
+  .api-cta-section {
+    padding: 4rem 0;
+    background: linear-gradient(
+      135deg,
+      rgba(var(--color-accent), 0.08) 0%,
+      rgba(var(--color-primary), 0.05) 100%
+    );
+  }
+
+  .api-cta-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background: rgb(var(--color-surface));
+    border: 1px solid rgba(var(--color-accent), 0.3);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(var(--color-accent), 0.1);
+  }
+
+  .api-cta-badge {
+    display: inline-block;
+    background: rgba(var(--color-accent), 0.15);
+    color: rgb(var(--color-accent));
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  .api-cta-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--color-text));
+  }
+
+  .api-cta-card p {
+    font-size: 1.125rem;
+    color: rgb(var(--color-text-muted));
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .api-cta-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(var(--color-accent));
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-outline-light {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgba(var(--color-accent), 0.5);
+    border-radius: var(--radius-md);
+    color: rgb(var(--color-text));
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    background: transparent;
+  }
+
+  .btn-outline-light:hover {
+    border-color: rgb(var(--color-accent));
+    color: rgb(var(--color-accent));
+    background: rgba(var(--color-accent), 0.05);
+  }
+
     /* Responsive */
     @media (max-width: 1024px) {
       .context-grid {
         grid-template-columns: 1fr;
       }
     }
+
+  @media (max-width: 768px) {
+    .api-cta-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .api-cta-card h3 {
+      font-size: 1.5rem;
+    }
+
+    .api-cta-card p {
+      font-size: 1rem;
+    }
+  }
 
     @media (max-width: 768px) {
       .context-card {
