@@ -3,15 +3,15 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-  title="Contact — Bérangère Gallais | Développeuse d'Agents IA"
-  description="Discutons de votre projet d'agent IA. Contactez-moi pour analyser vos besoins."
+  title="Contact | Bérangère Gallais | QA Automation Engineer / SDET"
+  description="Disponible pour un poste en CDI, full remote. Contactez-moi par email ou LinkedIn."
 >
   <!-- Hero Section -->
   <section class="contact-hero">
     <div class="container">
       <h1 class="hero-title">Contact</h1>
       <p class="hero-subtitle">
-        Vous avez un projet d'agent IA ?<br />
+        Disponible pour un poste en CDI, full remote.<br />
         Choisissez le moyen de contact qui vous convient le mieux.
       </p>
     </div>
@@ -20,7 +20,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   <!-- Contact Methods Section -->
   <section class="contact-methods-section">
     <div class="container">
-      <h2 class="section-title">Discutons de votre projet</h2>
+      <h2 class="section-title">Échangeons</h2>
       <div class="contact-cards-grid">
         <!-- Email Card -->
         <div class="contact-card">
@@ -43,7 +43,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           <a href="mailto:contact@berangeregallais.com" class="contact-link">
             contact@berangeregallais.com
           </a>
-          <p class="contact-note">Réponse sous 24h en semaine</p>
         </div>
 
         <!-- LinkedIn Card -->
@@ -75,26 +74,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           </a>
           <p class="contact-note">Connectons-nous sur LinkedIn</p>
         </div>
-
-        <!-- Response Time Card -->
-        <div class="contact-card highlight-card">
-          <div class="contact-card-icon">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-          </div>
-          <h3>Réactivité</h3>
-          <p class="contact-highlight">Sous 24h en semaine</p>
-          <p class="contact-note">Réponse rapide garantie</p>
-        </div>
       </div>
     </div>
   </section>
@@ -102,31 +81,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   <!-- CTA Section -->
   <section class="contact-cta">
     <div class="container">
-      <h2>Vous hésitez encore ?</h2>
-      <p>Quelques réponses aux questions les plus fréquentes</p>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h4>Quels sont vos délais de livraison&nbsp;?</h4>
-          <p>
-            De 4 à 9 semaines environ selon la complexité de l'offre choisie. La
-            validation permet de valider l'approche avant développement complet.
-          </p>
-        </div>
-        <div class="faq-item">
-          <h4>Quel est le meilleur moment pour démarrer&nbsp;?</h4>
-          <p>
-            Dès que vous avez identifié un cas d'usage précis à automatiser.
-            Commencez par une validation si vous voulez valider la faisabilité avec un
-            budget réduit.
-          </p>
-        </div>
-      </div>
       <div class="cta-buttons">
-        <a href="/fr/offres" class="btn btn-primary btn-large">
-          Voir les offres et tarifs
+        <a href="/about/cv-bgallais-fr.pdf" download class="btn btn-primary btn-large">
+          Télécharger mon CV
         </a>
-        <a href="/fr/services" class="btn btn-secondary btn-large">
-          Découvrir mes services
+        <a href="/fr/portfolio" class="btn btn-secondary btn-large">
+          Voir mon portfolio
         </a>
       </div>
     </div>
@@ -226,15 +186,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     border-color: rgb(var(--color-primary));
   }
 
-  .contact-card.highlight-card {
-    background: linear-gradient(
-      135deg,
-      rgba(var(--color-primary), 0.08) 0%,
-      rgba(var(--color-primary), 0.04) 100%
-    );
-    border-color: rgba(var(--color-primary), 0.3);
-  }
-
   .contact-card-icon {
     width: 64px;
     height: 64px;
@@ -272,13 +223,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   .contact-link:hover {
     color: rgb(var(--color-primary-hover));
     opacity: 0.85;
-  }
-
-  .contact-highlight {
-    color: rgb(var(--color-primary));
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
   }
 
   .contact-note {
@@ -319,54 +263,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     z-index: 1;
   }
 
-  .contact-cta h2 {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    margin-bottom: 1rem;
-    color: rgb(var(--color-text));
-  }
-
-  .contact-cta > .container > p {
-    font-size: 1.125rem;
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 3rem;
-  }
-
-  .faq-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    text-align: left;
-  }
-
-  .faq-item {
-    background: rgba(var(--color-surface), 0.6);
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    transition: all 0.3s ease;
-  }
-
-  .faq-item:hover {
-    box-shadow: 0 8px 20px rgba(var(--color-primary), 0.1);
-    border-color: rgba(var(--color-primary), 0.3);
-  }
-
-  .faq-item h4 {
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: rgb(var(--color-text));
-  }
-
-  .faq-item p {
-    color: rgb(var(--color-text-muted));
-    line-height: 1.7;
-    margin: 0;
-  }
-
   .cta-buttons {
     display: flex;
     gap: 1.5rem;
@@ -377,14 +273,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   /* ===============================
      RESPONSIVE
      =============================== */
-  @media (max-width: 1024px) {
-    .faq-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      max-width: 600px;
-    }
-  }
-
   @media (max-width: 768px) {
     .contact-cards-grid {
       grid-template-columns: 1fr;

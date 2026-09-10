@@ -37,66 +37,65 @@ const allCategories = [
     </div>
   </section>
 
-  <!-- Featured Video Demo -->
+  <!-- Featured Demo -->
   <section class="featured-demo">
     <div class="container">
       <div class="demo-header">
         <span class="demo-badge">✨ Projet phare</span>
-        <h2>Agent RAG Neolens en Action</h2>
+        <h2>QA Agent Supervisor</h2>
         <p>
-          Découvrez comment cet agent IA répond aux questions techniques 
-          avec citations sources, support multilingue, et zéro hallucination.
+          Un système multi-agents qui pilote une vraie suite de tests Playwright/pytest : il exécute les tests, distingue un vrai bug d'un test qui flanche, et génère un rapport lisible par tous.
         </p>
       </div>
-      
+
       <div class="demo-grid">
         <div class="demo-video">
-          <video controls preload="metadata" poster="/portfolio/01-home-welcome.png">
-            <source src="/portfolio/videos/02-source-citation-demo.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
+          <img
+            src="/portfolio/qa-agent-supervisor.png"
+            alt="Interface QA Agent Supervisor"
+          />
         </div>
-        
+
         <div class="demo-features">
           <h3>Fonctionnalités clés</h3>
           <ul>
             <li>
-              <div class="feature-icon">🎯</div>
+              <div class="feature-icon">🤖</div>
               <div class="feature-content">
-                <strong>RAG Intelligent</strong>
-                <span>Recherche vectorielle FAISS dans 34 documents (50k mots)</span>
+                <strong>Une tâche, le bon agent</strong>
+                <span>Un agent superviseur redirige chaque demande vers l'agent adapté : analyse de couverture, exécution des tests, tri des échecs, ou rédaction du rapport</span>
               </div>
             </li>
             <li>
-              <div class="feature-icon">📚</div>
+              <div class="feature-icon">🔍</div>
               <div class="feature-content">
-                <strong>Citations Sources</strong>
-                <span>Références automatiques avec noms des documents</span>
+                <strong>Tests instables identifiés par la preuve</strong>
+                <span>Un test n'est classé « flaky » que s'il échoue puis réussit au rerun. Aucun appel à l'IA n'est nécessaire pour ça, contrairement à un jugement basé sur l'historique du test</span>
               </div>
             </li>
             <li>
-              <div class="feature-icon">🌍</div>
+              <div class="feature-icon">📊</div>
               <div class="feature-content">
-                <strong>Multilingue FR/EN</strong>
-                <span>Détection automatique et réponses traduites selon la langue</span>
+                <strong>Un rapport pour chaque public</strong>
+                <span>Rapport technique détaillé pour l'équipe dev, résumé clair pour les non-techniques</span>
               </div>
             </li>
             <li>
-              <div class="feature-icon">✅</div>
+              <div class="feature-icon">⚡</div>
               <div class="feature-content">
-                <strong>Zéro Hallucination</strong>
-                <span>Validation stricte input/output</span>
+                <strong>Un bouton Stop qui arrête vraiment les tests</strong>
+                <span>L'exécution en cours s'arrête réellement, en ~45 ms</span>
               </div>
             </li>
             <li>
-              <div class="feature-icon">🔧</div>
+              <div class="feature-icon">💰</div>
               <div class="feature-content">
-                <strong>Production-Ready</strong>
-                <span>137 tests, CI/CD, monitoring</span>
+                <strong>Coût affiché avant de lancer un run</strong>
+                <span>Le nombre d'appels API estimé, pas de mauvaise surprise</span>
               </div>
             </li>
           </ul>
-          <a href="/fr/portfolio/neolens-support-agent" class="demo-link">
+          <a href="/fr/portfolio/qa-agent-supervisor" class="demo-link">
             Voir le projet complet →
           </a>
         </div>
@@ -109,7 +108,22 @@ const allCategories = [
     <div class="container">
       <h2 class="section-title">Projets</h2>
       <div class="projects-grid">
-        <!-- Agent RAG Neolens - Featured -->
+        <!-- QA Agent Supervisor - Featured -->
+        <div class="project-wrapper featured-project">
+          <PortfolioCard
+            title="QA Agent Supervisor"
+            client="Orchestrateur de tests multi-agents"
+            description="Système multi-agents (LangGraph + Claude API) qui orchestre une vraie suite de tests Playwright/pytest : suggestions de couverture, triage des échecs, détection de flaky tests par preuve."
+            tags={["Python", "LangGraph", "Claude API", "Pydantic", "FastAPI", "Playwright"]}
+            image="/portfolio/qa-agent-supervisor.png"
+            link="/fr/portfolio/qa-agent-supervisor"
+            category={["ai-agent", "qa"]}
+            githubUrl="https://github.com/berangeregallais/qa-agent-supervisor"
+            lang="fr"
+          />
+        </div>
+
+        <!-- Agent RAG Neolens -->
         <div class="project-wrapper featured-project">
           <PortfolioCard
             title="Agent RAG Neolens"
@@ -152,39 +166,39 @@ const allCategories = [
 <section class="portfolio-cta">
   <div class="container">
     <div class="cta-content">
-      <h2>Prêt à créer votre agent IA ?</h2>
+      <h2>On en parle ?</h2>
       <p>
-        Discutons de votre projet et trouvons la solution adaptée à vos besoins. 
-        Agent RAG, guidé, ou sur-mesure - je vous accompagne de A à Z.
+        QA Automation Engineer / SDET & Technical Writer, disponible en CDI,
+        full remote.
       </p>
       <div class="cta-benefits">
         <div class="benefit">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20 6 9 17l-5-5"></path>
           </svg>
-          Agent IA sur-mesure
+          Tests automatisés & CI/CD
         </div>
         <div class="benefit">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20 6 9 17l-5-5"></path>
           </svg>
-          Code + Documentation + Tests
+          Agents IA & LangGraph
         </div>
         <div class="benefit">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20 6 9 17l-5-5"></path>
           </svg>
-          Solution complète incluse
+          Documentation technique claire
         </div>
       </div>
       <div class="cta-buttons">
         <a href="/fr/contact" class="btn btn-primary btn-large">
-          <span>Discutons de votre projet</span>
+          <span>Me contacter</span>
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M5 12h14m-7-7 7 7-7 7"></path>
           </svg>
         </a>
-        <a href="/fr/offres" class="btn btn-secondary">Voir mes offres</a>
+        <a href="/about/cv-bgallais-fr.pdf" download class="btn btn-secondary">Télécharger mon CV</a>
       </div>
     </div>
   </div>
@@ -311,7 +325,8 @@ const allCategories = [
     box-shadow: var(--shadow-xl);
   }
 
-  .demo-video video {
+  .demo-video video,
+  .demo-video img {
     width: 100%;
     height: auto;
     display: block;

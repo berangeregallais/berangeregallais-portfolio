@@ -3,6 +3,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BackToTop from "../components/BackToTop.astro";
+import CookieConsent from "../components/CookieConsent.astro";
 import '../styles/globals.css';
 
 export interface Props {
@@ -28,12 +29,6 @@ const ogImageURL = new URL(image, Astro.site);
 <!doctype html>
 <html lang={resolvedLang}>
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YS87E715NG"></script>
-    <script is:inline set:html={`window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YS87E715NG');`}></script>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -117,6 +112,8 @@ const ogImageURL = new URL(image, Astro.site);
       <Footer lang={resolvedLang} />
       <BackToTop />
     </div>
+
+    <CookieConsent lang={resolvedLang} />
 
     <!-- Theme toggle -->
     <script>

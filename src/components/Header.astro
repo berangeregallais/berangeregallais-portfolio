@@ -9,16 +9,16 @@ const { lang, hideLangSwitch } = Astro.props;
 
 const navItems = {
   en: [
-    { label: "Services", href: "/en/services" },
     { label: "Portfolio", href: "/en/portfolio" },
-    { label: "Offers", href: "/en/offers" },
+    { label: "Skills", href: "/en/skills" },
     { label: "About", href: "/en/about" },
+    { label: "Contact", href: "/en/contact" },
   ],
   fr: [
-    { label: "Services", href: "/fr/services" },
     { label: "Portfolio", href: "/fr/portfolio" },
-    { label: "Offres", href: "/fr/offres" },
+    { label: "Compétences", href: "/fr/competences" },
     { label: "À propos", href: "/fr/about" },
+    { label: "Contact", href: "/fr/contact" },
   ],
 };
 
@@ -26,7 +26,8 @@ const currentPath = Astro.url.pathname;
 const currentLang = lang;
 const nav = navItems[currentLang];
 
-const ctaText = { en: "Get Started", fr: "Contact" };
+const ctaText = { en: "Download CV", fr: "Télécharger mon CV" };
+const cvHref = { en: "/about/cv-bgallais-en.pdf", fr: "/about/cv-bgallais-fr.pdf" };
 
 const shouldHideLangSwitch = hideLangSwitch || false;
 ---
@@ -83,7 +84,7 @@ const shouldHideLangSwitch = hideLangSwitch || false;
         </div>
 
         <!-- CTA Button -->
-        <a href={`/${lang}/contact`} class="btn btn-primary">
+        <a href={cvHref[lang]} download class="btn btn-primary">
           {ctaText[currentLang]}
         </a>
 
@@ -142,7 +143,7 @@ const shouldHideLangSwitch = hideLangSwitch || false;
         }
 
         <li class="nav-mobile-cta">
-          <a href={`/${lang}/contact`} class="btn btn-primary btn-full">
+          <a href={cvHref[lang]} download class="btn btn-primary btn-full">
             {ctaText[currentLang]}
           </a>
         </li>
@@ -524,8 +525,8 @@ const shouldHideLangSwitch = hideLangSwitch || false;
 
         // Mapping des pages spéciales
         const pageMapping = {
-          "offers": "offres",
-          "offres": "offers"
+          "skills": "competences",
+          "competences": "skills"
         };
 
         let newPath = currentPath.replace(/^\/(en|fr)\//, `/${newLang}/`);

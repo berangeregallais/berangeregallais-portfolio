@@ -7,22 +7,22 @@ const { lang } = Astro.props;
 
 const content = {
   en: {
-    copyright: "© 2025-2026 Bérangère Gallais. All rights reserved.",
-    services: "Services",
-    offers: "Offers",
+    copyright: "© 2026 Bérangère Gallais. All rights reserved.",
+    skills: "Skills",
     portfolio: "Portfolio",
     contact: "Contact",
     legal: "Legal Notice",
     privacy: "Privacy Policy",
+    cookies: "Manage cookies",
   },
   fr: {
-    copyright: "© 2025-2026 Bérangère Gallais. Tous droits réservés.",
-    services: "Services",
-    offers: "Offres",
+    copyright: "© 2026 Bérangère Gallais. Tous droits réservés.",
+    skills: "Compétences",
     portfolio: "Portfolio",
     contact: "Contact",
     legal: "Mentions légales",
     privacy: "Politique de confidentialité",
+    cookies: "Gérer les cookies",
   },
 };
 
@@ -33,12 +33,14 @@ const text = content[lang];
   <div class="container">
     <div class="footer-content">
       <div class="footer-links">
-        <a href={`/${lang}/services`}>{text.services}</a>
-        <a href={lang === "fr" ? `/${lang}/offres` : `/${lang}/offers`}>{text.offers}</a>
+        <a href={lang === "fr" ? `/${lang}/competences` : `/${lang}/skills`}>{text.skills}</a>
         <a href={`/${lang}/portfolio`}>{text.portfolio}</a>
         <a href={`/${lang}/contact`}>{text.contact}</a>
         <a href={`/${lang}/legal-notice`}>{text.legal}</a>
         <a href={`/${lang}/privacy-policy`}>{text.privacy}</a>
+        <button type="button" class="footer-cookie-btn" data-cookie-settings>
+          {text.cookies}
+        </button>
       </div>
       <p class="copyright">{text.copyright}</p>
     </div>
@@ -72,6 +74,22 @@ const text = content[lang];
   }
 
   .footer-links a:hover {
+    color: rgb(var(--color-primary));
+  }
+
+  .footer-cookie-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: rgb(var(--color-text-muted));
+    font-size: 0.9rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+  }
+
+  .footer-cookie-btn:hover {
     color: rgb(var(--color-primary));
   }
 

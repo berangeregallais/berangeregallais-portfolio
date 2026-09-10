@@ -6,2863 +6,1250 @@ import BackToTop from "../../components/BackToTop.astro";
 ---
 
 <BaseLayout
-  title="AI Agent Engineer | Production-ready systems"
-  description="Je construis des agents IA avec LangGraph, FastAPI et React. Code propre, testé, documenté."
+  title="Bérangère Gallais | QA Automation Engineer / SDET"
+  description="QA Automation Engineer / SDET & Technical Writer, disponible en CDI full remote. Tests automatisés (Cypress, Playwright, Selenium, Postman, k6), développement web, agents IA (LangGraph, Claude API)."
   lang="fr"
 >
-<div id="fr-index-root">
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-title">Agent Engineer Freelance</h1>
-        <p
-          class="hero-tagline"
-          style="font-size: 1.5rem; font-weight: 600; margin: 1rem 0 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
-        >
-          Des agents IA qui répondent avec précision. Zéro hallucination.
-        </p>
-        <p class="hero-subtitle">
-          Je construis des agents IA qui automatisent vos
-          processus métier : support technique, qualification commerciale,
-          onboarding, assistants internes. Backend + Frontend + Tests +
-          Documentation inclus.
-        </p>
+  <div id="fr-index-root">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">QA Automation Engineer / SDET</h1>
+          <p
+            class="hero-tagline"
+            style="font-size: 1.5rem; font-weight: 600; margin: 1rem 0 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+          >
+            À la recherche d'un poste en CDI, full remote.
+          </p>
+          <p class="hero-subtitle">
+            6 ans d'expérience en ingénierie logicielle, dont plus de 4 ans
+            dédiés exclusivement à l'automatisation de tests et à la
+            documentation technique. Je conçois aussi des agents IA avec
+            LangGraph et j'écris une documentation technique en Docs-as-Code,
+            intégrée au workflow des équipes.
+          </p>
 
-        <div class="value-props">
-          <div class="value-prop">
-            ◆ <strong>Répond sans halluciner</strong> — RAG sur vos docs/FAQ
-        </div>
-          <div class="value-prop">
-            ◆ <strong>S'intègre à vos outils</strong> — API, CRM, Slack, Zendesk
-          </div>
-          <div class="value-prop">
-            ◆ <strong>Prêt pour la prod</strong> — Tests automatisés + monitoring
-          </div>
-          <div class="value-prop">
-            ◆ <strong>Multilingue</strong> — FR/EN (autres langues sur demande)
-          </div>
-        </div>
-
-        <div class="hero-cta">
-          <a href="/fr/offres" class="btn btn-primary">Voir les offres</a>
-        </div>
-      </div>
-
-      <div class="chat-preview">
-        <div class="chat-header">
-          <div class="agent-avatar">🤖</div>
-          <div class="agent-info">
-            <span class="agent-name">Assistant Documentation</span>
-            <span class="agent-status">En ligne</span>
-          </div>
-        </div>
-        <div class="chat-messages">
-          <div class="message user-message">
-            <div class="message-avatar">👤</div>
-            <div class="message-content">
-              Comment gérer les webhooks en cas d'erreur ?
+          <div class="value-props">
+            <div class="value-prop">
+              ◆ <strong>QA Automation / SDET</strong> : Cypress, Playwright, Selenium,
+              Postman, k6
+            </div>
+            <div class="value-prop">
+              ◆ <strong>Développement</strong> : Java, Python, JavaScript/TypeScript
+            </div>
+            <div class="value-prop">
+              ◆ <strong>Agents IA</strong> : LangGraph, RAG, architectures multi-agents
+            </div>
+            <div class="value-prop">
+              ◆ <strong>Technical Writing</strong> : Docs-as-Code, OpenAPI, documentation
+              API, spécifications techniques
             </div>
           </div>
-          <div class="message agent-message">
-            <div class="message-avatar">🤖</div>
-            <div class="message-content">
-              D'après votre documentation technique, voici la bonne pratique :<br
-              /><br />
 
-              <strong>1. Implémentez un backoff exponentiel</strong><br />
-              Retry avec délais progressifs : 1s, 2s, 4s, 8s...<br /><br />
+          <div class="hero-cta">
+            <a href="/fr/portfolio" class="btn btn-primary"
+              >Voir mon portfolio</a
+            >
+            <a
+              href="/about/cv-bgallais-fr.pdf"
+              download
+              class="btn btn-secondary">Télécharger mon CV</a
+            >
+          </div>
+        </div>
 
-              <strong>2. Stockez les événements échoués</strong><br />
-              Utilisez une queue de messages (Redis, SQS) pour rejouer les webhooks
-              plus tard<br /><br />
+        <div class="chat-preview">
+          <div class="chat-header">
+            <div class="agent-avatar">🤖</div>
+            <div class="agent-info">
+              <span class="agent-name">Assistant Documentation</span>
+              <span class="agent-status">En ligne</span>
+            </div>
+          </div>
+          <div class="chat-messages">
+            <div class="message user-message">
+              <div class="message-avatar">👤</div>
+              <div class="message-content">
+                Comment gérer les webhooks en cas d'erreur ?
+              </div>
+            </div>
+            <div class="message agent-message">
+              <div class="message-avatar">🤖</div>
+              <div class="message-content">
+                D'après votre documentation technique, voici la bonne pratique :<br
+                /><br />
 
-              <strong>3. Activez les notifications d'échec</strong><br />
-              Configurez des alertes dans votre dashboard pour surveiller le taux
-              d'erreur<br /><br />
+                <strong>1. Implémentez un backoff exponentiel</strong><br />
+                Retry avec délais progressifs : 1s, 2s, 4s, 8s...<br /><br />
 
-              📄 <em style="color: #667eea;"
-                >Source : Documentation Webhooks v2.1 (section 3.4)</em
-              ><br /><br />
+                <strong>2. Stockez les événements échoués</strong><br />
+                Utilisez une queue de messages (Redis, SQS) pour rejouer les webhooks
+                plus tard<br /><br />
 
-              Besoin d'un exemple de code ?
+                <strong>3. Activez les notifications d'échec</strong><br />
+                Configurez des alertes dans votre dashboard pour surveiller le taux
+                d'erreur<br /><br />
+
+                📄 <em style="color: #667eea;"
+                  >Source : Documentation Webhooks v2.1 (section 3.4)</em
+                ><br /><br />
+
+                Besoin d'un exemple de code ?
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Problématique & Solutions -->
-  <section class="context-section section-spacing">
-    <div class="container">
-      <h2 class="section-title">Pour qui ?</h2>
+    <!-- Profil -->
+    <section class="context-section section-spacing">
+      <div class="container">
+        <h2 class="section-title">Mon profil</h2>
 
-      <div class="context-grid">
-        <div class="context-card">
-          <h3>Vous avez ce problème</h3>
-          <ul>
-            <li>
-              Votre équipe technique passe plusieurs heures par semaine sur du
-              support répétitif
-            </li>
-            <li>
-              Votre documentation est complète mais personne ne trouve l'info
-              rapidement
-            </li>
-            <li>
-              Vous gérez 200+ tickets/mois dont 60% sont des questions
-              récurrentes
-            </li>
-            <li>
-              Les chatbots no-code que vous avez testés donnent des réponses
-              trop génériques
-            </li>
-          </ul>
-        </div>
-
-        <div class="context-card context-card--solution">
-          <h3>Ce que je construis</h3>
-          <ul>
-            <li>
-              <strong>Assistant support technique</strong> : répond aux questions
-              sur votre produit, votre API, votre documentation. Sans hallucination
-            </li>
-            <li>
-              <strong>Agent de qualification commerciale</strong> : qualifie les
-              leads, collecte les besoins, dirige vers le bon interlocuteur
-            </li>
-            <li>
-              <strong>Assistant onboarding</strong> : guide les nouveaux utilisateurs
-              ou collaborateurs, explique les fonctionnalités, réduit le time-to-value
-            </li>
-            <li>
-              <strong>Assistant interne</strong> : RH, IT, compliance, il répond
-              aux questions récurrentes de vos équipes
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="context-result">
-        <p>
-          <strong>Résultat concret :</strong> Les questions récurrentes sont automatisées.
-          Votre équipe se concentre sur les cas complexes. Vos utilisateurs ont leurs
-          réponses en quelques secondes.
-        </p>
-      </div>
-
-      <div class="cta-services">
-        <p>Vous voulez des exemples concrets pour votre secteur ?</p>
-        <div class="cta-services-buttons">
-          <a href="/fr/services" class="btn btn-secondary">
-            Découvrir tous les cas d'usage détaillés →
-          </a>
-          <a href="/fr/types-agents" class="btn btn-secondary">
-            Voir tous les types d'agents →
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA API -->
-  <section class="api-cta-section">
-    <div class="container">
-      <div class="api-cta-card">
-        <span class="api-cta-badge">BACKEND ONLY</span>
-        <h3>Besoin juste de l'API ?</h3>
-        <p>Agent IA backend only, sans interface. Vous l'intégrez dans votre app existante.</p>
-        <div class="api-cta-price">À partir de 3 500€</div>
-        <a href="/fr/offres#offres" class="btn btn-outline-light">Voir l'offre API →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Architecture & Approche -->
-  <section class="solution-section section-spacing">
-    <div class="container">
-      <h2 class="section-title">Comment ça fonctionne ?</h2>
-
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">◆</div>
-          <h3>Réduit le temps de réponse de 80%</h3>
-          <p>
-            Votre agent répond en quelques secondes en cherchant dans votre
-            documentation, FAQ ou base de connaissances. Il cite ses sources
-            pour chaque réponse.
-            <strong>Résultat :</strong> vos équipes ne gèrent que les cas complexes.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">◆</div>
-          <h3>S'intègre à vos outils existants</h3>
-          <p>
-            Connexion native à Slack, Zendesk, votre CRM ou votre base de
-            données. Pas de changement de workflow pour vos équipes.
-            <strong>Résultat :</strong> l'agent travaille dans votre écosystème actuel.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">◆</div>
-          <h3>Testé comme du code en production</h3>
-          <p>
-            Architecture avec tests automatisés, monitoring des conversations,
-            documentation technique complète. Mon background de QA Automation
-            Engineer garantit la fiabilité.
-            <strong>Résultat :</strong> zéro surprise en production.
-          </p>
-        </div>
-      </div>
-
-      <div class="use-cases">
-        <h3>Cas d'usage typiques</h3>
-        <ul class="use-cases-list">
-          <li>
-            <strong>Support client automatisé</strong> — FAQ, troubleshooting, suivi
-            de commandes
-          </li>
-          <li>
-            <strong>Assistant développeur</strong> — Documentation API, authentification,
-            exemples de code
-          </li>
-          <li>
-            <strong>Onboarding utilisateurs</strong> — Guides interactifs, formation
-            produit
-          </li>
-          <li>
-            <strong>Support interne</strong> — RH, IT, compliance, procédures
-          </li>
-        </ul>
-        <p class="metrics-text">
-          <strong>Impact mesurable :</strong> -60% de tickets support récurrents
-          • Disponibilité 24/7 • ROI en 3-6 mois
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Approche -->
-  <section class="approach-section section-spacing">
-    <div class="container">
-      <h2 class="section-title">Approche</h2>
-
-      <div class="approach-grid">
-        <div class="approach-card">
-          <h4>Contact direct</h4>
-          <p>
-            Pas d'intermédiaire. Suivi quotidien de l'avancement. Vous savez
-            toujours où vous en êtes.
-          </p>
-        </div>
-
-        <div class="approach-card">
-          <h4>Tests automatisés complets</h4>
-          <p>
-            Tests unitaires, tests d'intégration, CI/CD. Vous recevez un système
-            qui fonctionne et reste maintenable.
-          </p>
-        </div>
-
-        <div class="approach-card">
-          <h4>Documentation complète</h4>
-          <p>
-            Documentation technique (architecture, APIs, déploiement) ET
-            documentation utilisateur. Zéro dépendance : vous comprenez comment
-            ça marche, vous pouvez le faire évoluer.
-          </p>
-        </div>
-
-        <div class="approach-card">
-          <h4>Code ownership</h4>
-          <p>
-            Vous recevez tout le code, commenté, versionné, déployable. Vous en
-            êtes propriétaire et restez autonome.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Marché -->
-  <section class="market-section section-spacing">
-    <div class="container">
-      <h2 class="section-title">Pourquoi investir maintenant ?</h2>
-
-      <div class="market-stats">
-        <div class="stat-card">
-          <div class="stat-number">87%</div>
-          <p>
-            des utilisateurs ont une expérience positive avec les chatbots IA
-          </p>
-          <span class="stat-source">Source : Botpress 2025</span>
-          </div>
-
-        <div class="stat-card">
-          <div class="stat-number">25%</div>
-          <p>
-            de réduction des coûts opérationnels grâce à l'IA
-          </p>
-          <span class="stat-source">Source : Gartner 2024</span>
-          </div>
-
-        <div class="stat-card">
-          <div class="stat-number">40%</div>
-            <p>
-            des entreprises utilisent des chatbots pour le support client 24/7
-            </p>
-          <span class="stat-source">Source : IBM 2024</span>
-          </div>
-
-        <div class="stat-card">
-          <div class="stat-number">70%</div>
-          <p>des interactions client seront gérées par l'IA d'ici 2028</p>
-          <span class="stat-source">Source : Gartner 2024</span>
-          </div>
-        </div>
-
-      <div class="market-insight">
-        <p>
-          Le marché des agents IA atteindra <strong
-            >50 milliards de dollars en 2030</strong
-          >, avec une croissance annuelle de 45%. Les entreprises qui
-          investissent maintenant prennent une longueur d'avance sur leurs
-          concurrents.
-        </p>
-        <p class="market-source">
-          <em>Sources : GM Insights, Spherical Insights, Dual Media 2025</em>
-        </p>
-          </div>
-          </div>
-  </section>
-
-  <!-- Bloc Preuve (Portfolio) -->
-  <section class="proof-section section-spacing">
-    <div class="container">
-      <h2 class="section-title">Démo : Agent de support API</h2>
-
-      <div class="proof-content">
-        <div class="proof-image">
-          <img
-            src="/portfolio/06-python-code-example.png"
-            alt="Agent de support API"
-          />
-          </div>
-        <div class="proof-text">
-          <p>
-            Agent IA pour support technique API. Il répond aux
-            questions sur l'authentification, les endpoints, les codes erreur.
-            Il est disponible 24/7, multilingue (FR/EN), avec citations des
-            sources.
-          </p>
-
-          <h4>Ce que l'agent peut faire :</h4>
-          <ul class="tech-stack">
-            <li>
-              <strong>Support technique :</strong> Répond aux questions API en temps
-              réel
-            </li>
-            <li>
-              <strong>Recherche intelligente :</strong> Trouve l'info dans 200+ pages
-              de documentation
-            </li>
-            <li>
-              <strong>Multilingue :</strong> Détecte automatiquement le français
-              et l'anglais
-            </li>
-            <li>
-              <strong>Citations sources :</strong> il est toujours fiable et traçable
-            </li>
-          </ul>
-
-          <h4>Bénéfices pour vos utilisateurs :</h4>
-          <ul class="tech-stack">
-            <li>
-              <strong>Réponse instantanée :</strong> Quelques secondes contre plusieurs
-              minutes ou heures
-            </li>
-            <li>
-              <strong>Disponibilité 24/7 :</strong> Plus besoin d'attendre les heures
-              ouvrées
-            </li>
-            <li>
-              <strong>Précision :</strong> Réponses contextuelles avec exemples de
-              code
-            </li>
-            <li>
-              <strong>Autonomie :</strong> Vos développeurs progressent sans bloquer
-              votre support
-            </li>
-          </ul>
-
-          <a href="/fr/portfolio" class="btn btn-primary">Tester la démo →</a>
-          </div>
-          </div>
-
-      <!-- Vidéo Démo -->
-      <div class="demo-video-section">
-        <h3>L'agent en action</h3>
-        <p class="demo-intro">
-          Découvrez comment l'agent répond avec précision, cite ses sources et évite les hallucinations
-        </p>
-        
-        <div class="demo-video-container">
-          <video controls preload="metadata" poster="/portfolio/01-home-welcome.png">
-            <source src="/portfolio/videos/02-source-citation-demo.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-        </div>
-
-        <div class="demo-highlights">
-          <div class="highlight-item">
-            <span class="highlight-icon">✓</span>
-            <span>Réponses précises avec citations sources</span>
-          </div>
-          <div class="highlight-item">
-            <span class="highlight-icon">✓</span>
-            <span>Recherche vectorielle dans votre documentation</span>
-          </div>
-          <div class="highlight-item">
-            <span class="highlight-icon">✓</span>
-            <span>Zéro hallucination grâce à la validation stricte</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Portfolio supplémentaire -->
-      <div class="portfolio-intro">
-        <h3>Deux approches complémentaires</h3>
-        <p>
-          Je maîtrise différentes architectures d'agents IA selon vos besoins
-            </p>
-          </div>
-
-      <div class="portfolio-grid-featured">
-        <!-- Agent 1 : RAG -->
-        <div class="portfolio-featured-card">
-          <div class="featured-badge featured-badge-rag">Agent RAG</div>
-          <PortfolioCard
-            title="Neolens Support Agent"
-            client="Support technique API"
-            description="Agent RAG pour support documentation API. Recherche intelligente dans 200+ pages, citations sources."
-            tags={["Python", "FastAPI", "LangGraph", "FAISS", "Next.js 14"]}
-            image="/portfolio/01-home-welcome.png"
-            link="/fr/portfolio/neolens-support-agent"
-            category={["ai-agent"]}
-          />
-        </div>
-
-        <!-- Agent 2 : Conversationnel -->
-        <div class="portfolio-featured-card">
-          <div class="featured-badge featured-badge-conversational">
-            Agent IA
-          </div>
-          <PortfolioCard
-            title="Visionary AI Agent"
-            client="Assistant API IA"
-            description="Assistant qui accélère l'adoption de votre API. Quick-start prompts, exemples de code interactifs."
-            tags={["React", "TypeScript", "Gemini AI", "Netlify Functions"]}
-            image="/portfolio/visionary-ai-agent.png"
-            link="/fr/portfolio/visionary-ai-agent"
-            category={["ai-agent"]}
-            githubUrl="https://github.com/berangeregallais/visionary-ai-docs-assistant"
-            lang="fr"
-          />
-          </div>
-          </div>
-
-      <!-- Section comparative -->
-      <div class="agent-comparison">
-        <h3>Quelle approche pour votre projet ?</h3>
-
-        <div class="comparison-cards">
-          <div class="comparison-card">
-            <h4>Agent RAG</h4>
-            <p>
-              <strong>Pour :</strong> Répondre aux questions issues de votre documentation
-            </p>
-            <p>Ex : Support client, FAQ, documentation technique</p>
-          </div>
-
-          <div class="comparison-card">
-            <h4>Agent IA Guidé</h4>
-            <p><strong>Pour :</strong> Guider vos clients étape par étape</p>
-            <p>Ex : Onboarding, intégration API, assistant développeur</p>
-        </div>
-      </div>
-
-        <p class="comparison-note">
-          <strong>Pas sûr ?</strong> Je vous aide à choisir l'approche adaptée lors
-          de l'appel découverte.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Comment je travaille -->
-  <section id="processus" class="process-section section-spacing">
-    <div class="container">
-      <h2 class="section-title">Comment on travaille ensemble ?</h2>
-      <p class="section-intro">
-        Un processus clair en 3 étapes pour transformer votre idée en agent IA fonctionnel.
-      </p>
-
-      <div class="process-steps">
-        <!-- Étape 1 -->
-        <div class="process-card">
-          <div class="process-number">1</div>
-          <h3>Appel découverte (30 min)</h3>
-          <p>
-            On discute de votre projet : quel problème vous voulez résoudre, quelles sont vos données disponibles,
-            vos contraintes techniques et votre budget.
-          </p>
-          <div class="process-outcome">
-            <strong>Ce que vous obtenez :</strong>
+        <div class="context-grid">
+          <div class="context-card">
+            <h3>Ce que je recherche</h3>
             <ul>
-              <li>Une vision claire de la faisabilité</li>
-              <li>Une recommandation d'approche (validation ou direct)</li>
-              <li>Une estimation de délai et budget</li>
+              <li>
+                Un poste en <strong>CDI, en full remote</strong>, où la qualité est
+                un travail collectif
+              </li>
+              <li>
+                Un rôle QA Automation Engineer / SDET, ou un poste qui combine
+                test, développement et documentation
+              </li>
+              <li>
+                Une équipe où je peux appliquer si besoin mes compétences en
+                agents IA à des problèmes concrets
+              </li>
+              <li>
+                Un environnement où la documentation technique compte autant que
+                le code
+              </li>
+            </ul>
+          </div>
+
+          <div class="context-card context-card--solution">
+            <h3>Ce que j'apporte</h3>
+            <ul>
+              <li>
+                <strong>Plus de 4 ans dédiés à l'automatisation de tests</strong
+                > : Cypress, Playwright, Selenium, pipeline XRay-Cypress, Appium
+              </li>
+              <li>
+                <strong>Double compétence dev + test</strong> : développement web
+                (Java, Angular) avant de me spécialiser en QA
+              </li>
+              <li>
+                <strong>Conception et test d'agents IA</strong> : architectures multi-agents
+                LangGraph, RAG, API LLM (Claude, Gemini)
+              </li>
+              <li>
+                <strong>Rapports à deux niveaux</strong> : rapport technique détaillé, résumé accessible pour les profils non-techniques
+              </li>
             </ul>
           </div>
         </div>
 
-        <!-- Étape 2 -->
-        <div class="process-card">
-          <div class="process-number">2</div>
-          <h3>Validation ou développement direct</h3>
-          <p>
-            <strong>Option A : Validation (recommandé si incertitude)</strong><br>
-            Je valide la faisabilité sur votre cas réel avant de m'engager sur le projet complet.
-          </p>
-          <p>
-            <strong>Option B : Développement direct</strong><br>
-            Si le besoin est clair et la faisabilité évidente, on passe directement à la production.
-          </p>
-          <div class="process-outcome">
-            <strong>Ce que vous obtenez :</strong>
-            <ul>
-              <li>Validation : Prototype fonctionnel + rapport de faisabilité</li>
-              <li>Direct : Agent complet prêt à déployer</li>
-              </ul>
-            </div>
-            </div>
-
-        <!-- Étape 3 -->
-        <div class="process-card">
-          <div class="process-number">3</div>
-          <h3>Déploiement & suivi</h3>
-          <p>
-            Je déploie l'agent en production, je forme votre équipe, et je reste disponible pendant la période
-            de support pour ajuster et optimiser.
-          </p>
-          <div class="process-outcome">
-            <strong>Ce que vous obtenez :</strong>
-            <ul>
-              <li>Agent déployé et opérationnel</li>
-              <li>Documentation complète</li>
-              <li>Formation de votre équipe</li>
-              <li>Support post-lancement (durée selon offre)</li>
-          </ul>
+        <div class="cta-services">
+          <p>Le détail de ces compétences, section par section :</p>
+          <div class="cta-services-buttons">
+            <a href="/fr/competences" class="btn btn-secondary">
+              Voir mes compétences →
+            </a>
+            <a href="/fr/portfolio" class="btn btn-secondary">
+              Voir mon portfolio →
+            </a>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="proof-section section-spacing">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+
+        <div class="portfolio-grid-featured">
+          <!-- Agent 1 : QA -->
+          <div class="portfolio-featured-card">
+            <div class="featured-badge featured-badge-conversational">
+              Agents IA x Tests
+            </div>
+            <PortfolioCard
+              title="QA Agent Supervisor"
+              client="Orchestrateur de tests multi-agents"
+              description="Système multi-agents LangGraph qui orchestre une vraie suite de tests Playwright/pytest : suggestions de couverture, triage des échecs, détection de flaky tests."
+              tags={[
+                "Python",
+                "LangGraph",
+                "Claude API",
+                "Pydantic",
+                "Playwright",
+              ]}
+              image="/portfolio/qa-agent-supervisor.png"
+              link="/fr/portfolio/qa-agent-supervisor"
+              category={["ai-agent", "qa"]}
+              githubUrl="https://github.com/berangeregallais/qa-agent-supervisor"
+              lang="fr"
+            />
+          </div>
+
+          <!-- Agent 2 : RAG -->
+          <div class="portfolio-featured-card">
+            <div class="featured-badge featured-badge-rag">Agent RAG</div>
+            <PortfolioCard
+              title="Neolens Support Agent"
+              client="Support technique API"
+              description="Agent RAG pour support documentation API. Recherche intelligente dans plus de 200 pages, citations sources."
+              tags={["Python", "FastAPI", "LangGraph", "FAISS", "Next.js 14"]}
+              image="/portfolio/01-home-welcome.png"
+              link="/fr/portfolio/neolens-support-agent"
+              category={["ai-agent"]}
+            />
+          </div>
+        </div>
+
+        <div class="cta-services">
+          <div class="cta-services-buttons">
+            <a href="/fr/portfolio" class="btn btn-secondary">
+              Voir tout le portfolio →
+            </a>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <!-- CTA Section -->
-      <div class="process-cta">
-        <h3>Prêt à démarrer ?</h3>
-        <p>
-          Réservez votre appel découverte gratuit (30 min) pour discuter de votre projet.
-          Je vous dirai si un agent IA est adapté à votre cas et quelle approche je recommande.
-        </p>
-        <a href="/fr/contact" class="btn btn-primary btn-large">Discutons de votre projet</a>
-        <p class="process-link">
-          Vous voulez voir les tarifs et offres détaillées ?
-          <a href="/fr/offres">Consulter les offres →</a>
-        </p>
+    <!-- Disponibilité -->
+    <section id="contact-cta" class="process-section section-spacing">
+      <div class="container">
+        <!-- CTA Section -->
+        <div class="process-cta">
+          <h3>Disponible pour un poste en CDI, full remote</h3>
+          <p>
+            QA Automation Engineer / SDET & Technical Writer, je recherche une
+            équipe où mes compétences en tests, développement et agents IA
+            peuvent s'appliquer à des problèmes concrets.
+          </p>
+          <a href="/fr/contact" class="btn btn-primary btn-large"
+            >Me contacter</a
+          >
+          <p class="process-link">
+            <a href="/about/cv-bgallais-fr.pdf" download>Télécharger mon CV →</a
+            >
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <BackToTop />
+    <BackToTop />
 
-<style>
-    /* ===============================
+    <style>
+      /* ===============================
      COULEURS PERSONNALISÉES POUR CETTE PAGE
      =============================== */
-    :root {
-      --color-background-custom: 5, 10, 48; /* #050a30 - Bleu foncé */
-      --color-primary-custom: 238, 130, 255; /* #ee82ff - Rose moins saturé */
-      --color-primary-hover-custom: 245, 150, 255; /* #f596ff - Rose clair pour hover */
-      --color-accent-custom: 240, 170, 255; /* #f0aaff - Rose doux pour accents */
-    }
+      :root {
+        --color-background-custom: 5, 10, 48; /* #050a30 - Bleu foncé */
+        --color-primary-custom: 238, 130, 255; /* #ee82ff - Rose moins saturé */
+        --color-primary-hover-custom:
+          245, 150, 255; /* #f596ff - Rose clair pour hover */
+        --color-accent-custom:
+          240, 170, 255; /* #f0aaff - Rose doux pour accents */
+      }
 
-    /* Override des variables de couleur pour cette page */
-    #fr-index-root {
-      --color-background: 5, 10, 48;
-      --color-primary: 238, 130, 255;
-      --color-primary-hover: 245, 150, 255;
-      --color-accent: 240, 170, 255;
-      --color-surface: 15, 25, 65;
-      --color-surface-variant: 25, 40, 90;
-    }
+      /* Override des variables de couleur pour cette page */
+      #fr-index-root {
+        --color-background: 5, 10, 48;
+        --color-primary: 238, 130, 255;
+        --color-primary-hover: 245, 150, 255;
+        --color-accent: 240, 170, 255;
+        --color-surface: 15, 25, 65;
+        --color-surface-variant: 25, 40, 90;
+      }
 
-  /* ===============================
+      /* ===============================
      HERO SECTION
      =============================== */
-  .hero {
-    padding: 8rem 0 6rem;
-    background: linear-gradient(
-      135deg,
-      rgb(var(--color-background)) 0%,
-      rgba(var(--color-primary), 0.05) 100%
-    );
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-        circle at 20% 80%,
-        rgba(var(--color-primary), 0.08) 0%,
-        transparent 50%
-      ),
-      radial-gradient(
-        circle at 80% 20%,
-        rgba(var(--color-accent), 0.05) 0%,
-        transparent 50%
-      );
-    pointer-events: none;
-  }
-
-  .hero .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-title {
-    font-family: var(--font-hero);
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
-    line-height: 1.15;
-    margin-bottom: 2rem;
-    color: rgb(var(--color-text));
-  }
-
-  .hero-subtitle {
-    font-size: 1.25rem;
-    line-height: 1.7;
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 2rem;
-  }
-
-  .hero-badge {
-    display: inline-flex;
-    padding: 0.75rem 1.5rem;
-    background: rgba(var(--color-accent), 0.15);
-    border: 1px solid rgba(var(--color-accent), 0.3);
-    border-radius: var(--radius-lg);
-    color: rgb(var(--color-accent));
-    font-size: 0.875rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
-  }
-
-  .hero-cta {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-    /* Value Props */
-    .value-props {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      margin-bottom: 2rem;
-    }
-
-    .value-prop {
-      font-size: 1rem;
-      color: rgb(var(--color-text));
-      padding: 0.75rem 1rem;
-      background: rgba(var(--color-surface-variant), 0.5);
-      border-left: 3px solid rgb(var(--color-primary));
-      border-radius: var(--radius-sm);
-      transition: all 0.2s ease;
-    }
-
-    .value-prop:hover {
-      background: rgba(var(--color-surface-variant), 0.7);
-      transform: translateX(4px);
-    }
-
-    .value-prop strong {
-      color: rgb(var(--color-primary));
-      font-weight: 600;
-  }
-
-  /* Chat Preview */
-  .chat-preview {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-xl);
-    background: rgb(var(--color-surface));
-    border: 1px solid rgba(var(--color-border), 0.3);
-  }
-
-  .chat-header {
-    display: flex;
-    align-items: center;
-    padding: 1.25rem 1.5rem;
-    gap: 1rem;
-    background: rgba(var(--color-surface-variant), 0.3);
-    border-bottom: 1px solid rgba(var(--color-border), 0.2);
-  }
-
-  .agent-avatar {
-    font-size: 2rem;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: linear-gradient(
-      135deg,
-      rgb(var(--color-primary)),
-      rgb(var(--color-primary-hover))
-    );
-  }
-
-  .agent-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .agent-name {
-    font-weight: 600;
-    font-size: 1rem;
-    color: rgb(var(--color-text));
-  }
-
-  .agent-status {
-    font-size: 0.875rem;
-    color: rgb(var(--color-text-muted));
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .agent-status::before {
-    content: "●";
-    color: rgb(var(--color-success));
-    font-size: 0.75rem;
-  }
-
-  .chat-messages {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    min-height: 320px;
-    background: rgba(var(--color-surface-variant), 0.1);
-  }
-
-  .message {
-    display: flex;
-    gap: 0.75rem;
-    max-width: 90%;
-    animation: slideIn 0.3s ease;
-  }
-
-  .user-message {
-    align-self: flex-end;
-    flex-direction: row-reverse;
-  }
-
-  .agent-message {
-    align-self: flex-start;
-      animation: slideIn 0.3s ease 1s backwards;
-  }
-
-  .message-avatar {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-  }
-
-  .message-content {
-    padding: 1rem 1.25rem;
-    border-radius: var(--radius-lg);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    flex: 1;
-    text-align: left;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      hyphens: auto;
-  }
-
-  .user-message .message-content {
-    background: rgb(var(--color-primary));
-    color: rgb(var(--color-text-button));
-    border-bottom-right-radius: 0.25rem;
-  }
-
-  .agent-message .message-content {
-    background: rgba(var(--color-surface-variant), 0.8);
-    color: rgb(var(--color-text));
-    border-bottom-left-radius: 0.25rem;
-    border: 1px solid rgba(var(--color-border), 0.7);
-  }
-
-  .inline-code {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--radius-sm);
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
-    display: inline-block;
-    text-align: left;
-  }
-
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
+      .hero {
+        padding: 8rem 0 6rem;
+        background: linear-gradient(
+          135deg,
+          rgb(var(--color-background)) 0%,
+          rgba(var(--color-primary), 0.05) 100%
+        );
+        position: relative;
+        overflow: hidden;
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(var(--color-primary), 0.08) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(var(--color-accent), 0.05) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
       }
-    }
 
-    /* ===============================
-   BADGES
-   =============================== */
-    .badge {
-      padding: 0.5rem 0.9rem;
-    background: rgba(var(--color-surface-variant), 0.5);
-    border: 1px solid rgba(var(--color-border), 0.5);
-    border-radius: var(--radius-md);
-    color: rgb(var(--color-text));
-    font-size: 0.875rem;
-    font-weight: 500;
-      transition: all 0.2s ease;
-    }
+      .hero .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
 
-    .badge:hover {
-      background: rgba(var(--color-primary), 0.1);
-      border-color: rgb(var(--color-primary));
-      transform: translateY(-2px);
-    }
+      .hero-title {
+        font-family: var(--font-hero);
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 700;
+        line-height: 1.15;
+        margin-bottom: 2rem;
+        color: rgb(var(--color-text));
+      }
 
-    /* ===============================
-   TECH STACK SECTION
-   =============================== */
-    .tech-stack-section {
-      margin-top: 4rem;
-      padding: 3rem 0 2rem;
-      background: linear-gradient(
-        180deg,
-        rgb(var(--color-background)) 0%,
-        rgba(var(--color-surface-variant), 0.3) 100%
-      );
-    }
+      .hero-subtitle {
+        font-size: 1.25rem;
+        line-height: 1.7;
+        color: rgb(var(--color-text-muted));
+        margin-bottom: 2rem;
+      }
 
-    .tech-stack-label {
-      text-align: center;
-      margin-bottom: 1.5rem;
-      font-size: 0.9rem;
-      color: rgb(var(--color-text-muted));
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
+      .hero-cta {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
 
-    .tech-stack-badges {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      max-width: 750px;
-      margin: 0 auto;
-    }
-
-    .tech-stack-link {
-      text-align: center;
-      margin-top: 1.5rem;
-      font-size: 0.9rem;
-    }
-
-    .tech-stack-link a {
-      color: rgb(var(--color-primary));
-      text-decoration: none;
-      border-bottom: 1px solid rgb(var(--color-primary));
-      transition: all 0.2s ease;
-    }
-
-    .tech-stack-link a:hover {
-      color: rgb(var(--color-primary-hover));
-      border-bottom-color: rgb(var(--color-primary-hover));
-  }
-
-  /* ===============================
-   CONTEXT SECTION
-   =============================== */
-  .context-section {
-    background: rgb(var(--color-surface));
-  }
-
-  .context-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .context-card {
-    background: rgba(var(--color-surface-variant), 0.3);
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2.5rem;
-  }
-
-  .context-card--solution {
-    background: rgba(var(--color-primary), 0.03);
-    border: 1px solid rgba(var(--color-primary), 0.2);
-  }
-
-  .context-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1.5rem;
-  }
-
-  .context-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .context-card ul li {
-    padding-left: 1.75rem;
-    margin-bottom: 1rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-    line-height: 1.6;
-  }
-
-  .context-card ul li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-primary));
-    font-size: 1.5rem;
-    line-height: 1;
-  }
-
-  .context-card--solution ul li {
-    padding-left: 2rem;
-  }
-
-  .context-card--solution ul li::before {
-    content: "→";
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .context-card strong {
-    color: rgb(var(--color-text));
-    font-weight: 600;
-  }
-
-  .context-result {
-    text-align: center;
-    padding: 2rem 2.5rem;
-    background: rgba(var(--color-primary), 0.05);
-    border: 2px solid rgba(var(--color-primary), 0.3);
-    border-radius: var(--radius-lg);
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .context-result p {
-    font-size: 1.125rem;
-    color: rgb(var(--color-text));
-    margin: 0;
-    line-height: 1.7;
-  }
-
-  .context-result strong {
-    color: rgb(var(--color-primary));
-  }
-
-    .cta-services {
-      text-align: center;
-      margin-top: 2.5rem;
-      padding: 2rem;
-      background: rgba(var(--color-accent), 0.03);
-      border-radius: var(--radius-lg);
-    }
-
-    .cta-services p {
-      font-size: 1.125rem;
-      color: rgb(var(--color-text));
-      margin-bottom: 1.5rem;
-      font-weight: 500;
-    }
-
-    .cta-services-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-  /* ===============================
-   API CTA SECTION
-   =============================== */
-  .api-cta-section {
-    padding: 4rem 0;
-    background: linear-gradient(
-      135deg,
-      rgba(var(--color-accent), 0.08) 0%,
-      rgba(var(--color-primary), 0.05) 100%
-    );
-  }
-
-  .api-cta-card {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 2.5rem;
-    background: rgb(var(--color-surface));
-    border: 1px solid rgba(var(--color-accent), 0.3);
-    border-radius: var(--radius-xl);
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(var(--color-accent), 0.1);
-  }
-
-  .api-cta-badge {
-    display: inline-block;
-    background: rgba(var(--color-accent), 0.15);
-    color: rgb(var(--color-accent));
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-md);
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 1rem;
-  }
-
-  .api-cta-card h3 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    color: rgb(var(--color-text));
-  }
-
-  .api-cta-card p {
-    font-size: 1.125rem;
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-
-  .api-cta-price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: rgb(var(--color-accent));
-    margin-bottom: 1.5rem;
-  }
-
-  .btn-outline-light {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border: 2px solid rgba(var(--color-accent), 0.5);
-    border-radius: var(--radius-md);
-    color: rgb(var(--color-text));
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.2s ease;
-    background: transparent;
-  }
-
-  .btn-outline-light:hover {
-    border-color: rgb(var(--color-accent));
-    color: rgb(var(--color-accent));
-    background: rgba(var(--color-accent), 0.05);
-  }
-
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .context-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .api-cta-card {
-      padding: 2rem 1.5rem;
-    }
-
-    .api-cta-card h3 {
-      font-size: 1.5rem;
-    }
-
-    .api-cta-card p {
-      font-size: 1rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .context-card {
-      padding: 1.5rem;
-    }
-
-    .context-result {
-      padding: 1.5rem;
-    }
-  }
-
-  /* ===============================
-   USE CASES & METRICS
-   =============================== */
-  .use-cases {
-    margin-top: 4rem;
-    padding: 2.5rem;
-    background: rgba(var(--color-surface-variant), 0.3);
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-  }
-
-  .use-cases h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-
-  .use-cases-list {
-    list-style: none;
-    padding: 0;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-  }
-
-  .use-cases-list li {
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-    font-size: 0.95rem;
-  }
-
-  .use-cases-list li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-primary));
-    font-weight: bold;
-  }
-
-    .use-cases-list li strong {
-      color: rgb(var(--color-text));
-      font-weight: 600;
-  }
-
-  .metrics-text {
-    text-align: center;
-    color: rgb(var(--color-text));
-    font-size: 1rem;
-    margin: 0;
-      padding-top: 1rem;
-    }
-
-    .metrics-text strong {
-      color: rgb(var(--color-primary));
-  }
-
-  /* ===============================
-   APPROACH SECTION
-   =============================== */
-  .approach-section {
-    background: rgb(var(--color-surface));
-  }
-
-  .approach-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  .approach-card {
-    background: rgba(var(--color-surface-variant), 0.3);
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-  }
-
-  .approach-card h4 {
-    font-family: var(--font-heading);
-    font-size: 1.125rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 0.75rem;
-  }
-
-  .approach-card p {
-    color: rgb(var(--color-text-muted));
-    font-size: 0.95rem;
-    margin: 0;
-  }
-
-  /* ===============================
-   OFFERS - SIMPLIFIED
-   =============================== */
-  .offer-tagline {
-    font-size: 0.95rem;
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 1rem;
-    font-weight: 400;
-  }
-
-  .offer-use-cases {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background: rgba(var(--color-accent), 0.05);
-    border-radius: var(--radius-md);
-    font-size: 0.9rem;
-  }
-
-  .offer-use-cases p {
-    margin: 0;
-    color: rgb(var(--color-text-muted));
-  }
-
-    .offer-demo-ref {
-      margin-top: 1rem;
-      padding: 0.75rem 1rem;
-      background: linear-gradient(
-        135deg,
-        rgba(var(--color-primary), 0.08),
-        rgba(var(--color-accent), 0.08)
-      );
-      border-left: 3px solid rgb(var(--color-primary));
-      border-radius: var(--radius-md);
-      font-size: 0.85rem;
-    }
-
-    .offer-demo-ref p {
-      margin: 0;
-      color: rgb(var(--color-text));
-    }
-
-    .demo-link {
-      color: rgb(var(--color-primary));
-      text-decoration: none;
-      font-weight: 500;
-      border-bottom: 1px solid transparent;
-      transition: border-bottom-color 0.2s ease;
-    }
-
-    .demo-link:hover {
-      border-bottom-color: rgb(var(--color-primary));
-  }
-
-  .offer-use-cases strong {
-    color: rgb(var(--color-text));
-  }
-
-  /* ===============================
-   RESPONSIVE
-   =============================== */
-  @media (max-width: 1024px) {
-    .approach-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .use-cases {
-      padding: 1.5rem;
-    }
-
-    .approach-card {
-      padding: 1.5rem;
-    }
+      /* Value Props */
+      .value-props {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+      }
 
       .value-prop {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        color: rgb(var(--color-text));
+        padding: 0.75rem 1rem;
+        background: rgba(var(--color-surface-variant), 0.5);
+        border-left: 3px solid rgb(var(--color-primary));
+        border-radius: var(--radius-sm);
+        transition: all 0.2s ease;
       }
 
-      .tech-stack-section {
-        padding: 2rem 0 1.5rem !important;
-        margin-top: 2rem;
-    }
-  }
+      .value-prop:hover {
+        background: rgba(var(--color-surface-variant), 0.7);
+        transform: translateX(4px);
+      }
 
-  /* ===============================
+      .value-prop strong {
+        color: rgb(var(--color-primary));
+        font-weight: 600;
+      }
+
+      /* Chat Preview */
+      .chat-preview {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-xl);
+        background: rgb(var(--color-surface));
+        border: 1px solid rgba(var(--color-border), 0.3);
+      }
+
+      .chat-header {
+        display: flex;
+        align-items: center;
+        padding: 1.25rem 1.5rem;
+        gap: 1rem;
+        background: rgba(var(--color-surface-variant), 0.3);
+        border-bottom: 1px solid rgba(var(--color-border), 0.2);
+      }
+
+      .agent-avatar {
+        font-size: 2rem;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          rgb(var(--color-primary)),
+          rgb(var(--color-primary-hover))
+        );
+      }
+
+      .agent-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .agent-name {
+        font-weight: 600;
+        font-size: 1rem;
+        color: rgb(var(--color-text));
+      }
+
+      .agent-status {
+        font-size: 0.875rem;
+        color: rgb(var(--color-text-muted));
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .agent-status::before {
+        content: "●";
+        color: rgb(var(--color-success));
+        font-size: 0.75rem;
+      }
+
+      .chat-messages {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        min-height: 320px;
+        background: rgba(var(--color-surface-variant), 0.1);
+      }
+
+      .message {
+        display: flex;
+        gap: 0.75rem;
+        max-width: 90%;
+        animation: slideIn 0.3s ease;
+      }
+
+      .user-message {
+        align-self: flex-end;
+        flex-direction: row-reverse;
+      }
+
+      .agent-message {
+        align-self: flex-start;
+        animation: slideIn 0.3s ease 1s backwards;
+      }
+
+      .message-avatar {
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+
+      .message-content {
+        padding: 1rem 1.25rem;
+        border-radius: var(--radius-lg);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        flex: 1;
+        text-align: left;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+
+      .user-message .message-content {
+        background: rgb(var(--color-primary));
+        color: rgb(var(--color-text-button));
+        border-bottom-right-radius: 0.25rem;
+      }
+
+      .agent-message .message-content {
+        background: rgba(var(--color-surface-variant), 0.8);
+        color: rgb(var(--color-text));
+        border-bottom-left-radius: 0.25rem;
+        border: 1px solid rgba(var(--color-border), 0.7);
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ===============================
+   CONTEXT SECTION
+   =============================== */
+      .context-section {
+        background: rgb(var(--color-surface));
+      }
+
+      .context-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .context-card {
+        background: rgba(var(--color-surface-variant), 0.3);
+        border: 1px solid rgba(var(--color-border), 0.3);
+        border-radius: var(--radius-lg);
+        padding: 2.5rem;
+      }
+
+      .context-card--solution {
+        background: rgba(var(--color-primary), 0.03);
+        border: 1px solid rgba(var(--color-primary), 0.2);
+      }
+
+      .context-card h3 {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        color: rgb(var(--color-text));
+        margin-bottom: 1.5rem;
+      }
+
+      .context-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .context-card ul li {
+        padding-left: 1.75rem;
+        margin-bottom: 1rem;
+        position: relative;
+        color: rgb(var(--color-text-muted));
+        line-height: 1.6;
+      }
+
+      .context-card ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: rgb(var(--color-primary));
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+
+      .context-card--solution ul li {
+        padding-left: 2rem;
+      }
+
+      .context-card--solution ul li::before {
+        content: "→";
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .context-card strong {
+        color: rgb(var(--color-text));
+        font-weight: 600;
+      }
+
+      .context-result {
+        text-align: center;
+        padding: 2rem 2.5rem;
+        background: rgba(var(--color-primary), 0.05);
+        border: 2px solid rgba(var(--color-primary), 0.3);
+        border-radius: var(--radius-lg);
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .context-result p {
+        font-size: 1.125rem;
+        color: rgb(var(--color-text));
+        margin: 0;
+        line-height: 1.7;
+      }
+
+      .context-result strong {
+        color: rgb(var(--color-primary));
+      }
+
+      .cta-services {
+        text-align: center;
+        margin-top: 2.5rem;
+        padding: 2rem;
+        background: rgba(var(--color-accent), 0.03);
+        border-radius: var(--radius-lg);
+      }
+
+      .cta-services p {
+        font-size: 1.125rem;
+        color: rgb(var(--color-text));
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+      }
+
+      .cta-services-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .context-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .context-card {
+          padding: 1.5rem;
+        }
+
+        .context-result {
+          padding: 1.5rem;
+        }
+      }
+
+      /* ===============================
+   USE CASES & METRICS
+   =============================== */
+      .use-cases {
+        margin-top: 4rem;
+        padding: 2.5rem;
+        background: rgba(var(--color-surface-variant), 0.3);
+        border: 1px solid rgba(var(--color-border), 0.3);
+        border-radius: var(--radius-lg);
+      }
+
+      .use-cases h3 {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        color: rgb(var(--color-text));
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .use-cases-list {
+        list-style: none;
+        padding: 0;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+      }
+
+      .use-cases-list li {
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+        position: relative;
+        color: rgb(var(--color-text-muted));
+        font-size: 0.95rem;
+      }
+
+      .use-cases-list li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: rgb(var(--color-primary));
+        font-weight: bold;
+      }
+
+      .use-cases-list li strong {
+        color: rgb(var(--color-text));
+        font-weight: 600;
+      }
+
+      /* ===============================
+   APPROACH SECTION
+   =============================== */
+      .approach-section {
+        background: rgb(var(--color-surface));
+      }
+
+      .approach-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .approach-card {
+        background: rgba(var(--color-surface-variant), 0.3);
+        border: 1px solid rgba(var(--color-border), 0.3);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+      }
+
+      .approach-card h4 {
+        font-family: var(--font-heading);
+        font-size: 1.125rem;
+        color: rgb(var(--color-text));
+        margin-bottom: 0.75rem;
+      }
+
+      .approach-card p {
+        color: rgb(var(--color-text-muted));
+        font-size: 0.95rem;
+        margin: 0;
+      }
+
+      /* ===============================
+   RESPONSIVE
+   =============================== */
+      @media (max-width: 1024px) {
+        .approach-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .use-cases {
+          padding: 1.5rem;
+        }
+
+        .approach-card {
+          padding: 1.5rem;
+        }
+
+        .value-prop {
+          font-size: 0.9rem;
+        }
+      }
+
+      /* ===============================
    SECTIONS COMMUNES
    =============================== */
-  .section-title {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: rgb(var(--color-text));
-  }
+      .section-title {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 3rem;
+        color: rgb(var(--color-text));
+      }
 
-  .section-intro {
-    text-align: center;
-    font-size: 1.125rem;
-    color: rgb(var(--color-text-muted));
-    max-width: 800px;
-    margin: 0 auto 3rem;
-  }
-
-  /* ===============================
+      /* ===============================
      BLOC SOLUTION
      =============================== */
-  .solution-section {
-    background: rgba(var(--color-surface-variant), 0.5);
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .feature-card {
-    background: rgb(var(--color-surface));
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    text-align: center;
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
-  }
-
-  .feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-  }
-
-  .feature-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: rgb(var(--color-primary));
-    font-weight: 300;
-    line-height: 1;
-  }
-
-  .feature-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-  }
-
-  .feature-card p {
-    color: rgb(var(--color-text-muted));
-    font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .feature-card p strong {
-      color: rgb(var(--color-primary));
-      font-weight: 600;
-  }
-
-  .solution-result {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(var(--color-primary), 0.05);
-    border: 2px solid rgba(var(--color-primary), 0.3);
-    border-radius: var(--radius-lg);
-  }
-
-  .solution-result p {
-    font-size: 1.125rem;
-    color: rgb(var(--color-text));
-    margin: 0;
-  }
-
-  .solution-result strong {
-    color: rgb(var(--color-primary));
-  }
-
-  /* ===============================
-     BLOC OFFRES
-     =============================== */
-  .offers-section {
-    background: rgba(var(--color-surface-variant), 0.5);
-  }
-
-  .offers-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 3rem;
-    align-items: start;
-  }
-
-  .offer-card {
-    background: rgb(var(--color-surface));
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    position: relative;
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .offer-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-  }
-
-
-
-  .offer-header h3 {
-    font-family: var(--font-heading);
-    font-size: 1.75rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-  }
-
-  .offer-price {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: rgb(var(--color-primary));
-    margin-bottom: 0.5rem;
-  }
-
-  .offer-vat {
-    font-size: 0.75rem;
-    color: rgb(var(--color-text-muted));
-    font-style: italic;
-    margin-bottom: 1.5rem;
-  }
-
-  .offer-for {
-    background: rgba(var(--color-accent), 0.1);
-    padding: 1rem;
-    border-radius: var(--radius-md);
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-    color: rgb(var(--color-text-muted));
-  }
-
-  .offer-for strong {
-    color: rgb(var(--color-text));
-  }
-
-  .offer-subtitle {
-    font-size: 1rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-
-  .offer-duration {
-    font-size: 0.9rem;
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 1.5rem;
-  }
-
-    .offer-value-prop {
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      background: linear-gradient(
-        135deg,
-        rgba(var(--color-accent), 0.08),
-        rgba(var(--color-primary), 0.08)
-      );
-      border-left: 3px solid rgb(var(--color-accent));
-      border-radius: var(--radius-sm);
-    }
-
-    .offer-value-prop p {
-      margin: 0;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: rgb(var(--color-text));
-    }
-
-    .offer-value-prop p + p {
-      margin-top: 0.75rem;
-    }
-
-    .offer-value-prop strong {
-      color: rgb(var(--color-primary));
-  }
-
-  .offer-includes {
-    flex: 1;
-  }
-
-  .offer-includes h4 {
-    font-size: 1rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-  }
-
-  .offer-includes ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1.5rem;
-  }
-
-  .offer-includes ul li {
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-    font-size: 0.95rem;
-  }
-
-  .offer-includes ul li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-success));
-    font-weight: bold;
-  }
-
-    .offer-includes details.tech-details {
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(var(--color-border), 0.2);
-    }
-
-    .offer-includes details.tech-details summary {
-      cursor: pointer;
-      color: rgb(var(--color-text-muted));
-      font-size: 0.85rem;
-      font-weight: 500;
-      user-select: none;
-      transition: color 0.2s ease;
-    }
-
-    .offer-includes details.tech-details summary:hover {
-      color: rgb(var(--color-primary));
-    }
-
-    .offer-includes details.tech-details ul {
-      margin-top: 0.75rem;
-      padding-left: 1.5rem;
-    }
-
-    .offer-includes details.tech-details ul li {
-      font-size: 0.85rem;
-  }
-
-  .offer-cta {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-top: auto;
-    margin-bottom: 1.5rem;
-  }
-
-  .offer-cta .btn {
-    width: 100%;
-  }
-
-  .offer-details {
-    border-top: 1px solid rgba(var(--color-border), 0.3);
-    padding-top: 1rem;
-    margin-top: auto;
-  }
-
-  .offer-details summary {
-    cursor: pointer;
-    color: rgb(var(--color-primary));
-    font-weight: 500;
-    user-select: none;
-    transition: opacity 0.2s ease;
-  }
-
-  .offer-details summary:hover {
-    opacity: 0.8;
-  }
-
-  .offer-full-details {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(var(--color-border), 0.2);
-  }
-
-  .offer-full-details p {
-    margin-bottom: 0.75rem;
-    color: rgb(var(--color-text));
-  }
-
-  .offer-full-details ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .offer-full-details ul li {
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-    font-size: 0.9rem;
-  }
-
-  .offer-full-details ul li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-accent));
-  }
-
-  .offer-unsure {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(var(--color-primary), 0.05);
-    border: 1px solid rgba(var(--color-primary), 0.2);
-    border-radius: var(--radius-lg);
-  }
-
-  .offer-unsure p:first-child {
-    font-size: 1.25rem;
-    color: rgb(var(--color-text));
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-  }
-
-  .offer-unsure p:last-of-type {
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 1.5rem;
-  }
-
-  /* ===============================
-   POC CARD - SPECIAL STYLING
-   =============================== */
-
-    /* ===============================
-     POC BANNER (Option 3 - Option B)
-     =============================== */
-    .poc-banner {
-      margin-bottom: 3rem;
-    }
-
-    .poc-banner .offer-card--poc {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 1rem;
-      padding: 1.5rem;
-      background: linear-gradient(
-        135deg,
-        rgba(var(--color-accent), 0.05),
-        rgba(var(--color-primary), 0.05)
-      );
-      border: 2px dashed rgba(var(--color-accent), 0.4);
-    }
-
-    .poc-banner-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .poc-main {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    .poc-badge {
-      padding: 0.5rem 1rem;
-      background: linear-gradient(
-        135deg,
-        rgb(var(--color-accent)),
-        rgba(var(--color-accent), 0.8)
-      );
-      color: rgb(var(--color-text-button));
-      border-radius: var(--radius-md);
-      font-weight: 600;
-      font-size: 0.875rem;
-      white-space: nowrap;
-    }
-
-    .poc-info h3 {
-      font-size: 1.5rem;
-      margin: 0 0 0.25rem 0;
-      color: rgb(var(--color-text));
-    }
-
-    .poc-tagline {
-      margin: 0;
-      font-size: 0.95rem;
-      color: rgb(var(--color-text-muted));
-    }
-
-    .poc-price-block {
-      text-align: right;
-    }
-
-    .poc-price {
-      font-size: 2rem;
-      font-weight: 700;
-      color: rgb(var(--color-primary));
-      margin: 0;
-    }
-
-    .poc-vat {
-      margin: 0;
-      font-size: 0.75rem;
-      color: rgb(var(--color-text-muted));
-      white-space: nowrap;
-    }
-
-    .poc-highlights {
-      display: grid;
-    grid-template-columns: repeat(4, 1fr);
-      gap: 0.75rem;
-      padding: 0.75rem;
-      background: rgba(var(--color-surface), 0.5);
-      border-radius: var(--radius-md);
-    }
-
-    .poc-highlight-item {
-      font-size: 0.8rem;
-      color: rgb(var(--color-text));
-      white-space: nowrap;
-    }
-
-    .poc-upgrade-banner {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.875rem 1.25rem;
-      background: linear-gradient(
-        135deg,
-        rgba(var(--color-success), 0.1),
-        rgba(var(--color-primary), 0.1)
-      );
-      border-left: 3px solid rgb(var(--color-success));
-      border-radius: var(--radius-md);
-      font-size: 0.95rem;
-      color: rgb(var(--color-text));
-    }
-
-    .upgrade-icon {
-      font-size: 1.25rem;
-    }
-
-    .poc-cta {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-    .poc-cta .btn {
-      white-space: nowrap;
-      padding: 0.65rem 0.85rem !important;
-      font-size: 0.8rem !important;
-    }
-
-    @media (max-width: 1024px) {
-      .poc-banner .offer-card--poc {
-        flex-direction: column;
-    gap: 1.5rem;
+      .solution-section {
+        background: rgba(var(--color-surface-variant), 0.5);
       }
 
-      .poc-main {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 1rem;
-      }
-
-      .poc-price-block {
-        text-align: center;
-      }
-
-      .poc-highlights {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
-      }
-
-      .poc-cta {
-        justify-content: center;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .poc-highlights {
-        grid-template-columns: 1fr;
-      }
-
-      .poc-highlight-item {
-        white-space: normal;
-      }
-    }
-
-    /* ===============================
-     HERO GRID (3 colonnes - Option 3)
-     =============================== */
-    .offers-grid-hero {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    @media (max-width: 1024px) {
-      .offers-grid-hero {
-        grid-template-columns: 1fr;
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+        margin-bottom: 3rem;
       }
 
-      .poc-banner .offer-card--poc {
-        grid-template-columns: 1fr;
+      .feature-card {
+        background: rgb(var(--color-surface));
+        border: 1px solid rgba(var(--color-border), 0.3);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
         text-align: center;
-        gap: 1rem;
-      }
-    }
-
-    /* ===============================
-     ENTERPRISE ACCORDION (Option 3)
-     =============================== */
-    .enterprise-accordion {
-      margin: 3rem 0 2rem;
-      border: 2px solid rgba(var(--color-primary), 0.3);
-      border-radius: var(--radius-lg);
-      background: rgba(var(--color-surface-variant), 0.3);
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .enterprise-accordion[open] {
-      border-color: rgb(var(--color-primary));
-      box-shadow: 0 4px 20px rgba(var(--color-primary), 0.15);
-    }
-
-    .enterprise-summary {
-      display: grid;
-      grid-template-columns: auto 1fr auto auto;
-      align-items: center;
-      gap: 1.5rem;
-      padding: 1.5rem 2rem;
-      cursor: pointer;
-      list-style: none;
-      transition: all 0.3s ease;
-      user-select: none;
-    }
-
-    .enterprise-summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .enterprise-summary:hover {
-      background: rgba(var(--color-primary), 0.05);
-    }
-
-    .enterprise-icon {
-      font-size: 2rem;
-    }
-
-    .enterprise-title h3 {
-      font-size: 1.25rem;
-      margin: 0 0 0.25rem 0;
-      color: rgb(var(--color-text));
-    }
-
-    .enterprise-title p {
-      margin: 0;
-      font-size: 0.9rem;
-      color: rgb(var(--color-text-muted));
-    }
-
-    .enterprise-price {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: rgb(var(--color-primary));
-    }
-
-    .accordion-arrow {
-      font-size: 1.25rem;
-      color: rgb(var(--color-primary));
-      transition: transform 0.3s ease;
-    }
-
-    .enterprise-accordion[open] .accordion-arrow {
-      transform: rotate(180deg);
-    }
-
-    .enterprise-content {
-      padding: 0 2rem 2rem;
-      animation: slideDown 0.3s ease;
-    }
-
-    @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .offer-card-enterprise {
-      margin-top: 1rem;
-  }
-
-  /* ===============================
-   RESPONSIVE DESIGN
-   =============================== */
-
-  /* Upgrade highlight */
-  .offer-upgrade {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background: rgba(var(--color-success), 0.08);
-    border: 1px solid rgba(var(--color-success), 0.3);
-    border-radius: var(--radius-md);
-  }
-
-  .offer-upgrade-text {
-    margin: 0;
-    font-size: 0.9rem;
-    color: rgb(var(--color-text));
-    text-align: center;
-  }
-
-  .offer-upgrade-text strong {
-    color: rgb(var(--color-success));
-  }
-
-  /* ===============================
-   RESPONSIVE DESIGN
-   =============================== */
-
-  /* ===============================
-     COMPARISON TABLE
-     =============================== */
-    .comparison-section {
-      margin: 4rem 0 3rem;
-    }
-
-    .comparison-section h3 {
-      text-align: center;
-      font-size: 1.75rem;
-      margin-bottom: 2rem;
-      color: rgb(var(--color-text));
-    }
-
-    .comparison-table-wrapper {
-      overflow-x: auto;
-      margin-bottom: 1.5rem;
-      border-radius: var(--radius-lg);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .comparison-table {
-      width: 100%;
-      border-collapse: collapse;
-    background: rgb(var(--color-surface));
-      font-size: 0.9rem;
-    }
-
-    .comparison-table thead {
-      background: linear-gradient(
-        135deg,
-        rgb(var(--color-primary)),
-        rgba(var(--color-primary), 0.8)
-      );
-      color: rgb(var(--color-text-button));
-    }
-
-    .comparison-table th {
-      padding: 1.25rem 1rem;
-      text-align: left;
-      font-weight: 600;
-      font-size: 1rem;
-      line-height: 1.4;
-    }
-
-    .comparison-table th span {
-      display: block;
-      margin-top: 0.3rem;
-      font-size: 0.8rem;
-      font-weight: 400;
-      opacity: 0.9;
-      line-height: 1.3;
-    }
-
-    .comparison-table th.feature-column {
-      width: 25%;
-      min-width: 200px;
-    }
-
-    .comparison-table td {
-      padding: 1rem;
-      border-bottom: 1px solid rgba(var(--color-text-muted), 0.1);
-    }
-
-    .comparison-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .comparison-table tr:hover {
-      background: rgba(var(--color-primary), 0.03);
-    }
-
-    .comparison-table .feature-name {
-      font-weight: 500;
-      color: rgb(var(--color-text));
-    }
-
-    .comparison-table .category-row {
-      background: linear-gradient(
-        135deg,
-        rgba(var(--color-primary), 0.1),
-        rgba(var(--color-accent), 0.05)
-      );
-    }
-
-    .comparison-table .category-row td {
-      padding: 0.75rem 1rem;
-      font-size: 0.95rem;
-      color: rgb(var(--color-primary));
-      border-top: 2px solid rgba(var(--color-primary), 0.2);
-      border-bottom: 2px solid rgba(var(--color-primary), 0.2);
-    }
-
-    .comparison-note {
-      text-align: center;
-      font-size: 0.95rem;
-      color: rgb(var(--color-text-muted));
-      margin: 0;
-      padding: 1rem;
-      background: rgba(var(--color-accent), 0.05);
-      border-radius: var(--radius-md);
-    }
-
-    .comparison-note strong {
-      color: rgb(var(--color-primary));
-    }
-
-    @media (max-width: 768px) {
-      .comparison-table {
-        font-size: 0.8rem;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
       }
 
-      .comparison-table th,
-      .comparison-table td {
-        padding: 0.75rem 0.5rem;
+      .feature-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-xl);
       }
 
-      .comparison-table th.feature-column {
-        min-width: 150px;
+      .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-primary));
+        font-weight: 300;
+        line-height: 1;
       }
 
-      .comparison-table th span {
-        font-size: 0.7rem;
-        margin-top: 0.2rem;
+      .feature-card h3 {
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        color: rgb(var(--color-text));
+        margin-bottom: 1rem;
       }
 
-      .comparison-section h3 {
-        font-size: 1.5rem;
+      .feature-card p {
+        color: rgb(var(--color-text-muted));
+        font-size: 0.95rem;
+        line-height: 1.6;
       }
-    }
 
-    /* ===============================
+      .feature-card p strong {
+        color: rgb(var(--color-primary));
+        font-weight: 600;
+      }
+
+      /* ===============================
      PROCESS SECTION - "Comment je travaille"
      =============================== */
-    .process-section {
-      background: rgba(var(--color-surface-variant), 0.5);
-      padding-top: 2rem !important;
-    }
-
-    .process-steps {
-    display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-      margin-bottom: 3rem;
-      align-items: start;
-  }
-
-    .process-card {
-      background: rgb(var(--color-surface));
-    border: 1px solid rgba(var(--color-border), 0.3);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-      position: relative;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
-    .process-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .process-number {
-      position: absolute;
-      top: -1rem;
-      left: 2rem;
-      width: 2.5rem;
-      height: 2.5rem;
-      background: linear-gradient(135deg, rgb(var(--color-primary)), rgba(var(--color-primary), 0.8));
-      color: rgb(var(--color-text-button));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1.25rem;
-      box-shadow: 0 2px 8px rgba(var(--color-primary), 0.3);
-    }
-
-    .process-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-      text-align: center;
-      margin-top: 0.5rem;
-    }
-
-    .process-card > p {
-      color: rgb(var(--color-text-muted));
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    .process-outcome {
-      background: rgba(var(--color-accent), 0.08);
-      padding: 1rem;
-      border-radius: var(--radius-md);
-      border-left: 3px solid rgb(var(--color-accent));
-      margin-top: auto;
-    }
-
-    .process-outcome strong {
-      color: rgb(var(--color-primary));
-      display: block;
-      margin-bottom: 0.75rem;
-    }
-
-    .process-outcome ul {
-    list-style: none;
-    padding: 0;
-      margin: 0;
-  }
-
-    .process-outcome ul li {
-    padding-left: 1.5rem;
-      margin-bottom: 0.5rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-    font-size: 0.95rem;
-  }
-
-    .process-outcome ul li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-success));
-    font-weight: bold;
-  }
-
-    .process-cta {
-      text-align: center;
-      padding: 2.5rem;
-      background: rgba(var(--color-primary), 0.05);
-      border: 1px solid rgba(var(--color-primary), 0.2);
-      border-radius: var(--radius-lg);
-    }
-
-    .process-cta h3 {
-      font-size: 1.75rem;
-      color: rgb(var(--color-text));
-      margin-bottom: 1rem;
-    }
-
-    .process-cta > p {
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 1.5rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-  }
-
-    .process-link {
-    margin-top: 1.5rem;
-      font-size: 0.95rem;
-      color: rgb(var(--color-text-muted));
-    }
-
-    .process-link a {
-      color: rgb(var(--color-primary));
-      text-decoration: none;
-      font-weight: 600;
-      transition: opacity 0.2s ease;
-    }
-
-    .process-link a:hover {
-      opacity: 0.8;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 1024px) {
-      .process-steps {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+      .process-section {
+        background: rgba(var(--color-surface-variant), 0.5);
+        padding-top: 2rem !important;
       }
-    }
 
+      .process-cta {
+        text-align: center;
+        padding: 2.5rem;
+        background: rgba(var(--color-primary), 0.05);
+        border: 1px solid rgba(var(--color-primary), 0.2);
+        border-radius: var(--radius-lg);
+      }
 
-  /* ===============================
+      .process-cta h3 {
+        font-size: 1.75rem;
+        color: rgb(var(--color-text));
+        margin-bottom: 1rem;
+      }
+
+      .process-cta > p {
+        color: rgb(var(--color-text-muted));
+        margin-bottom: 1.5rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .process-link {
+        margin-top: 1.5rem;
+        font-size: 0.95rem;
+        color: rgb(var(--color-text-muted));
+      }
+
+      .process-link a {
+        color: rgb(var(--color-primary));
+        text-decoration: none;
+        font-weight: 600;
+        transition: opacity 0.2s ease;
+      }
+
+      .process-link a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+      }
+
+      /* ===============================
      BLOC PREUVE
      =============================== */
-  .proof-section {
-    background: rgba(var(--color-surface-variant), 0.5);
-  }
+      .proof-section {
+        background: rgba(var(--color-surface-variant), 0.5);
+      }
 
+      .proof-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+        margin-bottom: 4rem;
+      }
 
-  .proof-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    margin-bottom: 4rem;
-  }
+      .proof-image img {
+        width: 100%;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-xl);
+        border: 1px solid rgba(var(--color-border), 0.3);
+      }
 
-  .proof-image img {
-    width: 100%;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-xl);
-    border: 1px solid rgba(var(--color-border), 0.3);
-  }
+      .proof-text p {
+        color: rgb(var(--color-text-muted));
+        margin-bottom: 1.5rem;
+      }
 
-  .proof-text p {
-    color: rgb(var(--color-text-muted));
-    margin-bottom: 1.5rem;
-  }
+      .proof-text h4 {
+        color: rgb(var(--color-text));
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        white-space: nowrap;
+      }
 
-  .proof-text h4 {
-    color: rgb(var(--color-text));
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-    white-space: nowrap;
-  }
+      .tech-stack {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2rem;
+      }
 
-  .tech-stack {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2rem;
-  }
+      .tech-stack li {
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+        position: relative;
+        color: rgb(var(--color-text-muted));
+      }
 
-  .tech-stack li {
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    position: relative;
-    color: rgb(var(--color-text-muted));
-  }
+      .tech-stack li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: rgb(var(--color-primary));
+      }
 
-  .tech-stack li::before {
-    content: "▸";
-    position: absolute;
-    left: 0;
-    color: rgb(var(--color-primary));
-  }
+      .tech-stack strong {
+        color: rgb(var(--color-text));
+      }
 
-  .tech-stack strong {
-    color: rgb(var(--color-text));
-  }
-
-    /* ===============================
+      /* ===============================
      DEMO VIDEO SECTION
      =============================== */
-    .demo-video-section {
-      margin-top: 4rem;
-      margin-bottom: 6rem;
-      text-align: center;
-    }
-
-    .demo-video-section h3 {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      color: rgb(var(--color-text));
-      margin-bottom: 1rem;
-    }
-
-    .demo-intro {
-      font-size: 1.125rem;
-      color: rgb(var(--color-text-muted));
-      max-width: 700px;
-      margin: 0 auto 2rem;
-      line-height: 1.7;
-    }
-
-    .demo-video-container {
-      max-width: 900px;
-      margin: 0 auto 2rem;
-      background: rgba(var(--color-surface-variant), 0.3);
-      border: 1px solid rgba(var(--color-border), 0.3);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-xl);
-    }
-
-    .demo-video-container video {
-      width: 100%;
-      height: auto;
-      display: block;
-      background: #000;
-    }
-
-    .demo-highlights {
-    display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-      margin-top: 2rem;
-      align-items: start;
-    }
-
-    .highlight-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: rgb(var(--color-text-muted));
-      font-size: 0.95rem;
-      justify-content: flex-start;
-    }
-
-    .highlight-icon {
-      color: rgb(var(--color-success));
-      font-weight: bold;
-      font-size: 1.1rem;
-      width: 1.2rem;
-      text-align: center;
-      flex-shrink: 0;
-    }
-
-    @media (max-width: 768px) {
-      .demo-highlights {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        align-items: center;
+      .demo-video-section {
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+        text-align: center;
       }
-  }
 
-  /* ===============================
+      .demo-video-section h3 {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        color: rgb(var(--color-text));
+        margin-bottom: 1rem;
+      }
+
+      .demo-intro {
+        font-size: 1.125rem;
+        color: rgb(var(--color-text-muted));
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
+      }
+
+      .demo-video-container {
+        max-width: 900px;
+        margin: 0 auto 2rem;
+        background: rgba(var(--color-surface-variant), 0.3);
+        border: 1px solid rgba(var(--color-border), 0.3);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-xl);
+      }
+
+      .demo-video-container video {
+        width: 100%;
+        height: auto;
+        display: block;
+        background: #000;
+      }
+
+      .demo-highlights {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+        align-items: start;
+      }
+
+      .highlight-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: rgb(var(--color-text-muted));
+        font-size: 0.95rem;
+        justify-content: flex-start;
+      }
+
+      .highlight-icon {
+        color: rgb(var(--color-success));
+        font-weight: bold;
+        font-size: 1.1rem;
+        width: 1.2rem;
+        text-align: center;
+        flex-shrink: 0;
+      }
+
+      @media (max-width: 768px) {
+        .demo-highlights {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+          align-items: center;
+        }
+      }
+
+      /* ===============================
      PORTFOLIO - INTRO
      =============================== */
-    .portfolio-intro {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
+      .portfolio-intro {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
 
-    .portfolio-intro h3 {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      color: rgb(var(--color-text));
-      margin-bottom: 1rem;
-    }
+      .portfolio-intro h3 {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        color: rgb(var(--color-text));
+        margin-bottom: 1rem;
+      }
 
-    .portfolio-intro p {
-      font-size: 1.125rem;
-      color: rgb(var(--color-text-muted));
-      max-width: 600px;
-      margin: 0 auto;
-    }
+      .portfolio-intro p {
+        font-size: 1.125rem;
+        color: rgb(var(--color-text-muted));
+        max-width: 600px;
+        margin: 0 auto;
+      }
 
-    /* ===============================
+      /* ===============================
      PORTFOLIO - FEATURED GRID
      =============================== */
-    .portfolio-grid-featured {
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 3rem;
-      margin-bottom: 4rem;
-    }
+      .portfolio-grid-featured {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 3rem;
+        margin-bottom: 4rem;
+      }
 
-    .portfolio-featured-card {
-      position: relative;
-      background: rgba(var(--color-surface-variant), 0.3);
-      border: 2px solid rgba(var(--color-border), 0.3);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      transition: all 0.3s ease;
-    }
+      .portfolio-featured-card {
+        position: relative;
+        background: rgba(var(--color-surface-variant), 0.3);
+        border: 2px solid rgba(var(--color-border), 0.3);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        transition: all 0.3s ease;
+      }
 
-    .portfolio-featured-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-xl);
-      border-color: rgba(var(--color-primary), 0.5);
-    }
+      .portfolio-featured-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-xl);
+        border-color: rgba(var(--color-primary), 0.5);
+      }
 
-    .featured-badge {
-      position: absolute;
-      top: -12px;
-      left: 20px;
-      padding: 0.5rem 1rem;
-      border-radius: var(--radius-md);
-      font-size: 0.875rem;
-      font-weight: 600;
-      box-shadow: var(--shadow-md);
-      z-index: 1;
-    }
+      .featured-badge {
+        position: absolute;
+        top: -12px;
+        left: 20px;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-md);
+        font-size: 0.875rem;
+        font-weight: 600;
+        box-shadow: var(--shadow-md);
+        z-index: 1;
+      }
 
-    .featured-badge-rag {
-    background: linear-gradient(
-      135deg,
-        rgb(var(--color-primary)),
-        rgb(var(--color-primary-hover))
-      );
-      color: rgb(var(--color-text-button));
-    }
+      .featured-badge-rag {
+        background: linear-gradient(
+          135deg,
+          rgb(var(--color-primary)),
+          rgb(var(--color-primary-hover))
+        );
+        color: rgb(var(--color-text-button));
+      }
 
-    .featured-badge-conversational {
-      background: linear-gradient(
-        135deg,
-        rgb(var(--color-accent)),
-        rgba(var(--color-accent), 0.8)
-      );
-      color: rgb(var(--color-text-button));
-    }
+      .featured-badge-conversational {
+        background: linear-gradient(
+          135deg,
+          rgb(var(--color-accent)),
+          rgba(var(--color-accent), 0.8)
+        );
+        color: rgb(var(--color-text-button));
+      }
 
-    .use-case-label {
-      margin-top: 1rem;
-      padding: 1rem;
-      background: rgba(var(--color-primary), 0.05);
-      border-radius: var(--radius-md);
-      font-size: 0.9rem;
-      color: rgb(var(--color-text-muted));
-      border-left: 3px solid rgb(var(--color-primary));
-    }
-
-    .use-case-label strong {
-      color: rgb(var(--color-text));
-    }
-
-    .demo-status {
-      margin-top: 1rem;
-      padding: 1rem;
-      background: rgba(var(--color-accent), 0.05);
-      border-radius: var(--radius-md);
-    text-align: center;
-    }
-
-    .status-badge {
-      display: inline-block;
-      padding: 0.375rem 0.75rem;
-      background: rgba(var(--color-accent), 0.15);
-      border: 1px solid rgba(var(--color-accent), 0.3);
-      border-radius: var(--radius-sm);
-      font-size: 0.875rem;
-      font-weight: 600;
-    color: rgb(var(--color-text));
-      margin-bottom: 0.5rem;
-  }
-
-    .demo-status p {
-      margin: 0.5rem 0 0 0;
-      font-size: 0.875rem;
-    color: rgb(var(--color-text-muted));
-    }
-
-    /* ===============================
+      /* ===============================
      AGENT COMPARISON
      =============================== */
-    .agent-comparison {
-      margin: 4rem 0 1.5rem 0;
-      padding: 3rem 2rem;
-      background: rgba(var(--color-surface-variant), 0.2);
-      border-radius: var(--radius-lg);
-    }
+      .agent-comparison {
+        margin: 4rem 0 1.5rem 0;
+        padding: 3rem 2rem;
+        background: rgba(var(--color-surface-variant), 0.2);
+        border-radius: var(--radius-lg);
+      }
 
-    .agent-comparison h3 {
-      font-family: var(--font-heading);
-      font-size: 1.75rem;
-      color: rgb(var(--color-text));
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .comparison-cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .comparison-card {
-      background: rgb(var(--color-surface));
-      border: 1px solid rgba(var(--color-border), 0.3);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-    }
-
-    .comparison-card h4 {
-      font-family: var(--font-heading);
-      font-size: 1.25rem;
-      color: rgb(var(--color-primary));
-    margin-bottom: 1rem;
-  }
-
-    .comparison-card p {
-      margin-bottom: 0.75rem;
-      color: rgb(var(--color-text));
-    }
-
-    .comparison-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0;
-    }
-
-    .comparison-card ul li {
-      padding-left: 1.5rem;
-      margin-bottom: 0.5rem;
-      position: relative;
-      color: rgb(var(--color-text-muted));
-      font-size: 0.9rem;
-    }
-
-    .comparison-card ul li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: rgb(var(--color-success));
-      font-weight: bold;
-    }
-
-    .comparison-card .example {
-      margin-top: 1rem;
-      padding: 0.75rem;
-      background: rgba(var(--color-accent), 0.05);
-      border-radius: var(--radius-md);
-      font-size: 0.875rem;
-      color: rgb(var(--color-text-muted));
-      font-style: italic;
-    }
-
-    .comparison-note {
-      text-align: center;
-      font-size: 1.125rem;
-      color: rgb(var(--color-text));
-      padding: 1.5rem;
-      background: rgba(var(--color-primary), 0.05);
-      border-radius: var(--radius-md);
-      margin: 0;
-    }
-
-    .comparison-note strong {
-      color: rgb(var(--color-primary));
-    }
-
-    /* ===============================
-     PORTFOLIO GRID (autres projets)
-     =============================== */
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-
-    /* ===============================
-     RESPONSIVE - PORTFOLIO
-     =============================== */
-    @media (max-width: 1024px) {
-      .portfolio-grid-featured {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+      .agent-comparison h3 {
+        font-family: var(--font-heading);
+        font-size: 1.75rem;
+        color: rgb(var(--color-text));
+        text-align: center;
+        margin-bottom: 2.5rem;
       }
 
       .comparison-cards {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .portfolio-featured-card {
-        padding: 1.5rem;
-      }
-
-      .portfolio-grid-featured {
-        grid-template-columns: 1fr !important;
-        gap: 1.5rem;
-      }
-
-      .agent-comparison {
-        padding: 2rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-bottom: 2rem;
       }
 
       .comparison-card {
-        padding: 1.5rem;
+        background: rgb(var(--color-surface));
+        border: 1px solid rgba(var(--color-border), 0.3);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
       }
-    }
 
+      .comparison-card h4 {
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        color: rgb(var(--color-primary));
+        margin-bottom: 1rem;
+      }
 
-  /* ===============================
+      .comparison-card p {
+        margin-bottom: 0.75rem;
+        color: rgb(var(--color-text));
+      }
+
+      .comparison-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+      }
+
+      .comparison-card ul li {
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        color: rgb(var(--color-text-muted));
+        font-size: 0.9rem;
+      }
+
+      .comparison-card ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: rgb(var(--color-success));
+        font-weight: bold;
+      }
+
+      .comparison-note {
+        text-align: center;
+        font-size: 1.125rem;
+        color: rgb(var(--color-text));
+        padding: 1.5rem;
+        background: rgba(var(--color-primary), 0.05);
+        border-radius: var(--radius-md);
+        margin: 0;
+      }
+
+      .comparison-note strong {
+        color: rgb(var(--color-primary));
+      }
+
+      /* ===============================
+     RESPONSIVE - PORTFOLIO
+     =============================== */
+      @media (max-width: 1024px) {
+        .portfolio-grid-featured {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .comparison-cards {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .portfolio-featured-card {
+          padding: 1.5rem;
+        }
+
+        .portfolio-grid-featured {
+          grid-template-columns: 1fr !important;
+          gap: 1.5rem;
+        }
+
+        .agent-comparison {
+          padding: 2rem 1rem;
+        }
+
+        .comparison-card {
+          padding: 1.5rem;
+        }
+      }
+
+      /* ===============================
      RESPONSIVE
      =============================== */
-  @media (max-width: 1024px) {
-    .hero .container,
-    .proof-content {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      text-align: center;
-    }
+      @media (max-width: 1024px) {
+        .hero .container,
+        .proof-content {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+          text-align: center;
+        }
 
-    .hero-cta {
-      justify-content: center;
-    }
+        .hero-cta {
+          justify-content: center;
+        }
 
-    .chat-preview {
-      max-width: 600px;
-      margin: 0 auto;
-    }
+        .chat-preview {
+          max-width: 600px;
+          margin: 0 auto;
+        }
 
-    .offers-grid,
-    .differentiation-points,
-    .features-grid {
-      grid-template-columns: 1fr;
-    }
-
-      .problem-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .hero {
-      padding: 5rem 0 4rem;
-    }
-
-    .section-spacing {
-      padding: 2rem 0;
-    }
-
-    .comparison-table {
-      font-size: 0.8rem;
-    }
-
-    .comparison-table th,
-    .comparison-table td {
-      padding: 0.75rem 0.5rem;
-    }
-
-    .offer-card {
-      padding: 1.5rem;
-    }
-
-    .message {
-      max-width: 95%;
-    }
-
-      .message-content {
-        padding: 0.75rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    .message-avatar {
-      font-size: 1.25rem;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .hero-title {
-      font-size: 2rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1rem;
-    }
-
-    .section-title {
-      font-size: 1.75rem;
-    }
-
-    .btn {
-      width: 100%;
-    }
-
-    .hero-cta .btn,
-    .offer-cta .btn {
-      font-size: 0.9rem;
-      padding: 0.75rem 1.25rem;
-    }
-
-    .cta-services .btn {
-      white-space: normal;
-      line-height: 1.4;
-      padding: 0.75rem 1rem;
-    }
-
-    .chat-messages {
-      min-height: 280px;
-      padding: 1rem;
-    }
-
-    .message {
-      max-width: 100%;
-    }
-
-      .message-content {
-        padding: 0.75rem 0.875rem;
-        font-size: 0.85rem;
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
       }
 
+      @media (max-width: 768px) {
+        .hero {
+          padding: 5rem 0 4rem;
+        }
 
-    .comparison-table th,
-    .comparison-table td {
-      padding: 0.5rem 0.25rem;
-      font-size: 0.75rem;
-    }
-  }
+        .section-spacing {
+          padding: 2rem 0;
+        }
 
-    /* ===============================
-     SECTION MARCHÉ
-     =============================== */
-    .market-section {
-      background: linear-gradient(
-        135deg,
-        rgba(var(--color-primary), 0.03) 0%,
-        rgba(var(--color-accent), 0.02) 100%
-      );
-    }
+        .message {
+          max-width: 95%;
+        }
 
-    .market-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
+        .message-content {
+          padding: 0.75rem 1rem;
+          font-size: 0.9rem;
+        }
 
-    .stat-card {
-      background: rgb(var(--color-surface));
-      border: 1px solid rgba(var(--color-border), 0.3);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      text-align: center;
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-    .stat-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .stat-number {
-      font-size: 3.5rem;
-      font-weight: 700;
-      color: rgb(var(--color-primary));
-      margin-bottom: 1rem;
-      line-height: 1;
-    }
-
-    .stat-card p {
-      color: rgb(var(--color-text));
-      font-size: 1rem;
-      line-height: 1.5;
-      margin-bottom: 1rem;
-    }
-
-    .stat-source {
-      display: block;
-      font-size: 0.75rem;
-      color: rgb(var(--color-text-muted));
-      font-style: italic;
-    }
-
-    .market-insight {
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2.5rem;
-      background: rgba(var(--color-primary), 0.05);
-      border: 2px solid rgba(var(--color-primary), 0.2);
-      border-radius: var(--radius-lg);
-    }
-
-    .market-insight p {
-      font-size: 1.125rem;
-      color: rgb(var(--color-text));
-      margin-bottom: 1rem;
-      line-height: 1.7;
-    }
-
-    .market-insight p:last-child {
-      margin-bottom: 0;
-    }
-
-    .market-source {
-      font-size: 0.875rem !important;
-      color: rgb(var(--color-text-muted)) !important;
-      margin-top: 1rem !important;
-    }
-
-    @media (max-width: 1024px) {
-      .market-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        .message-avatar {
+          font-size: 1.25rem;
+        }
       }
 
-      .stat-number {
-        font-size: 3rem;
-      }
-    }
+      @media (max-width: 600px) {
+        .hero-title {
+          font-size: 2rem;
+        }
 
-    @media (max-width: 600px) {
-      .market-stats {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
+        .hero-subtitle {
+          font-size: 1rem;
+        }
 
-      .stat-card {
-        padding: 1.5rem;
-      }
+        .section-title {
+          font-size: 1.75rem;
+        }
 
-      .stat-number {
-        font-size: 2.5rem;
-      }
+        .btn {
+          width: 100%;
+        }
 
-      .market-insight {
-        padding: 1.5rem;
-      }
+        .hero-cta .btn {
+          font-size: 0.9rem;
+          padding: 0.75rem 1.25rem;
+        }
 
-      .market-insight p {
-        font-size: 1rem;
-    }
-  }
-</style>
-</div>
+        .cta-services .btn {
+          white-space: normal;
+          line-height: 1.4;
+          padding: 0.75rem 1rem;
+        }
+
+        .chat-messages {
+          min-height: 280px;
+          padding: 1rem;
+        }
+
+        .message {
+          max-width: 100%;
+        }
+
+        .message-content {
+          padding: 0.75rem 0.875rem;
+          font-size: 0.85rem;
+        }
+      }
+    </style>
+  </div>
 </BaseLayout>

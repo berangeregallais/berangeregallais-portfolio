@@ -37,66 +37,67 @@ const allCategories = [
     </div>
   </section>
 
-  <!-- Featured Video Demo -->
+  <!-- Featured Demo -->
   <section class="featured-demo">
     <div class="container">
       <div class="demo-header">
         <span class="demo-badge">✨ Featured Project</span>
-        <h2>Neolens RAG Agent in Action</h2>
+        <h2>QA Agent Supervisor</h2>
         <p>
-          Discover how this AI agent answers technical questions 
-          with source citations, multilingual support, and zero hallucination.
+          A multi-agent system that runs a real Playwright/pytest test suite:
+          it executes the tests, tells a real bug from a flaky one, and
+          produces a report anyone can read.
         </p>
       </div>
-      
+
       <div class="demo-grid">
         <div class="demo-video">
-          <video controls preload="metadata" poster="/portfolio/01-home-welcome.png">
-            <source src="/portfolio/videos/02-source-citation-demo.mp4" type="video/mp4">
-            Your browser does not support video playback.
-          </video>
+          <img
+            src="/portfolio/qa-agent-supervisor.png"
+            alt="QA Agent Supervisor interface"
+          />
         </div>
-        
+
         <div class="demo-features">
           <h3>Key Features</h3>
           <ul>
             <li>
-              <div class="feature-icon">🎯</div>
+              <div class="feature-icon">🤖</div>
               <div class="feature-content">
-                <strong>Intelligent RAG</strong>
-                <span>FAISS vector search in 34 documents (50k words)</span>
+                <strong>One task, the right agent</strong>
+                <span>A supervisor agent routes each request to the agent built for it: coverage analysis, test execution, failure triage, or report writing</span>
               </div>
             </li>
             <li>
-              <div class="feature-icon">📚</div>
+              <div class="feature-icon">🔍</div>
               <div class="feature-content">
-                <strong>Source Citations</strong>
-                <span>Automatic references with document names</span>
+                <strong>Flaky tests identified by evidence</strong>
+                <span>A test is only labeled "flaky" if it fails then passes on rerun. No AI call is needed for that, unlike a judgment based on the test's failure history</span>
               </div>
             </li>
             <li>
-              <div class="feature-icon">🌍</div>
+              <div class="feature-icon">📊</div>
               <div class="feature-content">
-                <strong>Multilingual FR/EN</strong>
-                <span>Automatic detection and localized responses</span>
+                <strong>A report for every audience</strong>
+                <span>Detailed technical report for the dev team, plain-language summary for non-technical readers</span>
               </div>
             </li>
             <li>
-              <div class="feature-icon">✅</div>
+              <div class="feature-icon">⚡</div>
               <div class="feature-content">
-                <strong>Zero Hallucination</strong>
-                <span>Strict input/output validation</span>
+                <strong>A Stop button that actually stops tests</strong>
+                <span>Not just the UI: the running tests actually stop, in ~45 ms</span>
               </div>
             </li>
             <li>
-              <div class="feature-icon">🔧</div>
+              <div class="feature-icon">💰</div>
               <div class="feature-content">
-                <strong>Production-Ready</strong>
-                <span>137 tests, CI/CD, monitoring</span>
+                <strong>Cost shown before you run anything</strong>
+                <span>The estimated number of API calls, no surprises</span>
               </div>
             </li>
           </ul>
-          <a href="/en/portfolio/neolens-support-agent" class="demo-link">
+          <a href="/en/portfolio/qa-agent-supervisor" class="demo-link">
             View full project →
           </a>
         </div>
@@ -109,7 +110,22 @@ const allCategories = [
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
-        <!-- Agent RAG Neolens - Featured -->
+        <!-- QA Agent Supervisor - Featured -->
+        <div class="project-wrapper featured-project">
+          <PortfolioCard
+            title="QA Agent Supervisor"
+            client="Multi-agent test orchestrator"
+            description="Multi-agent system (LangGraph + Claude API) that orchestrates a real Playwright/pytest test suite: coverage suggestions, failure triage, evidence-based flaky test detection."
+            tags={["Python", "LangGraph", "Claude API", "Pydantic", "FastAPI", "Playwright"]}
+            image="/portfolio/qa-agent-supervisor.png"
+            link="/en/portfolio/qa-agent-supervisor"
+            category={["ai-agent", "qa"]}
+            githubUrl="https://github.com/berangeregallais/qa-agent-supervisor"
+            lang="en"
+          />
+        </div>
+
+        <!-- Agent RAG Neolens -->
         <div class="project-wrapper featured-project">
           <PortfolioCard
             title="Neolens RAG Agent"
@@ -152,39 +168,39 @@ const allCategories = [
 <section class="portfolio-cta">
   <div class="container">
     <div class="cta-content">
-      <h2>Ready to create your AI agent?</h2>
+      <h2>Let's talk about it</h2>
       <p>
-        Let's discuss your project and find the solution that fits your needs. 
-        RAG agent, custom automation, or tailored solution - I'll guide you from A to Z.
+        QA Automation Engineer / SDET & Technical Writer, available for a
+        full-remote, permanent position.
       </p>
       <div class="cta-benefits">
         <div class="benefit">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20 6 9 17l-5-5"></path>
           </svg>
-          Custom AI Agent
+          Test automation & CI/CD
         </div>
         <div class="benefit">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20 6 9 17l-5-5"></path>
           </svg>
-          Code + Documentation + Tests
+          AI agents & LangGraph
         </div>
         <div class="benefit">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20 6 9 17l-5-5"></path>
           </svg>
-          Complete solution included
+          Clear technical documentation
         </div>
       </div>
       <div class="cta-buttons">
         <a href="/en/contact" class="btn btn-primary btn-large">
-          <span>Let's discuss your project</span>
+          <span>Get in touch</span>
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M5 12h14m-7-7 7 7-7 7"></path>
           </svg>
         </a>
-        <a href="/en/offers" class="btn btn-secondary">View my offers</a>
+        <a href="/about/cv-bgallais-en.pdf" download class="btn btn-secondary">Download my CV</a>
       </div>
     </div>
   </div>
@@ -311,7 +327,8 @@ const allCategories = [
     box-shadow: var(--shadow-xl);
   }
 
-  .demo-video video {
+  .demo-video video,
+  .demo-video img {
     width: 100%;
     height: auto;
     display: block;

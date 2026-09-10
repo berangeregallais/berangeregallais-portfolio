@@ -1,0 +1,189 @@
+---
+// src/components/CookieConsent.astro
+export interface Props {
+  lang: "en" | "fr";
+}
+
+const { lang } = Astro.props;
+
+const content = {
+  en: {
+    message:
+      "This site uses Google Analytics to measure traffic. It's only enabled with your consent.",
+    accept: "Accept",
+    decline: "Decline",
+    policy: "Learn more",
+    policyHref: "/en/privacy-policy",
+  },
+  fr: {
+    message:
+      "Ce site utilise Google Analytics pour mesurer sa fréquentation. Il n'est activé qu'avec votre accord.",
+    accept: "Accepter",
+    decline: "Refuser",
+    policy: "En savoir plus",
+    policyHref: "/fr/privacy-policy",
+  },
+};
+
+const t = content[lang];
+---
+
+<div id="cookie-consent" class="cookie-consent" hidden>
+  <div class="cookie-consent__content">
+    <p>{t.message} <a href={t.policyHref}>{t.policy}</a></p>
+    <div class="cookie-consent__actions">
+      <button type="button" class="btn btn-secondary" data-cookie-decline>
+        {t.decline}
+      </button>
+      <button type="button" class="btn btn-primary" data-cookie-accept>
+        {t.accept}
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cookie-consent {
+    position: fixed;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 500;
+    max-width: 640px;
+    margin: 0 auto;
+    background: rgb(var(--color-surface));
+    border: 1px solid rgba(var(--color-border), 0.4);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    padding: 1.5rem;
+  }
+
+  .cookie-consent[hidden] {
+    display: none;
+  }
+
+  .cookie-consent__content p {
+    margin: 0 0 1rem;
+    color: rgb(var(--color-text));
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .cookie-consent__content a {
+    color: rgb(var(--color-primary));
+    text-decoration: underline;
+  }
+
+  .cookie-consent__actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .cookie-consent__actions .btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 600px) {
+    .cookie-consent {
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      padding: 1.25rem;
+    }
+
+    .cookie-consent__actions {
+      justify-content: stretch;
+    }
+
+    .cookie-consent__actions .btn {
+      flex: 1;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var GA_ID = "G-YS87E715NG";
+    var STORAGE_KEY = "cookie-consent";
+
+    function loadGA() {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      window.gtag = gtag;
+      gtag("js", new Date());
+      gtag("config", GA_ID);
+    }
+
+    function getConsent() {
+      try {
+        return localStorage.getItem(STORAGE_KEY);
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function setConsent(value) {
+      try {
+        localStorage.setItem(STORAGE_KEY, value);
+      } catch (e) {}
+    }
+
+    function showBanner() {
+      var banner = document.getElementById("cookie-consent");
+      if (banner) banner.hidden = false;
+    }
+
+    function hideBanner() {
+      var banner = document.getElementById("cookie-consent");
+      if (banner) banner.hidden = true;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var consent = getConsent();
+
+      if (consent === "accepted") {
+        loadGA();
+      } else if (consent !== "rejected") {
+        showBanner();
+      }
+
+      var acceptBtn = document.querySelector("[data-cookie-accept]");
+      var declineBtn = document.querySelector("[data-cookie-decline]");
+
+      if (acceptBtn) {
+        acceptBtn.addEventListener("click", function () {
+          setConsent("accepted");
+          loadGA();
+          hideBanner();
+        });
+      }
+
+      if (declineBtn) {
+        declineBtn.addEventListener("click", function () {
+          setConsent("rejected");
+          hideBanner();
+        });
+      }
+
+      document.querySelectorAll("[data-cookie-settings]").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          showBanner();
+        });
+      });
+    });
+  })();
+</script>
